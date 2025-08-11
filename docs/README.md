@@ -298,3 +298,20 @@ This project is licensed under the MIT License - see the [LICENSE](../LICENSE) f
 ---
 
 **Note**: This automation suite is designed for enterprise use. Always test automation scripts in a development environment before running them in production.
+
+## Authentication Tests
+
+- Location: `tests/test_auth.py`
+- Framework: `unittest` with mocked HTTP calls (no live Graph traffic)
+- What’s covered:
+  - Access token success path (client credentials)
+  - Invalid credentials (401 invalid_client)
+  - Network timeout
+  - Verification success (200) and insufficient privileges (403)
+  - Missing environment variables
+- Logs: `logs/test_auth.log` captures timestamps and outcomes
+
+### Troubleshooting Signals
+- 403 Authorization_RequestDenied: Grant Graph app permissions such as `Organization.Read.All` or `Directory.Read.All` and click Admin consent in Azure AD.
+- 401 invalid_client: Verify `CLIENT_ID` and `CLIENT_SECRET` in `config/.env`.
+- Timeouts: Check network/proxy/DNS and retry.
