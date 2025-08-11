@@ -1,0 +1,122 @@
+# Microsoft 365 Automation Suite - .gitignore
+# Purpose: Exclude secrets, build artifacts, caches, logs, and local tooling files from version control.
+# Note: Keep example/template config files tracked (e.g., config/env.example).
+
+# -----------------------------
+# Environment variables & secrets
+# -----------------------------
+.env
+.env.*
+config/.env
+config/.env.*
+!config/env.example
+
+# Common secret/key files
+*.key
+*.pem
+*.p12
+*.pfx
+*.cer
+*.crt
+config/credentials.*
+config/secrets.*
+
+# -----------------------------
+# Logs & runtime outputs
+# -----------------------------
+logs/
+*.log
+*.out
+*.err
+
+# -----------------------------
+# Python: byte-compiled / cache / packaging
+# -----------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+.venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+.pyre/
+.pytype/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Type check / build system caches
+.mypy_cache/
+.pyre/
+.pytype/
+
+# -----------------------------
+# Editors & IDEs
+# -----------------------------
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+
+# -----------------------------
+# PowerShell-specific
+# -----------------------------
+*.ps1.log
+*.psm1.log
