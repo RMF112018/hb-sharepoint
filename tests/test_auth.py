@@ -3,7 +3,7 @@ Unit tests for src/auth.py authentication utilities.
 
 These tests validate:
 - Successful access token retrieval via client credentials flow
-- Handling invalid credentials (expected RuntimeError)
+- Handling invalid credentials (expected AuthenticationError)
 - Handling network errors (e.g., timeout)
 - Verification of Microsoft Graph connectivity for success and failure cases
 
@@ -30,6 +30,7 @@ from auth import (
     verify_graph_connection,
     load_environment,
 )
+from auth.authenticator import AuthenticationError
 import requests
 
 
@@ -85,7 +86,7 @@ class TestAuthUtilities(unittest.TestCase):
     def tearDownClass(cls):
         cls.env_patch.stop()
 
-    @patch("auth.requests.post")
+    @patch("auth.authenticator.requests.post")
     def test_obtain_access_token_success(self, mock_post: MagicMock):
         """Token retrieval succeeds when Azure AD returns 200 with access_token.
 
@@ -105,12 +106,12 @@ class TestAuthUtilities(unittest.TestCase):
         self.assertEqual(token, "mock-token-123")
         mock_post.assert_called_once()
 
-    @patch("auth.requests.post")
+    @patch("auth.authenticator.requests.post")
     def test_obtain_access_token_invalid_credentials(self, mock_post: MagicMock):
-        """Invalid credentials are handled by raising RuntimeError.
+        """Invalid credentials are handled by raising AuthenticationError.
 
         - Simulates a 401 Unauthorized with an error message from Azure AD.
-        - Expects obtain_access_token to raise RuntimeError for operators to handle.
+        - Expects obtain_access_token to raise AuthenticationError.
         """
         mock_response = MagicMock()
         mock_response.status_code = 401
@@ -118,7 +119,7 @@ class TestAuthUtilities(unittest.TestCase):
         mock_response.json.return_value = {"error": "invalid_client"}
         mock_post.return_value = mock_response
 
-        with self.assertRaises(RuntimeError) as ctx:
+        with self.assertRaises(AuthenticationError) as ctx:
             obtain_access_token(
                 tenant_id="test-tenant-id",
                 client_id="bad-client-id",
@@ -127,7 +128,7 @@ class TestAuthUtilities(unittest.TestCase):
         self.assertIn("Token request failed with status 401", str(ctx.exception))
         mock_post.assert_called_once()
 
-    @patch("auth.requests.post", side_effect=requests.exceptions.Timeout("Timeout"))
+    @patch("auth.authenticator.requests.post", side_effect=requests.exceptions.Timeout("Timeout"))
     def test_obtain_access_token_network_timeout(self, _mock_post: MagicMock):
         """Network timeouts are surfaced as RequestException for retry/alerting.
 
@@ -141,7 +142,7 @@ class TestAuthUtilities(unittest.TestCase):
                 client_secret="test-client-secret",
             )
 
-    @patch("auth.requests.get")
+    @patch("auth.authenticator.requests.get")
     def test_verify_graph_connection_success(self, mock_get: MagicMock):
         """Graph verification succeeds when endpoint returns 200 with JSON body.
 
@@ -159,7 +160,7 @@ class TestAuthUtilities(unittest.TestCase):
         self.assertIsInstance(payload, dict)
         mock_get.assert_called_once()
 
-    @patch("auth.requests.get")
+    @patch("auth.authenticator.requests.get")
     def test_verify_graph_connection_forbidden(self, mock_get: MagicMock):
         """Graph verification returns (False, details) on 403 errors.
 
@@ -177,15 +178,16 @@ class TestAuthUtilities(unittest.TestCase):
         self.assertIsInstance(details, dict)
         mock_get.assert_called_once()
 
-    def test_load_environment_missing_vars(self):
-        """load_environment raises ValueError when required vars are missing.
+    @patch("auth.authenticator.load_dotenv")
+    def test_load_environment_missing_vars(self, _mock_load_dotenv: MagicMock):
+        """load_environment raises AuthenticationError when required vars are missing.
 
         - Clears variables in a scoped patch to simulate missing config.
         - Ensures a clear error message is provided to guide IT staff.
         """
         with unittest.mock.patch.dict(os.environ, {}, clear=True):
-            with self.assertRaises(ValueError) as ctx:
-                load_environment(env_path="config/.env")
+            with self.assertRaises(AuthenticationError) as ctx:
+                load_environment(env_path="nonexistent/.env")
             self.assertIn("Missing required environment variables", str(ctx.exception))
 
 

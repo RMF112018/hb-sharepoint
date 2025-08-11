@@ -1,13 +1,23 @@
 """
 Authentication Module for Microsoft 365 Automation Suite
 
-This module handles all authentication operations including:
-- Client credentials flow for Microsoft Graph API
-- Token management and refresh
-- Secure credential handling
+This package exposes client-credentials helpers for Microsoft Graph:
+- load_environment: Load and validate environment configuration
+- obtain_access_token: Acquire an access token via client credentials
+- verify_graph_connection: Verify Graph connectivity (e.g., /organization)
+- configure_logging: Set up logging for auth operations
 """
 
-from .authenticator import M365Authenticator
-from .token_manager import TokenManager
+from .authenticator import (
+    load_environment,
+    obtain_access_token,
+    verify_graph_connection,
+    configure_logging,
+)
 
-__all__ = ['M365Authenticator', 'TokenManager']
+__all__ = [
+    "load_environment",
+    "obtain_access_token",
+    "verify_graph_connection",
+    "configure_logging",
+]
