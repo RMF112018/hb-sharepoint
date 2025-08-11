@@ -1,0 +1,36 @@
+# Microsoft 365 Automation Suite - Python Dependencies
+# This file lists all required Python packages for the automation scripts
+
+# Core HTTP library for Microsoft Graph API calls
+requests>=2.31.0
+
+# Environment variable management
+python-dotenv>=1.0.0
+
+# Microsoft Graph API authentication and utilities
+msal>=1.25.0
+
+# Logging and monitoring
+structlog>=23.2.0
+
+# Configuration management
+pyyaml>=6.0.1
+
+# Date and time handling
+python-dateutil>=2.8.2
+
+# Retry mechanisms for API calls
+tenacity>=8.2.3
+
+# Testing framework
+pytest>=7.4.0
+pytest-mock>=3.11.1
+pytest-cov>=4.1.0
+
+# Code quality and linting
+black>=23.7.0
+flake8>=6.0.0
+mypy>=1.5.0
+
+# Development utilities
+pre-commit>=3.3.0
