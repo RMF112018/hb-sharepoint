@@ -142,6 +142,38 @@ python src/auth.py
 - On success: you'll see "Graph connectivity OK." and a log entry in `logs/auth.log`.
 - On failure: check `logs/auth.log` for detailed errors (e.g., invalid credentials, missing consent).
 
+## Running Tests
+
+Follow these steps to run the unit tests for authentication.
+
+### 1. Install Test Dependencies
+
+Install all project dependencies (includes testing packages):
+
+```bash
+pip install -r requirements.txt
+```
+
+### 2. Run the Tests
+
+Run the `unittest` suite for the authentication module:
+
+```bash
+python -m unittest tests/test_auth.py -v
+```
+
+Alternatively, run all tests:
+
+```bash
+python -m unittest discover -s tests -p "test_*.py" -v
+```
+
+### 3. Interpreting Results
+
+- Tests will print PASS/FAIL summaries to the console.
+- Detailed logs are written to `logs/test_auth.log` with timestamps.
+- If a test fails, review the log file and the error message for guidance.
+
 ## 📚 Detailed Setup Guide
 
 For comprehensive setup instructions, including Azure AD application registration and detailed configuration, see [setup-guide.md](setup-guide.md).

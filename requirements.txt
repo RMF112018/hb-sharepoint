@@ -26,6 +26,7 @@ tenacity>=8.2.3
 pytest>=7.4.0
 pytest-mock>=3.11.1
 pytest-cov>=4.1.0
+requests-mock>=1.12.1
 
 # Code quality and linting
 black>=23.7.0
