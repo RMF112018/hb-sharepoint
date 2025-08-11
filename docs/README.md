@@ -103,6 +103,45 @@ cp config/env.example config/.env
 python -m pytest tests/unit/ -v
 ```
 
+## Authentication Setup
+
+Follow these steps to configure authentication and verify connectivity to Microsoft Graph.
+
+### 1. Obtain Azure AD App Credentials
+
+1. Go to the Azure Portal and open Azure Active Directory.
+2. Navigate to App registrations > New registration.
+3. Register an app (e.g., "M365 Automation Suite").
+4. Record the following from the app's Overview page:
+   - Tenant ID (Directory ID)
+   - Client ID (Application ID)
+5. Go to Certificates & secrets > New client secret, create a secret, and copy its value.
+6. Grant required Graph application permissions (e.g., `Organization.Read.All`) and click "Grant admin consent".
+
+### 2. Populate the .env File
+
+1. Copy the example file:
+   ```bash
+   cp config/env.example config/.env
+   ```
+2. Open `config/.env` and replace placeholders with your values:
+   ```ini
+   TENANT_ID=<your-tenant-id>
+   CLIENT_ID=<your-client-id>
+   CLIENT_SECRET=<your-client-secret>
+   ```
+
+### 3. Test Authentication with auth.py
+
+Run the provided authentication script to obtain a token and verify access using a lightweight endpoint (`/organization` for app-only auth):
+
+```bash
+python src/auth.py
+```
+
+- On success: you'll see "Graph connectivity OK." and a log entry in `logs/auth.log`.
+- On failure: check `logs/auth.log` for detailed errors (e.g., invalid credentials, missing consent).
+
 ## 📚 Detailed Setup Guide
 
 For comprehensive setup instructions, including Azure AD application registration and detailed configuration, see [setup-guide.md](setup-guide.md).
