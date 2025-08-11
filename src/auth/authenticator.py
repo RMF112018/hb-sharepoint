@@ -1,21 +1,46 @@
 """
-Microsoft 365 Authenticator Module
+Authentication utility for Microsoft 365 Automation Suite.
 
-This module provides authentication functionality for the Microsoft 365 Automation Suite
-using the client credentials flow with MSAL (Microsoft Authentication Library).
+This module authenticates to Microsoft Graph using the client credentials
+flow (application permissions) and verifies connectivity by calling a
+lightweight Graph endpoint. It is intended for IT staff to quickly test
+credentials and environment configuration.
 
-Classes:
-    M365Authenticator: Handles authentication and token acquisition
+Usage (from project root):
+    python src/auth/authenticator.py
+
+Notes:
+- Requires a valid Azure AD app registration with appropriate Graph app
+  permissions and admin consent. See docs/README.md for details.
+- Reads configuration from config/.env. Do not commit real secrets.
+
+References:
+- Microsoft identity platform OAuth 2.0 client credentials flow:
+  https://learn.microsoft.com/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow
+- Microsoft Graph REST API:
+  https://learn.microsoft.com/graph/api/overview
 """
 
-import os
-import logging
-from typing import List, Optional
-from dotenv import load_dotenv
-from msal import ConfidentialClientApplication
+from __future__ import annotations
 
-# Set up logging
-logger = logging.getLogger(__name__)
+import os
+import sys
+import logging
+from typing import Dict, Tuple
+
+import requests
+from dotenv import load_dotenv
+
+# Constants
+DEFAULT_ENV_PATH: str = "config/.env"
+TOKEN_ENDPOINT_TEMPLATE: str = (
+    "https://login.microsoftonline.com/{tenant_id}/oauth2/v2.0/token"
+)
+GRAPH_DEFAULT_SCOPE: str = "https://graph.microsoft.com/.default"
+GRAPH_VERIFY_ENDPOINT_APP_ONLY: str = (
+    "https://graph.microsoft.com/v1.0/organization"
+)
+LOG_FILE_PATH: str = "logs/auth.log"
 
 
 class AuthenticationError(Exception):
@@ -23,154 +48,236 @@ class AuthenticationError(Exception):
     pass
 
 
-class M365Authenticator:
+def ensure_logs_directory_exists(log_file_path: str) -> None:
+    """Ensure the directory for the log file exists.
+
+    Args:
+        log_file_path: Path to the log file (e.g., logs/auth.log)
     """
-    Handles Microsoft 365 authentication using client credentials flow.
-    
-    This class manages the authentication process for accessing Microsoft Graph API
-    using Azure AD application credentials. It supports automatic token refresh
-    and provides secure credential management.
-    
-    Attributes:
-        tenant_id (str): Azure AD tenant ID
-        client_id (str): Azure AD application client ID
-        client_secret (str): Azure AD application client secret
-        authority (str): Azure AD authority URL
-        app (ConfidentialClientApplication): MSAL application instance
+    log_dir = os.path.dirname(log_file_path)
+    if log_dir and not os.path.exists(log_dir):
+        os.makedirs(log_dir, exist_ok=True)
+
+
+def configure_logging(log_file_path: str = LOG_FILE_PATH, level: int = logging.INFO) -> None:
+    """Configure application logging for both file and stdout.
+
+    Args:
+        log_file_path: Destination log file path.
+        level: Logging level (e.g., logging.INFO).
     """
-    
-    def __init__(self, env_file: str = "config/.env"):
-        """
-        Initialize the authenticator with credentials from environment variables.
-        
-        Args:
-            env_file (str): Path to the .env file containing credentials
-            
-        Raises:
-            AuthenticationError: If required environment variables are missing
-        """
-        # Load environment variables
-        load_dotenv(env_file)
-        
-        # Get credentials from environment
-        self.tenant_id = os.getenv('TENANT_ID')
-        self.client_id = os.getenv('CLIENT_ID')
-        self.client_secret = os.getenv('CLIENT_SECRET')
-        
-        # Validate required credentials
-        if not all([self.tenant_id, self.client_id, self.client_secret]):
-            missing_vars = []
-            if not self.tenant_id:
-                missing_vars.append('TENANT_ID')
-            if not self.client_id:
-                missing_vars.append('CLIENT_ID')
-            if not self.client_secret:
-                missing_vars.append('CLIENT_SECRET')
-            
-            raise AuthenticationError(
-                f"Missing required environment variables: {', '.join(missing_vars)}. "
-                f"Please check your {env_file} file."
-            )
-        
-        # Build authority URL
-        self.authority = f"https://login.microsoftonline.com/{self.tenant_id}"
-        
-        # Initialize MSAL application
+    ensure_logs_directory_exists(log_file_path)
+
+    fmt = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+    datefmt = "%Y-%m-%dT%H:%M:%S%z"
+
+    # Root logger
+    logging.basicConfig(level=level, format=fmt, datefmt=datefmt)
+
+    # File handler
+    file_handler = logging.FileHandler(log_file_path)
+    file_handler.setLevel(level)
+    file_handler.setFormatter(logging.Formatter(fmt, datefmt))
+
+    # Console handler
+    console_handler = logging.StreamHandler(sys.stdout)
+    console_handler.setLevel(level)
+    console_handler.setFormatter(logging.Formatter(fmt, datefmt))
+
+    root_logger = logging.getLogger()
+    root_logger.handlers = []  # Prevent duplicate handlers if re-run
+    root_logger.addHandler(file_handler)
+    root_logger.addHandler(console_handler)
+
+
+logger = logging.getLogger(__name__)
+
+
+def load_environment(env_path: str = DEFAULT_ENV_PATH) -> Dict[str, str]:
+    """Load and validate environment configuration from a .env file.
+
+    Args:
+        env_path: Path to the .env file in the config directory.
+
+    Returns:
+        Dict[str, str]: Dictionary containing TENANT_ID, CLIENT_ID, CLIENT_SECRET.
+
+    Raises:
+        AuthenticationError: If required variables are missing.
+    """
+    # Load environment variables from file; existing environment variables take precedence
+    load_dotenv(dotenv_path=env_path, override=False)
+
+    tenant_id = os.getenv("TENANT_ID")
+    client_id = os.getenv("CLIENT_ID")
+    client_secret = os.getenv("CLIENT_SECRET")
+
+    missing = [name for name, value in (
+        ("TENANT_ID", tenant_id),
+        ("CLIENT_ID", client_id),
+        ("CLIENT_SECRET", client_secret),
+    ) if not value]
+
+    if missing:
+        raise AuthenticationError(
+            "Missing required environment variables: " + ", ".join(missing) +
+            f". Ensure {env_path} exists and is populated."
+        )
+
+    return {
+        "TENANT_ID": tenant_id,
+        "CLIENT_ID": client_id,
+        "CLIENT_SECRET": client_secret,
+    }
+
+
+def obtain_access_token(
+    tenant_id: str,
+    client_id: str,
+    client_secret: str,
+    scope: str = GRAPH_DEFAULT_SCOPE,
+    timeout_seconds: int = 30,
+) -> str:
+    """Obtain an access token from Azure AD using client credentials flow.
+
+    Args:
+        tenant_id: Azure AD tenant (directory) ID.
+        client_id: Azure AD application (client) ID.
+        client_secret: Azure AD application client secret.
+        scope: OAuth 2.0 scope for Graph; defaults to https://graph.microsoft.com/.default
+        timeout_seconds: Network timeout for the HTTP request.
+
+    Returns:
+        str: The access token.
+
+    Raises:
+        requests.exceptions.RequestException: For network-related errors.
+        AuthenticationError: For non-success HTTP responses or missing token in response.
+    """
+    token_url = TOKEN_ENDPOINT_TEMPLATE.format(tenant_id=tenant_id)
+
+    # Form-encoded body as required by the token endpoint
+    data = {
+        "client_id": client_id,
+        "client_secret": client_secret,
+        "scope": scope,
+        "grant_type": "client_credentials",
+    }
+
+    try:
+        response = requests.post(token_url, data=data, timeout=timeout_seconds)
+    except requests.exceptions.RequestException as exc:
+        logger.error("Network error requesting token: %s", str(exc))
+        raise
+
+    if response.status_code != 200:
+        # Avoid logging secrets; include safe context and server message
+        logger.error(
+            "Token request failed (status=%s). Response: %s",
+            response.status_code,
+            response.text,
+        )
+        raise AuthenticationError(
+            f"Token request failed with status {response.status_code}: {response.text}"
+        )
+
+    payload = response.json()
+    access_token = payload.get("access_token")
+    if not access_token:
+        logger.error("Token response JSON missing access_token: %s", payload)
+        raise AuthenticationError("Token response missing access_token.")
+
+    logger.info("Successfully obtained access token.")
+    return access_token
+
+
+def verify_graph_connection(
+    access_token: str,
+    endpoint_url: str = GRAPH_VERIFY_ENDPOINT_APP_ONLY,
+    timeout_seconds: int = 30,
+) -> Tuple[bool, Dict[str, object]]:
+    """Verify Microsoft Graph connectivity using the provided access token.
+
+    Args:
+        access_token: Bearer token for Graph API calls.
+        endpoint_url: Verification endpoint. For app-only, use /organization.
+        timeout_seconds: Network timeout for the HTTP request.
+
+    Returns:
+        Tuple[bool, Dict[str, object]]: (success flag, parsed JSON or error details)
+    """
+    headers = {
+        "Authorization": f"Bearer {access_token}",
+        "Accept": "application/json",
+    }
+
+    try:
+        response = requests.get(endpoint_url, headers=headers, timeout=timeout_seconds)
+    except requests.exceptions.RequestException as exc:
+        logger.error("Network error during verification call: %s", str(exc))
+        return False, {"error": str(exc)}
+
+    if response.status_code in (200, 204):
+        logger.info("Graph verification successful (status=%s).", response.status_code)
         try:
-            self.app = ConfidentialClientApplication(
-                client_id=self.client_id,
-                client_credential=self.client_secret,
-                authority=self.authority
-            )
-            logger.info("MSAL application initialized successfully")
-            
-        except Exception as e:
-            logger.error(f"Failed to initialize MSAL application: {str(e)}")
-            raise AuthenticationError(f"MSAL initialization failed: {str(e)}")
-    
-    def get_access_token(self, scopes: Optional[List[str]] = None) -> str:
-        """
-        Get access token for Microsoft Graph API.
-        
-        This method attempts to acquire a token silently first, then falls back
-        to client credentials flow if no cached token is available.
-        
-        Args:
-            scopes (List[str], optional): List of scopes to request.
-                Defaults to ['https://graph.microsoft.com/.default']
-            
-        Returns:
-            str: Access token for API calls
-            
-        Raises:
-            AuthenticationError: If token acquisition fails
-        """
-        if scopes is None:
-            scopes = ['https://graph.microsoft.com/.default']
-        
-        logger.debug(f"Requesting access token for scopes: {scopes}")
-        
-        try:
-            # First, try to get token silently (from cache)
-            result = self.app.acquire_token_silent(scopes, account=None)
-            
-            if not result:
-                logger.debug("No cached token found, acquiring new token")
-                # If no cached token, acquire new one using client credentials
-                result = self.app.acquire_token_for_client(scopes=scopes)
-            
-            # Check if token acquisition was successful
-            if "access_token" in result:
-                logger.info("Access token acquired successfully")
-                return result["access_token"]
-            else:
-                error_msg = result.get('error_description', 'Unknown error')
-                logger.error(f"Token acquisition failed: {error_msg}")
-                raise AuthenticationError(f"Authentication failed: {error_msg}")
-                
-        except Exception as e:
-            logger.error(f"Unexpected error during token acquisition: {str(e)}")
-            raise AuthenticationError(f"Token acquisition failed: {str(e)}")
-    
-    def validate_credentials(self) -> bool:
-        """
-        Validate that the configured credentials are working.
-        
-        This method attempts to acquire a token to verify that the
-        configured credentials are valid and have the necessary permissions.
-        
-        Returns:
-            bool: True if credentials are valid, False otherwise
-        """
-        try:
-            token = self.get_access_token()
-            # If we get here, credentials are valid
-            logger.info("Credentials validation successful")
-            return True
-            
-        except AuthenticationError as e:
-            logger.warning(f"Credentials validation failed: {str(e)}")
-            return False
-    
-    def get_token_info(self) -> dict:
-        """
-        Get information about the current token and configuration.
-        
-        Returns:
-            dict: Token and configuration information
-        """
-        return {
-            "tenant_id": self.tenant_id,
-            "client_id": self.client_id,
-            "authority": self.authority,
-            "has_client_secret": bool(self.client_secret),
-            "credentials_valid": self.validate_credentials()
-        }
-    
-    def __repr__(self) -> str:
-        """Return string representation of the authenticator."""
-        return f"M365Authenticator(tenant_id='{self.tenant_id}', client_id='{self.client_id}')"
-    
-    def __str__(self) -> str:
-        """Return human-readable string representation."""
-        return f"Microsoft 365 Authenticator for tenant {self.tenant_id}"
+            return True, response.json() if response.content else {}
+        except ValueError:
+            return True, {}
+
+    # Provide helpful diagnostics but avoid secrets
+    logger.error(
+        "Graph verification failed (status=%s). Response: %s",
+        response.status_code,
+        response.text,
+    )
+    try:
+        return False, response.json()
+    except ValueError:
+        return False, {"status": response.status_code, "text": response.text}
+
+
+def main() -> int:
+    """Entry point for command-line execution.
+
+    Returns:
+        int: Process exit code (0 for success, non-zero for failure).
+    """
+    configure_logging()
+    logger.info("Starting Microsoft Graph authentication test")
+
+    try:
+        env = load_environment()
+    except AuthenticationError as exc:
+        logger.error("Environment configuration error: %s", str(exc))
+        return 2
+
+    try:
+        access_token = obtain_access_token(
+            tenant_id=env["TENANT_ID"],
+            client_id=env["CLIENT_ID"],
+            client_secret=env["CLIENT_SECRET"],
+        )
+    except requests.exceptions.RequestException:
+        # Network errors already logged in obtain_access_token
+        return 3
+    except AuthenticationError as exc:
+        # API or parsing error
+        logger.error("Failed to obtain access token: %s", str(exc))
+        return 4
+
+    # For app-only flows, /me is not available; prefer /organization
+    success, result = verify_graph_connection(access_token)
+
+    if success:
+        logger.info("Authentication and verification succeeded.")
+        # Provide a concise stdout message for operators
+        print("Graph connectivity OK.")
+        return 0
+
+    logger.error("Verification failed. Details: %s", result)
+    print("Graph connectivity FAILED. See logs/auth.log for details.")
+    return 5
+
+
+if __name__ == "__main__":
+    sys.exit(main())
