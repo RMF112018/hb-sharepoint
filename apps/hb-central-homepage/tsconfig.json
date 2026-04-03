@@ -1,9 +1,21 @@
 {
   "extends": "@microsoft/rush-stack-compiler-4.7/includes/tsconfig-web.json",
   "compilerOptions": {
+    "allowJs": true,
+    "checkJs": false,
+    "jsx": "react-jsx",
+    "lib": ["es2015", "dom", "dom.iterable"],
+    "moduleResolution": "bundler",
     "rootDir": ".",
     "skipLibCheck": true,
     "types": ["vite/client"]
   },
-  "include": ["src/webparts/**/*.ts", "src/webparts/**/*.tsx"]
+  "include": [
+    "src/runtime/**/*.ts",
+    "src/runtime/**/*.tsx",
+    "src/webparts/**/*.ts",
+    "src/webparts/**/*.tsx",
+    "src/webparts/**/*.js"
+  ],
+  "exclude": ["src/**/*.test.ts", "src/**/*.test.tsx", "src/test/**"]
 }

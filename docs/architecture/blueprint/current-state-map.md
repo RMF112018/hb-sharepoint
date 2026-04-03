@@ -48,7 +48,8 @@ The repository currently contains:
 - phase-3 Prompt-04 per-surface runtime source-ownership closure records for pre-wrapper-refactor decomposition
 - phase-3 Prompt-05 direct wrapper-to-surface runtime ownership closure records that remove production wrapper dependency on `dist/homepage.js`
 - phase-3 Prompt-06 split bundle-ownership closure records with artifact-level ownership validation for all five homepage surfaces
-- a deterministic `.sppkg` packaging path for the homepage app via native SPFx production packaging (`apps/hb-central-homepage/gulpfile.cjs` + `config/package-solution.json`) guarded by `tools/validate-sppkg.mjs`
+- phase-3 Prompt-07 Heft-native packaging-authority closure records for homepage deployable path governance
+- a deterministic `.sppkg` packaging path for the homepage app via Heft-native SPFx production packaging (`heft build --production` + `heft package-solution --production`) guarded by `tools/validate-sppkg.mjs`
 - a `packages/ui-kit/` shared visual package with runnable typecheck, lint, build, and test scripts
 
 The repository does not yet contain:
@@ -92,6 +93,7 @@ The repository does not yet contain:
 - Treat phase-3 Prompt-04 as materially executed for source-ownership scope: per-surface mount ownership is explicit and should be consumed before wrapper import-path refactor work.
 - Treat phase-3 Prompt-05 as materially executed for wrapper-ownership scope: wrappers now directly own per-surface runtime mounting and should remain free of `dist/homepage.js` production bridge imports.
 - Treat phase-3 Prompt-06 as materially executed for bundle-ownership scope: deployable surface ownership is now split and should remain protected by artifact-level anti-collapse validation.
+- Treat phase-3 Prompt-07 as materially executed for packaging-authority scope: homepage deployable packaging is now Heft-native and should remain free of custom gulp-bridge authority.
 - Use the prompt package to sequence implementation work, but use live files and this map as the source of truth for what exists now.
 - Do not infer app structure, package structure, or verification capabilities that have not been created yet.
 - Treat Prompt-01 as historically executed: the structural baseline already exists and should be confirmed rather than recreated.
@@ -142,3 +144,4 @@ The repository does not yet contain:
 - `docs/architecture/blueprint/phase-3-per-surface-runtime-ownership-and-prompt-04-closure.md` records the approved phase-3 Prompt-04 per-surface runtime source-ownership baseline and closure.
 - `docs/architecture/blueprint/phase-3-wrapper-direct-ownership-and-prompt-05-closure.md` records the approved phase-3 Prompt-05 direct wrapper-surface runtime ownership baseline and closure.
 - `docs/architecture/blueprint/phase-3-split-bundle-ownership-and-prompt-06-closure.md` records the approved phase-3 Prompt-06 split bundle-ownership baseline and closure.
+- `docs/architecture/blueprint/phase-3-heft-native-packaging-and-prompt-07-closure.md` records the approved phase-3 Prompt-07 Heft-native packaging-authority baseline and closure.

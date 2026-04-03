@@ -5,11 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "start": "heft start --clean",
     "check-types": "tsc --noEmit -p tsconfig.dev.json",
     "lint": "eslint src --ext .ts,.tsx",
     "build": "vite build",
     "test": "vitest run",
-    "spfx:package": "pnpm build && node ../../tools/run-spfx-package.mjs"
+    "spfx:package": "heft build --clean --production && heft package-solution --production"
   },
   "dependencies": {
     "@hbc/brand-tokens": "workspace:*",
@@ -24,9 +25,11 @@
   "devDependencies": {
     "@eslint/js": "^9.21.0",
     "@microsoft/rush-stack-compiler-4.7": "^0.1.1",
-    "@microsoft/sp-build-web": "1.22.2",
+    "@microsoft/spfx-heft-plugins": "1.22.2",
+    "@microsoft/spfx-web-build-rig": "1.22.2",
+    "@rushstack/heft": "^1.1.2",
     "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.2.0",
+    "@testing-library/react": "12.1.5",
     "@testing-library/user-event": "^14.6.1",
     "@types/node": "^22.13.10",
     "@types/react": "17.0.89",
@@ -37,7 +40,6 @@
     "eslint": "^9.21.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "globals": "^15.15.0",
-    "gulp": "4.0.2",
     "jsdom": "^26.0.0",
     "typescript": "^5.7.3",
     "vite": "^6.2.0",

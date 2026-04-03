@@ -27,18 +27,17 @@
     "internalModuleBaseUrls": [
       "~sitecollection/ClientSideAssets"
     ],
-    "entryModuleId": "hb-central-homepage-web-part",
+    "entryModuleId": "hb-central-homepage-company-pulse-web-part",
     "scriptResources": {
-      "hb-central-homepage-web-part": {
+      "hb-central-homepage-company-pulse-web-part": {
         "type": "path",
-        "path": "hb-central-homepage-web-part_a4169a6ab85bbfb0425d.js"
+        "path": "hb-central-homepage-company-pulse-web-part_c3a84402b2706cb0d50e.js"
       },
       "@microsoft/sp-webpart-base": {
         "type": "component",
         "id": "974a7777-0990-4136-8fa6-95d80114c2e0",
         "version": "1.22.2"
       }
-    },
-    "exportName": "d"
+    }
   }
 }

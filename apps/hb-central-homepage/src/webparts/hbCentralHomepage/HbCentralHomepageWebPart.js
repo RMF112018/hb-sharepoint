@@ -1,5 +1,4 @@
 import { BaseClientSideWebPart } from "@microsoft/sp-webpart-base";
-import { mountHomepageSections } from "../../runtime/owners/mountHomepageSections.tsx";
 
 const HOMEPAGE_ROOT_CLASS = "hb-central-homepage-spfx-root";
 
@@ -17,7 +16,17 @@ export default class HbCentralHomepageWebPart extends BaseClientSideWebPart {
       this.domElement.replaceChildren(root);
 
       this._mountPromise = Promise.resolve()
-        .then(() => {
+        .then(
+          () =>
+            import("../../../lib-commonjs/src/runtime/owners/mountHomepageSections.js"),
+        )
+        .then((module) => {
+          const mountHomepageSections =
+            module.mountHomepageSections ??
+            module.default?.mountHomepageSections;
+          if (typeof mountHomepageSections !== "function") {
+            throw new Error("mountHomepageSections export is unavailable");
+          }
           const unmount = mountHomepageSections(root);
           if (typeof unmount === "function") {
             this._unmountHomepage = unmount;

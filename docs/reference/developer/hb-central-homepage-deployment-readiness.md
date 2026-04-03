@@ -26,7 +26,7 @@ Expected build output:
 - App build artifacts in `apps/hb-central-homepage/dist/`
 - Split chunks may include homepage main bundle plus lazy-loaded section chunks
 - SharePoint package artifact at `dist/sppkg/hb-central-homepage.sppkg`
-- Staged package contents are produced by the native SPFx package pipeline (`gulp bundle --ship` + `gulp package-solution --ship`)
+- Staged package contents are produced by the Heft-native SPFx package pipeline (`heft build --production` + `heft package-solution --production`)
 - Packaged focused web part manifest IDs present for:
   - homepage sections
   - hero
@@ -37,7 +37,7 @@ Expected build output:
 ## Installation and Configuration Expectations
 
 - The homepage app is currently packaged as a Vite-based SPFx-compatible runtime baseline.
-- `.sppkg` generation is handled by native SPFx tooling from `apps/hb-central-homepage/gulpfile.cjs` using app-local metadata in `apps/hb-central-homepage/config/` and `apps/hb-central-homepage/src/webparts/`.
+- `.sppkg` generation is handled by Heft-native SPFx tooling using app-local metadata in `apps/hb-central-homepage/config/` and `apps/hb-central-homepage/src/webparts/`.
 - Package structure is validated by `tools/validate-sppkg.mjs` to enforce OPC parts, the single required `package-manifest` relationship, no localhost production manifest references, and no unsupported `ClientSideComponentInstance` feature registration.
 - Composition and feature surfaces are configured app-locally via runtime manifest/config seams in `apps/hb-central-homepage/src/runtime`.
 - Runtime-to-host mount wiring is validated by `tools/validate-homepage-webpart-wiring.mjs` to guard against stale bundle/export mismatches.
@@ -85,4 +85,4 @@ Tenant/App Catalog upload and live page render verification remain downstream re
 ## Failure Mode Note
 
 - A prior custom zip package path and feature-manifest misuse allowed invalid package metadata to reach App Catalog, including missing/invalid relationship envelope behavior and unsupported feature registration.
-- The current packaging path uses native SPFx package generation and blocks release if relationship validation, localhost checks, or unsupported feature-registration checks fail.
+- The current packaging path uses Heft-native SPFx package generation and blocks release if relationship validation, localhost checks, or unsupported feature-registration checks fail.

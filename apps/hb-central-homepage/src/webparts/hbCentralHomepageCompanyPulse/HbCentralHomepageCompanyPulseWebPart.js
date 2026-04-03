@@ -1,5 +1,4 @@
 import { BaseClientSideWebPart } from "@microsoft/sp-webpart-base";
-import { mountHomepageCompanyPulse } from "../../runtime/owners/mountHomepageCompanyPulse.tsx";
 
 const COMPANY_PULSE_ROOT_CLASS = "hb-central-homepage-company-pulse-spfx-root";
 
@@ -17,7 +16,17 @@ export default class HbCentralHomepageCompanyPulseWebPart extends BaseClientSide
       this.domElement.replaceChildren(root);
 
       this._mountPromise = Promise.resolve()
-        .then(() => {
+        .then(
+          () =>
+            import("../../../lib-commonjs/src/runtime/owners/mountHomepageCompanyPulse.js"),
+        )
+        .then((module) => {
+          const mountHomepageCompanyPulse =
+            module.mountHomepageCompanyPulse ??
+            module.default?.mountHomepageCompanyPulse;
+          if (typeof mountHomepageCompanyPulse !== "function") {
+            throw new Error("mountHomepageCompanyPulse export is unavailable");
+          }
           const unmount = mountHomepageCompanyPulse(root);
           if (typeof unmount === "function") {
             this._unmountCompanyPulse = unmount;

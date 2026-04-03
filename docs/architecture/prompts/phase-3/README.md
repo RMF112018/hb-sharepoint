@@ -87,6 +87,15 @@ The Phase 3 end state is:
   - artifact-level ownership validation that fails on collapsed `entryModuleId` or primary script-resource ownership,
   - stable one-solution packaging posture while Heft-native packaging-path migration remains Prompt-07 scope.
 
+## Prompt-07 Baseline Status
+
+- Prompt-07 is now treated as an executed Phase-3 baseline for Heft-native homepage packaging authority.
+- Canonical closure note: `docs/architecture/blueprint/phase-3-heft-native-packaging-and-prompt-07-closure.md`.
+- The Prompt-07 closure freezes:
+  - Heft-native deployable package commands as authoritative homepage path,
+  - required Heft rig/config baseline for the homepage app,
+  - retirement of the custom gulp bridge from authoritative production packaging flow.
+
 ## Evidence sources used
 
 ### Attached artifacts

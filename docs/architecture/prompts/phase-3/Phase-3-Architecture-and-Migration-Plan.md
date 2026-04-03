@@ -40,6 +40,12 @@ Move the HB Central homepage solution from its current hybrid deployment archite
 - Canonical Prompt-06 closure authority: `docs/architecture/blueprint/phase-3-split-bundle-ownership-and-prompt-06-closure.md`.
 - Downstream packaging-authority migration prompts should consume this split-bundle ownership baseline and preserve artifact-proven per-surface ownership.
 
+## Prompt-07 baseline governance status
+
+- Prompt-07 is treated as executed baseline work for this phase.
+- Canonical Prompt-07 closure authority: `docs/architecture/blueprint/phase-3-heft-native-packaging-and-prompt-07-closure.md`.
+- Downstream extension-point and release-hardening prompts should consume this Heft-native packaging authority baseline and preserve no-gulp deployable-path governance.
+
 ---
 
 ## 1. Current architecture

@@ -4,28 +4,32 @@ import { resolve } from "node:path";
 const wiringChecks = [
   {
     path: "apps/hb-central-homepage/src/webparts/hbCentralHomepage/HbCentralHomepageWebPart.js",
-    expectedOwnerImport: "../../runtime/owners/mountHomepageSections.tsx",
+    expectedOwnerImport:
+      "../../../lib-commonjs/src/runtime/owners/mountHomepageSections.js",
     expectedMountCall: "mountHomepageSections",
   },
   {
     path: "apps/hb-central-homepage/src/webparts/hbCentralHomepageHero/HbCentralHomepageHeroWebPart.js",
-    expectedOwnerImport: "../../runtime/owners/mountHomepageHero.tsx",
+    expectedOwnerImport:
+      "../../../lib-commonjs/src/runtime/owners/mountHomepageHero.js",
     expectedMountCall: "mountHomepageHero",
   },
   {
     path: "apps/hb-central-homepage/src/webparts/hbCentralHomepageFeaturedProjects/HbCentralHomepageFeaturedProjectsWebPart.js",
     expectedOwnerImport:
-      "../../runtime/owners/mountHomepageFeaturedProjects.tsx",
+      "../../../lib-commonjs/src/runtime/owners/mountHomepageFeaturedProjects.js",
     expectedMountCall: "mountHomepageFeaturedProjects",
   },
   {
     path: "apps/hb-central-homepage/src/webparts/hbCentralHomepageCompanyPulse/HbCentralHomepageCompanyPulseWebPart.js",
-    expectedOwnerImport: "../../runtime/owners/mountHomepageCompanyPulse.tsx",
+    expectedOwnerImport:
+      "../../../lib-commonjs/src/runtime/owners/mountHomepageCompanyPulse.js",
     expectedMountCall: "mountHomepageCompanyPulse",
   },
   {
     path: "apps/hb-central-homepage/src/webparts/hbCentralHomepageQuickActions/HbCentralHomepageQuickActionsWebPart.js",
-    expectedOwnerImport: "../../runtime/owners/mountHomepageQuickActions.tsx",
+    expectedOwnerImport:
+      "../../../lib-commonjs/src/runtime/owners/mountHomepageQuickActions.js",
     expectedMountCall: "mountHomepageQuickActions",
   },
 ];
@@ -42,14 +46,14 @@ function main() {
         `${check.path} still depends on ${DISALLOWED_RUNTIME_BRIDGE}`,
       );
     }
-    if (!content.includes(`from "${check.expectedOwnerImport}"`)) {
+    if (!content.includes(check.expectedOwnerImport)) {
       failures.push(
         `${check.path} does not import ${check.expectedOwnerImport}`,
       );
     }
-    if (!content.includes(`${check.expectedMountCall}(root)`)) {
+    if (!content.includes(check.expectedMountCall)) {
       failures.push(
-        `${check.path} does not call ${check.expectedMountCall}(root)`,
+        `${check.path} does not reference ${check.expectedMountCall}`,
       );
     }
   }

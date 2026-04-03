@@ -46,6 +46,7 @@ This repository currently uses `docs/` for canonical architecture prompts, bluep
 - Phase-3 Prompt-04 has now established per-surface source runtime ownership and reduced `src/index.tsx` to an aggregator/bootstrap boundary.
 - Phase-3 Prompt-05 has now established direct wrapper-to-surface runtime ownership and removed production wrapper dependency on `dist/homepage.js`.
 - Phase-3 Prompt-06 has now established real split bundle ownership and artifact-level ownership validation for all five homepage surfaces.
+- Phase-3 Prompt-07 has now established Heft-native homepage packaging authority and retired the custom gulp bridge from deployable package flow.
 - Prompt-01 should now be treated as a confirmed historical foundation rather than pending structural work.
 
 ## Usage rules

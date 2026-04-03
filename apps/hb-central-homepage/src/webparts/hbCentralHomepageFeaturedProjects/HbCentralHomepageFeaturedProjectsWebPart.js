@@ -1,5 +1,4 @@
 import { BaseClientSideWebPart } from "@microsoft/sp-webpart-base";
-import { mountHomepageFeaturedProjects } from "../../runtime/owners/mountHomepageFeaturedProjects.tsx";
 
 const FEATURED_PROJECTS_ROOT_CLASS =
   "hb-central-homepage-featured-projects-spfx-root";
@@ -18,7 +17,19 @@ export default class HbCentralHomepageFeaturedProjectsWebPart extends BaseClient
       this.domElement.replaceChildren(root);
 
       this._mountPromise = Promise.resolve()
-        .then(() => {
+        .then(
+          () =>
+            import("../../../lib-commonjs/src/runtime/owners/mountHomepageFeaturedProjects.js"),
+        )
+        .then((module) => {
+          const mountHomepageFeaturedProjects =
+            module.mountHomepageFeaturedProjects ??
+            module.default?.mountHomepageFeaturedProjects;
+          if (typeof mountHomepageFeaturedProjects !== "function") {
+            throw new Error(
+              "mountHomepageFeaturedProjects export is unavailable",
+            );
+          }
           const unmount = mountHomepageFeaturedProjects(root);
           if (typeof unmount === "function") {
             this._unmountFeaturedProjects = unmount;

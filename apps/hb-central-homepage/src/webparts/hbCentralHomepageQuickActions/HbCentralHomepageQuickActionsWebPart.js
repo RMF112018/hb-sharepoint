@@ -1,5 +1,4 @@
 import { BaseClientSideWebPart } from "@microsoft/sp-webpart-base";
-import { mountHomepageQuickActions } from "../../runtime/owners/mountHomepageQuickActions.tsx";
 
 const QUICK_ACTIONS_ROOT_CLASS = "hb-central-homepage-quick-actions-spfx-root";
 
@@ -17,7 +16,17 @@ export default class HbCentralHomepageQuickActionsWebPart extends BaseClientSide
       this.domElement.replaceChildren(root);
 
       this._mountPromise = Promise.resolve()
-        .then(() => {
+        .then(
+          () =>
+            import("../../../lib-commonjs/src/runtime/owners/mountHomepageQuickActions.js"),
+        )
+        .then((module) => {
+          const mountHomepageQuickActions =
+            module.mountHomepageQuickActions ??
+            module.default?.mountHomepageQuickActions;
+          if (typeof mountHomepageQuickActions !== "function") {
+            throw new Error("mountHomepageQuickActions export is unavailable");
+          }
           const unmount = mountHomepageQuickActions(root);
           if (typeof unmount === "function") {
             this._unmountQuickActions = unmount;
