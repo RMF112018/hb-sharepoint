@@ -266,6 +266,54 @@ Canonical closure note: `docs/architecture/blueprint/phase-2-personalized-lower-
 
 ---
 
+## Prompt-06 Baseline Status (Executed)
+
+Prompt-06 is now treated as an executed baseline for Phase 2.
+Canonical closure note: `docs/architecture/blueprint/phase-2-production-grade-data-and-configuration-seams.md`.
+
+### Data/config inventory by homepage zone
+
+| Homepage zone | Source of truth | Config location | Current status | Failure/empty handling |
+| --- | --- | --- | --- | --- |
+| Hero | App-local runtime/section contracts | Central homepage seam config | Governed seam active | Existing loading/empty/error patterns |
+| Featured Projects | `featuredProjects` contracts and seam defaults | Central homepage seam config | Governed seam active | Explicit fallback card/empty posture |
+| Company Pulse | `companyPulse` contracts and seam defaults | Central homepage seam config | Governed seam active | Bounded metric fallback behavior |
+| Quick Actions | `quickActions` contracts and seam defaults | Central homepage seam config | Governed seam active | Safe grouped/ungrouped fallback rendering |
+| People/Culture | `peopleMoments` contracts and seam defaults | Central homepage seam config | Governed seam active | Sparse/empty people-moment fallback behavior |
+| News/Recognition/Spotlight | `newsRecognition` contracts and seam defaults | Central homepage seam config | Governed seam active | Stream-aware sparse fallback behavior |
+| Personalized lower zone | Deferred personalization seam contracts | Central homepage seam config | Bounded/deferred runtime personalization | Neutral non-personalized fallback behavior |
+| Footer/global utility | Page-local runtime seam | App-local config/runtime defaults | Governed seam active | Page-local fallback/empty-safe behavior |
+| Native editorial modules (News/Quick Links/Events) | Native SharePoint module data | SharePoint page authoring/config | Hybrid-native by design | Native SharePoint module behavior |
+
+### Normalized seam design summary
+
+- per-surface source modes and defaults are centralized in the app-local homepage authoring/config seam
+- adapter-driven normalization keeps source mapping out of visual components
+- bounded defaults and required-field guardrails standardize runtime behavior across sections
+- design is proportionate: centralized seams without introducing overengineered cross-package data infrastructure
+
+### Operational ownership map
+
+- content ownership:
+  - content editors curate section content within approved source seams
+  - native module content remains owned by SharePoint page authors/editors
+- configuration ownership:
+  - site owners/admins own source mode selection, seam constraints, and operational guardrails
+- update path:
+  - content updates flow through approved seam contracts and authoring defaults
+  - runtime surfaces consume normalized adapter outputs instead of ad hoc wiring
+- failure handling:
+  - each section preserves explicit empty/loading/error or sparse fallback behavior
+  - fallback defaults prevent hard failures when source data is incomplete
+
+### Limitations and fallback posture
+
+- deeper tenant/live-source operationalization remains constrained by environment readiness and approvals
+- production-grade seam governance is explicit, but some live-source integration depth remains deferred to later Phase-2 work
+- fallback behavior remains the required safety posture where source completeness or role/context signals are limited
+
+---
+
 ## Phase 2 Scope
 
 Phase 2 is intended to cover:
@@ -407,6 +455,7 @@ Prompt-01 and Prompt-02 baseline work resolves, at minimum:
 - news/recognition/spotlight zone architecture, source model, and fallback posture
 - people/culture zone scope, curation model, and fallback posture
 - lower-zone role-aware personalization contract and bounded fallback posture
+- section-by-section production-grade data/config seam model with operational ownership and limitations
 
 ---
 

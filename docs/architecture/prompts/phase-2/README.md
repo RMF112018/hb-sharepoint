@@ -93,6 +93,18 @@ Phase 2 is the **completion and production-hardening phase**. It is intended to 
 
 ---
 
+## Prompt-06 Baseline Status
+
+- Prompt-06 is now treated as an executed Phase-2 data/config-governance baseline.
+- Canonical closure note: `docs/architecture/blueprint/phase-2-production-grade-data-and-configuration-seams.md`.
+- The Prompt-06 closure records:
+  - section-by-section data/config seam inventory,
+  - normalized seam design and adapter-driven standardization,
+  - operational ownership by content/config/update/support boundary,
+  - explicit limitations and fallback posture for unresolved live-source constraints.
+
+---
+
 ## Recommended Execution Order
 
 Execute the prompts in numeric order.

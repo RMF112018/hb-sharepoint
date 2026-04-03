@@ -34,6 +34,12 @@ Define the canonical Phase-2 handoff scope after Phase-1 Prompt-08 packaging and
 - Canonical closure note: `docs/architecture/blueprint/phase-2-personalized-lower-zone-and-role-aware-content.md`.
 - Lower-zone personalization boundaries, role-aware rules, and fallback/supportability posture are now explicit; deferred backlog items below remain open until separately closed.
 
+## Prompt-06 closure status
+
+- Phase-2 Prompt-06 production-grade data/configuration seam outputs are now closed.
+- Canonical closure note: `docs/architecture/blueprint/phase-2-production-grade-data-and-configuration-seams.md`.
+- Section-by-section data/config ownership, seam normalization, and fallback limitations are now explicit; deferred backlog items below remain open until separately closed.
+
 ## Intentionally unfinished scope
 
 - deeper data integrations across focused homepage surfaces

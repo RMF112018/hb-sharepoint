@@ -106,6 +106,23 @@ Provide a concise SharePoint page assembly guide for the approved Phase-2 final 
   - do not introduce opaque ranking/targeting rules without support documentation
   - do not expand lower-zone scope into broad "my work hub" behavior without explicit governance decision
 
+## Phase-2 finalized maintenance rules for data/config seams
+
+- Source-of-truth pattern:
+  - Custom homepage sections use centralized seam configuration and adapter-normalized contracts as source of truth.
+  - Native editorial modules (News/Quick Links/Events) use SharePoint-native authoring/configuration as source of truth.
+- Content vs configuration ownership:
+  - Content editors own day-to-day content curation within approved seam contracts.
+  - Site owners/admins own source mode selection, config guardrails, and operational support boundaries.
+- Update and fallback behavior:
+  - Update paths should flow through seam-driven contracts, not ad hoc component-level data wiring.
+  - Empty/sparse/failure scenarios must keep explicit fallback behavior; do not suppress fallback UX.
+  - Unknown or incomplete source fields must use bounded defaults rather than render-time breakage.
+- Changes editors/admins should not make casually:
+  - do not bypass seam adapters by embedding long-term hardcoded data in UI components
+  - do not introduce per-section data wiring patterns that conflict with centralized seam governance
+  - do not treat property-pane configuration as a full CMS replacement without explicit governance decision
+
 ## Assembly checklist
 
 - Confirm all five HB Central custom web parts are available in toolbox:
