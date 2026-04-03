@@ -314,6 +314,54 @@ Canonical closure note: `docs/architecture/blueprint/phase-2-production-grade-da
 
 ---
 
+## Prompt-07 Baseline Status (Executed)
+
+Prompt-07 is now treated as an executed baseline for Phase 2.
+Canonical closure note: `docs/architecture/blueprint/phase-2-quick-actions-permissions-and-operational-launch-behavior.md`.
+
+### Quick-actions audit summary
+
+- real and functional:
+  - app-local quick actions deck renders governed action links from seam-driven contracts
+  - grouped and ungrouped actions are supported with bounded priority behavior
+- placeholder-only behaviors:
+  - no new decorative-only launch behavior is retained as the intended baseline
+- role-aware behavior:
+  - bounded role/context-aware visibility and prioritization posture is supported through approved seam governance
+- known gaps/deferred:
+  - deeper downstream permission-system coupling and tenant-specific destination hardening remain operational follow-up scope
+
+### Action model (destination, visibility, prioritization, fallback)
+
+- destination model:
+  - each action resolves to an explicit governed destination (`href`) with internal/external semantics
+- visibility model:
+  - actions may be conditionally visible by approved audience/role context
+  - unknown or unsupported role context must not hard-fail rendering
+- prioritization model:
+  - bounded priority signaling is permitted for high-frequency operational actions
+  - non-priority actions remain in deterministic deck ordering
+- fallback model:
+  - sparse/invalid action sets degrade to explicit empty-state-safe behavior
+  - unsupported context falls back to neutral/default action visibility
+- ownership/config path:
+  - content editors maintain action entries
+  - site owners/admins govern visibility rules and operational guardrails through seam configuration
+
+### Hardened operational launch behavior summary
+
+- launch surface remains operationally credible through explicit destinations, governed visibility rules, and bounded prioritization
+- behavior aligns with broader homepage seam governance and avoids opaque ad hoc launch logic
+- quick actions remain a curated operational deck, not a generic link dump or decorative tile strip
+
+### Permission/context supportability notes and deferred constraints
+
+- support teams can explain action visibility through documented role/audience rules and default fallback behavior
+- when role/context signals are missing, users receive neutral/default action presentation rather than unpredictable hiding
+- unresolved downstream dependency constraints (tenant permissions and destination readiness) remain explicitly documented and deferred
+
+---
+
 ## Phase 2 Scope
 
 Phase 2 is intended to cover:
@@ -456,6 +504,7 @@ Prompt-01 and Prompt-02 baseline work resolves, at minimum:
 - people/culture zone scope, curation model, and fallback posture
 - lower-zone role-aware personalization contract and bounded fallback posture
 - section-by-section production-grade data/config seam model with operational ownership and limitations
+- quick-actions operational launch model with permission/context explainability and fallback posture
 
 ---
 

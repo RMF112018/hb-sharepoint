@@ -123,6 +123,25 @@ Provide a concise SharePoint page assembly guide for the approved Phase-2 final 
   - do not introduce per-section data wiring patterns that conflict with centralized seam governance
   - do not treat property-pane configuration as a full CMS replacement without explicit governance decision
 
+## Phase-2 finalized maintenance rules for quick actions
+
+- Destination governance:
+  - Every action must map to an explicit operational destination; avoid placeholder-only links in maintained configurations.
+  - Internal/external destination intent should remain explicit and supportable.
+- Visibility and role-aware behavior:
+  - Visibility rules may use approved audience/role context only when documented and supportable.
+  - Unknown/ambiguous role context must fall back to neutral/default visibility behavior.
+- Prioritization and launch behavior:
+  - Use bounded priority treatment for high-frequency operational actions only.
+  - Keep launch ordering deterministic for non-priority entries and avoid opaque dynamic reshuffling.
+- Sparse-data and failure posture:
+  - Sparse action sets remain valid and should render with existing bounded fallback/empty behavior.
+  - Missing or invalid action metadata must fail safely without breaking deck rendering.
+- Changes editors/admins should not make casually:
+  - do not convert the deck into a generic uncurated link list
+  - do not hide actions via undocumented rules that support teams cannot explain
+  - do not introduce tenant-specific launch dependencies without documenting limitation and fallback behavior
+
 ## Assembly checklist
 
 - Confirm all five HB Central custom web parts are available in toolbox:

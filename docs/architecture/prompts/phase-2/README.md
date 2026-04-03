@@ -105,6 +105,18 @@ Phase 2 is the **completion and production-hardening phase**. It is intended to 
 
 ---
 
+## Prompt-07 Baseline Status
+
+- Prompt-07 is now treated as an executed Phase-2 quick-actions operational-governance baseline.
+- Canonical closure note: `docs/architecture/blueprint/phase-2-quick-actions-permissions-and-operational-launch-behavior.md`.
+- The Prompt-07 closure records:
+  - quick-actions audit outcomes and gap classification,
+  - explicit action model (destination, visibility, prioritization, fallback),
+  - hardened launch behavior expectations,
+  - permission/context supportability guidance and deferred constraints.
+
+---
+
 ## Recommended Execution Order
 
 Execute the prompts in numeric order.
