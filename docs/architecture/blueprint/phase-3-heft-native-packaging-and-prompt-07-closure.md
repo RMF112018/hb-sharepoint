@@ -31,7 +31,7 @@ Strong inferences:
 
 Open questions:
 
-- Any additional custom Heft extension needs remain downstream scope.
+- Prompt-08 now locks the current no-ejection/no-extra-plugin default for extension-point governance.
 - Final end-to-end deployment proof in SharePoint remains downstream scope.
 
 ## Why this strategy is safest now

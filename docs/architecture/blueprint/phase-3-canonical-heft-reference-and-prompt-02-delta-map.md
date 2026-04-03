@@ -37,7 +37,7 @@ Strong inferences:
 Open questions:
 
 - Exact final script naming conventions in `apps/hb-central-homepage/package.json` are implementation details for later prompts, but they must resolve to Heft-native SPFx behavior rather than custom gulp orchestration.
-- Any nonstandard bundling behavior required by current homepage runtime integration remains to be validated in later prompts for possible Heft extension usage.
+- Prompt-08 now documents the current customization inventory and locks no-ejection/no-extra-plugin defaults unless new evidence requires change.
 
 ### Multi-web-part guidance for this app
 

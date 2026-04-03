@@ -96,6 +96,15 @@ The Phase 3 end state is:
   - required Heft rig/config baseline for the homepage app,
   - retirement of the custom gulp bridge from authoritative production packaging flow.
 
+## Prompt-08 Baseline Status
+
+- Prompt-08 is now treated as an executed Phase-3 baseline for Heft customization governance and supported extension-point convergence.
+- Canonical closure note: `docs/architecture/blueprint/phase-3-heft-customization-inventory-and-prompt-08-closure.md`.
+- The Prompt-08 closure freezes:
+  - canonical inventory/disposition for nonstandard homepage package-flow behavior,
+  - explicit no-ejection/no-extra-Heft-plugin default for the current deployable path,
+  - retention boundaries for release-gate validation scripts versus packaging authority.
+
 ## Evidence sources used
 
 ### Attached artifacts
@@ -172,7 +181,6 @@ The recommended Phase 3 shape is:
 ### Open questions to resolve during implementation
 
 - Whether the repo should retain any Vite-based non-production preview path after the deployable path becomes Heft-native.
-- Whether any custom webpack behavior from the current homepage app requires a Heft plugin, or whether the migration can remain inside standard Heft/SPFx rig customization.
 
 ## How to use this package
 

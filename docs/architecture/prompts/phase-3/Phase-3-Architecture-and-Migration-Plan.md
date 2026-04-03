@@ -46,6 +46,12 @@ Move the HB Central homepage solution from its current hybrid deployment archite
 - Canonical Prompt-07 closure authority: `docs/architecture/blueprint/phase-3-heft-native-packaging-and-prompt-07-closure.md`.
 - Downstream extension-point and release-hardening prompts should consume this Heft-native packaging authority baseline and preserve no-gulp deployable-path governance.
 
+## Prompt-08 baseline governance status
+
+- Prompt-08 is treated as executed baseline work for this phase.
+- Canonical Prompt-08 closure authority: `docs/architecture/blueprint/phase-3-heft-customization-inventory-and-prompt-08-closure.md`.
+- Downstream release-hardening and artifact-proof prompts should consume this customization inventory baseline and preserve the no-ejection/no-extra-plugin default unless new repo-truth evidence requires change.
+
 ---
 
 ## 1. Current architecture
@@ -228,7 +234,7 @@ Before deep refactor, explicitly resolve:
 
 - React/runtime alignment for the selected SPFx baseline;
 - whether any Vite-only preview workflow survives post-Phase 3;
-- whether any custom bundling behavior requires Heft plugin extension or eject.
+- whether any new repo-truth evidence requires deviation from the Prompt-08 no-ejection/no-extra-plugin baseline.
 
 ### Sequence C — decompose the shared runtime
 
