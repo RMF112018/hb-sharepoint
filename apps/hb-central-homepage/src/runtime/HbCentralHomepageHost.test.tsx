@@ -3,10 +3,9 @@ import { HbCentralHomepageHost } from "./HbCentralHomepageHost";
 import { HOMEPAGE_COMPOSITION_MANIFEST } from "./homepageComposition";
 
 describe("HbCentralHomepageHost", () => {
-  it("defines the static non-hero composition manifest order for Prompt-06", () => {
+  it("defines the static non-hero composition manifest order for Prompt-07", () => {
     expect(HOMEPAGE_COMPOSITION_MANIFEST.map((entry) => entry.id)).toEqual([
       "people",
-      "actions",
       "newsRecognition",
       "personalizedLowerZone",
       "footerGlobalUtility",
@@ -22,7 +21,6 @@ describe("HbCentralHomepageHost", () => {
 
     expect(wrappers).toEqual([
       "people",
-      "actions",
       "newsRecognition",
       "footerGlobalUtility",
     ]);
@@ -44,7 +42,7 @@ describe("HbCentralHomepageHost", () => {
     render(<HbCentralHomepageHost includePersonalizedLowerZone />);
 
     expect(screen.getByTestId("homepage-section-people")).toHaveAttribute("data-zone", "mosaic");
-    expect(screen.getByTestId("homepage-section-actions")).toHaveAttribute("data-zone", "banded");
+    expect(screen.getByTestId("homepage-section-newsRecognition")).toHaveAttribute("data-zone", "mosaic");
     expect(screen.getByTestId("homepage-section-footerGlobalUtility")).toHaveAttribute("data-zone", "full-width");
   });
 
@@ -61,11 +59,11 @@ describe("HbCentralHomepageHost", () => {
     expect(screen.getByRole("heading", { name: /people and culture moments/i })).toBeInTheDocument();
   });
 
-  it("mounts the quick actions deck in the actions slot", () => {
+  it("does not mount quick actions in the non-hero host", () => {
     render(<HbCentralHomepageHost />);
 
-    expect(screen.getAllByRole("heading", { name: /quick actions deck/i }).length).toBeGreaterThan(0);
-    expect(screen.getByRole("link", { name: /open action daily log/i })).toBeInTheDocument();
+    expect(screen.queryByRole("heading", { name: /quick actions deck/i })).not.toBeInTheDocument();
+    expect(screen.queryByRole("link", { name: /open action daily log/i })).not.toBeInTheDocument();
   });
 
   it("mounts the news recognition spotlight mosaic in the newsRecognition slot", async () => {

@@ -1,6 +1,5 @@
 export type HomepageSectionId =
   | "people"
-  | "actions"
   | "newsRecognition"
   | "personalizedLowerZone"
   | "footerGlobalUtility";
@@ -25,13 +24,6 @@ export const HOMEPAGE_COMPOSITION_MANIFEST: readonly HomepageCompositionEntry[] 
     slot: "main",
     title: "People moments",
     description: "Recognitions and human-centered culture highlights.",
-  },
-  {
-    id: "actions",
-    zone: "banded",
-    slot: "main",
-    title: "Quick actions deck",
-    description: "Frequently used actions grouped for fast access.",
   },
   {
     id: "newsRecognition",

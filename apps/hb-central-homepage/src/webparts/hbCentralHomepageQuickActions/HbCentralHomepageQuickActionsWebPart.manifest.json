@@ -1,0 +1,48 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "506562ca-e752-4bf4-a218-f06d965f8f7f",
+  "alias": "HbCentralHomepageQuickActionsWebPart",
+  "componentType": "WebPart",
+  "version": "1.0.0",
+  "manifestVersion": 2,
+  "requiresCustomScript": false,
+  "supportsFullBleed": true,
+  "supportsThemeVariants": true,
+  "preconfiguredEntries": [
+    {
+      "groupId": "1df0ccf8-cf98-4f6a-8f17-8ec6f3f6f0ce",
+      "group": {
+        "default": "HB Central"
+      },
+      "title": {
+        "default": "HB Central Quick Actions"
+      },
+      "description": {
+        "default": "Dedicated quick actions web part surface for HB Central homepage."
+      },
+      "officeFabricIconFontName": "QuickNote",
+      "properties": {}
+    }
+  ],
+  "loaderConfig": {
+    "internalModuleBaseUrls": [
+      "~sitecollection/ClientSideAssets/"
+    ],
+    "scriptResources": {
+      "hb-central-homepage-quick-actions-web-part": {
+        "type": "path",
+        "path": "hb-central-homepage-quick-actions-web-part.js"
+      },
+      "react": {
+        "type": "component",
+        "id": "0d91016b-b78e-434e-8c3f-f9f782a6a90f",
+        "version": "17.0.1"
+      },
+      "react-dom": {
+        "type": "component",
+        "id": "aa0a46ec-1505-43cd-a0a9-6e7f6fd3c7ad",
+        "version": "17.0.1"
+      }
+    }
+  }
+}

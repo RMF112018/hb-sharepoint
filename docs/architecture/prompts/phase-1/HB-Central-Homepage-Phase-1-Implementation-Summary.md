@@ -217,3 +217,30 @@ Prompt-06 is now treated as an executed featured-projects/company-pulse extracti
   - shell/hero
   - featured projects
   - company pulse
+
+## Prompt-07 status (executed baseline)
+
+Prompt-07 is now treated as an executed quick-actions extraction and native-composition seam baseline for Phase 1.
+
+### Quick Actions decision (Prompt-07)
+
+- Quick Actions remains a **custom** web part for Phase 1.
+- Rationale: grouped action model, richer semantic link behavior, and explicit empty/loading state handling exceed native Quick Links baseline behavior.
+
+### Dedicated ownership after Prompt-07
+
+- Quick Actions rendering is owned by a dedicated custom web part path.
+- The existing non-hero composition host no longer owns `actions`.
+- Non-hero composition host now owns:
+  - people
+  - news/recognition
+  - optional personalized lower zone
+  - footer/global utility
+
+### Native SharePoint composition seams (Prompt-07)
+
+- Native SharePoint composition remains authoritative for:
+  - News
+  - selected Quick Links where native behavior is sufficient
+  - Events and other standard editorial modules
+- Hybrid assembly guidance is documented in `docs/reference/developer/hb-central-homepage-phase-1-hybrid-composition-playbook.md`.

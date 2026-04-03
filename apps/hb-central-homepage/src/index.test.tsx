@@ -44,4 +44,17 @@ describe("homepage mount exports", () => {
     unmount();
     expect(unmountMock).toHaveBeenCalledTimes(1);
   });
+
+  it("mounts and unmounts dedicated quick actions runtime", async () => {
+    const { mountHbCentralHomepageQuickActions } = await import("./index");
+    const container = document.createElement("div");
+    const unmount = mountHbCentralHomepageQuickActions(container);
+
+    expect(createRootMock).toHaveBeenCalledWith(container);
+    expect(renderMock).toHaveBeenCalledTimes(1);
+    expect(typeof unmount).toBe("function");
+
+    unmount();
+    expect(unmountMock).toHaveBeenCalledTimes(1);
+  });
 });

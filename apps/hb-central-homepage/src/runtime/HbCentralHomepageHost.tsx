@@ -8,7 +8,6 @@ import {
 } from "@hbc/ui-kit";
 import { Suspense, lazy, useMemo, type CSSProperties, type ReactElement } from "react";
 import { PeopleMomentsSurface } from "./PeopleMomentsSurface";
-import { QuickActionsDeck } from "./QuickActionsDeck";
 import {
   HOMEPAGE_COMPOSITION_MANIFEST,
   type HomepageCompositionEntry,
@@ -91,7 +90,6 @@ const SURFACE_RENDERERS: Partial<
   Record<HomepageCompositionEntry["id"], () => ReactElement>
 > = {
   people: () => <PeopleMomentsSurface />,
-  actions: () => <QuickActionsDeck />,
   newsRecognition: () => <NewsRecognitionSpotlightMosaic />,
   personalizedLowerZone: () => <PersonalizedLowerZoneSeam />,
   footerGlobalUtility: () => <GlobalUtilityFooter />,

@@ -19,6 +19,10 @@
         {
           "entrypoint": "./src/webparts/hbCentralHomepageCompanyPulse/HbCentralHomepageCompanyPulseWebPart.js",
           "manifest": "./src/webparts/hbCentralHomepageCompanyPulse/HbCentralHomepageCompanyPulseWebPart.manifest.json"
+        },
+        {
+          "entrypoint": "./src/webparts/hbCentralHomepageQuickActions/HbCentralHomepageQuickActionsWebPart.js",
+          "manifest": "./src/webparts/hbCentralHomepageQuickActions/HbCentralHomepageQuickActionsWebPart.manifest.json"
         }
       ]
     }

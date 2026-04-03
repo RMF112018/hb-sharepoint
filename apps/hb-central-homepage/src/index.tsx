@@ -2,6 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { HomepageCompanyPulse } from "./runtime/HomepageCompanyPulse";
 import { HomepageFeaturedProjects } from "./runtime/HomepageFeaturedProjects";
+import { HomepageQuickActions } from "./runtime/HomepageQuickActions";
 import { HbCentralHomepageHost } from "./runtime/HbCentralHomepageHost";
 import { HomepageShellHero } from "./runtime/HomepageShellHero";
 import "./runtime/homepageHardening.css";
@@ -50,6 +51,19 @@ export function mountHbCentralHomepageCompanyPulse(container: HTMLElement): () =
   root.render(
     <StrictMode>
       <HomepageCompanyPulse />
+    </StrictMode>,
+  );
+
+  return () => {
+    root.unmount();
+  };
+}
+
+export function mountHbCentralHomepageQuickActions(container: HTMLElement): () => void {
+  const root = createRoot(container);
+  root.render(
+    <StrictMode>
+      <HomepageQuickActions />
     </StrictMode>,
   );
 

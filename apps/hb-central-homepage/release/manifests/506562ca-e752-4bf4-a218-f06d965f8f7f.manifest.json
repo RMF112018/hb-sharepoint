@@ -1,6 +1,6 @@
 {
-  "id": "b8bb1136-d33e-47d2-9d45-848524b8fcbf",
-  "alias": "HbCentralHomepageWebPart",
+  "id": "506562ca-e752-4bf4-a218-f06d965f8f7f",
+  "alias": "HbCentralHomepageQuickActionsWebPart",
   "componentType": "WebPart",
   "version": "1.0.0",
   "manifestVersion": 2,
@@ -14,12 +14,12 @@
         "default": "HB Central"
       },
       "title": {
-        "default": "HB Central Homepage Sections"
+        "default": "HB Central Quick Actions"
       },
       "description": {
-        "default": "Non-hero homepage composition sections for HB Central."
+        "default": "Dedicated quick actions web part surface for HB Central homepage."
       },
-      "officeFabricIconFontName": "Home",
+      "officeFabricIconFontName": "QuickNote",
       "properties": {}
     }
   ],
@@ -39,6 +39,6 @@
         "version": "1.22.2"
       }
     },
-    "exportName": "a"
+    "exportName": "e"
   }
 }
