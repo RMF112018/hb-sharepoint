@@ -50,6 +50,15 @@ The Phase 3 end state is:
   - explicit disposition of legacy artifacts (`replace`, `retain`, `translate`, `retire-later`),
   - migration guardrails requiring downstream prompts to consume the canonical delta map.
 
+## Prompt-03 Baseline Status
+
+- Prompt-03 is now treated as an executed Phase-3 baseline, not an open runtime-strategy decision item.
+- Canonical closure note: `docs/architecture/blueprint/phase-3-runtime-react-strategy-and-prompt-03-closure.md`.
+- The Prompt-03 closure freezes:
+  - React/runtime posture aligned to SPFx-supported React `17.0.1` for the selected baseline,
+  - Vite role as preview-only non-production workflow,
+  - prerequisite runtime alignment changes required before ownership and bundle-boundary refactors.
+
 ## Evidence sources used
 
 ### Attached artifacts
@@ -126,7 +135,6 @@ The recommended Phase 3 shape is:
 ### Open questions to resolve during implementation
 
 - Whether the repo should retain any Vite-based non-production preview path after the deployable path becomes Heft-native.
-- Whether React 18 should remain in the homepage runtime during Phase 3, or whether the implementation should align to the currently supported SPFx runtime baseline and defer React 18 adoption until the selected SPFx version officially supports it.
 - Whether any custom webpack behavior from the current homepage app requires a Heft plugin, or whether the migration can remain inside standard Heft/SPFx rig customization.
 
 ## How to use this package

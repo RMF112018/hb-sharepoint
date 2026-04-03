@@ -1,5 +1,5 @@
 import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
+import { render, unmountComponentAtNode } from "react-dom";
 import { HomepageCompanyPulse } from "./runtime/HomepageCompanyPulse";
 import { HomepageFeaturedProjects } from "./runtime/HomepageFeaturedProjects";
 import { HomepageQuickActions } from "./runtime/HomepageQuickActions";
@@ -8,67 +8,73 @@ import { HomepageShellHero } from "./runtime/HomepageShellHero";
 import "./runtime/homepageHardening.css";
 
 export function mountHbCentralHomepage(container: HTMLElement): () => void {
-  const root = createRoot(container);
-  root.render(
+  render(
     <StrictMode>
       <HbCentralHomepageHost />
     </StrictMode>,
+    container,
   );
 
   return () => {
-    root.unmount();
+    unmountComponentAtNode(container);
   };
 }
 
 export function mountHbCentralHomepageHero(container: HTMLElement): () => void {
-  const root = createRoot(container);
-  root.render(
+  render(
     <StrictMode>
       <HomepageShellHero />
     </StrictMode>,
+    container,
   );
 
   return () => {
-    root.unmount();
+    unmountComponentAtNode(container);
   };
 }
 
-export function mountHbCentralHomepageFeaturedProjects(container: HTMLElement): () => void {
-  const root = createRoot(container);
-  root.render(
+export function mountHbCentralHomepageFeaturedProjects(
+  container: HTMLElement,
+): () => void {
+  render(
     <StrictMode>
       <HomepageFeaturedProjects />
     </StrictMode>,
+    container,
   );
 
   return () => {
-    root.unmount();
+    unmountComponentAtNode(container);
   };
 }
 
-export function mountHbCentralHomepageCompanyPulse(container: HTMLElement): () => void {
-  const root = createRoot(container);
-  root.render(
+export function mountHbCentralHomepageCompanyPulse(
+  container: HTMLElement,
+): () => void {
+  render(
     <StrictMode>
       <HomepageCompanyPulse />
     </StrictMode>,
+    container,
   );
 
   return () => {
-    root.unmount();
+    unmountComponentAtNode(container);
   };
 }
 
-export function mountHbCentralHomepageQuickActions(container: HTMLElement): () => void {
-  const root = createRoot(container);
-  root.render(
+export function mountHbCentralHomepageQuickActions(
+  container: HTMLElement,
+): () => void {
+  render(
     <StrictMode>
       <HomepageQuickActions />
     </StrictMode>,
+    container,
   );
 
   return () => {
-    root.unmount();
+    unmountComponentAtNode(container);
   };
 }
 

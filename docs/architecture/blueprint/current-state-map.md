@@ -44,6 +44,7 @@ The repository currently contains:
 - phase-2 Prompt-10 final validation and release-readiness audit closure records
 - phase-3 Prompt-01 repo-truth evidence-map and closure records for the homepage surface split and Heft-native migration phase
 - phase-3 Prompt-02 canonical Heft-reference and current-vs-target delta-map closure records for migration target-shape authority
+- phase-3 Prompt-03 runtime/React strategy and Vite-role closure records for pre-refactor runtime governance
 - a deterministic `.sppkg` packaging path for the homepage app via native SPFx production packaging (`apps/hb-central-homepage/gulpfile.cjs` + `config/package-solution.json`) guarded by `tools/validate-sppkg.mjs`
 - a `packages/ui-kit/` shared visual package with runnable typecheck, lint, build, and test scripts
 
@@ -84,6 +85,7 @@ The repository does not yet contain:
 - Treat phase-2 Prompt-10 as materially executed for final audit governance: severity-ranked findings, release-readiness verdict, and remediation boundaries are approved and should be implemented, not rediscovered.
 - Treat phase-3 Prompt-01 as materially executed for baseline evidence scope: current homepage surfaces, shared-bundle/runtime ownership posture, hybrid packaging path, and validation coverage are frozen and should be consumed rather than rediscovered.
 - Treat phase-3 Prompt-02 as materially executed for target-shape scope: canonical Heft-native reference expectations and current-vs-target delta dispositions are frozen and should be consumed rather than rediscovered.
+- Treat phase-3 Prompt-03 as materially executed for runtime-strategy scope: React/runtime posture and Vite preview-only role are locked and should be consumed rather than rediscovered.
 - Use the prompt package to sequence implementation work, but use live files and this map as the source of truth for what exists now.
 - Do not infer app structure, package structure, or verification capabilities that have not been created yet.
 - Treat Prompt-01 as historically executed: the structural baseline already exists and should be confirmed rather than recreated.
@@ -130,3 +132,4 @@ The repository does not yet contain:
 - `docs/architecture/blueprint/phase-2-homepage-handoff-backlog.md` records the canonical Phase-2 homepage backlog handoff.
 - `docs/architecture/blueprint/phase-3-repo-truth-evidence-map-and-prompt-01-closure.md` records the approved phase-3 Prompt-01 repo-truth evidence-map baseline and closure.
 - `docs/architecture/blueprint/phase-3-canonical-heft-reference-and-prompt-02-delta-map.md` records the approved phase-3 Prompt-02 canonical Heft reference baseline and delta-map closure.
+- `docs/architecture/blueprint/phase-3-runtime-react-strategy-and-prompt-03-closure.md` records the approved phase-3 Prompt-03 runtime/React strategy baseline and closure.

@@ -59,7 +59,7 @@ Strong inferences:
 
 Open questions:
 
-- Whether any non-production Vite preview path is retained after the authoritative deployable path becomes Heft-native.
+- Prompt-03 now locks this as preview-only non-production and removes this ambiguity.
 
 ### Current packaging path
 

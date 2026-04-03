@@ -42,6 +42,7 @@ This repository currently uses `docs/` for canonical architecture prompts, bluep
 - Phase-2 Prompt-10 has now established the finalized validation/release-readiness governance record, including severity-ranked findings, conditional-go rationale, and remediation punch-list boundaries.
 - Phase-3 Prompt-01 has now established the repo-truth evidence-map baseline, including current surface inventory, shared-bundle/runtime ownership reality, hybrid packaging-path classification, and validation-coverage freeze.
 - Phase-3 Prompt-02 has now established the canonical Heft-reference baseline and current-vs-target delta map for packaging/config/script authority migration.
+- Phase-3 Prompt-03 has now established the locked runtime/React strategy baseline and preview-only Vite role before ownership refactor work.
 - Prompt-01 should now be treated as a confirmed historical foundation rather than pending structural work.
 
 ## Usage rules

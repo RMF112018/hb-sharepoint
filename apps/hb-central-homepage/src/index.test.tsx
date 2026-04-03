@@ -1,21 +1,17 @@
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
 const renderMock = vi.fn();
-const unmountMock = vi.fn();
-const createRootMock = vi.fn(() => ({
-  render: renderMock,
-  unmount: unmountMock,
-}));
+const unmountComponentAtNodeMock = vi.fn();
 
-vi.mock("react-dom/client", () => ({
-  createRoot: createRootMock,
+vi.mock("react-dom", () => ({
+  render: renderMock,
+  unmountComponentAtNode: unmountComponentAtNodeMock,
 }));
 
 describe("homepage mount exports", () => {
   beforeEach(() => {
     renderMock.mockClear();
-    unmountMock.mockClear();
-    createRootMock.mockClear();
+    unmountComponentAtNodeMock.mockClear();
     document.body.innerHTML = "";
   });
 
@@ -24,12 +20,12 @@ describe("homepage mount exports", () => {
     const container = document.createElement("div");
     const unmount = mountHbCentralHomepageFeaturedProjects(container);
 
-    expect(createRootMock).toHaveBeenCalledWith(container);
+    expect(renderMock).toHaveBeenCalledWith(expect.anything(), container);
     expect(renderMock).toHaveBeenCalledTimes(1);
     expect(typeof unmount).toBe("function");
 
     unmount();
-    expect(unmountMock).toHaveBeenCalledTimes(1);
+    expect(unmountComponentAtNodeMock).toHaveBeenCalledWith(container);
   });
 
   it("mounts and unmounts dedicated company pulse runtime", async () => {
@@ -37,12 +33,12 @@ describe("homepage mount exports", () => {
     const container = document.createElement("div");
     const unmount = mountHbCentralHomepageCompanyPulse(container);
 
-    expect(createRootMock).toHaveBeenCalledWith(container);
+    expect(renderMock).toHaveBeenCalledWith(expect.anything(), container);
     expect(renderMock).toHaveBeenCalledTimes(1);
     expect(typeof unmount).toBe("function");
 
     unmount();
-    expect(unmountMock).toHaveBeenCalledTimes(1);
+    expect(unmountComponentAtNodeMock).toHaveBeenCalledWith(container);
   });
 
   it("mounts and unmounts dedicated quick actions runtime", async () => {
@@ -50,11 +46,11 @@ describe("homepage mount exports", () => {
     const container = document.createElement("div");
     const unmount = mountHbCentralHomepageQuickActions(container);
 
-    expect(createRootMock).toHaveBeenCalledWith(container);
+    expect(renderMock).toHaveBeenCalledWith(expect.anything(), container);
     expect(renderMock).toHaveBeenCalledTimes(1);
     expect(typeof unmount).toBe("function");
 
     unmount();
-    expect(unmountMock).toHaveBeenCalledTimes(1);
+    expect(unmountComponentAtNodeMock).toHaveBeenCalledWith(container);
   });
 });

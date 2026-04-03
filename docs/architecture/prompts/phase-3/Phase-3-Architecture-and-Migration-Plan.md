@@ -16,6 +16,12 @@ Move the HB Central homepage solution from its current hybrid deployment archite
 - Canonical Prompt-02 closure authority: `docs/architecture/blueprint/phase-3-canonical-heft-reference-and-prompt-02-delta-map.md`.
 - Downstream migration prompts should consume this canonical Heft reference and delta map as the target-shape authority.
 
+## Prompt-03 baseline governance status
+
+- Prompt-03 is treated as executed baseline work for this phase.
+- Canonical Prompt-03 closure authority: `docs/architecture/blueprint/phase-3-runtime-react-strategy-and-prompt-03-closure.md`.
+- Downstream runtime/ownership prompts should consume this locked React/runtime strategy and Vite-role rule before refactor work.
+
 ---
 
 ## 1. Current architecture
