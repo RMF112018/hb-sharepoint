@@ -43,6 +43,7 @@ This repository currently uses `docs/` for canonical architecture prompts, bluep
 - Phase-3 Prompt-01 has now established the repo-truth evidence-map baseline, including current surface inventory, shared-bundle/runtime ownership reality, hybrid packaging-path classification, and validation-coverage freeze.
 - Phase-3 Prompt-02 has now established the canonical Heft-reference baseline and current-vs-target delta map for packaging/config/script authority migration.
 - Phase-3 Prompt-03 has now established the locked runtime/React strategy baseline and preview-only Vite role before ownership refactor work.
+- Phase-3 Prompt-04 has now established per-surface source runtime ownership and reduced `src/index.tsx` to an aggregator/bootstrap boundary.
 - Prompt-01 should now be treated as a confirmed historical foundation rather than pending structural work.
 
 ## Usage rules

@@ -59,6 +59,16 @@ The Phase 3 end state is:
   - Vite role as preview-only non-production workflow,
   - prerequisite runtime alignment changes required before ownership and bundle-boundary refactors.
 
+## Prompt-04 Baseline Status
+
+- Prompt-04 is now treated as an executed Phase-3 baseline for source-level runtime ownership decomposition.
+- Canonical closure note: `docs/architecture/blueprint/phase-3-per-surface-runtime-ownership-and-prompt-04-closure.md`.
+- The Prompt-04 closure freezes:
+  - explicit per-surface source mount ownership modules,
+  - `src/index.tsx` as thin aggregator/bootstrap rather than monolithic runtime authority,
+  - stable `mountHbCentralHomepage*` export contracts for downstream wrapper compatibility,
+  - intentional deferral of wrapper import-path migration to Prompt-05.
+
 ## Evidence sources used
 
 ### Attached artifacts

@@ -22,6 +22,12 @@ Move the HB Central homepage solution from its current hybrid deployment archite
 - Canonical Prompt-03 closure authority: `docs/architecture/blueprint/phase-3-runtime-react-strategy-and-prompt-03-closure.md`.
 - Downstream runtime/ownership prompts should consume this locked React/runtime strategy and Vite-role rule before refactor work.
 
+## Prompt-04 baseline governance status
+
+- Prompt-04 is treated as executed baseline work for this phase.
+- Canonical Prompt-04 closure authority: `docs/architecture/blueprint/phase-3-per-surface-runtime-ownership-and-prompt-04-closure.md`.
+- Downstream wrapper and bundle-boundary prompts should consume this per-surface source ownership baseline and preserve its stable mount export contracts.
+
 ---
 
 ## 1. Current architecture
