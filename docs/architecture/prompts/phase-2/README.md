@@ -130,6 +130,19 @@ Phase 2 is the **completion and production-hardening phase**. It is intended to 
 
 ---
 
+## Prompt-09 Baseline Status
+
+- Prompt-09 is now treated as an executed Phase-2 authoring/administration/support governance baseline.
+- Canonical closure note: `docs/architecture/blueprint/phase-2-authoring-administration-and-support-guidance.md`.
+- Canonical operator-facing maintenance guide remains: `docs/reference/developer/hb-central-homepage-phase-1-hybrid-composition-playbook.md`.
+- The Prompt-09 closure records:
+  - role-based guidance for site owners, editors, admins, and support personnel,
+  - explicit maintenance boundaries and escalation triggers for non-routine changes,
+  - practical troubleshooting response paths for common operational homepage issues,
+  - canonical documentation routing for ongoing homepage operations and support.
+
+---
+
 ## Recommended Execution Order
 
 Execute the prompts in numeric order.

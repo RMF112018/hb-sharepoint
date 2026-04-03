@@ -399,6 +399,60 @@ Canonical closure note: `docs/architecture/blueprint/phase-2-ux-accessibility-re
 
 ---
 
+## Prompt-09 Baseline Status (Executed)
+
+Prompt-09 is now treated as an executed baseline for Phase 2.
+Canonical closure note: `docs/architecture/blueprint/phase-2-authoring-administration-and-support-guidance.md`.
+
+### Role-based guidance coverage
+
+- site owners:
+  - own page assembly compliance, custom-vs-native composition integrity, and approval of non-routine layout exceptions
+- content editors:
+  - own day-to-day content curation within approved source seams and native module authoring boundaries
+- admins:
+  - own deployment posture, permission/governance boundaries, and operational safeguards for supported homepage behavior
+- support personnel:
+  - own first-response troubleshooting, issue classification, escalation routing, and fallback behavior explanation
+
+### Homepage maintenance model (safe changes and escalation boundaries)
+
+- custom vs native ownership remains explicit and must be preserved during routine updates
+- safe routine changes include content freshness, bounded native module ordering below fixed custom stack, and seam-approved config updates
+- non-routine changes requiring escalation include ownership-boundary changes, undocumented personalization/visibility logic changes, and fixed-stack composition exceptions
+- escalation path routes through site owner/admin governance before implementation changes are approved
+
+### Troubleshooting and support flows
+
+- missing content:
+  - verify upstream source availability and seam-config completeness before escalating to implementation issues
+- quick-actions misconfiguration:
+  - validate governed destination metadata, visibility rules, and fallback-safe defaults
+- empty/personalized states:
+  - confirm role/context signal availability and expected neutral fallback behavior for unknown/sparse cases
+- broken section data:
+  - isolate source-contract vs rendering-path issue and escalate with evidence by owner boundary
+- packaging/deployment concerns:
+  - follow established packaging/validation safeguards and admin-run deployment checklist posture
+
+### Documentation map (where to look first)
+
+- first operator reference:
+  - `docs/reference/developer/hb-central-homepage-phase-1-hybrid-composition-playbook.md`
+- phase-2 governance closure references:
+  - `docs/architecture/prompts/phase-2/README.md`
+  - `docs/architecture/blueprint/current-state-map.md`
+  - `docs/architecture/blueprint/phase-2-homepage-handoff-backlog.md`
+- closure authority for this prompt:
+  - `docs/architecture/blueprint/phase-2-authoring-administration-and-support-guidance.md`
+
+### Open gaps intentionally deferred
+
+- deeper automation for support incident intake and telemetry-assisted diagnosis remains deferred to later release-readiness work
+- tenant-specific operational runbook expansion beyond baseline troubleshooting paths remains deferred to later prompts/releases
+
+---
+
 ## Phase 2 Scope
 
 Phase 2 is intended to cover:
@@ -543,6 +597,7 @@ Prompt-01 and Prompt-02 baseline work resolves, at minimum:
 - section-by-section production-grade data/config seam model with operational ownership and limitations
 - quick-actions operational launch model with permission/context explainability and fallback posture
 - cross-homepage UX/accessibility/responsive/performance governance baseline with explicit maintenance boundaries
+- role-based authoring/administration/support governance baseline with explicit maintenance and escalation boundaries
 
 ---
 

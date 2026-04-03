@@ -160,6 +160,24 @@ Provide a concise SharePoint page assembly guide for the approved Phase-2 final 
   - do not reorder or overload fixed custom sections in ways that break responsive scannability
   - do not suppress fallback states to hide sparse/failed data conditions
 
+## Phase-2 finalized maintenance rules for authoring/admin/support operations
+
+- Role ownership and safe-change boundaries:
+  - site owners maintain page assembly integrity and approve non-routine composition exceptions
+  - editors maintain content freshness and seam-safe updates; they do not alter ownership boundaries
+  - admins maintain deployment/permission posture and operational guardrails for supported behavior
+  - support personnel run first-response checks and route escalations by ownership boundary
+- Escalation triggers for non-routine changes:
+  - changes to fixed custom stack order or custom-vs-native ownership intent
+  - undocumented role-aware visibility/personalization behavior changes
+  - source/config changes that bypass seam contracts or remove fallback safety
+- First-response troubleshooting checks:
+  - missing content: verify source availability, content validity, and seam mode/config completeness
+  - quick-actions issues: verify destination metadata, visibility rules, and default fallback behavior
+  - empty/personalized outcomes: verify role/context signals and expected neutral fallback path
+  - broken section data: classify source-contract vs rendering-path issue and escalate with evidence
+  - packaging/deployment concerns: follow established packaging/validation and deployment readiness guidance
+
 ## Assembly checklist
 
 - Confirm all five HB Central custom web parts are available in toolbox:
