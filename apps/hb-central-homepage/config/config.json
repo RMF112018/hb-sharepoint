@@ -7,6 +7,10 @@
         {
           "entrypoint": "./src/webparts/hbCentralHomepage/HbCentralHomepageWebPart.js",
           "manifest": "./src/webparts/hbCentralHomepage/HbCentralHomepageWebPart.manifest.json"
+        },
+        {
+          "entrypoint": "./src/webparts/hbCentralHomepageHero/HbCentralHomepageHeroWebPart.js",
+          "manifest": "./src/webparts/hbCentralHomepageHero/HbCentralHomepageHeroWebPart.manifest.json"
         }
       ]
     }

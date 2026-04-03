@@ -15,10 +15,10 @@
         "default": "HB Central"
       },
       "title": {
-        "default": "HB Central Homepage"
+        "default": "HB Central Homepage Sections"
       },
       "description": {
-        "default": "Homepage shell and phase-0 surface composition experience."
+        "default": "Non-hero homepage composition sections for HB Central."
       },
       "officeFabricIconFontName": "Home",
       "properties": {}

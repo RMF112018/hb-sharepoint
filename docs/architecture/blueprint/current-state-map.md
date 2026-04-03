@@ -28,6 +28,7 @@ The repository currently contains:
 - phase-1 Prompt-02 structural baseline records and first-stage directory ownership under `packages/` for shared and feature boundaries
 - phase-1 Prompt-03 shared package scaffolds and build-boundary records for `@hbc/brand-tokens` and `@hbc/sharepoint-core`
 - phase-1 Prompt-04 shared brand-token and UI-foundation normalization records for `@hbc/brand-tokens` and `@hbc/ui-kit`
+- phase-1 Prompt-05 shell/hero dedicated web part records with non-hero composition host ownership split
 - a deterministic `.sppkg` packaging path for the homepage app via native SPFx production packaging (`apps/hb-central-homepage/gulpfile.cjs` + `config/package-solution.json`) guarded by `tools/validate-sppkg.mjs`
 - a `packages/ui-kit/` shared visual package with runnable typecheck, lint, build, and test scripts
 
@@ -52,6 +53,7 @@ The repository does not yet contain:
 - Treat phase-1 Prompt-02 as materially executed for structure scope: first-stage package directories and ownership/dependency rules are established and should be extended through Prompt-03 scaffolding rather than remapped.
 - Treat phase-1 Prompt-03 as materially executed for shared seam scope: shared package exports and build boundaries are now baseline expectations and should be extended rather than re-scaffolded.
 - Treat phase-1 Prompt-04 as materially executed for visual foundation scope: canonical brand tokens and shared UI primitives are now baseline expectations and should be extended rather than duplicated.
+- Treat phase-1 Prompt-05 as materially executed for shell ownership scope: dedicated shell/hero web part path is baseline and non-hero composition host must remain hero-free.
 - Use the prompt package to sequence implementation work, but use live files and this map as the source of truth for what exists now.
 - Do not infer app structure, package structure, or verification capabilities that have not been created yet.
 - Treat Prompt-01 as historically executed: the structural baseline already exists and should be confirmed rather than recreated.
@@ -80,3 +82,4 @@ The repository does not yet contain:
 - `docs/architecture/blueprint/phase-1-target-package-map-and-directory-structure.md` records the approved phase-1 Prompt-02 package map and directory-structure baseline.
 - `docs/architecture/blueprint/phase-1-shared-packages-and-build-boundaries.md` records the approved phase-1 Prompt-03 shared package and build-boundary baseline.
 - `docs/architecture/blueprint/phase-1-shared-brand-token-and-ui-foundation.md` records the approved phase-1 Prompt-04 shared brand-token and UI-foundation baseline.
+- `docs/architecture/blueprint/phase-1-shell-hero-dedicated-web-part.md` records the approved phase-1 Prompt-05 shell/hero dedicated web part baseline.

@@ -3,9 +3,8 @@ import { HbCentralHomepageHost } from "./HbCentralHomepageHost";
 import { HOMEPAGE_COMPOSITION_MANIFEST } from "./homepageComposition";
 
 describe("HbCentralHomepageHost", () => {
-  it("defines the static composition manifest in canonical Prompt-04 order", () => {
+  it("defines the static non-hero composition manifest order for Prompt-05", () => {
     expect(HOMEPAGE_COMPOSITION_MANIFEST.map((entry) => entry.id)).toEqual([
-      "hero",
       "projects",
       "pulse",
       "people",
@@ -24,7 +23,6 @@ describe("HbCentralHomepageHost", () => {
       .map((node) => node.getAttribute("data-section-id"));
 
     expect(wrappers).toEqual([
-      "hero",
       "projects",
       "pulse",
       "people",
@@ -32,6 +30,7 @@ describe("HbCentralHomepageHost", () => {
       "newsRecognition",
       "footerGlobalUtility",
     ]);
+    expect(screen.queryByTestId("homepage-section-hero")).not.toBeInTheDocument();
   });
 
   it("renders optional personalized lower zone when enabled", async () => {
@@ -46,9 +45,9 @@ describe("HbCentralHomepageHost", () => {
   it("renders wrappers for each zone type", () => {
     render(<HbCentralHomepageHost includePersonalizedLowerZone />);
 
-    expect(screen.getByTestId("homepage-section-hero")).toHaveAttribute("data-zone", "full-width");
     expect(screen.getByTestId("homepage-section-projects")).toHaveAttribute("data-zone", "banded");
     expect(screen.getByTestId("homepage-section-pulse")).toHaveAttribute("data-zone", "mosaic");
+    expect(screen.getByTestId("homepage-section-footerGlobalUtility")).toHaveAttribute("data-zone", "full-width");
   });
 
   it("mounts the featured projects showcase in the projects slot", () => {

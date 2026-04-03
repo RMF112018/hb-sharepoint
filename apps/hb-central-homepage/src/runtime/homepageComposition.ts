@@ -1,5 +1,4 @@
 export type HomepageSectionId =
-  | "hero"
   | "projects"
   | "pulse"
   | "people"
@@ -22,13 +21,6 @@ export interface HomepageCompositionEntry {
 }
 
 export const HOMEPAGE_COMPOSITION_MANIFEST: readonly HomepageCompositionEntry[] = [
-  {
-    id: "hero",
-    zone: "full-width",
-    slot: "main",
-    title: "Cinematic hero storyboard",
-    description: "Opening message area for current priorities and narratives.",
-  },
   {
     id: "projects",
     zone: "banded",

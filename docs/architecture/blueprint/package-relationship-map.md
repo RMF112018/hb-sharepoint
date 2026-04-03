@@ -34,6 +34,7 @@ This document defines the approved ownership and dependency direction for the re
 - Feature packages must not create direct circular dependencies on other feature packages.
 - Shared packages should expose explicit root exports (`"."`) and avoid ambiguous deep-export patterns.
 - Brand color/token contracts should be authored once in `@hbc/brand-tokens` and consumed by `@hbc/ui-kit` and app surfaces via shared exports.
+- Shell/hero runtime ownership should remain isolated from non-hero composition host ownership after Prompt-05 extraction.
 
 ## Guardrails
 

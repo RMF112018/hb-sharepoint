@@ -161,3 +161,30 @@ Prompt-04 is now treated as an executed shared visual-foundation normalization b
 - Do not introduce raw brand color literals in app-layer CSS/TSX when equivalent shared tokens exist.
 - Use shared semantic tokens for focus, emphasis, and state surfaces.
 - Add new reusable visual patterns to `@hbc/ui-kit` first, then consume from feature surfaces.
+
+## Prompt-05 status (executed baseline)
+
+Prompt-05 is now treated as an executed shell/hero extraction baseline for Phase 1.
+
+### Dedicated shell/hero ownership (Prompt-05)
+
+- Shell/hero rendering is owned by a dedicated custom web part path.
+- The shell/hero runtime is mounted through a dedicated SPFx host entry with clean mount/unmount behavior.
+- Shell/hero UI consumes shared token/UI foundations from `@hbc/ui-kit`.
+
+### Non-hero host ownership after Prompt-05
+
+- The existing homepage composition host no longer owns the `hero` section.
+- Non-hero composition remains in the existing host path:
+  - projects
+  - pulse
+  - people
+  - actions
+  - news/recognition
+  - optional personalized lower zone
+  - footer/global utility
+
+### Packaging and deployable strategy
+
+- One `.sppkg` solution remains the deployment model.
+- Toolbox discovery now includes dedicated shell/hero and non-hero composition web part surfaces.

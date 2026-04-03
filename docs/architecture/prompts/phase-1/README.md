@@ -11,7 +11,7 @@ The target model is:
 - **native SharePoint web parts** used where Microsoft already provides strong, maintainable capability,
 - and a homepage composition approach that avoids treating the entire homepage as one oversized SPA mounted into one web part.
 
-Prompt-01, Prompt-02, Prompt-03, and Prompt-04 in this package are now treated as executed baselines, not open discovery items.
+Prompt-01, Prompt-02, Prompt-03, Prompt-04, and Prompt-05 in this package are now treated as executed baselines, not open discovery items.
 
 ## Recommended target architecture
 
@@ -82,6 +82,14 @@ The prompts are designed to execute against the Prompt-01 baseline and produce:
 - Shared loading/empty/error-state primitives are governed in `@hbc/ui-kit`.
 - Homepage runtime styling uses shared token-driven focus treatment and shared card primitives for targeted feature rendering.
 - Canonical governance closure note: `docs/architecture/blueprint/phase-1-shared-brand-token-and-ui-foundation.md`.
+
+## Prompt-05 baseline status
+
+- Shell/hero rendering is extracted to a dedicated custom web part path with clean mount/unmount behavior.
+- Existing homepage composition host ownership is narrowed to non-hero sections only.
+- One deployable `.sppkg` solution remains, now with separate toolbox surfaces for hero and non-hero composition.
+- Shared token/UI foundation remains the governing visual contract for shell/hero rendering.
+- Canonical governance closure note: `docs/architecture/blueprint/phase-1-shell-hero-dedicated-web-part.md`.
 
 ## Suggested execution order
 
