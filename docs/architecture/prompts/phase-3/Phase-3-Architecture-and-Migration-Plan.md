@@ -10,6 +10,12 @@ Move the HB Central homepage solution from its current hybrid deployment archite
 - Canonical Prompt-01 closure authority: `docs/architecture/blueprint/phase-3-repo-truth-evidence-map-and-prompt-01-closure.md`.
 - Migration and implementation sequencing in this plan should consume that frozen evidence map as repo-truth baseline input.
 
+## Prompt-02 baseline governance status
+
+- Prompt-02 is treated as executed baseline work for this phase.
+- Canonical Prompt-02 closure authority: `docs/architecture/blueprint/phase-3-canonical-heft-reference-and-prompt-02-delta-map.md`.
+- Downstream migration prompts should consume this canonical Heft reference and delta map as the target-shape authority.
+
 ---
 
 ## 1. Current architecture

@@ -40,6 +40,16 @@ The Phase 3 end state is:
   - current hybrid gulp-backed packaging path,
   - current validation coverage and known gap areas for later release-gate hardening.
 
+## Prompt-02 Baseline Status
+
+- Prompt-02 is now treated as an executed Phase-3 baseline, not an open canonical-target discovery item.
+- Canonical closure note: `docs/architecture/blueprint/phase-3-canonical-heft-reference-and-prompt-02-delta-map.md`.
+- The Prompt-02 closure freezes:
+  - canonical Heft-native SPFx reference expectations for the current SPFx baseline,
+  - the current-vs-target delta map for packaging/config/script authority,
+  - explicit disposition of legacy artifacts (`replace`, `retain`, `translate`, `retire-later`),
+  - migration guardrails requiring downstream prompts to consume the canonical delta map.
+
 ## Evidence sources used
 
 ### Attached artifacts
