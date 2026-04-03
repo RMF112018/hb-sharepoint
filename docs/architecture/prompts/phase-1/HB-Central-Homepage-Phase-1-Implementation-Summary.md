@@ -69,3 +69,47 @@ For Phase 1, keep **one deployable SPFx solution** while decomposing source owne
 - Do not replace native SharePoint surfaces without clear product value.
 - Do not over-split deployables before source ownership is clean.
 - Do not duplicate shared visual or platform behavior across features.
+
+## Prompt-02 status (executed baseline)
+
+Prompt-02 is now treated as an executed first-stage structural closure for Phase 1.
+
+### Target package map (Prompt-02)
+
+- Shared packages:
+  - `packages/brand-tokens`
+  - `packages/sharepoint-core`
+  - `packages/ui-kit` (`@hbc/ui-kit`, existing visual owner)
+- Feature packages:
+  - `packages/homepage-shell`
+  - `packages/featured-projects`
+  - `packages/company-pulse`
+  - `packages/quick-actions`
+- Host layer:
+  - `apps/hb-central-homepage` (single deployable SPFx host for Phase 1)
+
+### Ownership table (Prompt-02)
+
+| Package/path | Owns | Must not own |
+| --- | --- | --- |
+| `apps/hb-central-homepage` | SPFx host wiring, toolbox/runtime integration, deployable packaging | Feature-domain implementation internals and reusable visual primitives |
+| `packages/ui-kit` | Reusable visual primitives and shared UI tokens/primitives | App-local SPFx host behavior and feature-specific business logic |
+| `packages/brand-tokens` | Brand/theme token constants and non-visual token contracts | SPFx host wiring and feature implementation logic |
+| `packages/sharepoint-core` | Shared SharePoint/core adapters and integration helpers | UI rendering concerns and app-specific composition rules |
+| `packages/homepage-shell` | Homepage shell/hero feature logic scoped to shell ownership | Shared generic UI primitives and host packaging concerns |
+| `packages/featured-projects` | Featured projects feature logic and contracts | Generic cross-feature shared platform helpers |
+| `packages/company-pulse` | Company pulse feature logic and contracts | Generic cross-feature shared platform helpers |
+| `packages/quick-actions` | Quick actions feature logic and contracts | Generic cross-feature shared platform helpers |
+
+### Dependency direction rules (Prompt-02)
+
+- `apps/hb-central-homepage` may depend on `packages/*` and `@hbc/ui-kit`.
+- Feature packages may depend on `packages/sharepoint-core`, `packages/brand-tokens`, and `@hbc/ui-kit`.
+- Shared packages must not depend on app-local host code.
+- Feature packages must not form circular cross-feature dependency chains.
+- Reusable visual primitives remain owned by `@hbc/ui-kit` and must not be re-created in feature-local packages.
+
+### Deferred restructuring notes
+
+- Prompt-02 establishes structure and ownership boundaries only.
+- Full package scaffolding (`package.json`, build/test wiring, exports, entrypoint contracts) is deferred to Prompt-03.

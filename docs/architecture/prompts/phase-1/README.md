@@ -11,7 +11,7 @@ The target model is:
 - **native SharePoint web parts** used where Microsoft already provides strong, maintainable capability,
 - and a homepage composition approach that avoids treating the entire homepage as one oversized SPA mounted into one web part.
 
-Prompt-01 in this package is now treated as an executed baseline and architecture freeze, not an open discovery item.
+Prompt-01 and Prompt-02 in this package are now treated as executed baselines, not open discovery items.
 
 ## Recommended target architecture
 
@@ -58,6 +58,14 @@ The prompts are designed to execute against the Prompt-01 baseline and produce:
 - Decision matrix established: homepage zones are explicitly classified as custom web part or native SharePoint composition.
 - Deployment strategy established: keep one deployable SPFx solution in Phase 1 unless later prompts justify a split.
 - Canonical governance closure note: `docs/architecture/blueprint/phase-1-hybrid-refactor-baseline.md`.
+
+## Prompt-02 baseline status
+
+- Target package map established with first-stage directories for shared foundations and focused feature ownership.
+- SPFx host-layer separation preserved at `apps/hb-central-homepage` with one deployable solution for Phase 1.
+- Ownership and dependency-direction rules are now explicit for shared, feature, and host layers.
+- Full package scaffolding is intentionally deferred to Prompt-03.
+- Canonical governance closure note: `docs/architecture/blueprint/phase-1-target-package-map-and-directory-structure.md`.
 
 ## Suggested execution order
 

@@ -23,6 +23,7 @@ This repository currently uses `docs/` for canonical architecture prompts, bluep
 - Prompt-12 has hardened accessibility semantics, responsive layout behavior, and runtime performance seams for implemented homepage surfaces.
 - Prompt-13 has finalized verification, documentation convergence, and deployment-readiness guidance for the phase-0 homepage baseline.
 - Phase-1 Prompt-01 has now established the hybrid refactor baseline (current-state map, target model, custom-vs-native decision matrix, and deployment strategy direction).
+- Phase-1 Prompt-02 has now established the target package map and first-stage directory ownership baseline for shared layers, feature packages, and the SPFx host boundary.
 - Prompt-01 should now be treated as a confirmed historical foundation rather than pending structural work.
 
 ## Usage rules
