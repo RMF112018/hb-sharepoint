@@ -12,6 +12,8 @@
     "spfx:package": "pnpm build && node ../../tools/run-spfx-package.mjs"
   },
   "dependencies": {
+    "@hbc/brand-tokens": "workspace:*",
+    "@hbc/sharepoint-core": "workspace:*",
     "@hbc/ui-kit": "workspace:*",
     "@microsoft/sp-core-library": "^1.20.0",
     "@microsoft/sp-property-pane": "^1.20.0",

@@ -24,6 +24,7 @@ This repository currently uses `docs/` for canonical architecture prompts, bluep
 - Prompt-13 has finalized verification, documentation convergence, and deployment-readiness guidance for the phase-0 homepage baseline.
 - Phase-1 Prompt-01 has now established the hybrid refactor baseline (current-state map, target model, custom-vs-native decision matrix, and deployment strategy direction).
 - Phase-1 Prompt-02 has now established the target package map and first-stage directory ownership baseline for shared layers, feature packages, and the SPFx host boundary.
+- Phase-1 Prompt-03 has now established shared package scaffolding and build-boundary baselines for `@hbc/brand-tokens` and `@hbc/sharepoint-core`.
 - Prompt-01 should now be treated as a confirmed historical foundation rather than pending structural work.
 
 ## Usage rules

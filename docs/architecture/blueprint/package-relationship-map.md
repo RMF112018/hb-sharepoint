@@ -32,6 +32,7 @@ This document defines the approved ownership and dependency direction for the re
 - Reusable visual UI must not be recreated inside app-local or feature-local packages when `@hbc/ui-kit` is the right owner.
 - Feature packages may depend on `packages/sharepoint-core`, `packages/brand-tokens`, and `@hbc/ui-kit` when boundaries remain clear.
 - Feature packages must not create direct circular dependencies on other feature packages.
+- Shared packages should expose explicit root exports (`"."`) and avoid ambiguous deep-export patterns.
 
 ## Guardrails
 

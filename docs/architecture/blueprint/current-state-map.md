@@ -26,6 +26,7 @@ The repository currently contains:
 - Prompt-13 closure artifacts covering final verification outcomes, deployment-readiness guidance, and residual risk/go-no-go framing
 - phase-1 Prompt-01 hybrid baseline governance records that freeze custom-vs-native composition and deployment strategy direction
 - phase-1 Prompt-02 structural baseline records and first-stage directory ownership under `packages/` for shared and feature boundaries
+- phase-1 Prompt-03 shared package scaffolds and build-boundary records for `@hbc/brand-tokens` and `@hbc/sharepoint-core`
 - a deterministic `.sppkg` packaging path for the homepage app via native SPFx production packaging (`apps/hb-central-homepage/gulpfile.cjs` + `config/package-solution.json`) guarded by `tools/validate-sppkg.mjs`
 - a `packages/ui-kit/` shared visual package with runnable typecheck, lint, build, and test scripts
 
@@ -48,6 +49,7 @@ The repository does not yet contain:
 - Treat Prompt-13 as materially executed for convergence scope: final validation and deployment-readiness guidance are now baseline records for phase-0 closure.
 - Treat phase-1 Prompt-01 as materially executed for baseline scope: the hybrid composition decision matrix and deployment strategy are approved and should be implemented, not rediscovered.
 - Treat phase-1 Prompt-02 as materially executed for structure scope: first-stage package directories and ownership/dependency rules are established and should be extended through Prompt-03 scaffolding rather than remapped.
+- Treat phase-1 Prompt-03 as materially executed for shared seam scope: shared package exports and build boundaries are now baseline expectations and should be extended rather than re-scaffolded.
 - Use the prompt package to sequence implementation work, but use live files and this map as the source of truth for what exists now.
 - Do not infer app structure, package structure, or verification capabilities that have not been created yet.
 - Treat Prompt-01 as historically executed: the structural baseline already exists and should be confirmed rather than recreated.
@@ -74,3 +76,4 @@ The repository does not yet contain:
 - `docs/architecture/blueprint/phase-0-final-verification-documentation-and-deployment-readiness.md` records the approved Prompt-13 closure baseline.
 - `docs/architecture/blueprint/phase-1-hybrid-refactor-baseline.md` records the approved phase-1 Prompt-01 hybrid baseline.
 - `docs/architecture/blueprint/phase-1-target-package-map-and-directory-structure.md` records the approved phase-1 Prompt-02 package map and directory-structure baseline.
+- `docs/architecture/blueprint/phase-1-shared-packages-and-build-boundaries.md` records the approved phase-1 Prompt-03 shared package and build-boundary baseline.

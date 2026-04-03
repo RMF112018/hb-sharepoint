@@ -11,7 +11,7 @@ The target model is:
 - **native SharePoint web parts** used where Microsoft already provides strong, maintainable capability,
 - and a homepage composition approach that avoids treating the entire homepage as one oversized SPA mounted into one web part.
 
-Prompt-01 and Prompt-02 in this package are now treated as executed baselines, not open discovery items.
+Prompt-01, Prompt-02, and Prompt-03 in this package are now treated as executed baselines, not open discovery items.
 
 ## Recommended target architecture
 
@@ -66,6 +66,14 @@ The prompts are designed to execute against the Prompt-01 baseline and produce:
 - Ownership and dependency-direction rules are now explicit for shared, feature, and host layers.
 - Full package scaffolding is intentionally deferred to Prompt-03.
 - Canonical governance closure note: `docs/architecture/blueprint/phase-1-target-package-map-and-directory-structure.md`.
+
+## Prompt-03 baseline status
+
+- Shared packages `@hbc/brand-tokens` and `@hbc/sharepoint-core` are scaffolded with stable explicit root exports.
+- Shared package build/type boundaries are defined with package-local TypeScript build configs.
+- `apps/hb-central-homepage` resolves shared package exports through workspace dependencies.
+- `@hbc/ui-kit` remains the governed reusable visual owner without competing shared UI packages.
+- Canonical governance closure note: `docs/architecture/blueprint/phase-1-shared-packages-and-build-boundaries.md`.
 
 ## Suggested execution order
 

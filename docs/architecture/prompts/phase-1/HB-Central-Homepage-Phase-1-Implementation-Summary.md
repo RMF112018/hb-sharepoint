@@ -113,3 +113,29 @@ Prompt-02 is now treated as an executed first-stage structural closure for Phase
 
 - Prompt-02 establishes structure and ownership boundaries only.
 - Full package scaffolding (`package.json`, build/test wiring, exports, entrypoint contracts) is deferred to Prompt-03.
+
+## Prompt-03 status (executed baseline)
+
+Prompt-03 is now treated as an executed shared-seam scaffolding baseline for Phase 1.
+
+### Shared package baseline (Prompt-03)
+
+- `@hbc/brand-tokens` (`packages/brand-tokens`) provides stable token contracts.
+- `@hbc/sharepoint-core` (`packages/sharepoint-core`) provides shared typed SharePoint/core adapter seams.
+- `@hbc/ui-kit` (`packages/ui-kit`) remains the reusable visual UI owner.
+
+### Public export rules (Prompt-03)
+
+- Shared packages expose a single explicit root export (`"."`) in `exports`.
+- Public entrypoints are `src/index.ts` for each shared package.
+- Prompt-03 avoids deep wildcard exports and ambiguous barrels.
+
+### Build and resolution boundaries
+
+- `apps/hb-central-homepage` consumes shared packages through workspace dependencies.
+- Shared packages remain app-agnostic and do not import app-layer code.
+- A runtime smoke test verifies host resolution for new shared package exports.
+
+### Unresolved tooling constraints
+
+- No unresolved build/tooling constraints were identified in Prompt-03 closure scope.
