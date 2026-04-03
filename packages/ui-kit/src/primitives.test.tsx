@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
-import { HbcBadge, HbcEditorialCard, HbcEmptyState, HbcSection } from "./index";
+import { HbcBadge, HbcEditorialCard, HbcEmptyState, HbcErrorState, HbcSection } from "./index";
 
 describe("@hbc/ui-kit primitives", () => {
   it("renders the foundational primitives", () => {
@@ -13,10 +13,15 @@ describe("@hbc/ui-kit primitives", () => {
           title="No content source configured yet"
           body="Prompt-04 will replace this placeholder with the homepage shell."
         />
+        <HbcErrorState
+          title="Shared error primitive"
+          body="Error-state presentation remains governed in the shared UI layer."
+        />
       </HbcSection>,
     );
 
     expect(screen.getByText(/shared visual foundation/i)).toBeInTheDocument();
     expect(screen.getByText(/no content source configured yet/i)).toBeInTheDocument();
+    expect(screen.getByRole("alert")).toBeInTheDocument();
   });
 });

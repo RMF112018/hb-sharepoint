@@ -16,7 +16,7 @@ import {
   type HomepageCompositionEntry,
   type HomepageShellState,
 } from "./homepageComposition";
-import { srOnlyStyle } from "./homepageHardening";
+import { homepageRootStyle, srOnlyStyle } from "./homepageHardening";
 
 const NewsRecognitionSpotlightMosaic = lazy(async () => ({
   default: (await import("./NewsRecognitionSpotlightMosaic")).NewsRecognitionSpotlightMosaic,
@@ -120,7 +120,12 @@ export function HbCentralHomepageHost({
 
   if (shellState !== "ready") {
     return (
-      <main className="hb-homepage-main" aria-label="HB Central homepage" role="main">
+      <main
+        className="hb-homepage-main"
+        aria-label="HB Central homepage"
+        role="main"
+        style={homepageRootStyle}
+      >
         <h1 style={srOnlyStyle}>HB Central homepage</h1>
         {renderShellState(shellState)}
       </main>
@@ -128,7 +133,12 @@ export function HbCentralHomepageHost({
   }
 
   return (
-    <main className="hb-homepage-main" aria-label="HB Central homepage" role="main">
+    <main
+      className="hb-homepage-main"
+      aria-label="HB Central homepage"
+      role="main"
+      style={homepageRootStyle}
+    >
       <h1 style={srOnlyStyle}>HB Central homepage</h1>
       {orderedSections.map((entry) => (
         <section

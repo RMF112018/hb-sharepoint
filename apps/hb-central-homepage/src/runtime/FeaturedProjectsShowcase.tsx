@@ -1,6 +1,7 @@
 import {
   HbcBadge,
   HbcCta,
+  HbcEditorialCard,
   HbcMediaFrame,
   hbcRadiusTokens,
   hbcSemanticTokens,
@@ -16,15 +17,6 @@ import { adaptFeaturedProjectsSource } from "./homepageAuthoringConfig";
 
 const gridStyle: CSSProperties = {
   gap: hbcSpacingTokens.lg,
-};
-
-const cardStyle: CSSProperties = {
-  display: "grid",
-  gap: hbcSpacingTokens.md,
-  padding: hbcSpacingTokens.lg,
-  borderRadius: hbcRadiusTokens.lg,
-  border: `1px solid ${hbcSemanticTokens.borderSubtle}`,
-  background: hbcSemanticTokens.surface,
 };
 
 function renderMedia(project: FeaturedProjectItem) {
@@ -83,10 +75,12 @@ export function FeaturedProjectsShowcase({
         style={gridStyle}
       >
         {projects.map((project) => (
-          <article key={project.id} style={cardStyle}>
-            {renderMedia(project)}
-            <div style={{ display: "grid", gap: hbcSpacingTokens.xs }}>
-              {project.sublabel ? (
+          <HbcEditorialCard
+            key={project.id}
+            title={project.title}
+            titleLevel={3}
+            eyebrow={
+              project.sublabel ? (
                 <p
                   style={{
                     margin: 0,
@@ -97,17 +91,19 @@ export function FeaturedProjectsShowcase({
                 >
                   {project.sublabel}
                 </p>
-              ) : null}
-              <h3
-                style={{
-                  margin: 0,
-                  color: hbcSemanticTokens.textPrimary,
-                  fontSize: "1.1rem",
-                  lineHeight: hbcTypographyTokens.title.lineHeight,
-                }}
+              ) : null
+            }
+            footer={
+              <HbcCta
+                href={project.destinationUrl}
+                ariaLabel={`View ${project.title} project destination`}
               >
-                {project.title}
-              </h3>
+                View {project.title} project
+              </HbcCta>
+            }
+          >
+            <div style={{ display: "grid", gap: hbcSpacingTokens.md }}>
+              {renderMedia(project)}
               <p
                 style={{
                   margin: 0,
@@ -119,13 +115,7 @@ export function FeaturedProjectsShowcase({
                 {project.supportLine}
               </p>
             </div>
-            <HbcCta
-              href={project.destinationUrl}
-              ariaLabel={`View ${project.title} project destination`}
-            >
-              View {project.title} project
-            </HbcCta>
-          </article>
+          </HbcEditorialCard>
         ))}
       </div>
     </section>

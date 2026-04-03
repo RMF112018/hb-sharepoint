@@ -15,6 +15,9 @@
     "build": "tsc -p tsconfig.build.json",
     "test": "vitest run --config vitest.config.ts"
   },
+  "dependencies": {
+    "@hbc/brand-tokens": "workspace:*"
+  },
   "peerDependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"

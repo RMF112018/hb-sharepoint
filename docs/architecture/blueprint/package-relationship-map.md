@@ -33,6 +33,7 @@ This document defines the approved ownership and dependency direction for the re
 - Feature packages may depend on `packages/sharepoint-core`, `packages/brand-tokens`, and `@hbc/ui-kit` when boundaries remain clear.
 - Feature packages must not create direct circular dependencies on other feature packages.
 - Shared packages should expose explicit root exports (`"."`) and avoid ambiguous deep-export patterns.
+- Brand color/token contracts should be authored once in `@hbc/brand-tokens` and consumed by `@hbc/ui-kit` and app surfaces via shared exports.
 
 ## Guardrails
 

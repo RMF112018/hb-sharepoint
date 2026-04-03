@@ -2,6 +2,7 @@ export {
   HbcBadge,
   HbcCta,
   HbcEditorialCard,
+  HbcErrorState,
   HbcEmptyState,
   HbcMediaFrame,
   HbcSection,

@@ -8,8 +8,9 @@ import {
 
 describe("shared package resolution", () => {
   it("resolves brand token exports", () => {
-    expect(HBC_BRAND_TOKENS.color.brandPrimary).toBe("#0B2E4F");
-    expect(HBC_BRAND_TOKENS.spacing.md).toBe(16);
+    expect(HBC_BRAND_TOKENS.color.brandPrimary).toBe("#225391");
+    expect(HBC_BRAND_TOKENS.color.brandAccent).toBe("#E57E46");
+    expect(HBC_BRAND_TOKENS.spacing.md).toBe("1rem");
   });
 
   it("resolves sharepoint-core exports", () => {

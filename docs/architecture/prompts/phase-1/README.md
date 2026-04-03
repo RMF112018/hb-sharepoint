@@ -11,7 +11,7 @@ The target model is:
 - **native SharePoint web parts** used where Microsoft already provides strong, maintainable capability,
 - and a homepage composition approach that avoids treating the entire homepage as one oversized SPA mounted into one web part.
 
-Prompt-01, Prompt-02, and Prompt-03 in this package are now treated as executed baselines, not open discovery items.
+Prompt-01, Prompt-02, Prompt-03, and Prompt-04 in this package are now treated as executed baselines, not open discovery items.
 
 ## Recommended target architecture
 
@@ -74,6 +74,14 @@ The prompts are designed to execute against the Prompt-01 baseline and produce:
 - `apps/hb-central-homepage` resolves shared package exports through workspace dependencies.
 - `@hbc/ui-kit` remains the governed reusable visual owner without competing shared UI packages.
 - Canonical governance closure note: `docs/architecture/blueprint/phase-1-shared-packages-and-build-boundaries.md`.
+
+## Prompt-04 baseline status
+
+- `@hbc/brand-tokens` is the canonical source for governed brand values (including required primary `#225391` and secondary `#E57E46`).
+- `@hbc/ui-kit` token semantics are normalized to consume canonical brand tokens.
+- Shared loading/empty/error-state primitives are governed in `@hbc/ui-kit`.
+- Homepage runtime styling uses shared token-driven focus treatment and shared card primitives for targeted feature rendering.
+- Canonical governance closure note: `docs/architecture/blueprint/phase-1-shared-brand-token-and-ui-foundation.md`.
 
 ## Suggested execution order
 

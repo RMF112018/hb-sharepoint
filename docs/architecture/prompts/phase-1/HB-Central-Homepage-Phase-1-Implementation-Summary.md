@@ -139,3 +139,25 @@ Prompt-03 is now treated as an executed shared-seam scaffolding baseline for Pha
 ### Unresolved tooling constraints
 
 - No unresolved build/tooling constraints were identified in Prompt-03 closure scope.
+
+## Prompt-04 status (executed baseline)
+
+Prompt-04 is now treated as an executed shared visual-foundation normalization baseline for Phase 1.
+
+### Token strategy and ownership (Prompt-04)
+
+- `@hbc/brand-tokens` is the canonical source for governed brand values, including primary `#225391` and secondary `#E57E46`.
+- `@hbc/ui-kit` consumes canonical brand tokens and owns reusable UI primitives and semantic visual contracts.
+- Feature/runtime surfaces consume tokens and primitives through `@hbc/ui-kit` instead of duplicating ad hoc values.
+
+### Shared UI foundation baseline
+
+- Shared card/section primitives remain in `@hbc/ui-kit`.
+- Shared loading, empty, and error state primitives are available from `@hbc/ui-kit`.
+- Prompt-04 refactors targeted homepage feature rendering to use shared UI primitives for card presentation.
+
+### Styling governance notes for later prompts
+
+- Do not introduce raw brand color literals in app-layer CSS/TSX when equivalent shared tokens exist.
+- Use shared semantic tokens for focus, emphasis, and state surfaces.
+- Add new reusable visual patterns to `@hbc/ui-kit` first, then consume from feature surfaces.

@@ -226,3 +226,44 @@ export function HbcEmptyState({
     </div>
   );
 }
+
+export function HbcErrorState({
+  title,
+  body,
+  headingLevel = 2,
+}: {
+  title: string;
+  body: string;
+  headingLevel?: HeadingLevel;
+}) {
+  const wrapperStyle: CSSProperties = {
+    display: "grid",
+    gap: hbcSpacingTokens.sm,
+    padding: hbcSpacingTokens.xl,
+    borderRadius: hbcRadiusTokens.md,
+    background: hbcSemanticTokens.surfaceError,
+    border: `1px solid ${hbcSemanticTokens.actionDanger}`,
+  };
+
+  const headingStyle: CSSProperties = {
+    margin: 0,
+    color: hbcSemanticTokens.textPrimary,
+    fontSize: "1.1rem",
+    fontWeight: 700,
+  };
+
+  const bodyStyle: CSSProperties = {
+    margin: 0,
+    color: hbcSemanticTokens.textSecondary,
+    lineHeight: hbcTypographyTokens.body.lineHeight,
+  };
+
+  const HeadingTag = `h${headingLevel}` as const;
+
+  return (
+    <div role="alert" style={wrapperStyle}>
+      <HeadingTag style={headingStyle}>{title}</HeadingTag>
+      <p style={bodyStyle}>{body}</p>
+    </div>
+  );
+}

@@ -48,6 +48,10 @@ export const sectionShellStyle: CSSProperties = {
   gap: "1rem",
 };
 
+export const homepageRootStyle: CSSProperties = {
+  "--hb-action-primary": hbcSemanticTokens.actionPrimary,
+} as CSSProperties;
+
 export const focusRingStyle: CSSProperties = {
   outline: `2px solid ${hbcSemanticTokens.actionPrimary}`,
   outlineOffset: "2px",
