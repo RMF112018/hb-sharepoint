@@ -1,6 +1,8 @@
 import { BaseClientSideWebPart } from "@microsoft/sp-webpart-base";
+import { mountHomepageFeaturedProjects } from "../../runtime/owners/mountHomepageFeaturedProjects";
 
-const FEATURED_PROJECTS_ROOT_CLASS = "hb-central-homepage-featured-projects-spfx-root";
+const FEATURED_PROJECTS_ROOT_CLASS =
+  "hb-central-homepage-featured-projects-spfx-root";
 
 export default class HbCentralHomepageFeaturedProjectsWebPart extends BaseClientSideWebPart {
   constructor() {
@@ -15,14 +17,9 @@ export default class HbCentralHomepageFeaturedProjectsWebPart extends BaseClient
       root.className = FEATURED_PROJECTS_ROOT_CLASS;
       this.domElement.replaceChildren(root);
 
-      this._mountPromise = import("../../../dist/homepage.js")
-        .then((module) => {
-          if (typeof module.mountHbCentralHomepageFeaturedProjects !== "function") {
-            throw new Error(
-              "HB Central homepage build artifact is missing mountHbCentralHomepageFeaturedProjects export.",
-            );
-          }
-          const unmount = module.mountHbCentralHomepageFeaturedProjects(root);
+      this._mountPromise = Promise.resolve()
+        .then(() => {
+          const unmount = mountHomepageFeaturedProjects(root);
           if (typeof unmount === "function") {
             this._unmountFeaturedProjects = unmount;
           }

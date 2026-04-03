@@ -1,4 +1,5 @@
 import { BaseClientSideWebPart } from "@microsoft/sp-webpart-base";
+import { mountHomepageHero } from "../../runtime/owners/mountHomepageHero";
 
 const HERO_ROOT_CLASS = "hb-central-homepage-hero-spfx-root";
 
@@ -15,14 +16,9 @@ export default class HbCentralHomepageHeroWebPart extends BaseClientSideWebPart 
       root.className = HERO_ROOT_CLASS;
       this.domElement.replaceChildren(root);
 
-      this._mountPromise = import("../../../dist/homepage.js")
-        .then((module) => {
-          if (typeof module.mountHbCentralHomepageHero !== "function") {
-            throw new Error(
-              "HB Central homepage build artifact is missing mountHbCentralHomepageHero export.",
-            );
-          }
-          const unmount = module.mountHbCentralHomepageHero(root);
+      this._mountPromise = Promise.resolve()
+        .then(() => {
+          const unmount = mountHomepageHero(root);
           if (typeof unmount === "function") {
             this._unmountHero = unmount;
           }

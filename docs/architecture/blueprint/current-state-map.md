@@ -46,6 +46,7 @@ The repository currently contains:
 - phase-3 Prompt-02 canonical Heft-reference and current-vs-target delta-map closure records for migration target-shape authority
 - phase-3 Prompt-03 runtime/React strategy and Vite-role closure records for pre-refactor runtime governance
 - phase-3 Prompt-04 per-surface runtime source-ownership closure records for pre-wrapper-refactor decomposition
+- phase-3 Prompt-05 direct wrapper-to-surface runtime ownership closure records that remove production wrapper dependency on `dist/homepage.js`
 - a deterministic `.sppkg` packaging path for the homepage app via native SPFx production packaging (`apps/hb-central-homepage/gulpfile.cjs` + `config/package-solution.json`) guarded by `tools/validate-sppkg.mjs`
 - a `packages/ui-kit/` shared visual package with runnable typecheck, lint, build, and test scripts
 
@@ -88,6 +89,7 @@ The repository does not yet contain:
 - Treat phase-3 Prompt-02 as materially executed for target-shape scope: canonical Heft-native reference expectations and current-vs-target delta dispositions are frozen and should be consumed rather than rediscovered.
 - Treat phase-3 Prompt-03 as materially executed for runtime-strategy scope: React/runtime posture and Vite preview-only role are locked and should be consumed rather than rediscovered.
 - Treat phase-3 Prompt-04 as materially executed for source-ownership scope: per-surface mount ownership is explicit and should be consumed before wrapper import-path refactor work.
+- Treat phase-3 Prompt-05 as materially executed for wrapper-ownership scope: wrappers now directly own per-surface runtime mounting and should remain free of `dist/homepage.js` production bridge imports.
 - Use the prompt package to sequence implementation work, but use live files and this map as the source of truth for what exists now.
 - Do not infer app structure, package structure, or verification capabilities that have not been created yet.
 - Treat Prompt-01 as historically executed: the structural baseline already exists and should be confirmed rather than recreated.
@@ -136,3 +138,4 @@ The repository does not yet contain:
 - `docs/architecture/blueprint/phase-3-canonical-heft-reference-and-prompt-02-delta-map.md` records the approved phase-3 Prompt-02 canonical Heft reference baseline and delta-map closure.
 - `docs/architecture/blueprint/phase-3-runtime-react-strategy-and-prompt-03-closure.md` records the approved phase-3 Prompt-03 runtime/React strategy baseline and closure.
 - `docs/architecture/blueprint/phase-3-per-surface-runtime-ownership-and-prompt-04-closure.md` records the approved phase-3 Prompt-04 per-surface runtime source-ownership baseline and closure.
+- `docs/architecture/blueprint/phase-3-wrapper-direct-ownership-and-prompt-05-closure.md` records the approved phase-3 Prompt-05 direct wrapper-surface runtime ownership baseline and closure.

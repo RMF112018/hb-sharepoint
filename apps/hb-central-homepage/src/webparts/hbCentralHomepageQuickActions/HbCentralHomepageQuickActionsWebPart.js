@@ -1,4 +1,5 @@
 import { BaseClientSideWebPart } from "@microsoft/sp-webpart-base";
+import { mountHomepageQuickActions } from "../../runtime/owners/mountHomepageQuickActions";
 
 const QUICK_ACTIONS_ROOT_CLASS = "hb-central-homepage-quick-actions-spfx-root";
 
@@ -15,14 +16,9 @@ export default class HbCentralHomepageQuickActionsWebPart extends BaseClientSide
       root.className = QUICK_ACTIONS_ROOT_CLASS;
       this.domElement.replaceChildren(root);
 
-      this._mountPromise = import("../../../dist/homepage.js")
-        .then((module) => {
-          if (typeof module.mountHbCentralHomepageQuickActions !== "function") {
-            throw new Error(
-              "HB Central homepage build artifact is missing mountHbCentralHomepageQuickActions export.",
-            );
-          }
-          const unmount = module.mountHbCentralHomepageQuickActions(root);
+      this._mountPromise = Promise.resolve()
+        .then(() => {
+          const unmount = mountHomepageQuickActions(root);
           if (typeof unmount === "function") {
             this._unmountQuickActions = unmount;
           }

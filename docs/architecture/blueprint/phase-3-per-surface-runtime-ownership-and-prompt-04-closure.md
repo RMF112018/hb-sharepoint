@@ -31,7 +31,7 @@ Strong inferences:
 
 Open questions:
 
-- Wrapper import-path migration away from `dist/homepage.js` is deferred to Prompt-05 by design.
+- Wrapper import-path migration away from `dist/homepage.js` is now resolved by Prompt-05 closure authority (`docs/architecture/blueprint/phase-3-wrapper-direct-ownership-and-prompt-05-closure.md`).
 - Packaging/bundle-boundary finalization remains deferred until later prompts aligned with Heft target-shape and validation gates.
 
 ## Why this strategy is safest now

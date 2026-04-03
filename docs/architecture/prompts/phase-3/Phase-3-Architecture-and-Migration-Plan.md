@@ -28,6 +28,12 @@ Move the HB Central homepage solution from its current hybrid deployment archite
 - Canonical Prompt-04 closure authority: `docs/architecture/blueprint/phase-3-per-surface-runtime-ownership-and-prompt-04-closure.md`.
 - Downstream wrapper and bundle-boundary prompts should consume this per-surface source ownership baseline and preserve its stable mount export contracts.
 
+## Prompt-05 baseline governance status
+
+- Prompt-05 is treated as executed baseline work for this phase.
+- Canonical Prompt-05 closure authority: `docs/architecture/blueprint/phase-3-wrapper-direct-ownership-and-prompt-05-closure.md`.
+- Downstream bundle-boundary and packaging prompts should consume this direct wrapper-surface ownership baseline and preserve no-bridge wrapper posture.
+
 ---
 
 ## 1. Current architecture

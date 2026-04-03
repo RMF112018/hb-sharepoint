@@ -1,4 +1,5 @@
 import { BaseClientSideWebPart } from "@microsoft/sp-webpart-base";
+import { mountHomepageSections } from "../../runtime/owners/mountHomepageSections";
 
 const HOMEPAGE_ROOT_CLASS = "hb-central-homepage-spfx-root";
 
@@ -15,14 +16,9 @@ export default class HbCentralHomepageWebPart extends BaseClientSideWebPart {
       root.className = HOMEPAGE_ROOT_CLASS;
       this.domElement.replaceChildren(root);
 
-      this._mountPromise = import("../../../dist/homepage.js")
-        .then((module) => {
-          if (typeof module.mountHbCentralHomepage !== "function") {
-            throw new Error(
-              "HB Central homepage build artifact is missing mountHbCentralHomepage export.",
-            );
-          }
-          const unmount = module.mountHbCentralHomepage(root);
+      this._mountPromise = Promise.resolve()
+        .then(() => {
+          const unmount = mountHomepageSections(root);
           if (typeof unmount === "function") {
             this._unmountHomepage = unmount;
           }

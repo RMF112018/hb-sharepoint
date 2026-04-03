@@ -44,6 +44,7 @@ This repository currently uses `docs/` for canonical architecture prompts, bluep
 - Phase-3 Prompt-02 has now established the canonical Heft-reference baseline and current-vs-target delta map for packaging/config/script authority migration.
 - Phase-3 Prompt-03 has now established the locked runtime/React strategy baseline and preview-only Vite role before ownership refactor work.
 - Phase-3 Prompt-04 has now established per-surface source runtime ownership and reduced `src/index.tsx` to an aggregator/bootstrap boundary.
+- Phase-3 Prompt-05 has now established direct wrapper-to-surface runtime ownership and removed production wrapper dependency on `dist/homepage.js`.
 - Prompt-01 should now be treated as a confirmed historical foundation rather than pending structural work.
 
 ## Usage rules

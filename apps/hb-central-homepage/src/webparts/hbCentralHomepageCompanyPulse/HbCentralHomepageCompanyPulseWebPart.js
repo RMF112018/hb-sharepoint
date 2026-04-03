@@ -1,4 +1,5 @@
 import { BaseClientSideWebPart } from "@microsoft/sp-webpart-base";
+import { mountHomepageCompanyPulse } from "../../runtime/owners/mountHomepageCompanyPulse";
 
 const COMPANY_PULSE_ROOT_CLASS = "hb-central-homepage-company-pulse-spfx-root";
 
@@ -15,14 +16,9 @@ export default class HbCentralHomepageCompanyPulseWebPart extends BaseClientSide
       root.className = COMPANY_PULSE_ROOT_CLASS;
       this.domElement.replaceChildren(root);
 
-      this._mountPromise = import("../../../dist/homepage.js")
-        .then((module) => {
-          if (typeof module.mountHbCentralHomepageCompanyPulse !== "function") {
-            throw new Error(
-              "HB Central homepage build artifact is missing mountHbCentralHomepageCompanyPulse export.",
-            );
-          }
-          const unmount = module.mountHbCentralHomepageCompanyPulse(root);
+      this._mountPromise = Promise.resolve()
+        .then(() => {
+          const unmount = mountHomepageCompanyPulse(root);
           if (typeof unmount === "function") {
             this._unmountCompanyPulse = unmount;
           }

@@ -69,6 +69,15 @@ The Phase 3 end state is:
   - stable `mountHbCentralHomepage*` export contracts for downstream wrapper compatibility,
   - intentional deferral of wrapper import-path migration to Prompt-05.
 
+## Prompt-05 Baseline Status
+
+- Prompt-05 is now treated as an executed Phase-3 baseline for direct wrapper surface ownership.
+- Canonical closure note: `docs/architecture/blueprint/phase-3-wrapper-direct-ownership-and-prompt-05-closure.md`.
+- The Prompt-05 closure freezes:
+  - direct wrapper-to-surface-owner runtime mapping for all five homepage wrappers,
+  - removal of production wrapper dependency on `../../../dist/homepage.js`,
+  - ownership-aware wiring validation that rejects bridge regression in wrappers.
+
 ## Evidence sources used
 
 ### Attached artifacts
