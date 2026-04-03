@@ -24,6 +24,7 @@ The repository currently contains:
 - app-local data/configuration/authoring seam adapters in `apps/hb-central-homepage/` that centralize source modes, defaults, and surface guardrails
 - Prompt-12 hardening updates in `apps/hb-central-homepage/` for section/link semantics, responsive layout contracts, and performance-minded lazy loading for lower-priority sections
 - Prompt-13 closure artifacts covering final verification outcomes, deployment-readiness guidance, and residual risk/go-no-go framing
+- phase-1 Prompt-01 hybrid baseline governance records that freeze custom-vs-native composition and deployment strategy direction
 - a deterministic `.sppkg` packaging path for the homepage app via native SPFx production packaging (`apps/hb-central-homepage/gulpfile.cjs` + `config/package-solution.json`) guarded by `tools/validate-sppkg.mjs`
 - a `packages/ui-kit/` shared visual package with runnable typecheck, lint, build, and test scripts
 
@@ -44,6 +45,7 @@ The repository does not yet contain:
 - Treat Prompt-11 as materially executed for source/configuration seams: surface adapters and authoring defaults are now centralized and should be extended rather than bypassed.
 - Treat Prompt-12 as materially executed for hardening scope: accessibility semantics, responsive contracts, and performance refinements are now baseline expectations and should be preserved.
 - Treat Prompt-13 as materially executed for convergence scope: final validation and deployment-readiness guidance are now baseline records for phase-0 closure.
+- Treat phase-1 Prompt-01 as materially executed for baseline scope: the hybrid composition decision matrix and deployment strategy are approved and should be implemented, not rediscovered.
 - Use the prompt package to sequence implementation work, but use live files and this map as the source of truth for what exists now.
 - Do not infer app structure, package structure, or verification capabilities that have not been created yet.
 - Treat Prompt-01 as historically executed: the structural baseline already exists and should be confirmed rather than recreated.
@@ -68,3 +70,4 @@ The repository does not yet contain:
 - `docs/architecture/blueprint/phase-0-data-configuration-and-authoring-seams.md` records the approved Prompt-11 data/configuration/authoring seam baseline.
 - `docs/architecture/blueprint/phase-0-accessibility-responsive-performance-hardening.md` records the approved Prompt-12 hardening baseline.
 - `docs/architecture/blueprint/phase-0-final-verification-documentation-and-deployment-readiness.md` records the approved Prompt-13 closure baseline.
+- `docs/architecture/blueprint/phase-1-hybrid-refactor-baseline.md` records the approved phase-1 Prompt-01 hybrid baseline.

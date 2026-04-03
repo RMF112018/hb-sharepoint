@@ -22,6 +22,7 @@ This repository currently uses `docs/` for canonical architecture prompts, bluep
 - Prompt-11 has established centralized data/configuration and authoring seam adapters for implemented homepage surfaces.
 - Prompt-12 has hardened accessibility semantics, responsive layout behavior, and runtime performance seams for implemented homepage surfaces.
 - Prompt-13 has finalized verification, documentation convergence, and deployment-readiness guidance for the phase-0 homepage baseline.
+- Phase-1 Prompt-01 has now established the hybrid refactor baseline (current-state map, target model, custom-vs-native decision matrix, and deployment strategy direction).
 - Prompt-01 should now be treated as a confirmed historical foundation rather than pending structural work.
 
 ## Usage rules
