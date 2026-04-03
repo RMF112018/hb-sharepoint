@@ -225,6 +225,47 @@ Canonical closure note: `docs/architecture/blueprint/phase-2-people-and-culture-
 
 ---
 
+## Prompt-05 Baseline Status (Executed)
+
+Prompt-05 is now treated as an executed baseline for Phase 2.
+Canonical closure note: `docs/architecture/blueprint/phase-2-personalized-lower-zone-and-role-aware-content.md`.
+
+### Decision summary (lower-zone existence and role-aware scope)
+
+- the personalized lower zone remains present as a governed custom seam in the sections host
+- broader personalization remains intentionally bounded/deferred to avoid brittle per-user complexity
+- role-aware behavior is limited to explainable runtime prioritization and safe visibility rules within approved seams
+
+### Personalization contract (in scope vs out of scope)
+
+- in scope:
+  - bounded role-aware prioritization where stable role/context signals exist
+  - deterministic default ordering and visibility fallbacks when role signals are missing or ambiguous
+  - explainable runtime behavior that admins/support can reason about
+- out of scope:
+  - per-user web part property personalization
+  - opaque personalization heuristics without supportable rationale
+  - broad "my work hub" expansion beyond homepage scope
+
+### Implementation summary (runtime behavior and fallbacks)
+
+- lower-zone runtime behavior continues to use the existing deferred personalization seam
+- behavior stays deterministic-first, with safe defaults for unknown roles and sparse personalization inputs
+- fallback posture preserves neutral/non-personalized rendering when role signals are unavailable
+
+### Supportability and explainability notes
+
+- admins/support can explain outcomes through documented role-aware rules and fallback order
+- when users do not match a known role profile, the zone falls back to default neutral ordering
+- when candidate personalized content is sparse, the zone retains bounded fallback rendering without forcing noisy filler content
+
+### Open gaps intentionally deferred
+
+- deeper identity/targeting integration and advanced personalization scoring remain deferred to later Phase-2 operational work
+- broader observability automation for personalization outcomes remains part of later release-readiness scope
+
+---
+
 ## Phase 2 Scope
 
 Phase 2 is intended to cover:
@@ -365,6 +406,7 @@ Prompt-01 and Prompt-02 baseline work resolves, at minimum:
 - composition-level release criticality for remaining Phase-2 prompt execution
 - news/recognition/spotlight zone architecture, source model, and fallback posture
 - people/culture zone scope, curation model, and fallback posture
+- lower-zone role-aware personalization contract and bounded fallback posture
 
 ---
 

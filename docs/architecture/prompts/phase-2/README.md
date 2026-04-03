@@ -81,6 +81,18 @@ Phase 2 is the **completion and production-hardening phase**. It is intended to 
 
 ---
 
+## Prompt-05 Baseline Status
+
+- Prompt-05 is now treated as an executed Phase-2 personalization-governance baseline.
+- Canonical closure note: `docs/architecture/blueprint/phase-2-personalized-lower-zone-and-role-aware-content.md`.
+- The Prompt-05 closure records:
+  - the lower-zone decision and bounded role-aware scope,
+  - explicit personalization contract and out-of-scope boundaries,
+  - deterministic fallback posture for unknown roles and sparse data,
+  - supportability/explainability guidance for admins and support paths.
+
+---
+
 ## Recommended Execution Order
 
 Execute the prompts in numeric order.

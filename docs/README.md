@@ -34,6 +34,7 @@ This repository currently uses `docs/` for canonical architecture prompts, bluep
 - Phase-2 Prompt-02 has now established the final composition model, page assembly rules, and authoring boundary closure record for the Phase-2 prompt series.
 - Phase-2 Prompt-03 has now established the finalized news/recognition/spotlight zone governance record, including curation and fallback expectations.
 - Phase-2 Prompt-04 has now established the finalized people-and-culture zone governance record, including curation ownership and sparse-content fallback expectations.
+- Phase-2 Prompt-05 has now established the finalized personalized-lower-zone governance record, including bounded role-aware behavior and fallback explainability expectations.
 - Prompt-01 should now be treated as a confirmed historical foundation rather than pending structural work.
 
 ## Usage rules

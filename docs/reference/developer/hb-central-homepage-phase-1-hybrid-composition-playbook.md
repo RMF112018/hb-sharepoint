@@ -89,6 +89,23 @@ Provide a concise SharePoint page assembly guide for the approved Phase-2 final 
   - do not mix unrelated generic announcements into this curated people/culture zone
   - do not bypass source seam contracts by hardcoding long-term entries in visual components
 
+## Phase-2 finalized maintenance rules for personalized lower zone
+
+- Lower-zone intent:
+  - Preserve a bounded runtime personalization seam without turning the homepage into a user-specific dashboard product.
+  - Keep behavior explainable, deterministic-first, and safe under missing-role or sparse-data conditions.
+- Governance ownership:
+  - Site owners/admins govern role-signal eligibility, priority rules, and support boundaries.
+  - Editors curate underlying content inputs; they do not define per-user targeting logic via page properties.
+- Role-aware behavior and defaults:
+  - Use known role/context signals only where governance-approved and supportable.
+  - Unknown or ambiguous role context must fall back to neutral/default rendering and ordering.
+  - Sparse personalization candidates must fall back to non-personalized bounded content behavior.
+- Changes editors/admins should not make casually:
+  - do not configure per-user personalization through web part property values
+  - do not introduce opaque ranking/targeting rules without support documentation
+  - do not expand lower-zone scope into broad "my work hub" behavior without explicit governance decision
+
 ## Assembly checklist
 
 - Confirm all five HB Central custom web parts are available in toolbox:

@@ -1,7 +1,7 @@
 {
   "name": "hb-sharepoint",
   "private": true,
-  "version": "00.000.029",
+  "version": "00.000.030",
   "description": "HB SharePoint apps-first SPFx workspace baseline",
   "packageManager": "pnpm@10.18.3",
   "scripts": {
