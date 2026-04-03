@@ -23,6 +23,57 @@ If repo truth shows that one or more of those assumptions are false, Prompt 01 m
 
 ---
 
+## Prompt-01 Baseline Status (Executed)
+
+Prompt-01 is now treated as an executed baseline for Phase 2.
+Canonical closure note: `docs/architecture/blueprint/phase-2-scope-baseline-and-open-decisions.md`.
+
+### Baseline summary (actual Phase-1 end state)
+
+- complete and functional:
+  - homepage shell / hero
+  - featured projects
+  - company pulse
+  - quick actions
+  - people moments and blended news/recognition/spotlight surfaces
+  - shared token/UI layer usage via `@hbc/ui-kit`
+  - packaging/deployment path and validation safeguards
+- partially implemented:
+  - production data integration depth across all surfaces
+  - tenant/page-context verification coverage
+- intentionally deferred:
+  - full personalization rollout beyond the current seam
+  - release automation and downstream tenant-operational steps
+
+### Phase 2 scope matrix
+
+| Scope classification | Items |
+| --- | --- |
+| Must finish in Phase 2 | production-grade data/config seams, runtime hardening and final composition governance, authoring/admin guidance, release-readiness evidence |
+| Optional for Phase 2 | bounded personalization expansion if reliable targeting signals and support posture are available |
+| Explicitly defer beyond Phase 2 | full production deployment automation and tenant-specific operationalization |
+| Blocked by unresolved dependency | any personalization expansion requiring unapproved identity/profile signal contracts or unsupported governance controls |
+
+### Open-decisions register (resolved direction)
+
+| Decision | Approved direction | Rationale |
+| --- | --- | --- |
+| Which zones stay native vs custom | Preserve hybrid model; keep custom ownership for differentiated surfaces and native SharePoint for low-complexity editorial modules | Maintains maintainability and authoring flexibility without regressions to monolith behavior |
+| Whether lower zone is justified | Keep lower zone seam, but keep broader personalization deferred unless evidence supports expansion | Prevents premature complexity while preserving extension point |
+| Appropriate personalization depth | Bound scope to supportable, fallback-safe runtime behavior only | Reduces operational risk and brittle audience-targeting behavior |
+| Required data/config seams | Centralized source/config seam ownership remains mandatory before production-readiness claims | Keeps data contracts and support ownership explicit |
+| Release-critical vs deferrable sections | Critical: composition, data/config seams, hardening, documentation, validation evidence. Deferrable: broader automation and deep personalization | Aligns release gate to reliability and supportability first |
+
+### Constraint summary inherited from earlier phases
+
+- one deployable `.sppkg` artifact remains the baseline deployment model
+- packaging validation safeguards remain mandatory
+- reusable visual UI ownership remains in `@hbc/ui-kit`
+- Phase 2 is completion/hardening, not repository restructuring
+- unresolved platform/tenant automation concerns remain outside this prompt's closure scope
+
+---
+
 ## Phase 2 Scope
 
 Phase 2 is intended to cover:

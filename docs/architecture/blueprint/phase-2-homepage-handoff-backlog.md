@@ -4,6 +4,12 @@
 
 Define the canonical Phase-2 handoff scope after Phase-1 Prompt-08 packaging and validation closure.
 
+## Prompt-01 closure status
+
+- Phase-2 Prompt-01 scope-baseline and open-decision outputs are now closed.
+- Canonical closure note: `docs/architecture/blueprint/phase-2-scope-baseline-and-open-decisions.md`.
+- This backlog remains authoritative for intentionally deferred Phase-2 implementation items and does not imply those items are complete.
+
 ## Intentionally unfinished scope
 
 - deeper data integrations across focused homepage surfaces

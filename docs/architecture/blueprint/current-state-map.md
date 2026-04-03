@@ -32,6 +32,7 @@ The repository currently contains:
 - phase-1 Prompt-06 featured-projects/company-pulse dedicated web part records with non-hero composition host ownership split
 - phase-1 Prompt-07 quick-actions dedicated web part records with explicit native SharePoint composition seams
 - phase-1 Prompt-08 packaging hardening and validation records with canonical Phase-2 handoff backlog
+- phase-2 Prompt-01 scope-baseline and open-decision closure records
 - a deterministic `.sppkg` packaging path for the homepage app via native SPFx production packaging (`apps/hb-central-homepage/gulpfile.cjs` + `config/package-solution.json`) guarded by `tools/validate-sppkg.mjs`
 - a `packages/ui-kit/` shared visual package with runnable typecheck, lint, build, and test scripts
 
@@ -60,6 +61,7 @@ The repository does not yet contain:
 - Treat phase-1 Prompt-06 as materially executed for feature-web-part ownership scope: dedicated featured-projects and company-pulse web part paths are baseline and non-hero composition host must remain projects/pulse-free.
 - Treat phase-1 Prompt-07 as materially executed for quick-actions/native-composition seam scope: dedicated quick-actions web part path is baseline and non-hero composition host must remain actions-free.
 - Treat phase-1 Prompt-08 as materially executed for packaging/validation scope: focused web part registrations and runtime mount wiring are validated as release baselines.
+- Treat phase-2 Prompt-01 as materially executed for scope baseline: the initial Phase-2 end-state baseline, scope matrix, open-decision direction, and inherited constraints are approved and should be implemented, not rediscovered.
 - Use the prompt package to sequence implementation work, but use live files and this map as the source of truth for what exists now.
 - Do not infer app structure, package structure, or verification capabilities that have not been created yet.
 - Treat Prompt-01 as historically executed: the structural baseline already exists and should be confirmed rather than recreated.
@@ -93,4 +95,5 @@ The repository does not yet contain:
 - `docs/architecture/blueprint/phase-1-quick-actions-and-native-composition-seams.md` records the approved phase-1 Prompt-07 quick-actions and native-composition seam baseline.
 - `docs/reference/developer/hb-central-homepage-phase-1-hybrid-composition-playbook.md` records the canonical SharePoint page assembly guidance for phase-1 hybrid composition.
 - `docs/architecture/blueprint/phase-1-packaging-validation-and-phase-2-handoff.md` records the approved phase-1 Prompt-08 packaging/validation and handoff baseline.
+- `docs/architecture/blueprint/phase-2-scope-baseline-and-open-decisions.md` records the approved phase-2 Prompt-01 scope baseline and open-decision closure.
 - `docs/architecture/blueprint/phase-2-homepage-handoff-backlog.md` records the canonical Phase-2 homepage backlog handoff.

@@ -32,6 +32,18 @@ Phase 2 is the **completion and production-hardening phase**. It is intended to 
 
 ---
 
+## Prompt-01 Baseline Status
+
+- Prompt-01 is now treated as an executed Phase-2 baseline, not an open discovery pass.
+- Canonical closure note: `docs/architecture/blueprint/phase-2-scope-baseline-and-open-decisions.md`.
+- The Prompt-01 closure records:
+  - the confirmed Phase-1 end-state baseline summary,
+  - an explicit Phase-2 scope matrix,
+  - resolved early Phase-2 decision direction,
+  - inherited constraints that subsequent prompts must preserve.
+
+---
+
 ## Recommended Execution Order
 
 Execute the prompts in numeric order.
