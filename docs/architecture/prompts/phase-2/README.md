@@ -143,6 +143,18 @@ Phase 2 is the **completion and production-hardening phase**. It is intended to 
 
 ---
 
+## Prompt-10 Baseline Status
+
+- Prompt-10 is now treated as an executed Phase-2 final validation/release-readiness governance baseline.
+- Canonical closure note: `docs/architecture/blueprint/phase-2-final-homepage-validation-and-release-readiness-audit.md`.
+- The Prompt-10 closure records:
+  - final end-state audit summary across architecture, runtime behavior, and operations,
+  - severity-ranked findings matrix with explicit release impact classification,
+  - explicit release-readiness verdict and rationale,
+  - remediation punch list and deferred-scope boundaries.
+
+---
+
 ## Recommended Execution Order
 
 Execute the prompts in numeric order.

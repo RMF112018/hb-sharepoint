@@ -58,6 +58,12 @@ Define the canonical Phase-2 handoff scope after Phase-1 Prompt-08 packaging and
 - Canonical closure note: `docs/architecture/blueprint/phase-2-authoring-administration-and-support-guidance.md`.
 - Role-based maintenance guidance, troubleshooting response paths, and escalation boundaries are now explicit; deferred backlog items below remain open until separately closed.
 
+## Prompt-10 closure status
+
+- Phase-2 Prompt-10 final validation and release-readiness audit outputs are now closed.
+- Canonical closure note: `docs/architecture/blueprint/phase-2-final-homepage-validation-and-release-readiness-audit.md`.
+- Final audit framing, severity-ranked findings, release-readiness verdict, and remediation boundaries are now explicit; deferred backlog items below remain open until separately closed.
+
 ## Intentionally unfinished scope
 
 - deeper data integrations across focused homepage surfaces

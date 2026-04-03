@@ -41,6 +41,7 @@ The repository currently contains:
 - phase-2 Prompt-07 quick-actions permissions and operational-launch closure records
 - phase-2 Prompt-08 UX/accessibility/responsive/performance closure records
 - phase-2 Prompt-09 authoring/administration/support guidance closure records
+- phase-2 Prompt-10 final validation and release-readiness audit closure records
 - a deterministic `.sppkg` packaging path for the homepage app via native SPFx production packaging (`apps/hb-central-homepage/gulpfile.cjs` + `config/package-solution.json`) guarded by `tools/validate-sppkg.mjs`
 - a `packages/ui-kit/` shared visual package with runnable typecheck, lint, build, and test scripts
 
@@ -78,6 +79,7 @@ The repository does not yet contain:
 - Treat phase-2 Prompt-07 as materially executed for quick-actions governance: launch model, permission/context behavior, and supportability fallback posture are approved and should be implemented, not rediscovered.
 - Treat phase-2 Prompt-08 as materially executed for UX/accessibility/responsive/performance governance: cross-homepage conformance posture and runtime-quality guardrails are approved and should be implemented, not rediscovered.
 - Treat phase-2 Prompt-09 as materially executed for authoring/admin/support governance: role-based maintenance guidance, troubleshooting paths, and escalation boundaries are approved and should be implemented, not rediscovered.
+- Treat phase-2 Prompt-10 as materially executed for final audit governance: severity-ranked findings, release-readiness verdict, and remediation boundaries are approved and should be implemented, not rediscovered.
 - Use the prompt package to sequence implementation work, but use live files and this map as the source of truth for what exists now.
 - Do not infer app structure, package structure, or verification capabilities that have not been created yet.
 - Treat Prompt-01 as historically executed: the structural baseline already exists and should be confirmed rather than recreated.
@@ -120,4 +122,5 @@ The repository does not yet contain:
 - `docs/architecture/blueprint/phase-2-quick-actions-permissions-and-operational-launch-behavior.md` records the approved phase-2 Prompt-07 quick-actions permissions and operational-launch closure.
 - `docs/architecture/blueprint/phase-2-ux-accessibility-responsive-behavior-and-performance.md` records the approved phase-2 Prompt-08 UX/accessibility/responsive/performance closure.
 - `docs/architecture/blueprint/phase-2-authoring-administration-and-support-guidance.md` records the approved phase-2 Prompt-09 authoring/administration/support closure.
+- `docs/architecture/blueprint/phase-2-final-homepage-validation-and-release-readiness-audit.md` records the approved phase-2 Prompt-10 final validation and release-readiness audit closure.
 - `docs/architecture/blueprint/phase-2-homepage-handoff-backlog.md` records the canonical Phase-2 homepage backlog handoff.

@@ -39,6 +39,7 @@ This repository currently uses `docs/` for canonical architecture prompts, bluep
 - Phase-2 Prompt-07 has now established the finalized quick-actions operational governance record, including permission/context visibility rules and launch fallback expectations.
 - Phase-2 Prompt-08 has now established the finalized UX/accessibility/responsive/performance governance record, including conformance guardrails and runtime fallback-quality expectations.
 - Phase-2 Prompt-09 has now established the finalized authoring/administration/support governance record, including role-based maintenance responsibilities, troubleshooting flows, and escalation boundaries.
+- Phase-2 Prompt-10 has now established the finalized validation/release-readiness governance record, including severity-ranked findings, conditional-go rationale, and remediation punch-list boundaries.
 - Prompt-01 should now be treated as a confirmed historical foundation rather than pending structural work.
 
 ## Usage rules
