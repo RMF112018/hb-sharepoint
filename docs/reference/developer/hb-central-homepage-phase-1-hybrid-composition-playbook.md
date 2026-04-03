@@ -142,6 +142,24 @@ Provide a concise SharePoint page assembly guide for the approved Phase-2 final 
   - do not hide actions via undocumented rules that support teams cannot explain
   - do not introduce tenant-specific launch dependencies without documenting limitation and fallback behavior
 
+## Phase-2 finalized maintenance rules for UX/accessibility/responsive/performance
+
+- Safe UX adjustments:
+  - adjust copy, ordering emphasis, and bounded visual rhythm only within approved shared token/UI rules
+  - preserve fixed custom stack intent and avoid introducing duplicate content semantics between custom and native regions
+- Accessibility and responsive guardrails:
+  - preserve keyboard reachability and visible focus behavior across all interactive homepage surfaces
+  - preserve semantic structure and readable state messaging for loading/empty/error/sparse scenarios
+  - preserve mobile/tablet/desktop readability and predictable interaction behavior across the composed page
+- Performance-safe content/assembly practices:
+  - keep critical sections readable without avoidable blocking behavior from lower-priority content
+  - keep explicit fallback behavior intact; do not remove loading/empty/error/sparse state affordances as a "polish" shortcut
+  - prefer maintainable deterministic behavior over fragile micro-optimization tweaks
+- Changes editors/admins should not make casually:
+  - do not introduce one-off style overrides that bypass shared tokens/UI foundations
+  - do not reorder or overload fixed custom sections in ways that break responsive scannability
+  - do not suppress fallback states to hide sparse/failed data conditions
+
 ## Assembly checklist
 
 - Confirm all five HB Central custom web parts are available in toolbox:

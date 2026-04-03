@@ -37,6 +37,7 @@ This repository currently uses `docs/` for canonical architecture prompts, bluep
 - Phase-2 Prompt-05 has now established the finalized personalized-lower-zone governance record, including bounded role-aware behavior and fallback explainability expectations.
 - Phase-2 Prompt-06 has now established the finalized production-grade data/config seam governance record, including section ownership and fallback limitations.
 - Phase-2 Prompt-07 has now established the finalized quick-actions operational governance record, including permission/context visibility rules and launch fallback expectations.
+- Phase-2 Prompt-08 has now established the finalized UX/accessibility/responsive/performance governance record, including conformance guardrails and runtime fallback-quality expectations.
 - Prompt-01 should now be treated as a confirmed historical foundation rather than pending structural work.
 
 ## Usage rules

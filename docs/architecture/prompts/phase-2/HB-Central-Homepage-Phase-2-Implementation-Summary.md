@@ -362,6 +362,43 @@ Canonical closure note: `docs/architecture/blueprint/phase-2-quick-actions-permi
 
 ---
 
+## Prompt-08 Baseline Status (Executed)
+
+Prompt-08 is now treated as an executed baseline for Phase 2.
+Canonical closure note: `docs/architecture/blueprint/phase-2-ux-accessibility-responsive-behavior-and-performance.md`.
+
+### UX refinement outcomes (cross-homepage consistency)
+
+- homepage zones now follow a single conformance posture for hierarchy, spacing rhythm, and interaction consistency
+- fixed custom stack and downstream native modules are treated as one composed user journey, not isolated section surfaces
+- cross-zone visual behavior remains governed through shared token/UI rules instead of ad hoc per-zone styling decisions
+
+### Accessibility posture (validated baseline expectations)
+
+- keyboard navigation and focus visibility must remain explicit across all homepage zones
+- semantic structure and assistive-technology readability remain required for custom surfaces and curated state messaging
+- contrast and interaction affordance posture remains governed by shared visual foundations and accessibility guardrails
+- reduced-motion-safe behavior remains expected where motion/transition effects are present
+
+### Responsive behavior contract
+
+- mobile, tablet, and desktop behavior remains explicitly governed as one contract across all homepage zones
+- section-level responsive behavior must preserve scannability, interaction clarity, and predictable ordering
+- responsive regressions that break curated intent or readability are treated as governance defects, not cosmetic preferences
+
+### Performance posture and runtime boundaries
+
+- loading strategy remains progressive and bounded so critical homepage content is available without avoidable blocking work
+- fallback behavior remains first-class: loading/empty/error/sparse states are part of runtime quality, not optional polish
+- practical optimization boundaries prioritize deterministic rendering and maintainable bundle/runtime behavior over fragile micro-optimizations
+
+### Open gaps intentionally deferred
+
+- deeper production telemetry/benchmark automation for continuous conformance tracking remains deferred to later release-readiness work
+- tenant-specific responsive and performance evidence collection at broader operational scale remains deferred to later prompts/releases
+
+---
+
 ## Phase 2 Scope
 
 Phase 2 is intended to cover:
@@ -505,6 +542,7 @@ Prompt-01 and Prompt-02 baseline work resolves, at minimum:
 - lower-zone role-aware personalization contract and bounded fallback posture
 - section-by-section production-grade data/config seam model with operational ownership and limitations
 - quick-actions operational launch model with permission/context explainability and fallback posture
+- cross-homepage UX/accessibility/responsive/performance governance baseline with explicit maintenance boundaries
 
 ---
 

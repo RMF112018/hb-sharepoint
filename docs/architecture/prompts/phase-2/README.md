@@ -117,6 +117,19 @@ Phase 2 is the **completion and production-hardening phase**. It is intended to 
 
 ---
 
+## Prompt-08 Baseline Status
+
+- Prompt-08 is now treated as an executed Phase-2 UX/accessibility/responsive/performance governance baseline.
+- Canonical closure note: `docs/architecture/blueprint/phase-2-ux-accessibility-responsive-behavior-and-performance.md`.
+- Canonical operator-facing maintenance guide remains: `docs/reference/developer/hb-central-homepage-phase-1-hybrid-composition-playbook.md`.
+- The Prompt-08 closure records:
+  - finalized cross-homepage UX conformance posture and assembly-level consistency expectations,
+  - validated accessibility baseline contract (keyboard/focus/semantics/contrast/reduced-motion-safe behavior),
+  - responsive behavior guardrails for mobile/tablet/desktop rendering integrity,
+  - runtime performance and fallback posture with explicit deferred operational gaps.
+
+---
+
 ## Recommended Execution Order
 
 Execute the prompts in numeric order.
