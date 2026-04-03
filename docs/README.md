@@ -40,6 +40,7 @@ This repository currently uses `docs/` for canonical architecture prompts, bluep
 - Phase-2 Prompt-08 has now established the finalized UX/accessibility/responsive/performance governance record, including conformance guardrails and runtime fallback-quality expectations.
 - Phase-2 Prompt-09 has now established the finalized authoring/administration/support governance record, including role-based maintenance responsibilities, troubleshooting flows, and escalation boundaries.
 - Phase-2 Prompt-10 has now established the finalized validation/release-readiness governance record, including severity-ranked findings, conditional-go rationale, and remediation punch-list boundaries.
+- Phase-3 Prompt-01 has now established the repo-truth evidence-map baseline, including current surface inventory, shared-bundle/runtime ownership reality, hybrid packaging-path classification, and validation-coverage freeze.
 - Prompt-01 should now be treated as a confirmed historical foundation rather than pending structural work.
 
 ## Usage rules
