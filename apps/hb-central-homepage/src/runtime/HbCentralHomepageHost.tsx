@@ -7,8 +7,6 @@ import {
   HbcSection,
 } from "@hbc/ui-kit";
 import { Suspense, lazy, useMemo, type CSSProperties, type ReactElement } from "react";
-import { CompanyPulseBand } from "./CompanyPulseBand";
-import { FeaturedProjectsShowcase } from "./FeaturedProjectsShowcase";
 import { PeopleMomentsSurface } from "./PeopleMomentsSurface";
 import { QuickActionsDeck } from "./QuickActionsDeck";
 import {
@@ -92,8 +90,6 @@ function renderDeferredSurfaceFallback(sectionTitle: string) {
 const SURFACE_RENDERERS: Partial<
   Record<HomepageCompositionEntry["id"], () => ReactElement>
 > = {
-  projects: () => <FeaturedProjectsShowcase />,
-  pulse: () => <CompanyPulseBand />,
   people: () => <PeopleMomentsSurface />,
   actions: () => <QuickActionsDeck />,
   newsRecognition: () => <NewsRecognitionSpotlightMosaic />,

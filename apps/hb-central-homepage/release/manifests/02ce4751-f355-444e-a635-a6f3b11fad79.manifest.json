@@ -1,6 +1,6 @@
 {
-  "id": "4ff4d963-cb8e-4ba2-b70f-89f72f0f4db1",
-  "alias": "HbCentralHomepageHeroWebPart",
+  "id": "02ce4751-f355-444e-a635-a6f3b11fad79",
+  "alias": "HbCentralHomepageFeaturedProjectsWebPart",
   "componentType": "WebPart",
   "version": "1.0.0",
   "manifestVersion": 2,
@@ -14,12 +14,12 @@
         "default": "HB Central"
       },
       "title": {
-        "default": "HB Central Homepage Hero"
+        "default": "HB Central Featured Projects"
       },
       "description": {
-        "default": "Dedicated premium shell and hero web part surface for HB Central homepage."
+        "default": "Dedicated featured projects web part surface for HB Central homepage."
       },
-      "officeFabricIconFontName": "HomeSolid",
+      "officeFabricIconFontName": "FabricDataConnectionLibrary",
       "properties": {}
     }
   ],
@@ -39,6 +39,6 @@
         "version": "1.22.2"
       }
     },
-    "exportName": "b"
+    "exportName": "c"
   }
 }

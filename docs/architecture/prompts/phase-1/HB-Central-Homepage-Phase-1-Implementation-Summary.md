@@ -188,3 +188,32 @@ Prompt-05 is now treated as an executed shell/hero extraction baseline for Phase
 
 - One `.sppkg` solution remains the deployment model.
 - Toolbox discovery now includes dedicated shell/hero and non-hero composition web part surfaces.
+
+## Prompt-06 status (executed baseline)
+
+Prompt-06 is now treated as an executed featured-projects/company-pulse extraction baseline for Phase 1.
+
+### Dedicated ownership after Prompt-06
+
+- Featured Projects rendering is owned by a dedicated custom web part path.
+- Company Pulse rendering is owned by a dedicated custom web part path.
+- Both dedicated runtimes consume shared token/UI foundations from `@hbc/ui-kit`.
+
+### Non-hero host ownership after Prompt-06
+
+- The existing non-hero composition host no longer owns `projects` or `pulse`.
+- Non-hero composition host now owns:
+  - people
+  - actions
+  - news/recognition
+  - optional personalized lower zone
+  - footer/global utility
+
+### Packaging and deployable strategy
+
+- One `.sppkg` solution remains the deployment model.
+- Toolbox discovery now includes dedicated surfaces for:
+  - homepage non-hero composition
+  - shell/hero
+  - featured projects
+  - company pulse

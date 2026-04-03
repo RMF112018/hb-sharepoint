@@ -3,10 +3,8 @@ import { HbCentralHomepageHost } from "./HbCentralHomepageHost";
 import { HOMEPAGE_COMPOSITION_MANIFEST } from "./homepageComposition";
 
 describe("HbCentralHomepageHost", () => {
-  it("defines the static non-hero composition manifest order for Prompt-05", () => {
+  it("defines the static non-hero composition manifest order for Prompt-06", () => {
     expect(HOMEPAGE_COMPOSITION_MANIFEST.map((entry) => entry.id)).toEqual([
-      "projects",
-      "pulse",
       "people",
       "actions",
       "newsRecognition",
@@ -23,14 +21,14 @@ describe("HbCentralHomepageHost", () => {
       .map((node) => node.getAttribute("data-section-id"));
 
     expect(wrappers).toEqual([
-      "projects",
-      "pulse",
       "people",
       "actions",
       "newsRecognition",
       "footerGlobalUtility",
     ]);
     expect(screen.queryByTestId("homepage-section-hero")).not.toBeInTheDocument();
+    expect(screen.queryByTestId("homepage-section-projects")).not.toBeInTheDocument();
+    expect(screen.queryByTestId("homepage-section-pulse")).not.toBeInTheDocument();
   });
 
   it("renders optional personalized lower zone when enabled", async () => {
@@ -45,22 +43,21 @@ describe("HbCentralHomepageHost", () => {
   it("renders wrappers for each zone type", () => {
     render(<HbCentralHomepageHost includePersonalizedLowerZone />);
 
-    expect(screen.getByTestId("homepage-section-projects")).toHaveAttribute("data-zone", "banded");
-    expect(screen.getByTestId("homepage-section-pulse")).toHaveAttribute("data-zone", "mosaic");
+    expect(screen.getByTestId("homepage-section-people")).toHaveAttribute("data-zone", "mosaic");
+    expect(screen.getByTestId("homepage-section-actions")).toHaveAttribute("data-zone", "banded");
     expect(screen.getByTestId("homepage-section-footerGlobalUtility")).toHaveAttribute("data-zone", "full-width");
   });
 
-  it("mounts the featured projects showcase in the projects slot", () => {
+  it("does not mount featured projects or company pulse in the non-hero host", () => {
     render(<HbCentralHomepageHost />);
 
-    expect(screen.getAllByRole("heading", { name: /featured projects showcase/i }).length).toBeGreaterThan(0);
-    expect(screen.getByRole("link", { name: /view beacon tower modernization project/i })).toBeInTheDocument();
+    expect(screen.queryByRole("heading", { name: /featured projects showcase/i })).not.toBeInTheDocument();
+    expect(screen.queryByRole("heading", { name: /company pulse band/i })).not.toBeInTheDocument();
   });
 
-  it("mounts the company pulse and people moments surfaces in their section slots", () => {
+  it("mounts the people moments surface in its section slot", () => {
     render(<HbCentralHomepageHost />);
 
-    expect(screen.getByRole("heading", { name: /company pulse band/i })).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: /people and culture moments/i })).toBeInTheDocument();
   });
 

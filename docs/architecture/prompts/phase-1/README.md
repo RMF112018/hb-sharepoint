@@ -11,7 +11,7 @@ The target model is:
 - **native SharePoint web parts** used where Microsoft already provides strong, maintainable capability,
 - and a homepage composition approach that avoids treating the entire homepage as one oversized SPA mounted into one web part.
 
-Prompt-01, Prompt-02, Prompt-03, Prompt-04, and Prompt-05 in this package are now treated as executed baselines, not open discovery items.
+Prompt-01, Prompt-02, Prompt-03, Prompt-04, Prompt-05, and Prompt-06 in this package are now treated as executed baselines, not open discovery items.
 
 ## Recommended target architecture
 
@@ -90,6 +90,14 @@ The prompts are designed to execute against the Prompt-01 baseline and produce:
 - One deployable `.sppkg` solution remains, now with separate toolbox surfaces for hero and non-hero composition.
 - Shared token/UI foundation remains the governing visual contract for shell/hero rendering.
 - Canonical governance closure note: `docs/architecture/blueprint/phase-1-shell-hero-dedicated-web-part.md`.
+
+## Prompt-06 baseline status
+
+- Featured Projects and Company Pulse rendering are extracted into dedicated custom web part paths.
+- Existing non-hero composition host ownership is narrowed further and no longer includes projects or pulse.
+- One deployable `.sppkg` solution remains, now with dedicated toolbox surfaces for shell/hero, featured projects, and company pulse.
+- Shared token/UI foundation remains the governing visual contract for extracted feature rendering.
+- Canonical governance closure note: `docs/architecture/blueprint/phase-1-featured-projects-company-pulse-dedicated-web-parts.md`.
 
 ## Suggested execution order
 

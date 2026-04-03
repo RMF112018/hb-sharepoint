@@ -1,6 +1,4 @@
 export type HomepageSectionId =
-  | "projects"
-  | "pulse"
   | "people"
   | "actions"
   | "newsRecognition"
@@ -21,20 +19,6 @@ export interface HomepageCompositionEntry {
 }
 
 export const HOMEPAGE_COMPOSITION_MANIFEST: readonly HomepageCompositionEntry[] = [
-  {
-    id: "projects",
-    zone: "banded",
-    slot: "main",
-    title: "Featured projects showcase",
-    description: "Current flagship efforts with editorial highlights.",
-  },
-  {
-    id: "pulse",
-    zone: "mosaic",
-    slot: "main",
-    title: "Company pulse",
-    description: "Operational and business pulse cards for the week.",
-  },
   {
     id: "people",
     zone: "mosaic",

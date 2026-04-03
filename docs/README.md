@@ -27,6 +27,7 @@ This repository currently uses `docs/` for canonical architecture prompts, bluep
 - Phase-1 Prompt-03 has now established shared package scaffolding and build-boundary baselines for `@hbc/brand-tokens` and `@hbc/sharepoint-core`.
 - Phase-1 Prompt-04 has now established shared brand-token governance and shared UI-foundation baselines across `@hbc/brand-tokens`, `@hbc/ui-kit`, and homepage runtime consumption.
 - Phase-1 Prompt-05 has now established dedicated shell/hero web part ownership and removed hero ownership from the non-hero composition host path.
+- Phase-1 Prompt-06 has now established dedicated featured-projects and company-pulse web part ownership and removed projects/pulse ownership from the non-hero composition host path.
 - Prompt-01 should now be treated as a confirmed historical foundation rather than pending structural work.
 
 ## Usage rules
