@@ -4,27 +4,28 @@ import { resolve } from "node:path";
 const wiringChecks = [
   {
     path: "apps/hb-central-homepage/src/webparts/hbCentralHomepage/HbCentralHomepageWebPart.js",
-    expectedOwnerImport: "../../runtime/owners/mountHomepageSections",
+    expectedOwnerImport: "../../runtime/owners/mountHomepageSections.tsx",
     expectedMountCall: "mountHomepageSections",
   },
   {
     path: "apps/hb-central-homepage/src/webparts/hbCentralHomepageHero/HbCentralHomepageHeroWebPart.js",
-    expectedOwnerImport: "../../runtime/owners/mountHomepageHero",
+    expectedOwnerImport: "../../runtime/owners/mountHomepageHero.tsx",
     expectedMountCall: "mountHomepageHero",
   },
   {
     path: "apps/hb-central-homepage/src/webparts/hbCentralHomepageFeaturedProjects/HbCentralHomepageFeaturedProjectsWebPart.js",
-    expectedOwnerImport: "../../runtime/owners/mountHomepageFeaturedProjects",
+    expectedOwnerImport:
+      "../../runtime/owners/mountHomepageFeaturedProjects.tsx",
     expectedMountCall: "mountHomepageFeaturedProjects",
   },
   {
     path: "apps/hb-central-homepage/src/webparts/hbCentralHomepageCompanyPulse/HbCentralHomepageCompanyPulseWebPart.js",
-    expectedOwnerImport: "../../runtime/owners/mountHomepageCompanyPulse",
+    expectedOwnerImport: "../../runtime/owners/mountHomepageCompanyPulse.tsx",
     expectedMountCall: "mountHomepageCompanyPulse",
   },
   {
     path: "apps/hb-central-homepage/src/webparts/hbCentralHomepageQuickActions/HbCentralHomepageQuickActionsWebPart.js",
-    expectedOwnerImport: "../../runtime/owners/mountHomepageQuickActions",
+    expectedOwnerImport: "../../runtime/owners/mountHomepageQuickActions.tsx",
     expectedMountCall: "mountHomepageQuickActions",
   },
 ];

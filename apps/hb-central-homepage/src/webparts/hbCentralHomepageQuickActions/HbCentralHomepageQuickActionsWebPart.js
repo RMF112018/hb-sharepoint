@@ -1,5 +1,5 @@
 import { BaseClientSideWebPart } from "@microsoft/sp-webpart-base";
-import { mountHomepageQuickActions } from "../../runtime/owners/mountHomepageQuickActions";
+import { mountHomepageQuickActions } from "../../runtime/owners/mountHomepageQuickActions.tsx";
 
 const QUICK_ACTIONS_ROOT_CLASS = "hb-central-homepage-quick-actions-spfx-root";
 

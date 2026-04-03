@@ -1,5 +1,5 @@
 import { BaseClientSideWebPart } from "@microsoft/sp-webpart-base";
-import { mountHomepageSections } from "../../runtime/owners/mountHomepageSections";
+import { mountHomepageSections } from "../../runtime/owners/mountHomepageSections.tsx";
 
 const HOMEPAGE_ROOT_CLASS = "hb-central-homepage-spfx-root";
 

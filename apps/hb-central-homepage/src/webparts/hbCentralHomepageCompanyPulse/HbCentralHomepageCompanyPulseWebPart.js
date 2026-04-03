@@ -1,5 +1,5 @@
 import { BaseClientSideWebPart } from "@microsoft/sp-webpart-base";
-import { mountHomepageCompanyPulse } from "../../runtime/owners/mountHomepageCompanyPulse";
+import { mountHomepageCompanyPulse } from "../../runtime/owners/mountHomepageCompanyPulse.tsx";
 
 const COMPANY_PULSE_ROOT_CLASS = "hb-central-homepage-company-pulse-spfx-root";
 

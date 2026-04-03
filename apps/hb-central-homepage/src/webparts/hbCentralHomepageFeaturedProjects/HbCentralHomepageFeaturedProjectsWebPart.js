@@ -1,5 +1,5 @@
 import { BaseClientSideWebPart } from "@microsoft/sp-webpart-base";
-import { mountHomepageFeaturedProjects } from "../../runtime/owners/mountHomepageFeaturedProjects";
+import { mountHomepageFeaturedProjects } from "../../runtime/owners/mountHomepageFeaturedProjects.tsx";
 
 const FEATURED_PROJECTS_ROOT_CLASS =
   "hb-central-homepage-featured-projects-spfx-root";

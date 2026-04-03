@@ -1,5 +1,5 @@
 import { BaseClientSideWebPart } from "@microsoft/sp-webpart-base";
-import { mountHomepageHero } from "../../runtime/owners/mountHomepageHero";
+import { mountHomepageHero } from "../../runtime/owners/mountHomepageHero.tsx";
 
 const HERO_ROOT_CLASS = "hb-central-homepage-hero-spfx-root";
 

@@ -78,6 +78,15 @@ The Phase 3 end state is:
   - removal of production wrapper dependency on `../../../dist/homepage.js`,
   - ownership-aware wiring validation that rejects bridge regression in wrappers.
 
+## Prompt-06 Baseline Status
+
+- Prompt-06 is now treated as an executed Phase-3 baseline for real per-surface bundle ownership.
+- Canonical closure note: `docs/architecture/blueprint/phase-3-split-bundle-ownership-and-prompt-06-closure.md`.
+- The Prompt-06 closure freezes:
+  - split SPFx bundle authority with one deployable bundle boundary per homepage surface,
+  - artifact-level ownership validation that fails on collapsed `entryModuleId` or primary script-resource ownership,
+  - stable one-solution packaging posture while Heft-native packaging-path migration remains Prompt-07 scope.
+
 ## Evidence sources used
 
 ### Attached artifacts

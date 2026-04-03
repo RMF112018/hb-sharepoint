@@ -2,24 +2,40 @@
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
   "version": "2.0",
   "bundles": {
-    "hb-central-homepage-web-part": {
+    "hb-central-homepage-sections-web-part": {
       "components": [
         {
           "entrypoint": "./src/webparts/hbCentralHomepage/HbCentralHomepageWebPart.js",
           "manifest": "./src/webparts/hbCentralHomepage/HbCentralHomepageWebPart.manifest.json"
-        },
+        }
+      ]
+    },
+    "hb-central-homepage-hero-web-part": {
+      "components": [
         {
           "entrypoint": "./src/webparts/hbCentralHomepageHero/HbCentralHomepageHeroWebPart.js",
           "manifest": "./src/webparts/hbCentralHomepageHero/HbCentralHomepageHeroWebPart.manifest.json"
-        },
+        }
+      ]
+    },
+    "hb-central-homepage-featured-projects-web-part": {
+      "components": [
         {
           "entrypoint": "./src/webparts/hbCentralHomepageFeaturedProjects/HbCentralHomepageFeaturedProjectsWebPart.js",
           "manifest": "./src/webparts/hbCentralHomepageFeaturedProjects/HbCentralHomepageFeaturedProjectsWebPart.manifest.json"
-        },
+        }
+      ]
+    },
+    "hb-central-homepage-company-pulse-web-part": {
+      "components": [
         {
           "entrypoint": "./src/webparts/hbCentralHomepageCompanyPulse/HbCentralHomepageCompanyPulseWebPart.js",
           "manifest": "./src/webparts/hbCentralHomepageCompanyPulse/HbCentralHomepageCompanyPulseWebPart.manifest.json"
-        },
+        }
+      ]
+    },
+    "hb-central-homepage-quick-actions-web-part": {
+      "components": [
         {
           "entrypoint": "./src/webparts/hbCentralHomepageQuickActions/HbCentralHomepageQuickActionsWebPart.js",
           "manifest": "./src/webparts/hbCentralHomepageQuickActions/HbCentralHomepageQuickActionsWebPart.manifest.json"

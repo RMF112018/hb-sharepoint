@@ -25,13 +25,11 @@
     }
   ],
   "loaderConfig": {
-    "internalModuleBaseUrls": [
-      "~sitecollection/ClientSideAssets/"
-    ],
+    "internalModuleBaseUrls": ["~sitecollection/ClientSideAssets/"],
     "scriptResources": {
-      "hb-central-homepage-web-part": {
+      "hb-central-homepage-sections-web-part": {
         "type": "path",
-        "path": "hb-central-homepage-web-part.js"
+        "path": "hb-central-homepage-sections-web-part.js"
       },
       "react": {
         "type": "component",
