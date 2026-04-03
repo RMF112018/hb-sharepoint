@@ -1,7 +1,7 @@
 {
   "name": "hb-sharepoint",
   "private": true,
-  "version": "00.000.024",
+  "version": "00.000.025",
   "description": "HB SharePoint apps-first SPFx workspace baseline",
   "packageManager": "pnpm@10.18.3",
   "scripts": {
@@ -9,8 +9,9 @@
     "lint": "turbo run lint",
     "build": "turbo run build",
     "test": "turbo run test",
-    "build:sppkg": "pnpm --filter @hbc/hb-central-homepage build && pnpm --filter @hbc/hb-central-homepage spfx:package && node tools/validate-sppkg.mjs",
-    "build:sppkg:homepage": "pnpm --filter @hbc/hb-central-homepage spfx:package && node tools/validate-sppkg.mjs",
+    "validate:homepage:package": "node tools/validate-homepage-webpart-wiring.mjs && node tools/validate-sppkg.mjs",
+    "build:sppkg": "pnpm --filter @hbc/hb-central-homepage build && pnpm --filter @hbc/hb-central-homepage spfx:package && pnpm validate:homepage:package",
+    "build:sppkg:homepage": "pnpm --filter @hbc/hb-central-homepage spfx:package && pnpm validate:homepage:package",
     "format:check": "prettier --check .",
     "format": "prettier --write ."
   },

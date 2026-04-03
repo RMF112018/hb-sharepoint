@@ -29,6 +29,7 @@ This repository currently uses `docs/` for canonical architecture prompts, bluep
 - Phase-1 Prompt-05 has now established dedicated shell/hero web part ownership and removed hero ownership from the non-hero composition host path.
 - Phase-1 Prompt-06 has now established dedicated featured-projects and company-pulse web part ownership and removed projects/pulse ownership from the non-hero composition host path.
 - Phase-1 Prompt-07 has now established dedicated quick-actions web part ownership and explicit native SharePoint composition seams with a canonical hybrid assembly playbook.
+- Phase-1 Prompt-08 has now established packaging/validation hardening baselines and canonical Phase-2 homepage handoff backlog documentation.
 - Prompt-01 should now be treated as a confirmed historical foundation rather than pending structural work.
 
 ## Usage rules

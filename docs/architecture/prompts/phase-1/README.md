@@ -11,7 +11,7 @@ The target model is:
 - **native SharePoint web parts** used where Microsoft already provides strong, maintainable capability,
 - and a homepage composition approach that avoids treating the entire homepage as one oversized SPA mounted into one web part.
 
-Prompt-01, Prompt-02, Prompt-03, Prompt-04, Prompt-05, Prompt-06, and Prompt-07 in this package are now treated as executed baselines, not open discovery items.
+Prompt-01, Prompt-02, Prompt-03, Prompt-04, Prompt-05, Prompt-06, Prompt-07, and Prompt-08 in this package are now treated as executed baselines, not open discovery items.
 
 ## Recommended target architecture
 
@@ -106,6 +106,14 @@ The prompts are designed to execute against the Prompt-01 baseline and produce:
 - Hybrid native-composition seams are explicit and actionable for SharePoint page assembly.
 - Canonical governance closure note: `docs/architecture/blueprint/phase-1-quick-actions-and-native-composition-seams.md`.
 - Canonical assembly playbook: `docs/reference/developer/hb-central-homepage-phase-1-hybrid-composition-playbook.md`.
+
+## Prompt-08 baseline status
+
+- Packaging hardening and validation safeguards are now explicit for the five focused custom web parts.
+- Deployable artifact path remains one `.sppkg` (`dist/sppkg/hb-central-homepage.sppkg`) with strengthened validation checks.
+- Deployment-readiness guidance now includes explicit toolbox/page-render evidence expectations.
+- Canonical governance closure note: `docs/architecture/blueprint/phase-1-packaging-validation-and-phase-2-handoff.md`.
+- Canonical Phase-2 handoff backlog: `docs/architecture/blueprint/phase-2-homepage-handoff-backlog.md`.
 
 ## Suggested execution order
 

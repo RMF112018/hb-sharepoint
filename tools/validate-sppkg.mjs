@@ -10,10 +10,21 @@ import { spawnSync } from "node:child_process";
  * packageManifestTargetExists: boolean;
  * localhostManifestEntries: string[];
  * unsupportedFeatureEntries: string[];
+ * missingExpectedWebPartDefinitionEntries: string[];
  * }} SppkgValidationResult */
 
 const packageManifestRelationshipType =
   "http://schemas.microsoft.com/sharepoint/2012/app/relationships/package-manifest";
+const expectedWebPartManifestIds = [
+  "b8bb1136-d33e-47d2-9d45-848524b8fcbf",
+  "4ff4d963-cb8e-4ba2-b70f-89f72f0f4db1",
+  "02ce4751-f355-444e-a635-a6f3b11fad79",
+  "c5819073-cf72-4d91-bd5b-49982a6b8230",
+  "506562ca-e752-4bf4-a218-f06d965f8f7f",
+];
+const expectedWebPartDefinitionEntries = expectedWebPartManifestIds.map(
+  (id) => `${id}/WebPart_${id}.xml`,
+);
 
 function runUnzip(args) {
   const result = spawnSync("unzip", args, { encoding: "utf8", stdio: "pipe" });
@@ -58,6 +69,9 @@ function validateSppkg(artifactPath) {
   let packageManifestTargetExists = false;
   const localhostManifestEntries = [];
   const unsupportedFeatureEntries = [];
+  const missingExpectedWebPartDefinitionEntries = expectedWebPartDefinitionEntries.filter(
+    (entry) => !entries.includes(entry),
+  );
 
   if (hasRootRels) {
     const relsXml = readEntry(artifactPath, "_rels/.rels");
@@ -109,6 +123,7 @@ function validateSppkg(artifactPath) {
     packageManifestTargetExists,
     localhostManifestEntries,
     unsupportedFeatureEntries,
+    missingExpectedWebPartDefinitionEntries,
   };
 
   return result;
@@ -145,6 +160,11 @@ function main() {
       `unsupported ClientSideComponentInstance registration detected in: ${result.unsupportedFeatureEntries.join(", ")}`,
     );
   }
+  if (result.missingExpectedWebPartDefinitionEntries.length > 0) {
+    failures.push(
+      `missing expected focused web part registrations: ${result.missingExpectedWebPartDefinitionEntries.join(", ")}`,
+    );
+  }
 
   if (failures.length > 0) {
     throw new Error(`Invalid .sppkg structure:\n${failures.map((f) => `- ${f}`).join("\n")}`);
@@ -157,7 +177,8 @@ function main() {
       `- package-manifest relationship: 1\n` +
       `- package-manifest target: ${result.packageManifestTarget}\n` +
       `- localhost manifest references: none\n` +
-      `- unsupported feature registration: none\n`,
+      `- unsupported feature registration: none\n` +
+      `- focused web part registrations: present (${expectedWebPartManifestIds.join(", ")})\n`,
   );
 }
 

@@ -244,3 +244,24 @@ Prompt-07 is now treated as an executed quick-actions extraction and native-comp
   - selected Quick Links where native behavior is sufficient
   - Events and other standard editorial modules
 - Hybrid assembly guidance is documented in `docs/reference/developer/hb-central-homepage-phase-1-hybrid-composition-playbook.md`.
+
+## Prompt-08 status (executed baseline)
+
+Prompt-08 is now treated as an executed packaging hardening, validation evidence, and Phase-2 handoff baseline for Phase 1.
+
+### Packaging and validation hardening (Prompt-08)
+
+- Packaging remains anchored to one deployable artifact: `dist/sppkg/hb-central-homepage.sppkg`.
+- `.sppkg` validation now enforces expected focused web part manifest presence (sections, hero, featured projects, company pulse, quick actions).
+- Runtime-to-host mount export wiring is validated to guard against stale bundle/mount mismatches.
+- Root packaging command path now includes packaging validation sequencing via `pnpm validate:homepage:package`.
+
+### Validation evidence expectations
+
+- Deployment-readiness guidance now includes explicit toolbox visibility evidence and page-render evidence expectations for all focused custom web parts.
+- Validation guidance explicitly states that extracted focused web parts must not rely on old monolithic rendering ownership.
+
+### Phase-2 handoff baseline
+
+- Canonical Phase-2 backlog is recorded in `docs/architecture/blueprint/phase-2-homepage-handoff-backlog.md`.
+- Phase-2 scope is explicit for deeper integrations, personalization expansion, deferred composition decisions, and release operationalization.
