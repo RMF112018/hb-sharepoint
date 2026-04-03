@@ -1,0 +1,9 @@
+{
+  "extends": "@microsoft/rush-stack-compiler-4.7/includes/tsconfig-web.json",
+  "compilerOptions": {
+    "rootDir": ".",
+    "skipLibCheck": true,
+    "types": ["vite/client"]
+  },
+  "include": ["src/webparts/**/*.ts", "src/webparts/**/*.tsx"]
+}

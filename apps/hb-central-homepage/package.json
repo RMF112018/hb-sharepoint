@@ -1,0 +1,44 @@
+{
+  "name": "@hbc/hb-central-homepage",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "check-types": "tsc --noEmit -p tsconfig.dev.json",
+    "lint": "eslint src --ext .ts,.tsx",
+    "build": "vite build",
+    "test": "vitest run",
+    "spfx:package": "pnpm build && node ../../tools/run-spfx-package.mjs"
+  },
+  "dependencies": {
+    "@hbc/ui-kit": "workspace:*",
+    "@microsoft/sp-core-library": "^1.20.0",
+    "@microsoft/sp-property-pane": "^1.20.0",
+    "@microsoft/sp-webpart-base": "^1.20.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "@microsoft/rush-stack-compiler-4.7": "^0.1.1",
+    "@microsoft/sp-build-web": "1.22.2",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/node": "^22.13.10",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@typescript-eslint/eslint-plugin": "^8.24.1",
+    "@typescript-eslint/parser": "^8.24.1",
+    "@vitejs/plugin-react": "^4.4.1",
+    "eslint": "^9.21.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "globals": "^15.15.0",
+    "gulp": "4.0.2",
+    "jsdom": "^26.0.0",
+    "typescript": "^5.7.3",
+    "vite": "^6.2.0",
+    "vitest": "^3.0.8"
+  }
+}

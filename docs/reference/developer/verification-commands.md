@@ -18,19 +18,22 @@ Do not claim completion without stating exactly what was run and what was not ru
 
 ## Root workspace commands
 
-These commands are currently defined in the root `package.json` and should be preferred over ad hoc alternatives when they match the validation need.
+The following root commands are now defined in the root `package.json` and should be preferred when they match the validation need.
 
 ### Core workspace commands
+
+Current root commands:
 
 - `pnpm lint` — run workspace lint via Turbo
 - `pnpm check-types` — run workspace type checks via Turbo
 - `pnpm build` — run workspace builds via Turbo
-- `pnpm test` — run the currently configured root test subset
-- `pnpm test:fallback` — fallback test path for auth/shell coverage
+- `pnpm test` — run workspace tests via Turbo
 - `pnpm format:check` — verify formatting
 - `pnpm format` — apply formatting
 
 ### Additional repository checks
+
+When later implementation prompts introduce them, the repository may also define:
 
 - `pnpm scan-stubs` — scan for non-approved stubs
 - `pnpm scan-stubs:all` — include approved stubs in the scan output
@@ -69,6 +72,23 @@ Prefer:
 - relevant package tests,
 - targeted runtime validation,
 - Playwright only when runtime behavior actually changed or the task calls for it.
+
+### Prompt-12 hardening acceptance checks
+
+When applying homepage accessibility/responsive/performance hardening, include explicit checks for:
+- keyboard-focusable interactive elements with visible focus treatment,
+- heading hierarchy and landmark clarity across ready/loading/empty/error states,
+- reduced-motion-safe loading/transition behavior,
+- responsive behavior at narrow, medium, wide, and extra-wide widths,
+- lazy-loaded section fallback quality and final render parity.
+
+### Prompt-13 readiness acceptance checks
+
+When closing homepage phase-0 readiness, include explicit checks for:
+- full homepage app validation stack pass (`check-types`, `lint`, `build`, `test`),
+- build artifact path verification (`apps/hb-central-homepage/dist/`),
+- documentation-to-reality alignment for commands, outputs, and known constraints,
+- explicit go/no-go and residual-risk notes in canonical closure docs.
 
 ### Architecture, workspace, or manifest change
 

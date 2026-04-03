@@ -77,7 +77,7 @@ The reason must be non-empty and should reference the governing decision or defe
 | S-03 | `tools/mocks/sp-core-library.ts` | SPFx SDK mock (globally exempt via D-06) |
 | S-04 | `tools/mocks/sp-property-pane.ts` | SPFx SDK mock (globally exempt via D-06) |
 | S-05 | `tools/mocks/sp-webpart-base.ts` | SPFx SDK mock (globally exempt via D-06) |
-| S-06 | `.github/workflows/cd.yml` | SPFx deployment pending Vite-to-.sppkg pipeline (PH8) |
+| S-06 | `.github/workflows/cd.yml` | Production SPFx deployment workflow remains out of scope; local `.sppkg` packaging is available via `pnpm build:sppkg` |
 
 Use `pnpm scan-stubs:all` to see the full inventory with markers.
 

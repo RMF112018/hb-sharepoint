@@ -1,0 +1,32 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "hb-central-homepage-client-side-solution",
+    "id": "7b9f902f-8f6f-492c-9525-d8a4b4d0846c",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "HB Construction",
+      "websiteUrl": "https://example.com",
+      "privacyUrl": "https://example.com/privacy",
+      "termsOfUseUrl": "https://example.com/terms",
+      "mpnId": "Undefined-1.0.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "HB Central homepage web part package"
+      },
+      "longDescription": {
+        "default": "SharePoint package for HB Central homepage runtime bundle."
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    }
+  },
+  "paths": {
+    "zippedPackage": "../../../dist/sppkg/hb-central-homepage.sppkg"
+  }
+}

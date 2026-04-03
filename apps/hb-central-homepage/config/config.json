@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "hb-central-homepage-web-part": {
+      "components": [
+        {
+          "entrypoint": "./src/webparts/hbCentralHomepage/HbCentralHomepageWebPart.js",
+          "manifest": "./src/webparts/hbCentralHomepage/HbCentralHomepageWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {
+    "react": "React",
+    "react-dom": "ReactDom"
+  },
+  "localizedResources": {}
+}
