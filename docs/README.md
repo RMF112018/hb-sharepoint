@@ -32,6 +32,7 @@ This repository currently uses `docs/` for canonical architecture prompts, bluep
 - Phase-1 Prompt-08 has now established packaging/validation hardening baselines and canonical Phase-2 homepage handoff backlog documentation.
 - Phase-2 Prompt-01 has now established the executable scope baseline and open-decision closure record for the Phase-2 prompt series.
 - Phase-2 Prompt-02 has now established the final composition model, page assembly rules, and authoring boundary closure record for the Phase-2 prompt series.
+- Phase-2 Prompt-03 has now established the finalized news/recognition/spotlight zone governance record, including curation and fallback expectations.
 - Prompt-01 should now be treated as a confirmed historical foundation rather than pending structural work.
 
 ## Usage rules

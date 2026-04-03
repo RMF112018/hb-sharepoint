@@ -57,6 +57,18 @@ Phase 2 is the **completion and production-hardening phase**. It is intended to 
 
 ---
 
+## Prompt-03 Baseline Status
+
+- Prompt-03 is now treated as an executed Phase-2 zone-implementation governance baseline.
+- Canonical closure note: `docs/architecture/blueprint/phase-2-news-recognition-and-spotlight-zone.md`.
+- The Prompt-03 closure records:
+  - implemented blended custom-zone behavior for news/recognition/spotlight in the sections host,
+  - explicit source/curation ownership and sparse-content fallback posture,
+  - validation evidence for loading/empty/error/editorial fallback behavior,
+  - deferred gaps for deeper production source hardening and broader operational verification.
+
+---
+
 ## Recommended Execution Order
 
 Execute the prompts in numeric order.

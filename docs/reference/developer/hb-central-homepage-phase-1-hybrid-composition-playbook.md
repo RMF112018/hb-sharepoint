@@ -50,6 +50,25 @@ Provide a concise SharePoint page assembly guide for the approved Phase-2 final 
 - Treat the non-hero HB Central sections web part as the owner for people/newsRecognition/personalized/footer seams only.
 - Keep full-width usage reserved for hero by default; other sections should remain in standard-width regions unless explicitly approved.
 
+## Phase-2 finalized maintenance rules for news/recognition/spotlight
+
+- Content streams and where they are curated:
+  - News-like entries for the blended custom mosaic are curated through the approved homepage source seams.
+  - Recognition entries are curated as editorial recognition content in the same blended source model.
+  - Spotlight entries are curated as featured/high-priority editorial highlights in the same blended source model.
+  - Native SharePoint News remains curated through the native News web part when page owners intentionally add that separate native module.
+- Curation ownership:
+  - Site owners/admins own source mode selection, governance guardrails, and configuration boundaries.
+  - Content editors own routine stream content freshness, ordering intent, and accuracy within approved seams.
+- Missing/sparse content behavior:
+  - If one stream is unavailable, the mosaic should still render remaining streams without layout breakage.
+  - If content is sparse overall, keep explicit empty-state/editorial fallback behavior and avoid forcing placeholder-only cards.
+  - If no valid content exists, use the existing explicit empty-state guidance rather than duplicating native modules in the same region.
+- Changes editors should not make casually:
+  - do not repurpose the blended custom zone into a pure native-news replacement
+  - do not duplicate identical news intent in both the custom mosaic and adjacent native News region without owner approval
+  - do not bypass source seam rules by embedding long-term hardcoded entries in visual components
+
 ## Assembly checklist
 
 - Confirm all five HB Central custom web parts are available in toolbox:

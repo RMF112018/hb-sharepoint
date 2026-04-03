@@ -34,6 +34,7 @@ The repository currently contains:
 - phase-1 Prompt-08 packaging hardening and validation records with canonical Phase-2 handoff backlog
 - phase-2 Prompt-01 scope-baseline and open-decision closure records
 - phase-2 Prompt-02 final composition-model and page-assembly closure records
+- phase-2 Prompt-03 news/recognition/spotlight zone closure records
 - a deterministic `.sppkg` packaging path for the homepage app via native SPFx production packaging (`apps/hb-central-homepage/gulpfile.cjs` + `config/package-solution.json`) guarded by `tools/validate-sppkg.mjs`
 - a `packages/ui-kit/` shared visual package with runnable typecheck, lint, build, and test scripts
 
@@ -64,6 +65,7 @@ The repository does not yet contain:
 - Treat phase-1 Prompt-08 as materially executed for packaging/validation scope: focused web part registrations and runtime mount wiring are validated as release baselines.
 - Treat phase-2 Prompt-01 as materially executed for scope baseline: the initial Phase-2 end-state baseline, scope matrix, open-decision direction, and inherited constraints are approved and should be implemented, not rediscovered.
 - Treat phase-2 Prompt-02 as materially executed for composition governance: final zone ownership, page assembly rules, and authoring boundaries are approved and should be implemented, not rediscovered.
+- Treat phase-2 Prompt-03 as materially executed for zone governance: news/recognition/spotlight architecture, source/curation model, and fallback behavior are approved and should be implemented, not rediscovered.
 - Use the prompt package to sequence implementation work, but use live files and this map as the source of truth for what exists now.
 - Do not infer app structure, package structure, or verification capabilities that have not been created yet.
 - Treat Prompt-01 as historically executed: the structural baseline already exists and should be confirmed rather than recreated.
@@ -99,4 +101,5 @@ The repository does not yet contain:
 - `docs/architecture/blueprint/phase-1-packaging-validation-and-phase-2-handoff.md` records the approved phase-1 Prompt-08 packaging/validation and handoff baseline.
 - `docs/architecture/blueprint/phase-2-scope-baseline-and-open-decisions.md` records the approved phase-2 Prompt-01 scope baseline and open-decision closure.
 - `docs/architecture/blueprint/phase-2-final-composition-model-and-page-assembly-rules.md` records the approved phase-2 Prompt-02 final composition model and page-assembly closure.
+- `docs/architecture/blueprint/phase-2-news-recognition-and-spotlight-zone.md` records the approved phase-2 Prompt-03 news/recognition/spotlight zone closure.
 - `docs/architecture/blueprint/phase-2-homepage-handoff-backlog.md` records the canonical Phase-2 homepage backlog handoff.

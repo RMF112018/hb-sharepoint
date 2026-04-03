@@ -16,6 +16,12 @@ Define the canonical Phase-2 handoff scope after Phase-1 Prompt-08 packaging and
 - Canonical closure note: `docs/architecture/blueprint/phase-2-final-composition-model-and-page-assembly-rules.md`.
 - Composition governance is now explicit; deferred backlog items below remain open until separately closed.
 
+## Prompt-03 closure status
+
+- Phase-2 Prompt-03 news/recognition/spotlight zone-governance outputs are now closed.
+- Canonical closure note: `docs/architecture/blueprint/phase-2-news-recognition-and-spotlight-zone.md`.
+- Zone architecture/source/fallback governance is now explicit; deferred backlog items below remain open until separately closed.
+
 ## Intentionally unfinished scope
 
 - deeper data integrations across focused homepage surfaces

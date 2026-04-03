@@ -131,6 +131,52 @@ Canonical closure note: `docs/architecture/blueprint/phase-2-final-composition-m
 
 ---
 
+## Prompt-03 Baseline Status (Executed)
+
+Prompt-03 is now treated as an executed baseline for Phase 2.
+Canonical closure note: `docs/architecture/blueprint/phase-2-news-recognition-and-spotlight-zone.md`.
+
+### Implementation summary
+
+- the news/recognition/spotlight zone is implemented as a governed custom mosaic surface within `HB Central Homepage Sections`
+- the zone supports blended rendering of news-like items, recognition items, and spotlight items through a normalized ranked contract
+- the implementation remains aligned to Prompt-02 composition governance by keeping this blended zone custom while allowing native SharePoint News as a separate editorial module
+
+### Zone architecture decision
+
+- primary blended zone architecture: dedicated custom zone in the sections host (`newsRecognition` slot)
+- native SharePoint News remains an approved separate page-level editorial module for author-managed feed scenarios
+- this hybrid split keeps differentiated storytelling in the custom mosaic while preserving native authoring strengths where appropriate
+
+### Content source and curation model
+
+- source streams:
+  - news/page-like entries
+  - recognition entries
+  - spotlight entries
+- curation ownership:
+  - site owners/admins define source mode and guardrails through centralized seam configuration
+  - editors curate stream content and ordering intent within approved boundaries
+- source-of-truth model:
+  - app-local seam configuration and normalized contracts remain the implementation source of truth
+  - native SharePoint News remains source of truth for standalone native-news modules placed outside the blended custom zone
+- sparse-content fallback:
+  - when one or more streams are missing, the mosaic degrades gracefully to remaining streams
+  - when sparse overall, explicit empty-state behavior and editorial fallback messaging remain in place
+
+### Validation evidence summary
+
+- loading, empty, and error states are already implemented and remain explicit for this zone
+- editorial fallback behavior is preserved for sparse or missing stream scenarios
+- the zone remains visually aligned to shared token/UI governance and responsive behavior expectations
+
+### Open gaps intentionally deferred
+
+- deeper production source integration hardening across all streams is deferred to later Phase-2 prompt work
+- additional tenant/page-context verification evidence remains part of broader release-readiness and operational backlog scope
+
+---
+
 ## Phase 2 Scope
 
 Phase 2 is intended to cover:
@@ -269,6 +315,7 @@ Prompt-01 and Prompt-02 baseline work resolves, at minimum:
 - page assembly order and fixed-vs-reorderable boundaries
 - justified lower-zone personalization posture (deferred/optional seam)
 - composition-level release criticality for remaining Phase-2 prompt execution
+- news/recognition/spotlight zone architecture, source model, and fallback posture
 
 ---
 
