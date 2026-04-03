@@ -22,6 +22,12 @@ Define the canonical Phase-2 handoff scope after Phase-1 Prompt-08 packaging and
 - Canonical closure note: `docs/architecture/blueprint/phase-2-news-recognition-and-spotlight-zone.md`.
 - Zone architecture/source/fallback governance is now explicit; deferred backlog items below remain open until separately closed.
 
+## Prompt-04 closure status
+
+- Phase-2 Prompt-04 people-and-culture zone-governance outputs are now closed.
+- Canonical closure note: `docs/architecture/blueprint/phase-2-people-and-culture-zone.md`.
+- People/culture section scope, curation ownership, and fallback governance are now explicit; deferred backlog items below remain open until separately closed.
+
 ## Intentionally unfinished scope
 
 - deeper data integrations across focused homepage surfaces

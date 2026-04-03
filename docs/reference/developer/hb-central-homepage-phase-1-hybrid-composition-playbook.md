@@ -69,6 +69,26 @@ Provide a concise SharePoint page assembly guide for the approved Phase-2 final 
   - do not duplicate identical news intent in both the custom mosaic and adjacent native News region without owner approval
   - do not bypass source seam rules by embedding long-term hardcoded entries in visual components
 
+## Phase-2 finalized maintenance rules for people/culture
+
+- Curated people/culture entries include:
+  - birthdays
+  - anniversaries
+  - promotions
+  - recognition highlights
+  - bounded culture highlights tied to people milestones
+- Curation and governance ownership:
+  - Site owners/admins govern source mode, field expectations, and update guardrails.
+  - Content editors curate routine people/culture entries and freshness cadence.
+- Sparse/missing-content behavior:
+  - Sparse lists are valid and should render as intentionally bounded content.
+  - If no valid entries are available, use explicit existing empty-state behavior; do not add filler-only celebratory entries.
+  - Keep counts bounded so the section remains scannable and does not become a long-feed surface.
+- Changes editors should not make casually:
+  - do not move people/culture ownership out of the sections host without governance approval
+  - do not mix unrelated generic announcements into this curated people/culture zone
+  - do not bypass source seam contracts by hardcoding long-term entries in visual components
+
 ## Assembly checklist
 
 - Confirm all five HB Central custom web parts are available in toolbox:

@@ -1,0 +1,329 @@
+# Fresh ChatGPT Session Prompt — HB Central Refactored SPFx Package Audit
+
+You are working against the live public GitHub repository:
+
+- `https://github.com/RMF112018/hb-sharepoint.git`
+
+I will attach the **current refactored `.sppkg` package** for evaluation.
+
+Your job is **not** to implement code in chat.
+Your job is to perform an **exhaustive audit** of:
+
+1. the attached refactored SharePoint Framework package artifact (`.sppkg`),
+2. the live public source code in the GitHub repo above,
+3. and the alignment between the packaged artifact and current source-controlled repo truth.
+
+The outcome must be a **comprehensive audit package** that tells me whether the current refactored solution is correctly architected, correctly packaged, deployable, aligned to SharePoint/SPFx best practices, and consistent with the actual current repository state.
+
+---
+
+## Core objective
+
+Audit the **current refactored HB Central homepage SPFx solution** by evaluating:
+
+- the attached `.sppkg` package artifact,
+- the source code and packaging/build structure in the live repo,
+- and the resulting deployment/runtime architecture implied by both.
+
+The audit must determine:
+
+- whether the package is structurally valid,
+- whether the package content is consistent with the repo’s current source code,
+- whether the package reflects the intended hybrid homepage architecture,
+- whether the source code and package follow supported SPFx / SharePoint implementation patterns,
+- whether the current implementation is actually fit for SharePoint homepage use,
+- and what defects, risks, gaps, inconsistencies, or anti-patterns remain.
+
+You must treat this as a **repo-truth and packaged-artifact reconciliation audit** with supporting subject matter research.
+
+---
+
+## Mandatory operating doctrine
+
+### 1. Current repo truth governs first
+- Audit the live `main` branch of the public repo before making conclusions about architecture or implementation status.
+- Do not infer current state from prior assumptions, memory, or prior chat output.
+- Treat the live repo and attached `.sppkg` as the authoritative current-state inputs.
+
+### 2. Read the smallest authoritative set first
+- Do not reread the entire repository blindly.
+- Read only the smallest set of files needed to establish:
+  - solution/package structure,
+  - SPFx ownership,
+  - build/package pipeline,
+  - web part manifests,
+  - shared UI structure,
+  - homepage architecture,
+  - and deployment/runtime bundle paths.
+- Do not reread files already in current session context unless the file changed, the context is stale, or the task scope expanded.
+
+### 3. Exhaustive research is mandatory
+Before finalizing the audit, perform **exhaustive subject matter research** on the relevant Microsoft/SPFx/SharePoint topics and use that research to assess the solution against supported and current best practices.
+
+### 4. Package artifact and repo must be reconciled
+Do not audit the `.sppkg` in isolation.
+Do not audit the repo in isolation.
+You must compare the package contents against the actual current source code and build/package design.
+
+### 5. Evidence over assumption
+Every conclusion should be grounded in one or more of:
+- actual package contents,
+- actual repo files,
+- actual emitted bundle behavior,
+- or explicit current Microsoft/SPFx guidance.
+
+### 6. No implementation drift
+Do not generate implementation code unless it is strictly necessary to explain a defect pattern.
+The primary deliverable is an audit and analysis package.
+
+---
+
+## Mandatory research requirement
+
+Before finalizing the audit, perform **exhaustive subject matter research** on all relevant areas.
+
+### Research topics that must be covered
+
+1. **Modern SPFx architecture and packaging**
+   - supported SPFx solution structure
+   - modern SPFx build/package flows
+   - Heft vs gulp implications where relevant
+   - client-side assets packaging
+   - `.sppkg` structure and packaging rules
+   - package manifest / feature manifest / asset inclusion behavior
+   - App Catalog deployment expectations
+   - web part visibility and toolbox registration
+   - supported usage of web parts vs extensions vs feature XML
+
+2. **SharePoint homepage architecture best practices**
+   - communication site homepage composition
+   - when to use one custom web part vs multiple web parts
+   - hybrid homepage patterns
+   - full-width web part usage
+   - authoring flexibility vs custom experience tradeoffs
+   - native SharePoint web parts vs custom SPFx web parts
+
+3. **Runtime bundle architecture**
+   - lazy loading and dynamic imports in SPFx
+   - stable runtime entry contracts
+   - React mount/unmount patterns in SPFx
+   - multi-bundle or chunked runtime loading considerations
+   - common causes of runtime-bundle failures in SPFx deployments
+
+4. **Deployment and validation best practices**
+   - App Catalog validation expectations
+   - site installation vs tenant deployment implications
+   - production asset hosting expectations
+   - localhost/dev artifact leakage into production packages
+   - package inspection and validation practices
+
+5. **Maintainability and architecture**
+   - shared UI package discipline
+   - package boundary design
+   - homepage decomposition patterns
+   - avoiding monolithic web part anti-patterns
+   - sustainable authoring/configuration seams
+   - progressive migration from a single-package model to a hybrid multi-package model
+
+### How to use the research
+- Do not just list research findings.
+- Use the research to evaluate the actual repo and package against best practices.
+- Explicitly say where the implementation aligns, partially aligns, or conflicts with current supported guidance.
+
+---
+
+## Audit scope
+
+Your audit must cover, at minimum, the following areas.
+
+### A. Live repo truth
+Determine and document:
+- actual solution/workspace/package structure
+- actual SPFx solution ownership
+- actual build/package tooling
+- actual homepage-related package layout
+- actual shared UI / design token structure
+- actual manifest and packaging config
+- actual source locations for homepage web parts
+- actual runtime entry points and lazy-load boundaries
+- actual packaging scripts and artifact paths
+- actual docs that describe the current implementation, if any
+
+### B. Attached `.sppkg` package artifact
+Inspect the package and determine:
+- whether the package is structurally valid
+- what components/web parts/extensions it contains
+- whether the package content matches the current repo
+- whether it includes correct manifests and assets
+- whether it contains stale bootstrap or placeholder content
+- whether it contains localhost or other dev-only production defects
+- whether it contains correct runtime bundle wiring
+- whether the emitted bundles appear to correspond to the current refactored architecture
+
+### C. Repo-to-package reconciliation
+Compare repo truth to package truth and determine:
+- whether the package was built from the current repo state
+- whether the package includes the expected current components
+- whether any files or architecture in source are not reflected in the package
+- whether the package contains stale or mismatched bundle outputs
+- whether the package reflects the intended hybrid model or an incomplete / broken version of it
+
+### D. Homepage architecture evaluation
+Determine whether the current implementation correctly aligns to a **hybrid homepage model**:
+- premium custom shell/hero where justified
+- focused custom web parts where justified
+- native SharePoint composition where appropriate
+- maintainable package boundaries
+- reusable shared UI ownership
+- sensible authoring and deployment model
+
+If it does not align, explain precisely how and why.
+
+### E. Packaging, deployment, and runtime risk
+Identify:
+- current packaging risks
+- deployment blockers
+- runtime loading risks
+- SharePoint authoring limitations
+- code/package ownership issues
+- bundle contract mismatches
+- any anti-patterns likely to create future breakage or maintenance pain
+
+---
+
+## Required audit method
+
+You must perform the work in this order:
+
+1. Audit the live repo structure and determine current repo truth
+2. Perform the mandatory subject matter research
+3. Inspect the attached `.sppkg` in detail
+4. Reconcile package contents against current repo truth
+5. Evaluate the current homepage architecture against best practices
+6. Identify all defects, risks, gaps, inconsistencies, and likely root causes
+7. Produce a downloadable markdown audit package
+
+Do not skip repo inspection.
+Do not skip research.
+Do not skip package inspection.
+Do not rely on stale assumptions.
+
+---
+
+## Output requirements
+
+Produce a **downloadable markdown audit package** containing the following files.
+
+### 1. `README.md`
+Must include:
+- contents of the audit package
+- recommended reading order
+- summary of audit scope
+- summary of evidence sources used
+- assumptions and limitations
+
+### 2. `HB-Central-SPFx-Refactor-Audit-Summary.md`
+Executive-level summary including:
+- overall audit verdict
+- whether the package and repo are aligned
+- whether the current solution is deployable
+- whether the architecture is heading in the right direction
+- top risks
+- top corrective actions
+
+### 3. `HB-Central-SPFx-Repo-Truth-and-Package-Reconciliation.md`
+Detailed comparison of:
+- current repo structure
+- current package structure
+- where they align
+- where they diverge
+- what appears stale, missing, miswired, or inconsistent
+
+### 4. `HB-Central-SPFx-Architecture-Assessment.md`
+Detailed assessment of:
+- homepage architecture
+- package boundaries
+- shared UI ownership
+- hybrid composition alignment
+- SharePoint-native vs custom responsibilities
+- maintainability and future scalability
+
+### 5. `HB-Central-SPFx-Packaging-and-Deployment-Audit.md`
+Detailed analysis of:
+- `.sppkg` validity
+- asset packaging
+- manifests
+- feature usage
+- deployment readiness
+- runtime bundle design
+- App Catalog implications
+- production readiness risks
+
+### 6. `HB-Central-SPFx-Defects-and-Risks-Matrix.md`
+A structured matrix of:
+- issue ID
+- title
+- severity
+- category
+- evidence
+- root cause hypothesis
+- recommended corrective direction
+- likely phase / priority
+
+### 7. `HB-Central-SPFx-Recommended-Remediation-Roadmap.md`
+Provide a recommended remediation roadmap organized into logical phases.
+Focus on:
+- hard blockers first
+- packaging/runtime correctness
+- architecture correction
+- composition correctness
+- documentation and verification hardening
+
+---
+
+## Additional required behaviors
+
+### Be explicit about uncertainty
+If you cannot fully verify something, say so clearly.
+Separate:
+- confirmed findings,
+- strong inferences,
+- and open questions.
+
+### Prefer repo truth and primary-source guidance
+When evaluating implementation quality, use:
+- package inspection,
+- repo inspection,
+- and primary Microsoft/SPFx documentation as primary evidence.
+
+### Do not overstate readiness
+If the package installs but does not correctly render or does not reflect the intended architecture, do not call it complete.
+
+### Do not confuse “available in toolbox” with “architecturally correct”
+The audit must go well beyond basic deployability.
+
+---
+
+## Required structure for the final response in the fresh session
+
+In the chat response, do the following:
+
+1. Summarize repo truth relevant to the homepage package
+2. Summarize the research findings that materially shaped the audit
+3. Summarize the package inspection findings
+4. Summarize the reconciliation between repo and package
+5. State the overall audit verdict
+6. Provide downloadable links to every markdown file generated
+7. Provide a downloadable archive of the full markdown package if possible
+
+---
+
+## Success criteria
+
+Success means the final audit package gives me:
+
+- an evidence-based understanding of the **current actual state** of the HB Central SPFx refactor,
+- a clear comparison between the live repo and the shipped `.sppkg`,
+- a clear determination of whether the current package is correct, incomplete, stale, or miswired,
+- a best-practice evaluation of the hybrid homepage direction,
+- and a concrete remediation roadmap grounded in current repo truth and current Microsoft/SPFx guidance.

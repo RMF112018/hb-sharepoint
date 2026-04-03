@@ -69,6 +69,18 @@ Phase 2 is the **completion and production-hardening phase**. It is intended to 
 
 ---
 
+## Prompt-04 Baseline Status
+
+- Prompt-04 is now treated as an executed Phase-2 people/culture governance baseline.
+- Canonical closure note: `docs/architecture/blueprint/phase-2-people-and-culture-zone.md`.
+- The Prompt-04 closure records:
+  - explicit people/culture section scope for the current phase,
+  - operational content model (source of truth, curation ownership, update path, fallback),
+  - accessibility/responsive validation posture for the people/culture surface,
+  - deferred gaps for deeper source operationalization.
+
+---
+
 ## Recommended Execution Order
 
 Execute the prompts in numeric order.

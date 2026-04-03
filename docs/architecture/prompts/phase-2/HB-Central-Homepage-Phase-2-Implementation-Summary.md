@@ -177,6 +177,54 @@ Canonical closure note: `docs/architecture/blueprint/phase-2-news-recognition-an
 
 ---
 
+## Prompt-04 Baseline Status (Executed)
+
+Prompt-04 is now treated as an executed baseline for Phase 2.
+Canonical closure note: `docs/architecture/blueprint/phase-2-people-and-culture-zone.md`.
+
+### Section definition (people/culture scope)
+
+- curated people moments covering:
+  - birthdays
+  - anniversaries
+  - promotions
+  - recognition highlights
+  - bounded culture highlights tied to employee milestones/celebrations
+- scope remains intentionally bounded to maintain readability and editorial sustainability
+
+### Implementation summary
+
+- people-and-culture behavior is delivered through the existing `people` zone in `HB Central Homepage Sections`
+- the rendered surface is app-local, token-governed, and aligned to the fixed composition model
+- sparse-content rendering remains explicit so low-volume periods stay intentional and readable
+
+### Operational content model
+
+- source of truth:
+  - app-local people-moments contracts and seam configuration remain authoritative for this custom zone
+- curation ownership:
+  - site owners/admins govern source mode, constraints, and publishing guardrails
+  - content editors curate routine people/culture entries and freshness cadence
+- update path:
+  - updates flow through approved source seams/contracts rather than ad hoc component hardcoding
+- fallback behavior:
+  - bounded, explicit empty-state behavior remains the default when no valid entries exist
+  - sparse lists remain valid and render without forcing filler-only content
+
+### Validation evidence summary
+
+- section scope is explicitly defined and aligned to Prompt-02 composition ownership
+- people/culture zone behavior remains integrated in the homepage composition model
+- basic accessibility posture remains intact via semantic links, readable hierarchy, and keyboard-safe interaction
+- responsive behavior remains governed by existing homepage hardening contracts
+
+### Open gaps intentionally deferred
+
+- deeper production integration and governance automation for people/culture sources remain in later Phase-2 operational scope
+- expanded tenant-context evidence collection remains part of broader release-readiness closure work
+
+---
+
 ## Phase 2 Scope
 
 Phase 2 is intended to cover:
@@ -316,6 +364,7 @@ Prompt-01 and Prompt-02 baseline work resolves, at minimum:
 - justified lower-zone personalization posture (deferred/optional seam)
 - composition-level release criticality for remaining Phase-2 prompt execution
 - news/recognition/spotlight zone architecture, source model, and fallback posture
+- people/culture zone scope, curation model, and fallback posture
 
 ---
 
