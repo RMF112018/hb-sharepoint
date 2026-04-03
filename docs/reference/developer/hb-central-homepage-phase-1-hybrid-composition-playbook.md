@@ -1,10 +1,10 @@
-# HB Central Homepage Phase-1 Hybrid Composition Playbook
+# HB Central Homepage Hybrid Composition Playbook (Phase-2 Finalized)
 
 ## Purpose
 
-Provide a concise SharePoint page assembly guide for the approved Phase-1 hybrid model so custom and native web parts are composed intentionally.
+Provide a concise SharePoint page assembly guide for the approved Phase-2 final hybrid model so custom and native web parts are composed intentionally.
 
-## Phase-1 section ownership map
+## Final section ownership map
 
 | Homepage zone | Ownership | Implementation surface |
 | --- | --- | --- |
@@ -14,29 +14,41 @@ Provide a concise SharePoint page assembly guide for the approved Phase-1 hybrid
 | Quick Actions | Custom | HB Central Quick Actions web part |
 | People moments | Custom | HB Central Homepage Sections web part |
 | News / recognition mosaic | Custom (current app-local surface) | HB Central Homepage Sections web part |
-| Personalized lower zone | Custom optional seam | HB Central Homepage Sections web part (optional) |
+| Personalized lower zone | Deferred/optional custom seam | HB Central Homepage Sections web part (optional) |
 | Footer / global utility | Custom page-local seam | HB Central Homepage Sections web part |
 | News (author-managed editorial feed) | Native SharePoint | News web part |
 | Quick Links (low-complexity links) | Native SharePoint | Quick Links web part |
 | Events / additional editorial modules | Native SharePoint | Events and other native web parts |
 
-## Recommended page assembly order
+## Final page assembly order
 
-1. HB Central Homepage Hero
-2. HB Central Featured Projects
-3. HB Central Company Pulse
-4. HB Central Quick Actions
-5. HB Central Homepage Sections
-6. Native SharePoint News
-7. Native SharePoint Quick Links (when needed)
-8. Native SharePoint Events / additional modules (when needed)
+1. Full-width hero region: HB Central Homepage Hero
+2. Standard-width fixed stack: HB Central Featured Projects
+3. Standard-width fixed stack: HB Central Company Pulse
+4. Standard-width fixed stack: HB Central Quick Actions
+5. Standard-width fixed stack: HB Central Homepage Sections
+6. Native editorial region: Native SharePoint News
+7. Native editorial region: Native SharePoint Quick Links (when needed)
+8. Native editorial region: Native SharePoint Events / additional modules (when needed)
 
-## Authoring constraints
+## Authoring boundaries and constraints
+
+- Site owners:
+  - Own final page assembly integrity and fixed-zone compliance.
+  - Approve documented exceptions for fixed-zone ordering only when content strategy requires it.
+- Content editors:
+  - Can update section content and native web part configuration.
+  - Can reorder native editorial modules below the fixed custom stack.
+  - Must not change custom-vs-native ownership intent without owner/admin approval.
+- Admins:
+  - Own deployment, permissions, and operational safeguards.
+  - Keep packaging/toolbox validation requirements intact.
 
 - Keep custom HB Central web parts in the order above unless a documented content strategy exception is approved.
 - Use native Quick Links only for low-complexity curated lists; preserve the custom Quick Actions part for grouped operational action sets.
 - Avoid duplicating the same content intent in both custom and native sections on the same page region.
 - Treat the non-hero HB Central sections web part as the owner for people/newsRecognition/personalized/footer seams only.
+- Keep full-width usage reserved for hero by default; other sections should remain in standard-width regions unless explicitly approved.
 
 ## Assembly checklist
 
@@ -49,3 +61,4 @@ Provide a concise SharePoint page assembly guide for the approved Phase-1 hybrid
 - Confirm homepage sections host does not render actions/projects/pulse/hero content.
 - Add native News/Quick Links/Events only where the native behavior is desired.
 - Validate visual consistency against shared token/UI baselines.
+- Confirm fixed custom stack order remains intact above native editorial modules.

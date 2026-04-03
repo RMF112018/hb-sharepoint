@@ -74,6 +74,63 @@ Canonical closure note: `docs/architecture/blueprint/phase-2-scope-baseline-and-
 
 ---
 
+## Prompt-02 Baseline Status (Executed)
+
+Prompt-02 is now treated as an executed baseline for Phase 2.
+Canonical closure note: `docs/architecture/blueprint/phase-2-final-composition-model-and-page-assembly-rules.md`.
+
+### Final homepage surface map
+
+| Homepage zone | Ownership model | Implementation surface | Rationale |
+| --- | --- | --- | --- |
+| Shell / Hero | Dedicated SPFx web part | HB Central Homepage Hero | Premium branded entry experience remains differentiated |
+| Featured Projects | Dedicated SPFx web part | HB Central Featured Projects | Purpose-built editorial priority and visual treatment |
+| Company Pulse | Dedicated SPFx web part | HB Central Company Pulse | Custom metric framing and bounded signal model |
+| Quick Actions | Dedicated SPFx web part | HB Central Quick Actions | Grouped operational actions exceed native quick links behavior |
+| People moments | Dedicated SPFx web part (sections host) | HB Central Homepage Sections | Maintains cohesion with app-local content seams |
+| News / recognition mosaic | Dedicated SPFx web part (sections host) | HB Central Homepage Sections | Blended surface is intentionally custom and governed |
+| Personalized lower zone | Deferred / optional | HB Central Homepage Sections seam | Preserves extension point while personalization remains bounded |
+| Footer / global utility | Dedicated SPFx web part (sections host) | HB Central Homepage Sections seam | Current page-local utility posture remains intentional |
+| News feed | Native SharePoint | News web part | Native editorial workflow is strong and supportable |
+| Quick Links (simple curation) | Native SharePoint | Quick Links web part | Native authoring is preferred for low-complexity lists |
+| Events / additional editorial modules | Native SharePoint | Events and related native web parts | Native modules preserve maintenance flexibility |
+
+### Page assembly rules
+
+- expected region order:
+  1. full-width hero region: `HB Central Homepage Hero`
+  2. primary content region in fixed order: `Featured Projects`, `Company Pulse`, `Quick Actions`, `HB Central Homepage Sections`
+  3. native editorial region: News, optional Quick Links, optional Events/other native modules
+- full-width usage is reserved for hero by default; other surfaces should use standard content-width regions unless an approved exception is recorded.
+- fixed-order zones: hero, featured projects, company pulse, quick actions, sections host.
+- editor-reorderable zones: native editorial modules below the fixed custom stack.
+- editors may add/remove/reorder native modules only when content intent is not duplicated by custom zones.
+
+### Authoring boundary summary
+
+- site owners:
+  - own page-level assembly compliance and final placement integrity
+  - may approve exceptions to fixed-order guidance with documented rationale
+- content editors:
+  - may update content within each owned surface and configure native modules
+  - must not swap ownership intent across custom and native zones without owner review
+- admins:
+  - own deployment, permission posture, and operational safeguards
+  - must preserve package validation and toolbox availability requirements
+- should not be changed casually:
+  - fixed custom surface order
+  - custom vs native ownership mapping
+  - deferred personalization boundary without signal/governance readiness
+
+### Decision rationale (final hybrid model)
+
+- preserves differentiated HB Central experiences where custom behavior materially improves outcomes
+- preserves native SharePoint for low-complexity editorial surfaces to reduce maintenance overhead
+- keeps assembly safe for non-developer operators by making fixed vs flexible zones explicit
+- prevents monolith regression while keeping visual cohesion under shared token/UI governance
+
+---
+
 ## Phase 2 Scope
 
 Phase 2 is intended to cover:
@@ -204,15 +261,14 @@ Prompt 08 applies a dedicated cross-homepage polish and conformance pass.
 
 ---
 
-## Open Decisions Expected in Phase 2
+## Resolved Early-Phase Decisions
 
-Prompt 01 and Prompt 02 should resolve, at minimum:
+Prompt-01 and Prompt-02 baseline work resolves, at minimum:
 
-- which remaining zones stay native vs become custom
-- whether the lower homepage zone is justified and what it should contain
-- how far personalization should go in the current phase
-- what the production data/config model should be for each section
-- which sections are required for release vs acceptable to defer
+- final zone ownership model (native vs dedicated custom vs deferred seam)
+- page assembly order and fixed-vs-reorderable boundaries
+- justified lower-zone personalization posture (deferred/optional seam)
+- composition-level release criticality for remaining Phase-2 prompt execution
 
 ---
 

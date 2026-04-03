@@ -44,6 +44,19 @@ Phase 2 is the **completion and production-hardening phase**. It is intended to 
 
 ---
 
+## Prompt-02 Baseline Status
+
+- Prompt-02 is now treated as an executed Phase-2 composition-governance baseline.
+- Canonical closure note: `docs/architecture/blueprint/phase-2-final-composition-model-and-page-assembly-rules.md`.
+- Canonical operator-facing assembly guide remains: `docs/reference/developer/hb-central-homepage-phase-1-hybrid-composition-playbook.md`.
+- The Prompt-02 closure records:
+  - final homepage surface ownership mapping,
+  - explicit page assembly and layout constraints,
+  - clear authoring boundaries for site owners, editors, and admins,
+  - rationale for the final hybrid model used by subsequent prompts.
+
+---
+
 ## Recommended Execution Order
 
 Execute the prompts in numeric order.
