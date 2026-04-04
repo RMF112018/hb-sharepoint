@@ -64,6 +64,12 @@ Move the HB Central homepage solution from its current hybrid deployment archite
 - Canonical Prompt-10 closure authority: `docs/architecture/blueprint/phase-3-final-artifact-audit-and-prompt-10-closure.md`.
 - Downstream SharePoint-validation and final-closeout prompts should consume this final artifact-audit baseline and preserve its packaged ownership and artifact-hygiene proof posture.
 
+## Prompt-11 baseline governance status
+
+- Prompt-11 is treated as executed baseline work for this phase.
+- Canonical Prompt-11 closure authority: `docs/architecture/blueprint/phase-3-sharepoint-readiness-and-prompt-11-closeout.md`.
+- Downstream operations/deployment work should consume this final closeout baseline, preserve its Conditional-Go guardrail when tenant evidence is missing, and require explicit tenant/runtime diagnostics evidence for full Go.
+
 ---
 
 ## 1. Current architecture

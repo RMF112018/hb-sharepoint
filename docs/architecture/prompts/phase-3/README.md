@@ -123,6 +123,15 @@ The Phase 3 end state is:
   - packaged per-surface `entryModuleId` and primary script-resource ownership mapping proof,
   - explicit validation-pass evidence for deployable artifact semantics and retired-bridge absence checks.
 
+## Prompt-11 Baseline Status
+
+- Prompt-11 is now treated as an executed Phase-3 baseline for final closeout governance.
+- Canonical closure note: `docs/architecture/blueprint/phase-3-sharepoint-readiness-and-prompt-11-closeout.md`.
+- The Prompt-11 closure freezes:
+  - explicit final status as Conditional-Go when tenant/runtime evidence is not captured in-repo,
+  - acceptance-checklist reconciliation against available artifact and release-gate evidence,
+  - explicit external readiness blockers required for full Go (app catalog validation, target-page behavior, and Page Diagnostics).
+
 ## Evidence sources used
 
 ### Attached artifacts
