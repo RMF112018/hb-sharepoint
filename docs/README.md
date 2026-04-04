@@ -64,6 +64,7 @@ This repository currently uses `docs/` for canonical architecture prompts, bluep
 - Phase-3b Prompt-03 has now established validator and regression-hardening closure governance, with mandatory package-time lazy owner chunk inspection and hard-fail runtime-format guards for CommonJS signatures (`docs/architecture/blueprint/phase-3b-validator-and-regression-hardening-and-prompt-03-closure.md`).
 - Phase-3b Prompt-04 has now established rebuild/deploy/live-proof closure governance, with clean-state artifact provenance and validator evidence frozen and explicit `Conditional Go` release classification pending external tenant live-proof artifacts (`docs/architecture/blueprint/phase-3b-rebuild-deploy-live-proof-and-prompt-04-closure.md`).
 - Phase-3c Prompt-01 has now established placeholder-owner forensics and classification closure governance, with surface-by-surface mapping from browser-safe placeholder owner entrypoints to intended real mount targets and explicit Prompt-02 restoration boundary (`docs/architecture/blueprint/phase-3c-placeholder-owner-forensics-and-prompt-01-closure.md`).
+- Phase-3c Prompt-02 has now established owner-restoration closure governance, with browser-safe owner entrypoints restored to surface-specific non-placeholder rendering while preserving wrapper import topology (`docs/architecture/blueprint/phase-3c-restore-real-owner-mounts-and-prompt-02-closure.md`).
 - Prompt-01 should now be treated as a confirmed historical foundation rather than pending structural work.
 
 ## Usage rules

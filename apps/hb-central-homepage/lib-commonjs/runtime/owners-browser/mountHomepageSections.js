@@ -11,15 +11,15 @@ export function mountHomepageSections(container) {
         "main",
         {
           className: "hb-homepage-main",
-          "aria-label": "HB Central homepage sections",
+          "aria-label": "HB Central homepage",
           role: "main",
         },
         createElement("section", { "data-surface": "homepage-sections" }, [
-          createElement("h2", { key: "heading" }, "HB Central Homepage"),
+          createElement("h1", { key: "heading" }, "HB Central Homepage"),
           createElement(
             "p",
             { key: "body" },
-            "Homepage sections runtime owner is loaded through the browser-safe owner path.",
+            "Homepage sections are mounted through the browser-safe surface owner.",
           ),
         ]),
       ),

@@ -7,11 +7,11 @@ require("../homepageHardening.css");
 function mountHomepageSections(container) {
     (0, react_dom_1.render)((0, react_1.createElement)(react_1.StrictMode, null, (0, react_1.createElement)("main", {
         className: "hb-homepage-main",
-        "aria-label": "HB Central homepage sections",
+        "aria-label": "HB Central homepage",
         role: "main",
     }, (0, react_1.createElement)("section", { "data-surface": "homepage-sections" }, [
-        (0, react_1.createElement)("h2", { key: "heading" }, "HB Central Homepage"),
-        (0, react_1.createElement)("p", { key: "body" }, "Homepage sections runtime owner is loaded through the browser-safe owner path."),
+        (0, react_1.createElement)("h1", { key: "heading" }, "HB Central Homepage"),
+        (0, react_1.createElement)("p", { key: "body" }, "Homepage sections are mounted through the browser-safe surface owner."),
     ]))), container);
     return function () {
         (0, react_dom_1.unmountComponentAtNode)(container);

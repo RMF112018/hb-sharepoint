@@ -47,7 +47,15 @@ This package does **not** authorize:
 - Evidence directory: `docs/architecture/prompts/phase-3c/evidence/2026-04-04-prompt-01/`
 - Canonical closure authority: `docs/architecture/blueprint/phase-3c-placeholder-owner-forensics-and-prompt-01-closure.md`
 - Current validated disposition: wrappers correctly import browser-safe owner entrypoints, but those entrypoints currently render placeholder proof-of-load text while real intended owner mounts exist separately in `src/runtime/owners/mountHomepage*.tsx`.
-- Prompt-02, Prompt-03, and Prompt-04 remain open downstream implementation/hardening/live-proof scope.
+- Prompt-02 is now closed; Prompt-03 and Prompt-04 remain open downstream implementation/hardening/live-proof scope.
+
+## Prompt-02 Status (2026-04-04)
+
+- Prompt-02 closure is complete for browser-safe owner restoration scope.
+- Evidence directory: `docs/architecture/prompts/phase-3c/evidence/2026-04-04-prompt-02/`
+- Canonical closure authority: `docs/architecture/blueprint/phase-3c-restore-real-owner-mounts-and-prompt-02-closure.md`
+- Current validated disposition: browser-safe owner entrypoints now render surface-specific success-path UI without proof-of-load placeholder text, and wrapper import topology remains browser-safe.
+- Prompt-03 and Prompt-04 remain open downstream hardening/live-proof scope.
 
 ## Current Known Condition
 

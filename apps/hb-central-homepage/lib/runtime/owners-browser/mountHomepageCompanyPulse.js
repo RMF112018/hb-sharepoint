@@ -19,7 +19,7 @@ export function mountHomepageCompanyPulse(container) {
           createElement(
             "p",
             { key: "body" },
-            "Company pulse runtime owner is loaded through the browser-safe owner path.",
+            "Company pulse updates are mounted through the browser-safe owner entrypoint.",
           ),
         ]),
       ),

@@ -11,7 +11,7 @@ function mountHomepageFeaturedProjects(container) {
         role: "main",
     }, (0, react_1.createElement)("section", { "data-surface": "homepage-featured-projects" }, [
         (0, react_1.createElement)("h2", { key: "heading" }, "HB Central Featured Projects"),
-        (0, react_1.createElement)("p", { key: "body" }, "Featured projects runtime owner is loaded through the browser-safe owner path."),
+        (0, react_1.createElement)("p", { key: "body" }, "Featured project highlights are mounted through the browser-safe owner entrypoint."),
     ]))), container);
     return function () {
         (0, react_dom_1.unmountComponentAtNode)(container);

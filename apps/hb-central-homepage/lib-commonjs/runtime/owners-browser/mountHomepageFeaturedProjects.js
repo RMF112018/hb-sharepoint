@@ -19,7 +19,7 @@ export function mountHomepageFeaturedProjects(container) {
           createElement(
             "p",
             { key: "body" },
-            "Featured projects runtime owner is loaded through the browser-safe owner path.",
+            "Featured project highlights are mounted through the browser-safe owner entrypoint.",
           ),
         ]),
       ),

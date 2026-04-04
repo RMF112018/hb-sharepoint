@@ -44,7 +44,17 @@ The correct end state is:
   - those entrypoints currently render placeholder proof-of-load text in success paths,
   - intended real owner mounts already exist at `src/runtime/owners/mountHomepage*.tsx`,
   - substitution boundary is source owner-adapter layer (`owners-browser`), not packaging-only transformation.
-- Prompt-02, Prompt-03, and Prompt-04 remain open downstream scope.
+- Prompt-02 is now closed; Prompt-03 and Prompt-04 remain open downstream scope.
+
+## Prompt-02 closure status (2026-04-04)
+
+- Prompt-02 restoration outputs are frozen at `docs/architecture/prompts/phase-3c/evidence/2026-04-04-prompt-02/`.
+- Canonical closure authority is now `docs/architecture/blueprint/phase-3c-restore-real-owner-mounts-and-prompt-02-closure.md`.
+- Prompt-02 confirms owner restoration in current repo truth:
+  - browser-safe owner entrypoints in `src/runtime/owners-browser/mountHomepage*.js` now provide surface-specific non-placeholder success-path rendering,
+  - placeholder proof-of-load success-path text is removed from focused owner entrypoints,
+  - wrapper/browser-safe import topology remains unchanged and compatible with existing runtime-format safeguards.
+- Prompt-03 and Prompt-04 remain open downstream scope.
 
 ## Prompt Sequence
 

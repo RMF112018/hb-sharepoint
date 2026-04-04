@@ -11,7 +11,7 @@ function mountHomepageQuickActions(container) {
         role: "main",
     }, (0, react_1.createElement)("section", { "data-surface": "homepage-quick-actions" }, [
         (0, react_1.createElement)("h2", { key: "heading" }, "HB Central Quick Actions"),
-        (0, react_1.createElement)("p", { key: "body" }, "Quick actions runtime owner is loaded through the browser-safe owner path."),
+        (0, react_1.createElement)("p", { key: "body" }, "Quick action shortcuts are mounted through the browser-safe owner entrypoint."),
     ]))), container);
     return function () {
         (0, react_dom_1.unmountComponentAtNode)(container);

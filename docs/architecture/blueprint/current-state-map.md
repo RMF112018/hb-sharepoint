@@ -66,6 +66,7 @@ The repository currently contains:
 - phase-3b Prompt-03 validator and regression-hardening closure records for mandatory lazy-owner runtime-format release-gate enforcement governance
 - phase-3b Prompt-04 rebuild/deploy/live-proof closure records for clean-state artifact provenance, deployment-proof framing, and Conditional-Go release governance
 - phase-3c Prompt-01 placeholder-owner forensics and classification closure records for restoration-boundary governance
+- phase-3c Prompt-02 real-owner mount restoration closure records for browser-safe entrypoint functional restoration governance
 - a deterministic `.sppkg` packaging path for the homepage app via Heft-native SPFx production packaging (`heft build --production` + `heft package-solution --production`) guarded by `tools/validate-sppkg.mjs`
 - a `packages/ui-kit/` shared visual package with runnable typecheck, lint, build, and test scripts
 
@@ -128,6 +129,7 @@ The repository does not yet contain:
 - Treat phase-3b Prompt-03 as materially executed for validator-hardening scope: homepage packaged lazy owner chunks are now mandatory-inspected and browser-incompatible CommonJS signatures (`Object.defineProperty(exports, ...)`, `exports.mountHomepage...`, `require(...)`) are release-gated hard failures with ownership anti-collapse checks preserved.
 - Treat phase-3b Prompt-04 as materially executed for rebuild/provenance/governance scope: clean-state package output and validator evidence are frozen with artifact-of-record digest linkage and explicit `Conditional Go` classification pending external tenant live-proof evidence.
 - Treat phase-3c Prompt-01 as materially executed for placeholder-forensics scope: browser-safe owner entrypoints are confirmed to render placeholder proof-of-load text while intended real mounts exist in `src/runtime/owners/mountHomepage*.tsx`, with Prompt-02 restoration boundary explicitly mapped.
+- Treat phase-3c Prompt-02 as materially executed for owner-restoration scope: browser-safe owner entrypoints now render surface-specific success-path UI, placeholder proof-of-load text is removed, and wrapper topology remains unchanged.
 - Use the prompt package to sequence implementation work, but use live files and this map as the source of truth for what exists now.
 - Do not infer app structure, package structure, or verification capabilities that have not been created yet.
 - Treat Prompt-01 as historically executed: the structural baseline already exists and should be confirmed rather than recreated.
@@ -196,3 +198,4 @@ The repository does not yet contain:
 - `docs/architecture/blueprint/phase-3b-validator-and-regression-hardening-and-prompt-03-closure.md` records the approved phase-3b Prompt-03 validator and regression-hardening baseline and closure.
 - `docs/architecture/blueprint/phase-3b-rebuild-deploy-live-proof-and-prompt-04-closure.md` records the approved phase-3b Prompt-04 rebuild/deploy/live-proof baseline and conditional-go closure.
 - `docs/architecture/blueprint/phase-3c-placeholder-owner-forensics-and-prompt-01-closure.md` records the approved phase-3c Prompt-01 placeholder-owner forensics and classification baseline and closure.
+- `docs/architecture/blueprint/phase-3c-restore-real-owner-mounts-and-prompt-02-closure.md` records the approved phase-3c Prompt-02 real-owner mount restoration baseline and closure.
