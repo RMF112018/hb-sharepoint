@@ -47,7 +47,7 @@ This package does **not** authorize:
 - Evidence directory: `docs/architecture/prompts/phase-3c/evidence/2026-04-04-prompt-01/`
 - Canonical closure authority: `docs/architecture/blueprint/phase-3c-placeholder-owner-forensics-and-prompt-01-closure.md`
 - Current validated disposition: wrappers correctly import browser-safe owner entrypoints, but those entrypoints currently render placeholder proof-of-load text while real intended owner mounts exist separately in `src/runtime/owners/mountHomepage*.tsx`.
-- Prompt-02 is now closed; Prompt-03 and Prompt-04 remain open downstream implementation/hardening/live-proof scope.
+- Prompt-02 and Prompt-03 are now closed; Prompt-04 remains open downstream live-proof scope.
 
 ## Prompt-02 Status (2026-04-04)
 
@@ -55,17 +55,25 @@ This package does **not** authorize:
 - Evidence directory: `docs/architecture/prompts/phase-3c/evidence/2026-04-04-prompt-02/`
 - Canonical closure authority: `docs/architecture/blueprint/phase-3c-restore-real-owner-mounts-and-prompt-02-closure.md`
 - Current validated disposition: browser-safe owner entrypoints now render surface-specific success-path UI without proof-of-load placeholder text, and wrapper import topology remains browser-safe.
-- Prompt-03 and Prompt-04 remain open downstream hardening/live-proof scope.
+- Prompt-03 is now closed; Prompt-04 remains open downstream live-proof scope.
 
-## Current Known Condition
+## Prompt-03 Status (2026-04-04)
 
-The currently deployed artifact is no longer failing with the earlier runtime-bundle exception. Instead, the homepage surfaces now render static proof-of-load messages such as:
+- Prompt-03 closure is complete for placeholder-regression hardening scope.
+- Evidence directory: `docs/architecture/prompts/phase-3c/evidence/2026-04-04-prompt-03/`
+- Canonical closure authority: `docs/architecture/blueprint/phase-3c-harden-against-placeholder-regression-and-prompt-03-closure.md`
+- Current validated disposition: homepage source-owner and packaged lazy-owner validation now hard-fails on blocked placeholder phrase-family signatures while preserving existing runtime-format and ownership anti-collapse safeguards.
+- Prompt-04 remains open downstream rebuild/deploy/live-proof scope.
+
+## Historical Defect Signature
+
+Prompt-03 gate hardening is based on the historical placeholder success-path messages previously observed in deployed homepage owners, such as:
 - "Company pulse runtime owner is loaded through the browser-safe owner path."
 - "Featured projects runtime owner is loaded through the browser-safe owner path."
 - "Homepage sections runtime owner is loaded through the browser-safe owner path."
 - "Hero runtime owner is loaded through the browser-safe owner path."
 
-That means the browser-safe owner path is executing, but the real feature mounts have not been restored behind it.
+These historical signatures are now guarded by hard-fail validation gates to prevent silent recurrence.
 
 ## Operating Doctrine
 

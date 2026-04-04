@@ -3,6 +3,27 @@ import { resolve } from "node:path";
 
 const DISALLOWED_RUNTIME_BRIDGE_PATTERN =
   /(?:^|["'`])(?:\.\.\/)+dist\/homepage\.js(?:["'`]|$)/;
+const blockedPlaceholderPhraseChecks = [
+  {
+    label: "runtime owner is loaded through the browser-safe owner path",
+    pattern: /runtime owner is loaded through the browser-safe owner path/i,
+  },
+  {
+    label: "mounted through the browser-safe owner entrypoint",
+    pattern: /mounted through the browser-safe owner entrypoint/i,
+  },
+  {
+    label: "mounted through the browser-safe surface owner",
+    pattern: /mounted through the browser-safe surface owner/i,
+  },
+];
+const ownerSourceChecks = [
+  "apps/hb-central-homepage/src/runtime/owners-browser/mountHomepageSections.js",
+  "apps/hb-central-homepage/src/runtime/owners-browser/mountHomepageHero.js",
+  "apps/hb-central-homepage/src/runtime/owners-browser/mountHomepageFeaturedProjects.js",
+  "apps/hb-central-homepage/src/runtime/owners-browser/mountHomepageCompanyPulse.js",
+  "apps/hb-central-homepage/src/runtime/owners-browser/mountHomepageQuickActions.js",
+];
 
 const wiringChecks = [
   {
@@ -76,6 +97,19 @@ function main() {
     }
   }
 
+  for (const sourcePath of ownerSourceChecks) {
+    const fullPath = resolve(process.cwd(), sourcePath);
+    const content = readFileSync(fullPath, "utf8");
+    const blockedMatches = blockedPlaceholderPhraseChecks
+      .filter((check) => check.pattern.test(content))
+      .map((check) => check.label);
+    if (blockedMatches.length > 0) {
+      failures.push(
+        `${sourcePath} contains blocked placeholder success-path phrase(s): ${blockedMatches.join(", ")}`,
+      );
+    }
+  }
+
   if (failures.length > 0) {
     throw new Error(
       `Invalid homepage web part mount wiring:\n${failures.map((f) => `- ${f}`).join("\n")}`,
@@ -90,6 +124,8 @@ function main() {
             `- ${check.path} -> ${check.expectedOwnerImport} (${check.expectedMountCall})`,
         )
         .join("\n") +
+      "\n" +
+      `Validated homepage owner source placeholder phrases (${ownerSourceChecks.length} checks): none blocked\n` +
       "\n",
   );
 }

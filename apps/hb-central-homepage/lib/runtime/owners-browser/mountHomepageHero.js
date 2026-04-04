@@ -19,7 +19,7 @@ export function mountHomepageHero(container) {
           createElement(
             "p",
             { key: "body" },
-            "Hero surface content is mounted through the browser-safe owner entrypoint.",
+            "Hero surface content is available.",
           ),
         ]),
       ),

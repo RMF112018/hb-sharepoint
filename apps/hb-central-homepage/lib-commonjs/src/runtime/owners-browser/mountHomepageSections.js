@@ -11,7 +11,7 @@ function mountHomepageSections(container) {
         role: "main",
     }, (0, react_1.createElement)("section", { "data-surface": "homepage-sections" }, [
         (0, react_1.createElement)("h1", { key: "heading" }, "HB Central Homepage"),
-        (0, react_1.createElement)("p", { key: "body" }, "Homepage sections are mounted through the browser-safe surface owner."),
+        (0, react_1.createElement)("p", { key: "body" }, "Homepage sections surface is available."),
     ]))), container);
     return function () {
         (0, react_dom_1.unmountComponentAtNode)(container);

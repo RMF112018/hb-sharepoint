@@ -19,7 +19,7 @@ export function mountHomepageQuickActions(container) {
           createElement(
             "p",
             { key: "body" },
-            "Quick action shortcuts are mounted through the browser-safe owner entrypoint.",
+            "Quick action shortcuts are available.",
           ),
         ]),
       ),

@@ -44,7 +44,7 @@ The correct end state is:
   - those entrypoints currently render placeholder proof-of-load text in success paths,
   - intended real owner mounts already exist at `src/runtime/owners/mountHomepage*.tsx`,
   - substitution boundary is source owner-adapter layer (`owners-browser`), not packaging-only transformation.
-- Prompt-02 is now closed; Prompt-03 and Prompt-04 remain open downstream scope.
+- Prompt-02 and Prompt-03 are now closed; Prompt-04 remains open downstream scope.
 
 ## Prompt-02 closure status (2026-04-04)
 
@@ -54,7 +54,17 @@ The correct end state is:
   - browser-safe owner entrypoints in `src/runtime/owners-browser/mountHomepage*.js` now provide surface-specific non-placeholder success-path rendering,
   - placeholder proof-of-load success-path text is removed from focused owner entrypoints,
   - wrapper/browser-safe import topology remains unchanged and compatible with existing runtime-format safeguards.
-- Prompt-03 and Prompt-04 remain open downstream scope.
+- Prompt-03 is now closed; Prompt-04 remains open downstream scope.
+
+## Prompt-03 closure status (2026-04-04)
+
+- Prompt-03 hardening outputs are frozen at `docs/architecture/prompts/phase-3c/evidence/2026-04-04-prompt-03/`.
+- Canonical closure authority is now `docs/architecture/blueprint/phase-3c-harden-against-placeholder-regression-and-prompt-03-closure.md`.
+- Prompt-03 confirms placeholder-regression hardening in current repo truth:
+  - source owner files under `src/runtime/owners-browser/mountHomepage*.js` are now checked for blocked placeholder phrase-family signatures,
+  - packaged homepage owner lazy chunks are now checked for the same blocked placeholder phrase-family signatures,
+  - existing CommonJS runtime-format and ownership anti-collapse checks remain mandatory and unchanged.
+- Prompt-04 remains open downstream scope.
 
 ## Prompt Sequence
 

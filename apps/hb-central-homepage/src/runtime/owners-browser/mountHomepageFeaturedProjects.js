@@ -19,7 +19,7 @@ export function mountHomepageFeaturedProjects(container) {
           createElement(
             "p",
             { key: "body" },
-            "Featured project highlights are mounted through the browser-safe owner entrypoint.",
+            "Featured project highlights are available.",
           ),
         ]),
       ),

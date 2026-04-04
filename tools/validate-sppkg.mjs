@@ -23,8 +23,10 @@ import { spawnSync } from "node:child_process";
  *   entry: string;
  *   mounts: string[];
  *   blockedSignatures: string[];
+ *   blockedPlaceholderPhrases: string[];
  * }>;
  * runtimeOwnerChunkViolations: string[];
+ * runtimeOwnerPlaceholderViolations: string[];
  * missingRuntimeOwnerMountExports: string[];
  * duplicateRuntimeOwnerMountExports: Array<{
  *   mount: string;
@@ -50,6 +52,20 @@ const expectedRuntimeOwnerMountExports = [
   "mountHomepageFeaturedProjects",
   "mountHomepageCompanyPulse",
   "mountHomepageQuickActions",
+];
+const blockedPlaceholderPhraseChecks = [
+  {
+    label: "runtime owner is loaded through the browser-safe owner path",
+    pattern: /runtime owner is loaded through the browser-safe owner path/i,
+  },
+  {
+    label: "mounted through the browser-safe owner entrypoint",
+    pattern: /mounted through the browser-safe owner entrypoint/i,
+  },
+  {
+    label: "mounted through the browser-safe surface owner",
+    pattern: /mounted through the browser-safe surface owner/i,
+  },
 ];
 
 function runUnzip(args) {
@@ -152,6 +168,7 @@ function inspectRuntimeOwnerChunks(entries, artifactPath) {
   );
   const runtimeOwnerChunkRecords = [];
   const runtimeOwnerChunkViolations = [];
+  const runtimeOwnerPlaceholderViolations = [];
   const mountEntryMap = new Map();
 
   for (const entry of runtimeChunkEntries) {
@@ -171,8 +188,16 @@ function inspectRuntimeOwnerChunks(entries, artifactPath) {
     if (/\brequire\s*\(/.test(content)) {
       blockedSignatures.push("require(...)");
     }
+    const blockedPlaceholderPhrases = blockedPlaceholderPhraseChecks
+      .filter((check) => check.pattern.test(content))
+      .map((check) => check.label);
 
-    runtimeOwnerChunkRecords.push({ entry, mounts, blockedSignatures });
+    runtimeOwnerChunkRecords.push({
+      entry,
+      mounts,
+      blockedSignatures,
+      blockedPlaceholderPhrases,
+    });
     for (const mount of mounts) {
       const mountEntries = mountEntryMap.get(mount);
       if (mountEntries) {
@@ -185,6 +210,11 @@ function inspectRuntimeOwnerChunks(entries, artifactPath) {
     if (blockedSignatures.length > 0) {
       runtimeOwnerChunkViolations.push(
         `${entry} [${mounts.join(", ")}]: ${blockedSignatures.join(", ")}`,
+      );
+    }
+    if (blockedPlaceholderPhrases.length > 0) {
+      runtimeOwnerPlaceholderViolations.push(
+        `${entry} [${mounts.join(", ")}]: ${blockedPlaceholderPhrases.join(", ")}`,
       );
     }
   }
@@ -202,6 +232,7 @@ function inspectRuntimeOwnerChunks(entries, artifactPath) {
   return {
     runtimeOwnerChunkRecords,
     runtimeOwnerChunkViolations,
+    runtimeOwnerPlaceholderViolations,
     missingRuntimeOwnerMountExports,
     duplicateRuntimeOwnerMountExports,
   };
@@ -228,6 +259,7 @@ function validateSppkg(artifactPath) {
   const {
     runtimeOwnerChunkRecords,
     runtimeOwnerChunkViolations,
+    runtimeOwnerPlaceholderViolations,
     missingRuntimeOwnerMountExports,
     duplicateRuntimeOwnerMountExports,
   } = inspectRuntimeOwnerChunks(entries, artifactPath);
@@ -327,6 +359,7 @@ function validateSppkg(artifactPath) {
     webPartOwnershipParseFailures,
     runtimeOwnerChunkRecords,
     runtimeOwnerChunkViolations,
+    runtimeOwnerPlaceholderViolations,
     missingRuntimeOwnerMountExports,
     duplicateRuntimeOwnerMountExports,
   };
@@ -408,6 +441,11 @@ function main() {
   if (result.runtimeOwnerChunkViolations.length > 0) {
     failures.push(
       `browser-incompatible CommonJS runtime signatures detected in homepage lazy owner chunks: ${result.runtimeOwnerChunkViolations.join("; ")}`,
+    );
+  }
+  if (result.runtimeOwnerPlaceholderViolations.length > 0) {
+    failures.push(
+      `blocked placeholder success-path phrases detected in homepage lazy owner chunks: ${result.runtimeOwnerPlaceholderViolations.join("; ")}`,
     );
   }
 
@@ -492,7 +530,7 @@ function main() {
   const runtimeOwnerChunkSummary = result.runtimeOwnerChunkRecords
     .map(
       (record) =>
-        `  - ${record.entry}: ${record.mounts.join(", ")}${record.blockedSignatures.length > 0 ? ` [blocked: ${record.blockedSignatures.join(", ")}]` : ""}`,
+        `  - ${record.entry}: ${record.mounts.join(", ")}${record.blockedSignatures.length > 0 ? ` [blocked: ${record.blockedSignatures.join(", ")}]` : ""}${record.blockedPlaceholderPhrases.length > 0 ? ` [placeholder: ${record.blockedPlaceholderPhrases.join(", ")}]` : ""}`,
     )
     .join("\n");
 
@@ -518,6 +556,7 @@ function main() {
       `- runtime owner lazy chunks inspected: ${result.runtimeOwnerChunkRecords.length}\n` +
       `- runtime owner exports discovered: ${result.runtimeOwnerChunkRecords.flatMap((record) => record.mounts).length}\n` +
       `- runtime owner CommonJS signatures: none\n` +
+      `- runtime owner placeholder phrases: none\n` +
       ownershipRecordsSummary +
       "\n" +
       runtimeOwnerChunkSummary +

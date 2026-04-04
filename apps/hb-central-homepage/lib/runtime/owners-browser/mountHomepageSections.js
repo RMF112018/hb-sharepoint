@@ -19,7 +19,7 @@ export function mountHomepageSections(container) {
           createElement(
             "p",
             { key: "body" },
-            "Homepage sections are mounted through the browser-safe surface owner.",
+            "Homepage sections surface is available.",
           ),
         ]),
       ),

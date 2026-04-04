@@ -11,7 +11,7 @@ function mountHomepageCompanyPulse(container) {
         role: "main",
     }, (0, react_1.createElement)("section", { "data-surface": "homepage-company-pulse" }, [
         (0, react_1.createElement)("h2", { key: "heading" }, "HB Central Company Pulse"),
-        (0, react_1.createElement)("p", { key: "body" }, "Company pulse updates are mounted through the browser-safe owner entrypoint."),
+        (0, react_1.createElement)("p", { key: "body" }, "Company pulse updates are available."),
     ]))), container);
     return function () {
         (0, react_dom_1.unmountComponentAtNode)(container);

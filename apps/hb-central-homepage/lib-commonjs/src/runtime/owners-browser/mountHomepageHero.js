@@ -11,7 +11,7 @@ function mountHomepageHero(container) {
         role: "main",
     }, (0, react_1.createElement)("section", { "data-surface": "homepage-hero" }, [
         (0, react_1.createElement)("h2", { key: "heading" }, "HB Central Homepage Hero"),
-        (0, react_1.createElement)("p", { key: "body" }, "Hero surface content is mounted through the browser-safe owner entrypoint."),
+        (0, react_1.createElement)("p", { key: "body" }, "Hero surface content is available."),
     ]))), container);
     return function () {
         (0, react_dom_1.unmountComponentAtNode)(container);

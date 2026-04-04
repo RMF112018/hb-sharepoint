@@ -31,7 +31,7 @@
     "scriptResources": {
       "hb-central-homepage-sections-web-part": {
         "type": "path",
-        "path": "hb-central-homepage-sections-web-part_6b021156635aec60ee1d.js"
+        "path": "hb-central-homepage-sections-web-part_9c9c07b55acd9bfb8d5d.js"
       },
       "@microsoft/sp-webpart-base": {
         "type": "component",
