@@ -43,6 +43,13 @@ Determine exactly where the current homepage packaging pipeline stops honoring t
 - Confirmed Prompt-05 disposition: no collapse boundary exists inside the current inspected pipeline layers (source -> generated -> pre-package -> packaged); mismatch source is artifact-selection/provenance outside current build/package flow.
 - Governance note: Prompt-01 mismatch-branch findings remain authoritative; Prompt-05 continuation follows approved operator-override continuity from Prompt-02 through Prompt-04.
 
+## Prompt-06 Status (2026-04-04)
+- Step 7 minimum-correct-remediation disposition is complete in `docs/architecture/prompts/phase-3a/evidence/2026-04-04-prompt-06/`.
+- Prompt-06 required output is complete:
+  - `06-remediation-summary.md`
+- Confirmed Prompt-06 disposition: no in-repo code/config remediation is required because Prompt-05 proved no in-pipeline collapse boundary in current repo truth; minimum-correct remediation for this prompt is provenance-control closure documentation.
+- Governance note: Prompt-01 mismatch-branch findings remain authoritative; Prompt-06 continuation follows approved operator-override continuity from Prompt-02 through Prompt-05, and Prompt-07 remains the recurrence-hardening scope.
+
 ## Investigation Sequence
 
 ### 1. Freeze evidence before modifying anything

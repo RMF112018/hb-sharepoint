@@ -58,6 +58,7 @@ The repository currently contains:
 - phase-3a Prompt-03 true-clean rebuild and post-build output-inventory closure records for generated-artifact provenance governance
 - phase-3a Prompt-04 generated-manifest and pre-package primary-asset boundary closure records for collapse-boundary provenance governance
 - phase-3a Prompt-05 collapse-boundary isolation closure records for first-boundary determination governance
+- phase-3a Prompt-06 minimum-correct-remediation closure records for no-code provenance-control governance in current repo truth
 - a deterministic `.sppkg` packaging path for the homepage app via Heft-native SPFx production packaging (`heft build --production` + `heft package-solution --production`) guarded by `tools/validate-sppkg.mjs`
 - a `packages/ui-kit/` shared visual package with runnable typecheck, lint, build, and test scripts
 
@@ -112,6 +113,7 @@ The repository does not yet contain:
 - Treat phase-3a Prompt-03 as materially executed for rebuild provenance scope: homepage packaging command chain has been rerun from a true-clean artifact/cache baseline and generated output locations are frozen for downstream boundary analysis.
 - Treat phase-3a Prompt-04 as materially executed for generated-boundary scope: pre-package generated manifests and staged ownership/assets remain split across all five surfaces and do not show collapse before final `.sppkg` assembly.
 - Treat phase-3a Prompt-05 as materially executed for boundary-isolation scope: no in-pipeline collapse boundary exists across source, generated, pre-package, and packaged ownership layers in current repo-truth execution.
+- Treat phase-3a Prompt-06 as materially executed for minimum-remediation scope: no in-repo code/config fix is proven for current pipeline truth, and remediation is formally closed as provenance-control documentation with Prompt-07 retaining recurrence-hardening scope.
 - Use the prompt package to sequence implementation work, but use live files and this map as the source of truth for what exists now.
 - Do not infer app structure, package structure, or verification capabilities that have not been created yet.
 - Treat Prompt-01 as historically executed: the structural baseline already exists and should be confirmed rather than recreated.
@@ -172,3 +174,4 @@ The repository does not yet contain:
 - `docs/architecture/blueprint/phase-3a-true-clean-rebuild-and-prompt-03-closure.md` records the approved phase-3a Prompt-03 true-clean rebuild and post-build output-inventory baseline with operator-override continuity.
 - `docs/architecture/blueprint/phase-3a-generated-manifest-and-asset-boundary-and-prompt-04-closure.md` records the approved phase-3a Prompt-04 generated-manifest and pre-package primary-asset boundary baseline with operator-override continuity.
 - `docs/architecture/blueprint/phase-3a-collapse-boundary-isolation-and-prompt-05-closure.md` records the approved phase-3a Prompt-05 collapse-boundary isolation baseline with operator-override continuity.
+- `docs/architecture/blueprint/phase-3a-minimum-correct-remediation-and-prompt-06-closure.md` records the approved phase-3a Prompt-06 minimum-correct-remediation baseline as no-code provenance-control closure with operator-override continuity.

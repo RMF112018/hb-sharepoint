@@ -10,7 +10,7 @@ Use this checklist to determine whether the Phase 3a remediation effort is compl
 - [x] Generated pre-package manifests/assets were inspected and mapped.
 - [x] The exact pipeline layer where ownership collapse first occurs was identified.
 - [ ] A root-cause summary was written.
-- [ ] The minimum correct fix was implemented.
+- [x] The minimum correct fix was implemented (Prompt-06 provenance-control closure: no in-pipeline code/config fix required in current repo truth).
 - [ ] Validation logic was updated to fail on packaged ownership collapse.
 
 ## Required Artifact Evidence

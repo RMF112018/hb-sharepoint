@@ -60,6 +60,12 @@ This package is based on the currently observed mismatch between:
 - Canonical closure authority: `docs/architecture/blueprint/phase-3a-collapse-boundary-isolation-and-prompt-05-closure.md`
 - Current validated disposition: no in-pipeline collapse boundary was found across source, generated, pre-package, and packaged ownership layers; mismatch source is artifact-selection/provenance outside the current inspected build/package flow.
 
+## Prompt-06 Status (2026-04-04)
+- Prompt-06 closure is complete for minimum-correct-remediation disposition scope.
+- Evidence directory: `docs/architecture/prompts/phase-3a/evidence/2026-04-04-prompt-06/`
+- Canonical closure authority: `docs/architecture/blueprint/phase-3a-minimum-correct-remediation-and-prompt-06-closure.md`
+- Current validated disposition: Prompt-05 proved no in-pipeline collapse boundary in current repo truth; Prompt-06 therefore closes as no-code provenance-control remediation with operator-override continuity retained and recurrence hardening deferred to Prompt-07.
+
 ## Assumptions and Limitations
 - This package assumes the homepage should continue shipping as **one single `.sppkg`**.
 - This package assumes the current remediation target is limited to the homepage package and its packaging chain.
