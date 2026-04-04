@@ -1,0 +1,65 @@
+Conclusion:
+- Packaged ownership is split, not collapsed, in `dist/sppkg/hb-central-homepage.sppkg`.
+- Inventory and per-web-part loader excerpts support mismatch-branch Prompt-01 closure.
+
+Packaged entry inventory (.sppkg):
+AppManifest.xml
+_rels/
+_rels/AppManifest.xml.rels
+_rels/.rels
+[Content_Types].xml
+feature_4ff4d963-cb8e-4ba2-b70f-89f72f0f4db1.xml
+_rels/feature_4ff4d963-cb8e-4ba2-b70f-89f72f0f4db1.xml.rels
+feature_4ff4d963-cb8e-4ba2-b70f-89f72f0f4db1.xml.config.xml
+4ff4d963-cb8e-4ba2-b70f-89f72f0f4db1/
+4ff4d963-cb8e-4ba2-b70f-89f72f0f4db1/WebPart_4ff4d963-cb8e-4ba2-b70f-89f72f0f4db1.xml
+feature_02ce4751-f355-444e-a635-a6f3b11fad79.xml
+_rels/feature_02ce4751-f355-444e-a635-a6f3b11fad79.xml.rels
+feature_02ce4751-f355-444e-a635-a6f3b11fad79.xml.config.xml
+02ce4751-f355-444e-a635-a6f3b11fad79/
+02ce4751-f355-444e-a635-a6f3b11fad79/WebPart_02ce4751-f355-444e-a635-a6f3b11fad79.xml
+feature_b8bb1136-d33e-47d2-9d45-848524b8fcbf.xml
+_rels/feature_b8bb1136-d33e-47d2-9d45-848524b8fcbf.xml.rels
+feature_b8bb1136-d33e-47d2-9d45-848524b8fcbf.xml.config.xml
+b8bb1136-d33e-47d2-9d45-848524b8fcbf/
+b8bb1136-d33e-47d2-9d45-848524b8fcbf/WebPart_b8bb1136-d33e-47d2-9d45-848524b8fcbf.xml
+feature_c5819073-cf72-4d91-bd5b-49982a6b8230.xml
+_rels/feature_c5819073-cf72-4d91-bd5b-49982a6b8230.xml.rels
+feature_c5819073-cf72-4d91-bd5b-49982a6b8230.xml.config.xml
+c5819073-cf72-4d91-bd5b-49982a6b8230/
+c5819073-cf72-4d91-bd5b-49982a6b8230/WebPart_c5819073-cf72-4d91-bd5b-49982a6b8230.xml
+feature_506562ca-e752-4bf4-a218-f06d965f8f7f.xml
+_rels/feature_506562ca-e752-4bf4-a218-f06d965f8f7f.xml.rels
+feature_506562ca-e752-4bf4-a218-f06d965f8f7f.xml.config.xml
+506562ca-e752-4bf4-a218-f06d965f8f7f/
+506562ca-e752-4bf4-a218-f06d965f8f7f/WebPart_506562ca-e752-4bf4-a218-f06d965f8f7f.xml
+ClientSideAssets.xml
+_rels/ClientSideAssets.xml.rels
+ClientSideAssets.xml.config.xml
+ClientSideAssets/
+ClientSideAssets/chunk.357_775c0006db12ff929954.js
+ClientSideAssets/chunk.603_88338352a0ffd29ab6fe.js
+ClientSideAssets/chunk.613_015c923baf4a31220915.js
+ClientSideAssets/chunk.725_ec8a856a5b318be378ed.js
+ClientSideAssets/chunk.757_b7a56530249311b149d8.js
+ClientSideAssets/hb-central-homepage-company-pulse-web-part_7cbfe4e3e765bf2ad8e9.js
+ClientSideAssets/hb-central-homepage-featured-projects-web-part_d1c70dfab7c182850c34.js
+ClientSideAssets/hb-central-homepage-hero-web-part_1e3f2e854d24aa41b894.js
+ClientSideAssets/hb-central-homepage-quick-actions-web-part_68d1f19c506736707671.js
+ClientSideAssets/hb-central-homepage-sections-web-part_77a76b2b245ac60ecde8.js
+
+Per-web-part loader ownership excerpts:
+===== b8bb1136-d33e-47d2-9d45-848524b8fcbf
+1:<?xml version="1.0" encoding="utf-8"?><Elements xmlns="http://schemas.microsoft.com/sharepoint/"><ClientSideComponent Name="HB Central Homepage Sections" Id="b8bb1136-d33e-47d2-9d45-848524b8fcbf" ComponentManifest="{&quot;id&quot;:&quot;b8bb1136-d33e-47d2-9d45-848524b8fcbf&quot;,&quot;alias&quot;:&quot;HbCentralHomepageWebPart&quot;,&quot;componentType&quot;:&quot;WebPart&quot;,&quot;version&quot;:&quot;1.0.0&quot;,&quot;manifestVersion&quot;:2,&quot;supportsFullBleed&quot;:true,&quot;supportsThemeVariants&quot;:true,&quot;preconfiguredEntries&quot;:[{&quot;groupId&quot;:&quot;1df0ccf8-cf98-4f6a-8f17-8ec6f3f6f0ce&quot;,&quot;group&quot;:{&quot;default&quot;:&quot;HB Central&quot;},&quot;title&quot;:{&quot;default&quot;:&quot;HB Central Homepage Sections&quot;},&quot;description&quot;:{&quot;default&quot;:&quot;Non-hero homepage composition sections for HB Central.&quot;},&quot;officeFabricIconFontName&quot;:&quot;Home&quot;,&quot;properties&quot;:{}}],&quot;loaderConfig&quot;:{&quot;internalModuleBaseUrls&quot;:[&quot;HTTPS://SPCLIENTSIDEASSETLIBRARY/&quot;],&quot;entryModuleId&quot;:&quot;hb-central-homepage-sections-web-part&quot;,&quot;scriptResources&quot;:{&quot;hb-central-homepage-sections-web-part&quot;:{&quot;type&quot;:&quot;path&quot;,&quot;path&quot;:&quot;hb-central-homepage-sections-web-part_77a76b2b245ac60ecde8.js&quot;},&quot;@microsoft/sp-webpart-base&quot;:{&quot;type&quot;:&quot;component&quot;,&quot;id&quot;:&quot;974a7777-0990-4136-8fa6-95d80114c2e0&quot;,&quot;version&quot;:&quot;1.22.2&quot;}}}}" Type="WebPart"></ClientSideComponent><Module Name="HB Central Homepage Sections" Url="_catalogs/wp" List="113"></Module></Elements>
+
+===== 4ff4d963-cb8e-4ba2-b70f-89f72f0f4db1
+1:<?xml version="1.0" encoding="utf-8"?><Elements xmlns="http://schemas.microsoft.com/sharepoint/"><ClientSideComponent Name="HB Central Homepage Hero" Id="4ff4d963-cb8e-4ba2-b70f-89f72f0f4db1" ComponentManifest="{&quot;id&quot;:&quot;4ff4d963-cb8e-4ba2-b70f-89f72f0f4db1&quot;,&quot;alias&quot;:&quot;HbCentralHomepageHeroWebPart&quot;,&quot;componentType&quot;:&quot;WebPart&quot;,&quot;version&quot;:&quot;1.0.0&quot;,&quot;manifestVersion&quot;:2,&quot;supportsFullBleed&quot;:true,&quot;supportsThemeVariants&quot;:true,&quot;preconfiguredEntries&quot;:[{&quot;groupId&quot;:&quot;1df0ccf8-cf98-4f6a-8f17-8ec6f3f6f0ce&quot;,&quot;group&quot;:{&quot;default&quot;:&quot;HB Central&quot;},&quot;title&quot;:{&quot;default&quot;:&quot;HB Central Homepage Hero&quot;},&quot;description&quot;:{&quot;default&quot;:&quot;Dedicated premium shell and hero web part surface for HB Central homepage.&quot;},&quot;officeFabricIconFontName&quot;:&quot;HomeSolid&quot;,&quot;properties&quot;:{}}],&quot;loaderConfig&quot;:{&quot;internalModuleBaseUrls&quot;:[&quot;HTTPS://SPCLIENTSIDEASSETLIBRARY/&quot;],&quot;entryModuleId&quot;:&quot;hb-central-homepage-hero-web-part&quot;,&quot;scriptResources&quot;:{&quot;hb-central-homepage-hero-web-part&quot;:{&quot;type&quot;:&quot;path&quot;,&quot;path&quot;:&quot;hb-central-homepage-hero-web-part_1e3f2e854d24aa41b894.js&quot;},&quot;@microsoft/sp-webpart-base&quot;:{&quot;type&quot;:&quot;component&quot;,&quot;id&quot;:&quot;974a7777-0990-4136-8fa6-95d80114c2e0&quot;,&quot;version&quot;:&quot;1.22.2&quot;}}}}" Type="WebPart"></ClientSideComponent><Module Name="HB Central Homepage Hero" Url="_catalogs/wp" List="113"></Module></Elements>
+
+===== 02ce4751-f355-444e-a635-a6f3b11fad79
+1:<?xml version="1.0" encoding="utf-8"?><Elements xmlns="http://schemas.microsoft.com/sharepoint/"><ClientSideComponent Name="HB Central Featured Projects" Id="02ce4751-f355-444e-a635-a6f3b11fad79" ComponentManifest="{&quot;id&quot;:&quot;02ce4751-f355-444e-a635-a6f3b11fad79&quot;,&quot;alias&quot;:&quot;HbCentralHomepageFeaturedProjectsWebPart&quot;,&quot;componentType&quot;:&quot;WebPart&quot;,&quot;version&quot;:&quot;1.0.0&quot;,&quot;manifestVersion&quot;:2,&quot;supportsFullBleed&quot;:true,&quot;supportsThemeVariants&quot;:true,&quot;preconfiguredEntries&quot;:[{&quot;groupId&quot;:&quot;1df0ccf8-cf98-4f6a-8f17-8ec6f3f6f0ce&quot;,&quot;group&quot;:{&quot;default&quot;:&quot;HB Central&quot;},&quot;title&quot;:{&quot;default&quot;:&quot;HB Central Featured Projects&quot;},&quot;description&quot;:{&quot;default&quot;:&quot;Dedicated featured projects web part surface for HB Central homepage.&quot;},&quot;officeFabricIconFontName&quot;:&quot;FabricDataConnectionLibrary&quot;,&quot;properties&quot;:{}}],&quot;loaderConfig&quot;:{&quot;internalModuleBaseUrls&quot;:[&quot;HTTPS://SPCLIENTSIDEASSETLIBRARY/&quot;],&quot;entryModuleId&quot;:&quot;hb-central-homepage-featured-projects-web-part&quot;,&quot;scriptResources&quot;:{&quot;hb-central-homepage-featured-projects-web-part&quot;:{&quot;type&quot;:&quot;path&quot;,&quot;path&quot;:&quot;hb-central-homepage-featured-projects-web-part_d1c70dfab7c182850c34.js&quot;},&quot;@microsoft/sp-webpart-base&quot;:{&quot;type&quot;:&quot;component&quot;,&quot;id&quot;:&quot;974a7777-0990-4136-8fa6-95d80114c2e0&quot;,&quot;version&quot;:&quot;1.22.2&quot;}}}}" Type="WebPart"></ClientSideComponent><Module Name="HB Central Featured Projects" Url="_catalogs/wp" List="113"></Module></Elements>
+
+===== c5819073-cf72-4d91-bd5b-49982a6b8230
+1:<?xml version="1.0" encoding="utf-8"?><Elements xmlns="http://schemas.microsoft.com/sharepoint/"><ClientSideComponent Name="HB Central Company Pulse" Id="c5819073-cf72-4d91-bd5b-49982a6b8230" ComponentManifest="{&quot;id&quot;:&quot;c5819073-cf72-4d91-bd5b-49982a6b8230&quot;,&quot;alias&quot;:&quot;HbCentralHomepageCompanyPulseWebPart&quot;,&quot;componentType&quot;:&quot;WebPart&quot;,&quot;version&quot;:&quot;1.0.0&quot;,&quot;manifestVersion&quot;:2,&quot;supportsFullBleed&quot;:true,&quot;supportsThemeVariants&quot;:true,&quot;preconfiguredEntries&quot;:[{&quot;groupId&quot;:&quot;1df0ccf8-cf98-4f6a-8f17-8ec6f3f6f0ce&quot;,&quot;group&quot;:{&quot;default&quot;:&quot;HB Central&quot;},&quot;title&quot;:{&quot;default&quot;:&quot;HB Central Company Pulse&quot;},&quot;description&quot;:{&quot;default&quot;:&quot;Dedicated company pulse web part surface for HB Central homepage.&quot;},&quot;officeFabricIconFontName&quot;:&quot;AreaChart&quot;,&quot;properties&quot;:{}}],&quot;loaderConfig&quot;:{&quot;internalModuleBaseUrls&quot;:[&quot;HTTPS://SPCLIENTSIDEASSETLIBRARY/&quot;],&quot;entryModuleId&quot;:&quot;hb-central-homepage-company-pulse-web-part&quot;,&quot;scriptResources&quot;:{&quot;hb-central-homepage-company-pulse-web-part&quot;:{&quot;type&quot;:&quot;path&quot;,&quot;path&quot;:&quot;hb-central-homepage-company-pulse-web-part_7cbfe4e3e765bf2ad8e9.js&quot;},&quot;@microsoft/sp-webpart-base&quot;:{&quot;type&quot;:&quot;component&quot;,&quot;id&quot;:&quot;974a7777-0990-4136-8fa6-95d80114c2e0&quot;,&quot;version&quot;:&quot;1.22.2&quot;}}}}" Type="WebPart"></ClientSideComponent><Module Name="HB Central Company Pulse" Url="_catalogs/wp" List="113"></Module></Elements>
+
+===== 506562ca-e752-4bf4-a218-f06d965f8f7f
+1:<?xml version="1.0" encoding="utf-8"?><Elements xmlns="http://schemas.microsoft.com/sharepoint/"><ClientSideComponent Name="HB Central Quick Actions" Id="506562ca-e752-4bf4-a218-f06d965f8f7f" ComponentManifest="{&quot;id&quot;:&quot;506562ca-e752-4bf4-a218-f06d965f8f7f&quot;,&quot;alias&quot;:&quot;HbCentralHomepageQuickActionsWebPart&quot;,&quot;componentType&quot;:&quot;WebPart&quot;,&quot;version&quot;:&quot;1.0.0&quot;,&quot;manifestVersion&quot;:2,&quot;supportsFullBleed&quot;:true,&quot;supportsThemeVariants&quot;:true,&quot;preconfiguredEntries&quot;:[{&quot;groupId&quot;:&quot;1df0ccf8-cf98-4f6a-8f17-8ec6f3f6f0ce&quot;,&quot;group&quot;:{&quot;default&quot;:&quot;HB Central&quot;},&quot;title&quot;:{&quot;default&quot;:&quot;HB Central Quick Actions&quot;},&quot;description&quot;:{&quot;default&quot;:&quot;Dedicated quick actions web part surface for HB Central homepage.&quot;},&quot;officeFabricIconFontName&quot;:&quot;QuickNote&quot;,&quot;properties&quot;:{}}],&quot;loaderConfig&quot;:{&quot;internalModuleBaseUrls&quot;:[&quot;HTTPS://SPCLIENTSIDEASSETLIBRARY/&quot;],&quot;entryModuleId&quot;:&quot;hb-central-homepage-quick-actions-web-part&quot;,&quot;scriptResources&quot;:{&quot;hb-central-homepage-quick-actions-web-part&quot;:{&quot;type&quot;:&quot;path&quot;,&quot;path&quot;:&quot;hb-central-homepage-quick-actions-web-part_68d1f19c506736707671.js&quot;},&quot;@microsoft/sp-webpart-base&quot;:{&quot;type&quot;:&quot;component&quot;,&quot;id&quot;:&quot;974a7777-0990-4136-8fa6-95d80114c2e0&quot;,&quot;version&quot;:&quot;1.22.2&quot;}}}}" Type="WebPart"></ClientSideComponent><Module Name="HB Central Quick Actions" Url="_catalogs/wp" List="113"></Module></Elements>

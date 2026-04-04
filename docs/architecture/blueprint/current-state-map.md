@@ -53,6 +53,7 @@ The repository currently contains:
 - phase-3 Prompt-09 ownership-aware release-gate closure records for actionable wrapper/artifact regression hard-failure governance
 - phase-3 Prompt-10 final artifact-audit closure records for packaged ownership proof and deployable semantic evidence
 - phase-3 Prompt-11 final closeout closure records for SharePoint-readiness reconciliation and explicit Conditional-Go governance
+- phase-3a Prompt-01 suspect-artifact evidence freeze and mismatch-branch closure records for remediation-gate provenance governance
 - a deterministic `.sppkg` packaging path for the homepage app via Heft-native SPFx production packaging (`heft build --production` + `heft package-solution --production`) guarded by `tools/validate-sppkg.mjs`
 - a `packages/ui-kit/` shared visual package with runnable typecheck, lint, build, and test scripts
 
@@ -102,6 +103,7 @@ The repository does not yet contain:
 - Treat phase-3 Prompt-09 as materially executed for release-gate scope: wrapper/runtime and packaged artifact ownership checks are now actionable hard-failure guards and should remain authoritative in homepage package validation.
 - Treat phase-3 Prompt-10 as materially executed for artifact-proof scope: final Heft-native package execution and per-surface packaged ownership mapping are now captured as canonical deployable evidence.
 - Treat phase-3 Prompt-11 as materially executed for phase-closeout governance scope: final status is explicitly Conditional-Go when tenant evidence is missing, and full-Go requires explicit app-catalog/page-behavior/diagnostics evidence.
+- Treat phase-3a Prompt-01 as materially executed for suspect-artifact validation scope: current artifact-of-record evidence is frozen and the approved branch is mismatch closure unless a different suspect artifact is provided.
 - Use the prompt package to sequence implementation work, but use live files and this map as the source of truth for what exists now.
 - Do not infer app structure, package structure, or verification capabilities that have not been created yet.
 - Treat Prompt-01 as historically executed: the structural baseline already exists and should be confirmed rather than recreated.
@@ -157,3 +159,4 @@ The repository does not yet contain:
 - `docs/architecture/blueprint/phase-3-ownership-aware-release-gates-and-prompt-09-closure.md` records the approved phase-3 Prompt-09 ownership-aware release-gate baseline and closure.
 - `docs/architecture/blueprint/phase-3-final-artifact-audit-and-prompt-10-closure.md` records the approved phase-3 Prompt-10 final artifact-audit baseline and closure.
 - `docs/architecture/blueprint/phase-3-sharepoint-readiness-and-prompt-11-closeout.md` records the approved phase-3 Prompt-11 final closeout baseline and Conditional-Go governance status.
+- `docs/architecture/blueprint/phase-3a-suspect-artifact-evidence-and-prompt-01-closure.md` records the approved phase-3a Prompt-01 suspect-artifact evidence freeze baseline and mismatch-branch closure.

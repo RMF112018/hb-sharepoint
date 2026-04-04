@@ -1,0 +1,13 @@
+Suspect artifact provenance note:
+- The original upstream build command that produced the externally supplied suspect artifact is not available in this run.
+
+Artifact-of-record validation command used in this Prompt-01 run:
+node tools/validate-sppkg.mjs dist/sppkg/hb-central-homepage.sppkg
+
+Supporting inspection commands used in this Prompt-01 run:
+unzip -Z1 dist/sppkg/hb-central-homepage.sppkg
+unzip -p dist/sppkg/hb-central-homepage.sppkg <id>/WebPart_<id>.xml
+
+Repo commit validated:
+- full SHA: ade0fcba911bc284ae55d64d9a757ead1ce18e6c
+- short SHA: ade0fcb

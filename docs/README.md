@@ -51,6 +51,7 @@ This repository currently uses `docs/` for canonical architecture prompts, bluep
 - Phase-3 Prompt-09 has now established ownership-aware validation release gates that hard-fail shared-bundle regressions and production debug/localhost leakage.
 - Phase-3 Prompt-10 has now established final Heft-native package artifact proof with canonical per-surface ownership mapping evidence for the shipped `.sppkg`.
 - Phase-3 Prompt-11 has now established final Phase-3 closeout governance with explicit Conditional-Go criteria and unresolved tenant-readiness blockers recorded as external evidence gates.
+- Phase-3a Prompt-01 has now established suspect-artifact evidence freeze and mismatch-branch closure governance (validated artifact-of-record is split; no further escalation without a different suspect artifact).
 - Prompt-01 should now be treated as a confirmed historical foundation rather than pending structural work.
 
 ## Usage rules

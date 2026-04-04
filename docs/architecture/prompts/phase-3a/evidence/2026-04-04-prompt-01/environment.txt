@@ -1,0 +1,4 @@
+timestamp=2026-04-04T08:33:54Z
+timezone=America/New_York
+node=v23.10.0
+pnpm=10.18.3
