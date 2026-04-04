@@ -4,30 +4,30 @@
 Use this checklist to determine whether the Phase 3a remediation effort is complete and whether the homepage package is ready for release or further validation.
 
 ## Technical Outcomes
-- [ ] The current suspect `.sppkg` was validated and the failure mode was documented.
+- [x] The current suspect `.sppkg` was validated and the failure mode was documented.
 - [x] Current `main` repo truth was frozen and recorded.
 - [x] The homepage packaging chain was rebuilt from a true clean state.
 - [x] Generated pre-package manifests/assets were inspected and mapped.
 - [x] The exact pipeline layer where ownership collapse first occurs was identified.
-- [ ] A root-cause summary was written.
+- [x] A root-cause summary was written.
 - [x] The minimum correct fix was implemented (Prompt-06 provenance-control closure: no in-pipeline code/config fix required in current repo truth).
 - [x] Validation logic was updated to fail on packaged ownership collapse (Prompt-07 closure confirms current validator/script wiring already enforces fail-fast anti-collapse checks).
 
 ## Required Artifact Evidence
-- [ ] One final homepage `.sppkg` exists.
-- [ ] The final `.sppkg` contains all five expected homepage web part registrations.
-- [ ] The final `.sppkg` contains five unique packaged `entryModuleId` values.
-- [ ] The final `.sppkg` contains five unique packaged primary script-resource keys.
-- [ ] The final `.sppkg` contains five unique packaged primary script-resource paths.
-- [ ] The packaged client-side assets inventory supports split primary ownership.
+- [x] One final homepage `.sppkg` exists.
+- [x] The final `.sppkg` contains all five expected homepage web part registrations.
+- [x] The final `.sppkg` contains five unique packaged `entryModuleId` values.
+- [x] The final `.sppkg` contains five unique packaged primary script-resource keys.
+- [x] The final `.sppkg` contains five unique packaged primary script-resource paths.
+- [x] The packaged client-side assets inventory supports split primary ownership.
 
 ## Documentation Outputs
 - [x] Evidence folder created and populated.
-- [ ] Root-cause summary created.
-- [ ] Ownership map for generated outputs created.
-- [ ] Ownership map for final packaged artifact created.
-- [ ] Any packaging/build documentation updated.
-- [ ] Any release/readiness notes updated.
+- [x] Root-cause summary created.
+- [x] Ownership map for generated outputs created.
+- [x] Ownership map for final packaged artifact created.
+- [x] Any packaging/build documentation updated.
+- [x] Any release/readiness notes updated.
 
 ## Go / No-Go Gate
 ### Go

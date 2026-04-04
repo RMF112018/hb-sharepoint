@@ -72,6 +72,12 @@ This package is based on the currently observed mismatch between:
 - Canonical closure authority: `docs/architecture/blueprint/phase-3a-validation-hardening-and-prompt-07-closure.md`
 - Current validated disposition: current validator scripts and package command wiring already enforce fail-fast packaged ownership anti-collapse assertions in the normal homepage packaging flow.
 
+## Prompt-08 Status (2026-04-04)
+- Prompt-08 closure is complete for final rebuild, validation, root-cause, and go/no-go closeout scope.
+- Evidence directory: `docs/architecture/prompts/phase-3a/evidence/2026-04-04-prompt-08/`
+- Canonical closure authority: `docs/architecture/blueprint/phase-3a-final-rebuild-validation-and-prompt-08-closure.md`
+- Current validated disposition: final true-clean rebuild and packaged ownership validation pass in current repo-truth flow, and Phase-3a closes with `Go` for artifacts produced through the documented validated packaging path.
+
 ## Assumptions and Limitations
 - This package assumes the homepage should continue shipping as **one single `.sppkg`**.
 - This package assumes the current remediation target is limited to the homepage package and its packaging chain.
