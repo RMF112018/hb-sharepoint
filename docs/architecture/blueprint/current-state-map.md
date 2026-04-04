@@ -61,6 +61,7 @@ The repository currently contains:
 - phase-3a Prompt-06 minimum-correct-remediation closure records for no-code provenance-control governance in current repo truth
 - phase-3a Prompt-07 validation-hardening closure records for recurrence-proof packaged ownership anti-collapse governance
 - phase-3a Prompt-08 final rebuild/validation closeout records for packaged ownership proof, root-cause summary, and explicit go/no-go governance
+- phase-3b Prompt-01 runtime-chunk forensics closure records for confirmed CommonJS lazy-chunk browser-failure root cause governance
 - a deterministic `.sppkg` packaging path for the homepage app via Heft-native SPFx production packaging (`heft build --production` + `heft package-solution --production`) guarded by `tools/validate-sppkg.mjs`
 - a `packages/ui-kit/` shared visual package with runnable typecheck, lint, build, and test scripts
 
@@ -118,6 +119,7 @@ The repository does not yet contain:
 - Treat phase-3a Prompt-06 as materially executed for minimum-remediation scope: no in-repo code/config fix is proven for current pipeline truth, and remediation is formally closed as provenance-control documentation with Prompt-07 retaining recurrence-hardening scope.
 - Treat phase-3a Prompt-07 as materially executed for recurrence-hardening scope: packaged ownership anti-collapse validator checks and command wiring are now frozen as fail-fast baseline behavior in normal homepage packaging flow.
 - Treat phase-3a Prompt-08 as materially executed for final-closeout scope: final rebuild and packaged ownership validation are frozen with root-cause summary and explicit `Go` decision for documented validated artifact flow.
+- Treat phase-3b Prompt-01 as materially executed for runtime-forensics scope: wrapper imports into `lib-commonjs` owner artifacts and emitted lazy-chunk CommonJS signatures are now frozen as confirmed direct root cause for `exports is not defined` runtime failure.
 - Use the prompt package to sequence implementation work, but use live files and this map as the source of truth for what exists now.
 - Do not infer app structure, package structure, or verification capabilities that have not been created yet.
 - Treat Prompt-01 as historically executed: the structural baseline already exists and should be confirmed rather than recreated.
@@ -181,3 +183,4 @@ The repository does not yet contain:
 - `docs/architecture/blueprint/phase-3a-minimum-correct-remediation-and-prompt-06-closure.md` records the approved phase-3a Prompt-06 minimum-correct-remediation baseline as no-code provenance-control closure with operator-override continuity.
 - `docs/architecture/blueprint/phase-3a-validation-hardening-and-prompt-07-closure.md` records the approved phase-3a Prompt-07 validation-hardening baseline for recurrence-proof ownership anti-collapse governance with operator-override continuity.
 - `docs/architecture/blueprint/phase-3a-final-rebuild-validation-and-prompt-08-closure.md` records the approved phase-3a Prompt-08 final rebuild/validation closeout baseline with explicit go/no-go governance and operator-override continuity.
+- `docs/architecture/blueprint/phase-3b-runtime-chunk-forensics-and-prompt-01-closure.md` records the approved phase-3b Prompt-01 runtime chunk forensics baseline and confirmed-root-cause closure.
