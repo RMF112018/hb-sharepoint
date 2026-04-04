@@ -41,7 +41,7 @@ Earlier audit work concluded the `.sppkg` structure, manifest ownership, and pac
 - Evidence directory: `docs/architecture/prompts/phase-3b/evidence/2026-04-04-prompt-01/`
 - Canonical closure authority: `docs/architecture/blueprint/phase-3b-runtime-chunk-forensics-and-prompt-01-closure.md`
 - Current validated disposition: wrappers import `lib-commonjs` runtime owner artifacts, emitted lazy chunks retain CommonJS signatures (`exports`/`require`), and Prompt-01 closes with `Confirmed root cause`.
-- Prompt-02, Prompt-03, and Prompt-04 remain open implementation scope.
+- At Prompt-01 closure time, Prompt-02, Prompt-03, and Prompt-04 remained open implementation scope.
 
 ## Prompt-02 Status (2026-04-04)
 
@@ -49,7 +49,15 @@ Earlier audit work concluded the `.sppkg` structure, manifest ownership, and pac
 - Evidence directory: `docs/architecture/prompts/phase-3b/evidence/2026-04-04-prompt-02/`
 - Canonical closure authority: `docs/architecture/blueprint/phase-3b-browser-safe-owner-build-remediation-and-prompt-02-closure.md`
 - Current validated disposition: wrapper imports now resolve to browser-safe owner modules under `src/runtime/owners-browser/*`, affected lazy chunks no longer emit `exports`/`require` CommonJS signatures, and package ownership invariants remain five-way unique.
-- Prompt-03 and Prompt-04 remain open hardening/live-proof scope.
+- Prompt-03 is now closed; Prompt-04 remains open hardening/live-proof scope.
+
+## Prompt-03 Status (2026-04-04)
+
+- Prompt-03 closure is complete for validator and regression hardening scope.
+- Evidence directory: `docs/architecture/prompts/phase-3b/evidence/2026-04-04-prompt-03/`
+- Canonical closure authority: `docs/architecture/blueprint/phase-3b-validator-and-regression-hardening-and-prompt-03-closure.md`
+- Current validated disposition: `tools/validate-sppkg.mjs` now inspects homepage lazy owner chunks in packaged `ClientSideAssets/chunk.*.js` artifacts and hard-fails on browser-incompatible CommonJS signatures (`Object.defineProperty(exports, ...)`, `exports.mountHomepage...`, `require(...)`) while preserving existing ownership and anti-bridge validation gates.
+- Prompt-04 remains open for clean rebuild, redeploy, and live SharePoint proof.
 
 ## Scope boundary
 

@@ -61,6 +61,7 @@ This repository currently uses `docs/` for canonical architecture prompts, bluep
 - Phase-3a Prompt-08 has now established final rebuild, packaged ownership proof, root-cause closeout, and explicit `Go` closure governance for artifacts produced through the documented validated packaging flow.
 - Phase-3b Prompt-01 has now established runtime-chunk forensics closure governance with explicit `Confirmed root cause` disposition for browser-incompatible CommonJS signatures in lazy homepage owner chunks (`docs/architecture/blueprint/phase-3b-runtime-chunk-forensics-and-prompt-01-closure.md`).
 - Phase-3b Prompt-02 has now established browser-safe owner build remediation closure governance, with lazy owner chunks verified free of browser-breaking CommonJS signatures and packaging ownership invariants preserved (`docs/architecture/blueprint/phase-3b-browser-safe-owner-build-remediation-and-prompt-02-closure.md`).
+- Phase-3b Prompt-03 has now established validator and regression-hardening closure governance, with mandatory package-time lazy owner chunk inspection and hard-fail runtime-format guards for CommonJS signatures (`docs/architecture/blueprint/phase-3b-validator-and-regression-hardening-and-prompt-03-closure.md`).
 - Prompt-01 should now be treated as a confirmed historical foundation rather than pending structural work.
 
 ## Usage rules

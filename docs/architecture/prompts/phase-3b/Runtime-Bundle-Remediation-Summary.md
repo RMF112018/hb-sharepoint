@@ -42,7 +42,17 @@ Earlier audits already established that wrappers dynamically import focused owne
   - wrapper imports now target `src/runtime/owners-browser/*`,
   - emitted lazy owner chunks no longer contain `Object.defineProperty(exports, ...)`, `exports.*`, or bare `require(...)`,
   - `.sppkg` ownership invariants remain intact (five unique entry/primary ownership values).
-- Prompt-03 and Prompt-04 remain open downstream scope.
+- Prompt-03 is now closed; Prompt-04 remains open downstream scope.
+
+## Prompt-03 closure status (2026-04-04)
+
+- Prompt-03 hardening outputs are frozen at `docs/architecture/prompts/phase-3b/evidence/2026-04-04-prompt-03/`.
+- Canonical closure authority is now `docs/architecture/blueprint/phase-3b-validator-and-regression-hardening-and-prompt-03-closure.md`.
+- Prompt-03 confirms runtime-format regression-hardening in current repo truth:
+  - homepage packaged lazy owner chunks are now explicitly inspected from `ClientSideAssets/chunk.*.js`,
+  - validator now hard-fails on browser-incompatible CommonJS signatures (`Object.defineProperty(exports, ...)`, `exports.mountHomepage...`, `require(...)`) in owner chunks,
+  - existing ownership anti-collapse checks and anti-bridge packaging checks remain preserved and mandatory in `validate:homepage:package`.
+- Prompt-04 remains open for clean rebuild, tenant redeploy, and live runtime proof closure.
 
 ## Scope of remediation
 
