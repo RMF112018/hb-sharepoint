@@ -55,6 +55,7 @@ This repository currently uses `docs/` for canonical architecture prompts, bluep
 - Phase-3a Prompt-02 has now established current-repo-truth freeze and build-input-map closure governance with explicit operator-override continuity from Prompt-01 mismatch disposition.
 - Phase-3a Prompt-03 has now established true-clean rebuild execution and post-build output-inventory closure governance with continued operator-override continuity.
 - Phase-3a Prompt-04 has now established generated-manifest and pre-package primary-asset boundary inspection closure governance with continued operator-override continuity.
+- Phase-3a Prompt-05 has now established exact collapse-boundary isolation closure governance (no in-pipeline collapse found in current repo-truth ownership layers) with continued operator-override continuity.
 - Prompt-01 should now be treated as a confirmed historical foundation rather than pending structural work.
 
 ## Usage rules

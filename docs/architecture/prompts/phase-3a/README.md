@@ -54,6 +54,12 @@ This package is based on the currently observed mismatch between:
 - Canonical closure authority: `docs/architecture/blueprint/phase-3a-generated-manifest-and-asset-boundary-and-prompt-04-closure.md`
 - Current validated disposition: generated and pre-package ownership remains split across all five homepage surfaces; collapse is not present before final `.sppkg` assembly.
 
+## Prompt-05 Status (2026-04-04)
+- Prompt-05 closure is complete for ownership diffing and precise collapse-boundary isolation scope.
+- Evidence directory: `docs/architecture/prompts/phase-3a/evidence/2026-04-04-prompt-05/`
+- Canonical closure authority: `docs/architecture/blueprint/phase-3a-collapse-boundary-isolation-and-prompt-05-closure.md`
+- Current validated disposition: no in-pipeline collapse boundary was found across source, generated, pre-package, and packaged ownership layers; mismatch source is artifact-selection/provenance outside the current inspected build/package flow.
+
 ## Assumptions and Limitations
 - This package assumes the homepage should continue shipping as **one single `.sppkg`**.
 - This package assumes the current remediation target is limited to the homepage package and its packaging chain.

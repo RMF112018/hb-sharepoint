@@ -8,7 +8,7 @@ Use this checklist to determine whether the Phase 3a remediation effort is compl
 - [x] Current `main` repo truth was frozen and recorded.
 - [x] The homepage packaging chain was rebuilt from a true clean state.
 - [x] Generated pre-package manifests/assets were inspected and mapped.
-- [ ] The exact pipeline layer where ownership collapse first occurs was identified.
+- [x] The exact pipeline layer where ownership collapse first occurs was identified.
 - [ ] A root-cause summary was written.
 - [ ] The minimum correct fix was implemented.
 - [ ] Validation logic was updated to fail on packaged ownership collapse.
