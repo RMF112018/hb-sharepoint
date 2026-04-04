@@ -44,7 +44,7 @@ The correct end state is:
   - those entrypoints currently render placeholder proof-of-load text in success paths,
   - intended real owner mounts already exist at `src/runtime/owners/mountHomepage*.tsx`,
   - substitution boundary is source owner-adapter layer (`owners-browser`), not packaging-only transformation.
-- Prompt-02 and Prompt-03 are now closed; Prompt-04 remains open downstream scope.
+- Prompt-02, Prompt-03, and Prompt-04 are now closed with Prompt-04 classified as Conditional Go pending external tenant live-proof evidence.
 
 ## Prompt-02 closure status (2026-04-04)
 
@@ -54,7 +54,7 @@ The correct end state is:
   - browser-safe owner entrypoints in `src/runtime/owners-browser/mountHomepage*.js` now provide surface-specific non-placeholder success-path rendering,
   - placeholder proof-of-load success-path text is removed from focused owner entrypoints,
   - wrapper/browser-safe import topology remains unchanged and compatible with existing runtime-format safeguards.
-- Prompt-03 is now closed; Prompt-04 remains open downstream scope.
+- Prompt-03 and Prompt-04 are now closed with Prompt-04 classified as Conditional Go pending external tenant live-proof evidence.
 
 ## Prompt-03 closure status (2026-04-04)
 
@@ -64,7 +64,16 @@ The correct end state is:
   - source owner files under `src/runtime/owners-browser/mountHomepage*.js` are now checked for blocked placeholder phrase-family signatures,
   - packaged homepage owner lazy chunks are now checked for the same blocked placeholder phrase-family signatures,
   - existing CommonJS runtime-format and ownership anti-collapse checks remain mandatory and unchanged.
-- Prompt-04 remains open downstream scope.
+- Prompt-04 is closed as Conditional Go pending external tenant live-proof evidence for hard-go promotion.
+
+## Prompt-04 closure status (2026-04-04)
+
+- Prompt-04 evidence outputs are frozen at `docs/architecture/prompts/phase-3c/evidence/2026-04-04-prompt-04/`.
+- Canonical closure authority is now `docs/architecture/blueprint/phase-3c-rebuild-deploy-functional-live-proof-and-prompt-04-closure.md`.
+- Prompt-04 confirms rebuild/provenance and conditional-go closure in current repo truth:
+  - clean-state homepage package build and validator path have been rerun with machine-captured logs,
+  - artifact-of-record hash/stat metadata is captured and linked,
+  - tenant deployment and live-render proof requirements are explicitly documented as pending external operator evidence for hard-go promotion.
 
 ## Prompt Sequence
 

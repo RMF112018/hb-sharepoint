@@ -1,0 +1,5 @@
+113:> node tools/validate-homepage-webpart-wiring.mjs && node tools/validate-sppkg.mjs
+115:Validated homepage web part mount wiring (5 checks)
+123:Validated .sppkg: /Users/bobbyfetting/hb-sharepoint/dist/sppkg/hb-central-homepage.sppkg
+137:- runtime owner CommonJS signatures: none
+138:- runtime owner placeholder phrases: none

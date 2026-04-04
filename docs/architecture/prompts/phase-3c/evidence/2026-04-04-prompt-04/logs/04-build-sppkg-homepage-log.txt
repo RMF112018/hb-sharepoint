@@ -1,0 +1,148 @@
+
+> hb-sharepoint@00.000.061 build:sppkg:homepage /Users/bobbyfetting/hb-sharepoint
+> pnpm --filter @hbc/hb-central-homepage spfx:package && pnpm validate:homepage:package
+
+
+> @hbc/hb-central-homepage@0.0.0 spfx:package /Users/bobbyfetting/hb-sharepoint/apps/hb-central-homepage
+> heft build --clean --production && heft package-solution --production
+
+ ---- build started ---- 
+[build:clean] Deleted 0 files and 2 folders
+[build:set-browserslist-ignore-old-data-env-var] Setting environment variable BROWSERSLIST_IGNORE_OLD_DATA=1
+[build:sass] Generating sass typings...
+[build:copy-javascript] Copied 20 files and linked 0 files
+[build:sass] Generated sass typings
+[build:typescript] The TypeScript compiler version 5.9.3 is newer than the latest version that was tested with Heft (5.8); it may not work correctly.
+[build:typescript] Using TypeScript version 5.9.3
+[build:typescript] Copied 10 files and linked 0 files
+[build:lint] Using ESLint version 9.39.4
+[build:webpack] Using Webpack version 5.95.0
+[build:webpack] Running Webpack compilation
+ ---- build finished (4.503s) ---- 
+-------------------- Finished (4.504s) --------------------
+ ---- package-solution started ---- 
+Found manifest: 02ce4751-f355-444e-a635-a6f3b11fad79.manifest.json
+Found manifest: 506562ca-e752-4bf4-a218-f06d965f8f7f.manifest.json
+Found manifest: b8bb1136-d33e-47d2-9d45-848524b8fcbf.manifest.json
+Found manifest: 4ff4d963-cb8e-4ba2-b70f-89f72f0f4db1.manifest.json
+Found manifest: c5819073-cf72-4d91-bd5b-49982a6b8230.manifest.json
+Found client-side build resource: chunk.462_eadda890a8478f26dcd9.js
+Found client-side build resource: chunk.678_77ffaf1b55c80a8dbb6c.js
+Found client-side build resource: chunk.763_6865db265c0b9512f796.js
+Found client-side build resource: chunk.88_5b3113cfd8258bab274f.js
+Found client-side build resource: chunk.921_0af80efb9abe1a4e1f50.js
+Found client-side build resource: hb-central-homepage-company-pulse-web-part_caa97484d972ab9a0346.js
+Found client-side build resource: hb-central-homepage-featured-projects-web-part_2671f8877c3d645901c2.js
+Found client-side build resource: hb-central-homepage-hero-web-part_6dc4c352c10bc6803b91.js
+Found client-side build resource: hb-central-homepage-quick-actions-web-part_c5716ad01ec6875975a6.js
+Found client-side build resource: hb-central-homepage-sections-web-part_9c9c07b55acd9bfb8d5d.js
+Verifying configuration...
+Done!
+
+Normalizing solution information...
+Attempting creating component definitions for {5} manifests
+Created component definitions for {5} manifests
+config.solution.features not set! Instead generating a feature for each component.
+Creating feature for HB Central Featured Projects...
+Creating feature for HB Central Quick Actions...
+Creating feature for HB Central Homepage Sections...
+Creating feature for HB Central Homepage Hero...
+Creating feature for HB Central Company Pulse...
+Done!
+
+Reading custom Feature XML...
+Done!
+
+Validating App Package...
+Done!
+
+Reading resources...
+Done!
+
+Reading Sharepoint Assets & Creating XML...
+Done!
+
+Writing solution XML to /Users/bobbyfetting/hb-sharepoint/apps/hb-central-homepage/sharepoint/solution/debug...
+Cleaned /Users/bobbyfetting/hb-sharepoint/apps/hb-central-homepage/sharepoint/solution/debug
+Created file: /Users/bobbyfetting/hb-sharepoint/apps/hb-central-homepage/sharepoint/solution/debug/AppManifest.xml
+Created file: /Users/bobbyfetting/hb-sharepoint/apps/hb-central-homepage/sharepoint/solution/debug/_rels/AppManifest.xml.rels
+Created file: /Users/bobbyfetting/hb-sharepoint/apps/hb-central-homepage/sharepoint/solution/debug/_rels/.rels
+Created file: /Users/bobbyfetting/hb-sharepoint/apps/hb-central-homepage/sharepoint/solution/debug/[Content_Types].xml
+Created file: /Users/bobbyfetting/hb-sharepoint/apps/hb-central-homepage/sharepoint/solution/debug/feature_02ce4751-f355-444e-a635-a6f3b11fad79.xml
+Created file: /Users/bobbyfetting/hb-sharepoint/apps/hb-central-homepage/sharepoint/solution/debug/_rels/feature_02ce4751-f355-444e-a635-a6f3b11fad79.xml.rels
+Created file: /Users/bobbyfetting/hb-sharepoint/apps/hb-central-homepage/sharepoint/solution/debug/feature_02ce4751-f355-444e-a635-a6f3b11fad79.xml.config.xml
+Created file: /Users/bobbyfetting/hb-sharepoint/apps/hb-central-homepage/sharepoint/solution/debug/02ce4751-f355-444e-a635-a6f3b11fad79/WebPart_02ce4751-f355-444e-a635-a6f3b11fad79.xml
+Created file: /Users/bobbyfetting/hb-sharepoint/apps/hb-central-homepage/sharepoint/solution/debug/feature_506562ca-e752-4bf4-a218-f06d965f8f7f.xml
+Created file: /Users/bobbyfetting/hb-sharepoint/apps/hb-central-homepage/sharepoint/solution/debug/_rels/feature_506562ca-e752-4bf4-a218-f06d965f8f7f.xml.rels
+Created file: /Users/bobbyfetting/hb-sharepoint/apps/hb-central-homepage/sharepoint/solution/debug/feature_506562ca-e752-4bf4-a218-f06d965f8f7f.xml.config.xml
+Created file: /Users/bobbyfetting/hb-sharepoint/apps/hb-central-homepage/sharepoint/solution/debug/506562ca-e752-4bf4-a218-f06d965f8f7f/WebPart_506562ca-e752-4bf4-a218-f06d965f8f7f.xml
+Created file: /Users/bobbyfetting/hb-sharepoint/apps/hb-central-homepage/sharepoint/solution/debug/feature_b8bb1136-d33e-47d2-9d45-848524b8fcbf.xml
+Created file: /Users/bobbyfetting/hb-sharepoint/apps/hb-central-homepage/sharepoint/solution/debug/_rels/feature_b8bb1136-d33e-47d2-9d45-848524b8fcbf.xml.rels
+Created file: /Users/bobbyfetting/hb-sharepoint/apps/hb-central-homepage/sharepoint/solution/debug/feature_b8bb1136-d33e-47d2-9d45-848524b8fcbf.xml.config.xml
+Created file: /Users/bobbyfetting/hb-sharepoint/apps/hb-central-homepage/sharepoint/solution/debug/b8bb1136-d33e-47d2-9d45-848524b8fcbf/WebPart_b8bb1136-d33e-47d2-9d45-848524b8fcbf.xml
+Created file: /Users/bobbyfetting/hb-sharepoint/apps/hb-central-homepage/sharepoint/solution/debug/feature_4ff4d963-cb8e-4ba2-b70f-89f72f0f4db1.xml
+Created file: /Users/bobbyfetting/hb-sharepoint/apps/hb-central-homepage/sharepoint/solution/debug/_rels/feature_4ff4d963-cb8e-4ba2-b70f-89f72f0f4db1.xml.rels
+Created file: /Users/bobbyfetting/hb-sharepoint/apps/hb-central-homepage/sharepoint/solution/debug/feature_4ff4d963-cb8e-4ba2-b70f-89f72f0f4db1.xml.config.xml
+Created file: /Users/bobbyfetting/hb-sharepoint/apps/hb-central-homepage/sharepoint/solution/debug/4ff4d963-cb8e-4ba2-b70f-89f72f0f4db1/WebPart_4ff4d963-cb8e-4ba2-b70f-89f72f0f4db1.xml
+Created file: /Users/bobbyfetting/hb-sharepoint/apps/hb-central-homepage/sharepoint/solution/debug/feature_c5819073-cf72-4d91-bd5b-49982a6b8230.xml
+Created file: /Users/bobbyfetting/hb-sharepoint/apps/hb-central-homepage/sharepoint/solution/debug/_rels/feature_c5819073-cf72-4d91-bd5b-49982a6b8230.xml.rels
+Created file: /Users/bobbyfetting/hb-sharepoint/apps/hb-central-homepage/sharepoint/solution/debug/feature_c5819073-cf72-4d91-bd5b-49982a6b8230.xml.config.xml
+Created file: /Users/bobbyfetting/hb-sharepoint/apps/hb-central-homepage/sharepoint/solution/debug/c5819073-cf72-4d91-bd5b-49982a6b8230/WebPart_c5819073-cf72-4d91-bd5b-49982a6b8230.xml
+Created file: /Users/bobbyfetting/hb-sharepoint/apps/hb-central-homepage/sharepoint/solution/debug/ClientSideAssets.xml
+Created file: /Users/bobbyfetting/hb-sharepoint/apps/hb-central-homepage/sharepoint/solution/debug/_rels/ClientSideAssets.xml.rels
+Created file: /Users/bobbyfetting/hb-sharepoint/apps/hb-central-homepage/sharepoint/solution/debug/ClientSideAssets.xml.config.xml
+Created file: /Users/bobbyfetting/hb-sharepoint/apps/hb-central-homepage/sharepoint/solution/debug/ClientSideAssets/chunk.462_eadda890a8478f26dcd9.js
+Created file: /Users/bobbyfetting/hb-sharepoint/apps/hb-central-homepage/sharepoint/solution/debug/ClientSideAssets/chunk.678_77ffaf1b55c80a8dbb6c.js
+Created file: /Users/bobbyfetting/hb-sharepoint/apps/hb-central-homepage/sharepoint/solution/debug/ClientSideAssets/chunk.763_6865db265c0b9512f796.js
+Created file: /Users/bobbyfetting/hb-sharepoint/apps/hb-central-homepage/sharepoint/solution/debug/ClientSideAssets/chunk.88_5b3113cfd8258bab274f.js
+Created file: /Users/bobbyfetting/hb-sharepoint/apps/hb-central-homepage/sharepoint/solution/debug/ClientSideAssets/chunk.921_0af80efb9abe1a4e1f50.js
+Created file: /Users/bobbyfetting/hb-sharepoint/apps/hb-central-homepage/sharepoint/solution/debug/ClientSideAssets/hb-central-homepage-company-pulse-web-part_caa97484d972ab9a0346.js
+Created file: /Users/bobbyfetting/hb-sharepoint/apps/hb-central-homepage/sharepoint/solution/debug/ClientSideAssets/hb-central-homepage-featured-projects-web-part_2671f8877c3d645901c2.js
+Created file: /Users/bobbyfetting/hb-sharepoint/apps/hb-central-homepage/sharepoint/solution/debug/ClientSideAssets/hb-central-homepage-hero-web-part_6dc4c352c10bc6803b91.js
+Created file: /Users/bobbyfetting/hb-sharepoint/apps/hb-central-homepage/sharepoint/solution/debug/ClientSideAssets/hb-central-homepage-quick-actions-web-part_c5716ad01ec6875975a6.js
+Created file: /Users/bobbyfetting/hb-sharepoint/apps/hb-central-homepage/sharepoint/solution/debug/ClientSideAssets/hb-central-homepage-sections-web-part_9c9c07b55acd9bfb8d5d.js
+Created file: /Users/bobbyfetting/hb-sharepoint/apps/hb-central-homepage/sharepoint/../../../dist/sppkg/hb-central-homepage.sppkg
+Done!
+
+ALL DONE!
+
+ ---- package-solution finished (0.119s) ---- 
+-------------------- Finished (0.122s) --------------------
+
+> hb-sharepoint@00.000.061 validate:homepage:package /Users/bobbyfetting/hb-sharepoint
+> node tools/validate-homepage-webpart-wiring.mjs && node tools/validate-sppkg.mjs
+
+Validated homepage web part mount wiring (5 checks)
+- apps/hb-central-homepage/src/webparts/hbCentralHomepage/HbCentralHomepageWebPart.js -> ../../runtime/owners-browser/mountHomepageSections.js (mountHomepageSections)
+- apps/hb-central-homepage/src/webparts/hbCentralHomepageHero/HbCentralHomepageHeroWebPart.js -> ../../runtime/owners-browser/mountHomepageHero.js (mountHomepageHero)
+- apps/hb-central-homepage/src/webparts/hbCentralHomepageFeaturedProjects/HbCentralHomepageFeaturedProjectsWebPart.js -> ../../runtime/owners-browser/mountHomepageFeaturedProjects.js (mountHomepageFeaturedProjects)
+- apps/hb-central-homepage/src/webparts/hbCentralHomepageCompanyPulse/HbCentralHomepageCompanyPulseWebPart.js -> ../../runtime/owners-browser/mountHomepageCompanyPulse.js (mountHomepageCompanyPulse)
+- apps/hb-central-homepage/src/webparts/hbCentralHomepageQuickActions/HbCentralHomepageQuickActionsWebPart.js -> ../../runtime/owners-browser/mountHomepageQuickActions.js (mountHomepageQuickActions)
+Validated homepage owner source placeholder phrases (5 checks): none blocked
+
+Validated .sppkg: /Users/bobbyfetting/hb-sharepoint/dist/sppkg/hb-central-homepage.sppkg
+- [Content_Types].xml: present
+- _rels/.rels: present
+- package-manifest relationship: 1
+- package-manifest target: /AppManifest.xml
+- localhost manifest references: none
+- debug/workbench leakage: none
+- unsupported feature registration: none
+- focused web part registrations: present (b8bb1136-d33e-47d2-9d45-848524b8fcbf, 4ff4d963-cb8e-4ba2-b70f-89f72f0f4db1, 02ce4751-f355-444e-a635-a6f3b11fad79, c5819073-cf72-4d91-bd5b-49982a6b8230, 506562ca-e752-4bf4-a218-f06d965f8f7f)
+- packaged entryModuleId ownership: 5 unique values
+- packaged primary script-resource keys: 5 unique values
+- packaged primary script-resource paths: 5 unique values
+- runtime owner lazy chunks inspected: 5
+- runtime owner exports discovered: 5
+- runtime owner CommonJS signatures: none
+- runtime owner placeholder phrases: none
+  - b8bb1136-d33e-47d2-9d45-848524b8fcbf: hb-central-homepage-sections-web-part -> hb-central-homepage-sections-web-part (hb-central-homepage-sections-web-part_9c9c07b55acd9bfb8d5d.js)
+  - 4ff4d963-cb8e-4ba2-b70f-89f72f0f4db1: hb-central-homepage-hero-web-part -> hb-central-homepage-hero-web-part (hb-central-homepage-hero-web-part_6dc4c352c10bc6803b91.js)
+  - 02ce4751-f355-444e-a635-a6f3b11fad79: hb-central-homepage-featured-projects-web-part -> hb-central-homepage-featured-projects-web-part (hb-central-homepage-featured-projects-web-part_2671f8877c3d645901c2.js)
+  - c5819073-cf72-4d91-bd5b-49982a6b8230: hb-central-homepage-company-pulse-web-part -> hb-central-homepage-company-pulse-web-part (hb-central-homepage-company-pulse-web-part_caa97484d972ab9a0346.js)
+  - 506562ca-e752-4bf4-a218-f06d965f8f7f: hb-central-homepage-quick-actions-web-part -> hb-central-homepage-quick-actions-web-part (hb-central-homepage-quick-actions-web-part_c5716ad01ec6875975a6.js)
+  - ClientSideAssets/chunk.462_eadda890a8478f26dcd9.js: mountHomepageQuickActions
+  - ClientSideAssets/chunk.678_77ffaf1b55c80a8dbb6c.js: mountHomepageCompanyPulse
+  - ClientSideAssets/chunk.763_6865db265c0b9512f796.js: mountHomepageFeaturedProjects
+  - ClientSideAssets/chunk.88_5b3113cfd8258bab274f.js: mountHomepageSections
+  - ClientSideAssets/chunk.921_0af80efb9abe1a4e1f50.js: mountHomepageHero

@@ -47,7 +47,7 @@ This package does **not** authorize:
 - Evidence directory: `docs/architecture/prompts/phase-3c/evidence/2026-04-04-prompt-01/`
 - Canonical closure authority: `docs/architecture/blueprint/phase-3c-placeholder-owner-forensics-and-prompt-01-closure.md`
 - Current validated disposition: wrappers correctly import browser-safe owner entrypoints, but those entrypoints currently render placeholder proof-of-load text while real intended owner mounts exist separately in `src/runtime/owners/mountHomepage*.tsx`.
-- Prompt-02 and Prompt-03 are now closed; Prompt-04 remains open downstream live-proof scope.
+- Prompt-02, Prompt-03, and Prompt-04 are now closed with Prompt-04 classified as Conditional Go pending external tenant live-proof evidence.
 
 ## Prompt-02 Status (2026-04-04)
 
@@ -55,7 +55,7 @@ This package does **not** authorize:
 - Evidence directory: `docs/architecture/prompts/phase-3c/evidence/2026-04-04-prompt-02/`
 - Canonical closure authority: `docs/architecture/blueprint/phase-3c-restore-real-owner-mounts-and-prompt-02-closure.md`
 - Current validated disposition: browser-safe owner entrypoints now render surface-specific success-path UI without proof-of-load placeholder text, and wrapper import topology remains browser-safe.
-- Prompt-03 is now closed; Prompt-04 remains open downstream live-proof scope.
+- Prompt-03 and Prompt-04 are now closed with Prompt-04 classified as Conditional Go pending external tenant live-proof evidence.
 
 ## Prompt-03 Status (2026-04-04)
 
@@ -63,7 +63,14 @@ This package does **not** authorize:
 - Evidence directory: `docs/architecture/prompts/phase-3c/evidence/2026-04-04-prompt-03/`
 - Canonical closure authority: `docs/architecture/blueprint/phase-3c-harden-against-placeholder-regression-and-prompt-03-closure.md`
 - Current validated disposition: homepage source-owner and packaged lazy-owner validation now hard-fails on blocked placeholder phrase-family signatures while preserving existing runtime-format and ownership anti-collapse safeguards.
-- Prompt-04 remains open downstream rebuild/deploy/live-proof scope.
+- Prompt-04 is closed as Conditional Go pending external tenant live-proof evidence for hard-go promotion.
+
+## Prompt-04 Status (2026-04-04)
+
+- Prompt-04 closure is complete for rebuild/provenance/live-proof governance scope.
+- Evidence directory: `docs/architecture/prompts/phase-3c/evidence/2026-04-04-prompt-04/`
+- Canonical closure authority: `docs/architecture/blueprint/phase-3c-rebuild-deploy-functional-live-proof-and-prompt-04-closure.md`
+- Current validated disposition: clean-state package build and validator provenance are complete with artifact-of-record hash/stat capture; tenant live proof remains externally executed and pending for hard-go promotion.
 
 ## Historical Defect Signature
 

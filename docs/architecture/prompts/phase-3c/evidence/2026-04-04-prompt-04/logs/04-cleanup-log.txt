@@ -1,0 +1,4 @@
+[cleanup-start] 2026-04-04T11:21:41Z
+rm -rf apps/hb-central-homepage/temp apps/hb-central-homepage/lib apps/hb-central-homepage/lib-commonjs apps/hb-central-homepage/sharepoint/solution/debug
+rm -f dist/sppkg/hb-central-homepage.sppkg
+[cleanup-end] 2026-04-04T11:21:41Z
