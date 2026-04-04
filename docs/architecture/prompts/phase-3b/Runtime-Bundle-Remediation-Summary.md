@@ -52,7 +52,18 @@ Earlier audits already established that wrappers dynamically import focused owne
   - homepage packaged lazy owner chunks are now explicitly inspected from `ClientSideAssets/chunk.*.js`,
   - validator now hard-fails on browser-incompatible CommonJS signatures (`Object.defineProperty(exports, ...)`, `exports.mountHomepage...`, `require(...)`) in owner chunks,
   - existing ownership anti-collapse checks and anti-bridge packaging checks remain preserved and mandatory in `validate:homepage:package`.
-- Prompt-04 remains open for clean rebuild, tenant redeploy, and live runtime proof closure.
+- Prompt-04 is now closed under Conditional-Go release classification with tenant live-proof evidence explicitly tracked as pending external operator scope.
+
+## Prompt-04 closure status (2026-04-04)
+
+- Prompt-04 build/provenance/live-proof outputs are frozen at `docs/architecture/prompts/phase-3b/evidence/2026-04-04-prompt-04/`.
+- Canonical closure authority is now `docs/architecture/blueprint/phase-3b-rebuild-deploy-live-proof-and-prompt-04-closure.md`.
+- Prompt-04 confirms conditional-go closeout in current repo truth:
+  - clean-state cleanup and `pnpm build:sppkg:homepage` execution outputs are retained as machine-captured logs,
+  - repaired artifact-of-record provenance is retained with digest/stat records for `dist/sppkg/hb-central-homepage.sppkg`,
+  - validator-backed package checks pass with runtime-format guard active,
+  - tenant deployment screenshots and live page/console proof remain explicitly pending external operator evidence.
+- Current release classification: `Conditional Go`.
 
 ## Scope of remediation
 

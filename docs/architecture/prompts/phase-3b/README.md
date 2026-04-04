@@ -57,7 +57,15 @@ Earlier audit work concluded the `.sppkg` structure, manifest ownership, and pac
 - Evidence directory: `docs/architecture/prompts/phase-3b/evidence/2026-04-04-prompt-03/`
 - Canonical closure authority: `docs/architecture/blueprint/phase-3b-validator-and-regression-hardening-and-prompt-03-closure.md`
 - Current validated disposition: `tools/validate-sppkg.mjs` now inspects homepage lazy owner chunks in packaged `ClientSideAssets/chunk.*.js` artifacts and hard-fails on browser-incompatible CommonJS signatures (`Object.defineProperty(exports, ...)`, `exports.mountHomepage...`, `require(...)`) while preserving existing ownership and anti-bridge validation gates.
-- Prompt-04 remains open for clean rebuild, redeploy, and live SharePoint proof.
+- Prompt-04 is now closed under Conditional-Go release classification pending external tenant live-proof artifacts.
+
+## Prompt-04 Status (2026-04-04)
+
+- Prompt-04 closure is complete for clean rebuild, artifact provenance, deployment-proof framing, and final release-decision scope.
+- Evidence directory: `docs/architecture/prompts/phase-3b/evidence/2026-04-04-prompt-04/`
+- Canonical closure authority: `docs/architecture/blueprint/phase-3b-rebuild-deploy-live-proof-and-prompt-04-closure.md`
+- Current validated disposition: clean-state `pnpm build:sppkg:homepage` execution and validator output are captured with artifact digest/stat provenance for `dist/sppkg/hb-central-homepage.sppkg`; tenant deployment screenshots and live per-surface console proof are explicitly tracked as pending external operator evidence.
+- Current release classification: `Conditional Go`.
 
 ## Scope boundary
 

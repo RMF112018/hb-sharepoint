@@ -64,6 +64,7 @@ The repository currently contains:
 - phase-3b Prompt-01 runtime-chunk forensics closure records for confirmed CommonJS lazy-chunk browser-failure root cause governance
 - phase-3b Prompt-02 browser-safe owner build-remediation closure records for emitted lazy-owner browser-module compatibility recovery governance
 - phase-3b Prompt-03 validator and regression-hardening closure records for mandatory lazy-owner runtime-format release-gate enforcement governance
+- phase-3b Prompt-04 rebuild/deploy/live-proof closure records for clean-state artifact provenance, deployment-proof framing, and Conditional-Go release governance
 - a deterministic `.sppkg` packaging path for the homepage app via Heft-native SPFx production packaging (`heft build --production` + `heft package-solution --production`) guarded by `tools/validate-sppkg.mjs`
 - a `packages/ui-kit/` shared visual package with runnable typecheck, lint, build, and test scripts
 
@@ -124,6 +125,7 @@ The repository does not yet contain:
 - Treat phase-3b Prompt-01 as materially executed for runtime-forensics scope: wrapper imports into `lib-commonjs` owner artifacts and emitted lazy-chunk CommonJS signatures are now frozen as confirmed direct root cause for `exports is not defined` runtime failure.
 - Treat phase-3b Prompt-02 as materially executed for browser-safe owner remediation scope: wrapper owner imports now target browser-safe owner modules and emitted lazy owner chunks are verified free of browser-breaking CommonJS signatures while packaged ownership remains split across five focused surfaces.
 - Treat phase-3b Prompt-03 as materially executed for validator-hardening scope: homepage packaged lazy owner chunks are now mandatory-inspected and browser-incompatible CommonJS signatures (`Object.defineProperty(exports, ...)`, `exports.mountHomepage...`, `require(...)`) are release-gated hard failures with ownership anti-collapse checks preserved.
+- Treat phase-3b Prompt-04 as materially executed for rebuild/provenance/governance scope: clean-state package output and validator evidence are frozen with artifact-of-record digest linkage and explicit `Conditional Go` classification pending external tenant live-proof evidence.
 - Use the prompt package to sequence implementation work, but use live files and this map as the source of truth for what exists now.
 - Do not infer app structure, package structure, or verification capabilities that have not been created yet.
 - Treat Prompt-01 as historically executed: the structural baseline already exists and should be confirmed rather than recreated.
@@ -190,3 +192,4 @@ The repository does not yet contain:
 - `docs/architecture/blueprint/phase-3b-runtime-chunk-forensics-and-prompt-01-closure.md` records the approved phase-3b Prompt-01 runtime chunk forensics baseline and confirmed-root-cause closure.
 - `docs/architecture/blueprint/phase-3b-browser-safe-owner-build-remediation-and-prompt-02-closure.md` records the approved phase-3b Prompt-02 browser-safe owner build-remediation baseline and closure.
 - `docs/architecture/blueprint/phase-3b-validator-and-regression-hardening-and-prompt-03-closure.md` records the approved phase-3b Prompt-03 validator and regression-hardening baseline and closure.
+- `docs/architecture/blueprint/phase-3b-rebuild-deploy-live-proof-and-prompt-04-closure.md` records the approved phase-3b Prompt-04 rebuild/deploy/live-proof baseline and conditional-go closure.
