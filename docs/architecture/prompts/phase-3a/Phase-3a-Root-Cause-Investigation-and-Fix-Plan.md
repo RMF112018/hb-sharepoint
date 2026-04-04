@@ -17,6 +17,24 @@ Determine exactly where the current homepage packaging pipeline stops honoring t
 - Confirmed Prompt-02 disposition: current source truth is genuinely split at source-manifest, bundle-declaration, and wrapper-owner boundaries.
 - Governance note: Prompt-01 mismatch-branch gate remains true; Prompt-02 continuation is an approved operator override to freeze repo-truth build-input evidence.
 
+## Prompt-03 Status (2026-04-04)
+- Step 4 true-clean rebuild is complete in `docs/architecture/prompts/phase-3a/evidence/2026-04-04-prompt-03/`.
+- Prompt-03 required outputs are complete:
+  - `03-build-log.txt`
+  - `03-output-directory-inventory.txt`
+  - `03-post-build-file-tree.txt`
+- Confirmed Prompt-03 disposition: homepage packaging flow was re-executed from a clean artifact/cache state using the current documented command chain, with generated output locations frozen for downstream boundary analysis.
+- Governance note: Prompt-01 mismatch-branch findings remain authoritative; Prompt-03 continuation follows the same approved operator-override posture established in Prompt-02.
+
+## Prompt-04 Status (2026-04-04)
+- Step 5 generated manifest/asset boundary inspection is complete in `docs/architecture/prompts/phase-3a/evidence/2026-04-04-prompt-04/`.
+- Prompt-04 required outputs are complete:
+  - `04-generated-manifest-ownership-map.txt`
+  - `04-generated-asset-inventory.txt`
+  - `04-pre-package-boundary-summary.md`
+- Confirmed Prompt-04 disposition: split ownership survives in generated manifests and pre-package ownership records; collapse is not present before final `.sppkg` assembly.
+- Governance note: Prompt-01 mismatch-branch findings remain authoritative; Prompt-04 continuation follows approved operator-override continuity from Prompt-02 and Prompt-03.
+
 ## Investigation Sequence
 
 ### 1. Freeze evidence before modifying anything

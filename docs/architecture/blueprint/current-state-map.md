@@ -55,6 +55,8 @@ The repository currently contains:
 - phase-3 Prompt-11 final closeout closure records for SharePoint-readiness reconciliation and explicit Conditional-Go governance
 - phase-3a Prompt-01 suspect-artifact evidence freeze and mismatch-branch closure records for remediation-gate provenance governance
 - phase-3a Prompt-02 repo-truth freeze and build-input-map closure records for packaging-input provenance governance
+- phase-3a Prompt-03 true-clean rebuild and post-build output-inventory closure records for generated-artifact provenance governance
+- phase-3a Prompt-04 generated-manifest and pre-package primary-asset boundary closure records for collapse-boundary provenance governance
 - a deterministic `.sppkg` packaging path for the homepage app via Heft-native SPFx production packaging (`heft build --production` + `heft package-solution --production`) guarded by `tools/validate-sppkg.mjs`
 - a `packages/ui-kit/` shared visual package with runnable typecheck, lint, build, and test scripts
 
@@ -106,6 +108,8 @@ The repository does not yet contain:
 - Treat phase-3 Prompt-11 as materially executed for phase-closeout governance scope: final status is explicitly Conditional-Go when tenant evidence is missing, and full-Go requires explicit app-catalog/page-behavior/diagnostics evidence.
 - Treat phase-3a Prompt-01 as materially executed for suspect-artifact validation scope: current artifact-of-record evidence is frozen and the approved branch is mismatch closure unless a different suspect artifact is provided.
 - Treat phase-3a Prompt-02 as materially executed for repo-truth freeze scope: current packaging command chain, source bundle declarations, wrapper ownership imports, and governing config inputs are frozen as explicit build-input authority.
+- Treat phase-3a Prompt-03 as materially executed for rebuild provenance scope: homepage packaging command chain has been rerun from a true-clean artifact/cache baseline and generated output locations are frozen for downstream boundary analysis.
+- Treat phase-3a Prompt-04 as materially executed for generated-boundary scope: pre-package generated manifests and staged ownership/assets remain split across all five surfaces and do not show collapse before final `.sppkg` assembly.
 - Use the prompt package to sequence implementation work, but use live files and this map as the source of truth for what exists now.
 - Do not infer app structure, package structure, or verification capabilities that have not been created yet.
 - Treat Prompt-01 as historically executed: the structural baseline already exists and should be confirmed rather than recreated.
@@ -163,3 +167,5 @@ The repository does not yet contain:
 - `docs/architecture/blueprint/phase-3-sharepoint-readiness-and-prompt-11-closeout.md` records the approved phase-3 Prompt-11 final closeout baseline and Conditional-Go governance status.
 - `docs/architecture/blueprint/phase-3a-suspect-artifact-evidence-and-prompt-01-closure.md` records the approved phase-3a Prompt-01 suspect-artifact evidence freeze baseline and mismatch-branch closure.
 - `docs/architecture/blueprint/phase-3a-repo-truth-build-input-map-and-prompt-02-closure.md` records the approved phase-3a Prompt-02 repo-truth freeze and build-input-map baseline with operator-override continuity.
+- `docs/architecture/blueprint/phase-3a-true-clean-rebuild-and-prompt-03-closure.md` records the approved phase-3a Prompt-03 true-clean rebuild and post-build output-inventory baseline with operator-override continuity.
+- `docs/architecture/blueprint/phase-3a-generated-manifest-and-asset-boundary-and-prompt-04-closure.md` records the approved phase-3a Prompt-04 generated-manifest and pre-package primary-asset boundary baseline with operator-override continuity.

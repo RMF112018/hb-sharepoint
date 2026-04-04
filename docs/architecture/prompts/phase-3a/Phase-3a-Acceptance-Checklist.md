@@ -6,8 +6,8 @@ Use this checklist to determine whether the Phase 3a remediation effort is compl
 ## Technical Outcomes
 - [ ] The current suspect `.sppkg` was validated and the failure mode was documented.
 - [x] Current `main` repo truth was frozen and recorded.
-- [ ] The homepage packaging chain was rebuilt from a true clean state.
-- [ ] Generated pre-package manifests/assets were inspected and mapped.
+- [x] The homepage packaging chain was rebuilt from a true clean state.
+- [x] Generated pre-package manifests/assets were inspected and mapped.
 - [ ] The exact pipeline layer where ownership collapse first occurs was identified.
 - [ ] A root-cause summary was written.
 - [ ] The minimum correct fix was implemented.
@@ -22,7 +22,7 @@ Use this checklist to determine whether the Phase 3a remediation effort is compl
 - [ ] The packaged client-side assets inventory supports split primary ownership.
 
 ## Documentation Outputs
-- [ ] Evidence folder created and populated.
+- [x] Evidence folder created and populated.
 - [ ] Root-cause summary created.
 - [ ] Ownership map for generated outputs created.
 - [ ] Ownership map for final packaged artifact created.

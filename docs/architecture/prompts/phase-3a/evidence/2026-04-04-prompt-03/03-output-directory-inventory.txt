@@ -1,0 +1,99 @@
+Prompt-03 output directory inventory
+timestamp=2026-04-04T08:45:55Z
+commit=eaaede24f2527432e83f5e80e83ddc8337415834
+
+===== apps/hb-central-homepage/dist
+exists=yes
+files=15
+dirs=1
+total 120
+drwxr-xr-x@ 17 bobbyfetting  staff   544 Apr  4 04:45 .
+drwxr-xr-x@ 22 bobbyfetting  staff   704 Apr  4 04:45 ..
+-rw-r--r--@  1 bobbyfetting  staff  1262 Apr  4 04:45 02ce4751-f355-444e-a635-a6f3b11fad79.manifest.json
+-rw-r--r--@  1 bobbyfetting  staff  1194 Apr  4 04:45 4ff4d963-cb8e-4ba2-b70f-89f72f0f4db1.manifest.json
+-rw-r--r--@  1 bobbyfetting  staff  1220 Apr  4 04:45 506562ca-e752-4bf4-a218-f06d965f8f7f.manifest.json
+-rw-r--r--@  1 bobbyfetting  staff  1181 Apr  4 04:45 b8bb1136-d33e-47d2-9d45-848524b8fcbf.manifest.json
+-rw-r--r--@  1 bobbyfetting  staff  1220 Apr  4 04:45 c5819073-cf72-4d91-bd5b-49982a6b8230.manifest.json
+-rw-r--r--@  1 bobbyfetting  staff   562 Apr  4 04:45 chunk.357_775c0006db12ff929954.js
+-rw-r--r--@  1 bobbyfetting  staff   550 Apr  4 04:45 chunk.603_88338352a0ffd29ab6fe.js
+-rw-r--r--@  1 bobbyfetting  staff   550 Apr  4 04:45 chunk.613_015c923baf4a31220915.js
+-rw-r--r--@  1 bobbyfetting  staff   536 Apr  4 04:45 chunk.725_ec8a856a5b318be378ed.js
+-rw-r--r--@  1 bobbyfetting  staff   548 Apr  4 04:45 chunk.757_b7a56530249311b149d8.js
+-rw-r--r--@  1 bobbyfetting  staff  3404 Apr  4 04:45 hb-central-homepage-company-pulse-web-part_7cbfe4e3e765bf2ad8e9.js
+-rw-r--r--@  1 bobbyfetting  staff  3448 Apr  4 04:45 hb-central-homepage-featured-projects-web-part_d1c70dfab7c182850c34.js
+-rw-r--r--@  1 bobbyfetting  staff  3331 Apr  4 04:45 hb-central-homepage-hero-web-part_1e3f2e854d24aa41b894.js
+-rw-r--r--@  1 bobbyfetting  staff  3404 Apr  4 04:45 hb-central-homepage-quick-actions-web-part_68d1f19c506736707671.js
+-rw-r--r--@  1 bobbyfetting  staff  3393 Apr  4 04:45 hb-central-homepage-sections-web-part_77a76b2b245ac60ecde8.js
+
+===== apps/hb-central-homepage/release
+exists=yes
+files=17
+dirs=5
+total 0
+drwxr-xr-x@  6 bobbyfetting  staff  192 Apr  4 04:45 .
+drwxr-xr-x@ 22 bobbyfetting  staff  704 Apr  4 04:45 ..
+drwxr-xr-x@  3 bobbyfetting  staff   96 Apr  4 04:45 analysis-logs
+drwxr-xr-x@ 12 bobbyfetting  staff  384 Apr  4 04:45 assets
+drwxr-xr-x@  3 bobbyfetting  staff   96 Apr  4 04:45 component-dependency-audit
+drwxr-xr-x@  7 bobbyfetting  staff  224 Apr  4 04:45 manifests
+
+===== apps/hb-central-homepage/sharepoint/solution
+exists=yes
+files=37
+dirs=9
+total 0
+drwxr-xr-x@  3 bobbyfetting  staff   96 Apr  4 04:45 .
+drwxr-xr-x@  3 bobbyfetting  staff   96 Apr  4 04:45 ..
+drwxr-xr-x@ 23 bobbyfetting  staff  736 Apr  4 04:45 debug
+
+===== apps/hb-central-homepage/sharepoint/solution/debug
+exists=yes
+files=37
+dirs=8
+total 112
+drwxr-xr-x@ 23 bobbyfetting  staff   736 Apr  4 04:45 .
+drwxr-xr-x@  3 bobbyfetting  staff    96 Apr  4 04:45 ..
+drwxr-xr-x@  3 bobbyfetting  staff    96 Apr  4 04:45 02ce4751-f355-444e-a635-a6f3b11fad79
+drwxr-xr-x@  3 bobbyfetting  staff    96 Apr  4 04:45 4ff4d963-cb8e-4ba2-b70f-89f72f0f4db1
+drwxr-xr-x@  3 bobbyfetting  staff    96 Apr  4 04:45 506562ca-e752-4bf4-a218-f06d965f8f7f
+-rw-r--r--@  1 bobbyfetting  staff  1048 Apr  4 04:45 AppManifest.xml
+drwxr-xr-x@ 12 bobbyfetting  staff   384 Apr  4 04:45 ClientSideAssets
+-rw-r--r--@  1 bobbyfetting  staff   312 Apr  4 04:45 ClientSideAssets.xml
+-rw-r--r--@  1 bobbyfetting  staff   189 Apr  4 04:45 ClientSideAssets.xml.config.xml
+-rw-r--r--@  1 bobbyfetting  staff   961 Apr  4 04:45 [Content_Types].xml
+drwxr-xr-x@ 10 bobbyfetting  staff   320 Apr  4 04:45 _rels
+drwxr-xr-x@  3 bobbyfetting  staff    96 Apr  4 04:45 b8bb1136-d33e-47d2-9d45-848524b8fcbf
+drwxr-xr-x@  3 bobbyfetting  staff    96 Apr  4 04:45 c5819073-cf72-4d91-bd5b-49982a6b8230
+-rw-r--r--@  1 bobbyfetting  staff   337 Apr  4 04:45 feature_02ce4751-f355-444e-a635-a6f3b11fad79.xml
+-rw-r--r--@  1 bobbyfetting  staff   189 Apr  4 04:45 feature_02ce4751-f355-444e-a635-a6f3b11fad79.xml.config.xml
+-rw-r--r--@  1 bobbyfetting  staff   329 Apr  4 04:45 feature_4ff4d963-cb8e-4ba2-b70f-89f72f0f4db1.xml
+-rw-r--r--@  1 bobbyfetting  staff   189 Apr  4 04:45 feature_4ff4d963-cb8e-4ba2-b70f-89f72f0f4db1.xml.config.xml
+-rw-r--r--@  1 bobbyfetting  staff   329 Apr  4 04:45 feature_506562ca-e752-4bf4-a218-f06d965f8f7f.xml
+-rw-r--r--@  1 bobbyfetting  staff   189 Apr  4 04:45 feature_506562ca-e752-4bf4-a218-f06d965f8f7f.xml.config.xml
+-rw-r--r--@  1 bobbyfetting  staff   337 Apr  4 04:45 feature_b8bb1136-d33e-47d2-9d45-848524b8fcbf.xml
+-rw-r--r--@  1 bobbyfetting  staff   189 Apr  4 04:45 feature_b8bb1136-d33e-47d2-9d45-848524b8fcbf.xml.config.xml
+-rw-r--r--@  1 bobbyfetting  staff   329 Apr  4 04:45 feature_c5819073-cf72-4d91-bd5b-49982a6b8230.xml
+-rw-r--r--@  1 bobbyfetting  staff   189 Apr  4 04:45 feature_c5819073-cf72-4d91-bd5b-49982a6b8230.xml.config.xml
+
+===== apps/hb-central-homepage/temp
+exists=yes
+files=5
+dirs=7
+total 0
+drwxr-xr-x@  4 bobbyfetting  staff  128 Apr  4 04:45 .
+drwxr-xr-x@ 22 bobbyfetting  staff  704 Apr  4 04:45 ..
+drwxr-xr-x@  6 bobbyfetting  staff  192 Apr  4 04:45 build
+drwxr-xr-x@  3 bobbyfetting  staff   96 Apr  4 04:45 sass-ts
+
+===== dist/.sppkg-staging
+exists=no
+
+===== dist/sppkg
+exists=yes
+files=1
+dirs=1
+total 56
+drwxr-xr-x@ 3 bobbyfetting  staff     96 Apr  4 04:45 .
+drwxr-xr-x@ 3 bobbyfetting  staff     96 Apr  4 04:45 ..
+-rw-r--r--@ 1 bobbyfetting  staff  26784 Apr  4 04:45 hb-central-homepage.sppkg
+

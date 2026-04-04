@@ -1,0 +1,38 @@
+Prompt-04 generated manifest ownership map
+source: apps/hb-central-homepage/release/manifests/*.manifest.json
+
+- file: /Users/bobbyfetting/hb-sharepoint/apps/hb-central-homepage/release/manifests/02ce4751-f355-444e-a635-a6f3b11fad79.manifest.json
+  id: 02ce4751-f355-444e-a635-a6f3b11fad79
+  alias: HbCentralHomepageFeaturedProjectsWebPart
+  entryModuleId: hb-central-homepage-featured-projects-web-part
+  primaryScriptResourceKey: hb-central-homepage-featured-projects-web-part
+  primaryScriptResourcePath: hb-central-homepage-featured-projects-web-part_d1c70dfab7c182850c34.js
+
+- file: /Users/bobbyfetting/hb-sharepoint/apps/hb-central-homepage/release/manifests/4ff4d963-cb8e-4ba2-b70f-89f72f0f4db1.manifest.json
+  id: 4ff4d963-cb8e-4ba2-b70f-89f72f0f4db1
+  alias: HbCentralHomepageHeroWebPart
+  entryModuleId: hb-central-homepage-hero-web-part
+  primaryScriptResourceKey: hb-central-homepage-hero-web-part
+  primaryScriptResourcePath: hb-central-homepage-hero-web-part_1e3f2e854d24aa41b894.js
+
+- file: /Users/bobbyfetting/hb-sharepoint/apps/hb-central-homepage/release/manifests/506562ca-e752-4bf4-a218-f06d965f8f7f.manifest.json
+  id: 506562ca-e752-4bf4-a218-f06d965f8f7f
+  alias: HbCentralHomepageQuickActionsWebPart
+  entryModuleId: hb-central-homepage-quick-actions-web-part
+  primaryScriptResourceKey: hb-central-homepage-quick-actions-web-part
+  primaryScriptResourcePath: hb-central-homepage-quick-actions-web-part_68d1f19c506736707671.js
+
+- file: /Users/bobbyfetting/hb-sharepoint/apps/hb-central-homepage/release/manifests/b8bb1136-d33e-47d2-9d45-848524b8fcbf.manifest.json
+  id: b8bb1136-d33e-47d2-9d45-848524b8fcbf
+  alias: HbCentralHomepageWebPart
+  entryModuleId: hb-central-homepage-sections-web-part
+  primaryScriptResourceKey: hb-central-homepage-sections-web-part
+  primaryScriptResourcePath: hb-central-homepage-sections-web-part_77a76b2b245ac60ecde8.js
+
+- file: /Users/bobbyfetting/hb-sharepoint/apps/hb-central-homepage/release/manifests/c5819073-cf72-4d91-bd5b-49982a6b8230.manifest.json
+  id: c5819073-cf72-4d91-bd5b-49982a6b8230
+  alias: HbCentralHomepageCompanyPulseWebPart
+  entryModuleId: hb-central-homepage-company-pulse-web-part
+  primaryScriptResourceKey: hb-central-homepage-company-pulse-web-part
+  primaryScriptResourcePath: hb-central-homepage-company-pulse-web-part_7cbfe4e3e765bf2ad8e9.js
+

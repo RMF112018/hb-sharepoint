@@ -42,6 +42,18 @@ This package is based on the currently observed mismatch between:
 - Canonical closure authority: `docs/architecture/blueprint/phase-3a-repo-truth-build-input-map-and-prompt-02-closure.md`
 - Current validated disposition: current source layer is genuinely split; Prompt-02 execution in this run is an approved operator override while retaining Prompt-01 mismatch-branch findings.
 
+## Prompt-03 Status (2026-04-04)
+- Prompt-03 closure is complete for true-clean rebuild and post-build artifact inventory scope.
+- Evidence directory: `docs/architecture/prompts/phase-3a/evidence/2026-04-04-prompt-03/`
+- Canonical closure authority: `docs/architecture/blueprint/phase-3a-true-clean-rebuild-and-prompt-03-closure.md`
+- Current validated disposition: the current homepage packaging command chain was rerun from a clean artifact/cache baseline and generated output locations were frozen for subsequent boundary analysis.
+
+## Prompt-04 Status (2026-04-04)
+- Prompt-04 closure is complete for generated-manifest and pre-package primary-asset boundary inspection scope.
+- Evidence directory: `docs/architecture/prompts/phase-3a/evidence/2026-04-04-prompt-04/`
+- Canonical closure authority: `docs/architecture/blueprint/phase-3a-generated-manifest-and-asset-boundary-and-prompt-04-closure.md`
+- Current validated disposition: generated and pre-package ownership remains split across all five homepage surfaces; collapse is not present before final `.sppkg` assembly.
+
 ## Assumptions and Limitations
 - This package assumes the homepage should continue shipping as **one single `.sppkg`**.
 - This package assumes the current remediation target is limited to the homepage package and its packaging chain.
