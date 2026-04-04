@@ -16,10 +16,9 @@ export default class HbCentralHomepageQuickActionsWebPart extends BaseClientSide
       this.domElement.replaceChildren(root);
 
       this._mountPromise = Promise.resolve()
-        .then(() =>
-          import(
-            "../../../lib-commonjs/src/runtime/owners/mountHomepageQuickActions.js"
-          ),
+        .then(
+          () =>
+            import("../../../lib-commonjs/src/runtime/owners/mountHomepageQuickActions.js"),
         )
         .then((module) => {
           const mountHomepageQuickActions =

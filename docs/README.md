@@ -48,6 +48,7 @@ This repository currently uses `docs/` for canonical architecture prompts, bluep
 - Phase-3 Prompt-06 has now established real split bundle ownership and artifact-level ownership validation for all five homepage surfaces.
 - Phase-3 Prompt-07 has now established Heft-native homepage packaging authority and retired the custom gulp bridge from deployable package flow.
 - Phase-3 Prompt-08 has now established the canonical Heft customization inventory baseline and locked no-ejection/no-extra-plugin defaults for the current deployable path.
+- Phase-3 Prompt-09 has now established ownership-aware validation release gates that hard-fail shared-bundle regressions and production debug/localhost leakage.
 - Prompt-01 should now be treated as a confirmed historical foundation rather than pending structural work.
 
 ## Usage rules

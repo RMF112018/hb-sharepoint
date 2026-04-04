@@ -9,6 +9,7 @@ import { spawnSync } from "node:child_process";
  * packageManifestTarget: string | null;
  * packageManifestTargetExists: boolean;
  * localhostManifestEntries: string[];
+ * debugLeakageEntries: string[];
  * unsupportedFeatureEntries: string[];
  * missingExpectedWebPartDefinitionEntries: string[];
  * webPartOwnershipRecords: Array<{
@@ -65,6 +66,15 @@ function hasLocalhostReference(content) {
 
 function hasUnsupportedFeatureRegistration(content) {
   return /<\s*ClientSideComponentInstance\b/i.test(content);
+}
+
+function hasDebugLeakage(content) {
+  return (
+    /debugmanifestsfile=/i.test(content) ||
+    /loadspfx=true/i.test(content) ||
+    /noredir=true/i.test(content) ||
+    /_layouts\/15\/workbench\.aspx/i.test(content)
+  );
 }
 
 function decodeXmlAttribute(value) {
@@ -128,6 +138,7 @@ function validateSppkg(artifactPath) {
   let packageManifestTarget = null;
   let packageManifestTargetExists = false;
   const localhostManifestEntries = [];
+  const debugLeakageEntries = [];
   const unsupportedFeatureEntries = [];
   const missingExpectedWebPartDefinitionEntries =
     expectedWebPartDefinitionEntries.filter(
@@ -171,6 +182,9 @@ function validateSppkg(artifactPath) {
     const content = readEntry(artifactPath, entry);
     if (hasLocalhostReference(content)) {
       localhostManifestEntries.push(entry);
+    }
+    if (hasDebugLeakage(content)) {
+      debugLeakageEntries.push(entry);
     }
   }
 
@@ -221,6 +235,7 @@ function validateSppkg(artifactPath) {
     packageManifestTarget,
     packageManifestTargetExists,
     localhostManifestEntries,
+    debugLeakageEntries,
     unsupportedFeatureEntries,
     missingExpectedWebPartDefinitionEntries,
     webPartOwnershipRecords,
@@ -260,6 +275,11 @@ function main() {
   if (result.localhostManifestEntries.length > 0) {
     failures.push(
       `localhost production reference detected in: ${result.localhostManifestEntries.join(", ")}`,
+    );
+  }
+  if (result.debugLeakageEntries.length > 0) {
+    failures.push(
+      `debug/workbench leakage detected in production package entries: ${result.debugLeakageEntries.join(", ")}`,
     );
   }
   if (result.unsupportedFeatureEntries.length > 0) {
@@ -322,7 +342,7 @@ function main() {
   );
   if (uniqueEntryModuleIds.size !== expectedWebPartManifestIds.length) {
     failures.push(
-      `packaged web part entryModuleId ownership collapsed: found ${uniqueEntryModuleIds.size} unique values, expected ${expectedWebPartManifestIds.length}`,
+      `packaged web part entryModuleId ownership collapsed: found ${uniqueEntryModuleIds.size} unique values, expected ${expectedWebPartManifestIds.length}. Inspect per-web-part ownership map in this output.`,
     );
   }
 
@@ -335,7 +355,7 @@ function main() {
     uniquePrimaryScriptResourceKeys.size !== expectedWebPartManifestIds.length
   ) {
     failures.push(
-      `packaged primary script-resource keys collapsed: found ${uniquePrimaryScriptResourceKeys.size} unique values, expected ${expectedWebPartManifestIds.length}`,
+      `packaged primary script-resource keys collapsed: found ${uniquePrimaryScriptResourceKeys.size} unique values, expected ${expectedWebPartManifestIds.length}. Inspect per-web-part ownership map in this output.`,
     );
   }
 
@@ -348,13 +368,20 @@ function main() {
     uniquePrimaryScriptResourcePaths.size !== expectedWebPartManifestIds.length
   ) {
     failures.push(
-      `packaged primary script-resource paths collapsed: found ${uniquePrimaryScriptResourcePaths.size} unique values, expected ${expectedWebPartManifestIds.length}`,
+      `packaged primary script-resource paths collapsed: found ${uniquePrimaryScriptResourcePaths.size} unique values, expected ${expectedWebPartManifestIds.length}. Inspect per-web-part ownership map in this output.`,
     );
   }
 
+  const ownershipRecordsSummary = result.webPartOwnershipRecords
+    .map(
+      (record) =>
+        `  - ${record.id}: ${record.entryModuleId} -> ${record.primaryScriptResourceKey} (${record.primaryScriptResourcePath})`,
+    )
+    .join("\n");
+
   if (failures.length > 0) {
     throw new Error(
-      `Invalid .sppkg structure:\n${failures.map((f) => `- ${f}`).join("\n")}`,
+      `Invalid .sppkg structure:\n${failures.map((f) => `- ${f}`).join("\n")}\n- packaged ownership map:\n${ownershipRecordsSummary}`,
     );
   }
 
@@ -365,17 +392,13 @@ function main() {
       `- package-manifest relationship: 1\n` +
       `- package-manifest target: ${result.packageManifestTarget}\n` +
       `- localhost manifest references: none\n` +
+      `- debug/workbench leakage: none\n` +
       `- unsupported feature registration: none\n` +
       `- focused web part registrations: present (${expectedWebPartManifestIds.join(", ")})\n` +
       `- packaged entryModuleId ownership: ${uniqueEntryModuleIds.size} unique values\n` +
       `- packaged primary script-resource keys: ${uniquePrimaryScriptResourceKeys.size} unique values\n` +
       `- packaged primary script-resource paths: ${uniquePrimaryScriptResourcePaths.size} unique values\n` +
-      result.webPartOwnershipRecords
-        .map(
-          (record) =>
-            `  - ${record.id}: ${record.entryModuleId} -> ${record.primaryScriptResourceKey} (${record.primaryScriptResourcePath})`,
-        )
-        .join("\n") +
+      ownershipRecordsSummary +
       "\n",
   );
 }

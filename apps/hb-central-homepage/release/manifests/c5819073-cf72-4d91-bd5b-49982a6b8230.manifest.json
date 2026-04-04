@@ -31,7 +31,7 @@
     "scriptResources": {
       "hb-central-homepage-company-pulse-web-part": {
         "type": "path",
-        "path": "hb-central-homepage-company-pulse-web-part_c3a84402b2706cb0d50e.js"
+        "path": "hb-central-homepage-company-pulse-web-part_7cbfe4e3e765bf2ad8e9.js"
       },
       "@microsoft/sp-webpart-base": {
         "type": "component",

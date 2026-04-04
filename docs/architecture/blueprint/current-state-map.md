@@ -50,6 +50,7 @@ The repository currently contains:
 - phase-3 Prompt-06 split bundle-ownership closure records with artifact-level ownership validation for all five homepage surfaces
 - phase-3 Prompt-07 Heft-native packaging-authority closure records for homepage deployable path governance
 - phase-3 Prompt-08 Heft customization-inventory closure records for supported extension-point convergence and no-ejection/no-extra-plugin baseline governance
+- phase-3 Prompt-09 ownership-aware release-gate closure records for actionable wrapper/artifact regression hard-failure governance
 - a deterministic `.sppkg` packaging path for the homepage app via Heft-native SPFx production packaging (`heft build --production` + `heft package-solution --production`) guarded by `tools/validate-sppkg.mjs`
 - a `packages/ui-kit/` shared visual package with runnable typecheck, lint, build, and test scripts
 
@@ -96,6 +97,7 @@ The repository does not yet contain:
 - Treat phase-3 Prompt-06 as materially executed for bundle-ownership scope: deployable surface ownership is now split and should remain protected by artifact-level anti-collapse validation.
 - Treat phase-3 Prompt-07 as materially executed for packaging-authority scope: homepage deployable packaging is now Heft-native and should remain free of custom gulp-bridge authority.
 - Treat phase-3 Prompt-08 as materially executed for customization-governance scope: nonstandard package-path behavior is now inventoried/dispositioned and deployable flow should remain on supported Heft extension points without ejection or extra plugin drift unless new evidence requires change.
+- Treat phase-3 Prompt-09 as materially executed for release-gate scope: wrapper/runtime and packaged artifact ownership checks are now actionable hard-failure guards and should remain authoritative in homepage package validation.
 - Use the prompt package to sequence implementation work, but use live files and this map as the source of truth for what exists now.
 - Do not infer app structure, package structure, or verification capabilities that have not been created yet.
 - Treat Prompt-01 as historically executed: the structural baseline already exists and should be confirmed rather than recreated.
@@ -148,3 +150,4 @@ The repository does not yet contain:
 - `docs/architecture/blueprint/phase-3-split-bundle-ownership-and-prompt-06-closure.md` records the approved phase-3 Prompt-06 split bundle-ownership baseline and closure.
 - `docs/architecture/blueprint/phase-3-heft-native-packaging-and-prompt-07-closure.md` records the approved phase-3 Prompt-07 Heft-native packaging-authority baseline and closure.
 - `docs/architecture/blueprint/phase-3-heft-customization-inventory-and-prompt-08-closure.md` records the approved phase-3 Prompt-08 customization-inventory and supported extension-point convergence baseline and closure.
+- `docs/architecture/blueprint/phase-3-ownership-aware-release-gates-and-prompt-09-closure.md` records the approved phase-3 Prompt-09 ownership-aware release-gate baseline and closure.

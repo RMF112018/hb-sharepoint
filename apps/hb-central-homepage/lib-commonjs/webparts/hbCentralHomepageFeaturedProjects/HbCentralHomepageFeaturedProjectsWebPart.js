@@ -17,17 +17,18 @@ export default class HbCentralHomepageFeaturedProjectsWebPart extends BaseClient
       this.domElement.replaceChildren(root);
 
       this._mountPromise = Promise.resolve()
-        .then(() =>
-          import(
-            "../../../lib-commonjs/src/runtime/owners/mountHomepageFeaturedProjects.js"
-          ),
+        .then(
+          () =>
+            import("../../../lib-commonjs/src/runtime/owners/mountHomepageFeaturedProjects.js"),
         )
         .then((module) => {
           const mountHomepageFeaturedProjects =
             module.mountHomepageFeaturedProjects ??
             module.default?.mountHomepageFeaturedProjects;
           if (typeof mountHomepageFeaturedProjects !== "function") {
-            throw new Error("mountHomepageFeaturedProjects export is unavailable");
+            throw new Error(
+              "mountHomepageFeaturedProjects export is unavailable",
+            );
           }
           const unmount = mountHomepageFeaturedProjects(root);
           if (typeof unmount === "function") {

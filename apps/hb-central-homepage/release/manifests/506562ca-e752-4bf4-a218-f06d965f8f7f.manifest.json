@@ -31,7 +31,7 @@
     "scriptResources": {
       "hb-central-homepage-quick-actions-web-part": {
         "type": "path",
-        "path": "hb-central-homepage-quick-actions-web-part_15bb5d67284f16bad078.js"
+        "path": "hb-central-homepage-quick-actions-web-part_68d1f19c506736707671.js"
       },
       "@microsoft/sp-webpart-base": {
         "type": "component",

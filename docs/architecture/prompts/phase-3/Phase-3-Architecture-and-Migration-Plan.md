@@ -52,6 +52,12 @@ Move the HB Central homepage solution from its current hybrid deployment archite
 - Canonical Prompt-08 closure authority: `docs/architecture/blueprint/phase-3-heft-customization-inventory-and-prompt-08-closure.md`.
 - Downstream release-hardening and artifact-proof prompts should consume this customization inventory baseline and preserve the no-ejection/no-extra-plugin default unless new repo-truth evidence requires change.
 
+## Prompt-09 baseline governance status
+
+- Prompt-09 is treated as executed baseline work for this phase.
+- Canonical Prompt-09 closure authority: `docs/architecture/blueprint/phase-3-ownership-aware-release-gates-and-prompt-09-closure.md`.
+- Downstream artifact-proof and final-phase closure prompts should consume this ownership-aware release-gate baseline and treat regression into collapsed bundle ownership or debug leakage as hard failure conditions.
+
 ---
 
 ## 1. Current architecture

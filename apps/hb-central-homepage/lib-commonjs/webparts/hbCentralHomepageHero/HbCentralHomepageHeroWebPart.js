@@ -16,8 +16,9 @@ export default class HbCentralHomepageHeroWebPart extends BaseClientSideWebPart 
       this.domElement.replaceChildren(root);
 
       this._mountPromise = Promise.resolve()
-        .then(() =>
-          import("../../../lib-commonjs/src/runtime/owners/mountHomepageHero.js"),
+        .then(
+          () =>
+            import("../../../lib-commonjs/src/runtime/owners/mountHomepageHero.js"),
         )
         .then((module) => {
           const mountHomepageHero =

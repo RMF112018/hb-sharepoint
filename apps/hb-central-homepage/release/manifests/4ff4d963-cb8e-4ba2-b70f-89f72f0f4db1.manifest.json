@@ -31,7 +31,7 @@
     "scriptResources": {
       "hb-central-homepage-hero-web-part": {
         "type": "path",
-        "path": "hb-central-homepage-hero-web-part_af6e6135b7e40106a335.js"
+        "path": "hb-central-homepage-hero-web-part_1e3f2e854d24aa41b894.js"
       },
       "@microsoft/sp-webpart-base": {
         "type": "component",

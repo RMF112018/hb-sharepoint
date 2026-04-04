@@ -105,6 +105,15 @@ The Phase 3 end state is:
   - explicit no-ejection/no-extra-Heft-plugin default for the current deployable path,
   - retention boundaries for release-gate validation scripts versus packaging authority.
 
+## Prompt-09 Baseline Status
+
+- Prompt-09 is now treated as an executed Phase-3 baseline for ownership-aware validation release gates.
+- Canonical closure note: `docs/architecture/blueprint/phase-3-ownership-aware-release-gates-and-prompt-09-closure.md`.
+- The Prompt-09 closure freezes:
+  - actionable wrapper ownership-gate enforcement for retired-bridge regression and per-surface owner linkage,
+  - actionable packaged artifact ownership-gate enforcement for non-collapsed `entryModuleId` and primary script-resource ownership,
+  - release-gate hard failures on localhost/debug leakage in production package artifacts.
+
 ## Evidence sources used
 
 ### Attached artifacts

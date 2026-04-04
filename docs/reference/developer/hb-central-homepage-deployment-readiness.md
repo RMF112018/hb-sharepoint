@@ -41,6 +41,10 @@ Expected build output:
 - Package structure is validated by `tools/validate-sppkg.mjs` to enforce OPC parts, the single required `package-manifest` relationship, no localhost production manifest references, and no unsupported `ClientSideComponentInstance` feature registration.
 - Composition and feature surfaces are configured app-locally via runtime manifest/config seams in `apps/hb-central-homepage/src/runtime`.
 - Runtime-to-host mount wiring is validated by `tools/validate-homepage-webpart-wiring.mjs` to guard against stale bundle/export mismatches.
+- Ownership-aware release-gate criteria are enforced by `pnpm validate:homepage:package`, including:
+  - per-surface packaged `entryModuleId` and primary script-resource non-collapse,
+  - hard failure for retired `dist/homepage.js` wrapper bridge regression,
+  - hard failure for localhost/debug/workbench leakage in production package artifacts.
 - Deployment consumers should treat configuration guidance in `apps/hb-central-homepage/README.md` as authoritative for current phase behavior.
 
 ## Toolbox and Page Render Evidence

@@ -1,6 +1,9 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 
+const DISALLOWED_RUNTIME_BRIDGE_PATTERN =
+  /(?:^|["'`])(?:\.\.\/)+dist\/homepage\.js(?:["'`]|$)/;
+
 const wiringChecks = [
   {
     path: "apps/hb-central-homepage/src/webparts/hbCentralHomepage/HbCentralHomepageWebPart.js",
@@ -33,7 +36,10 @@ const wiringChecks = [
     expectedMountCall: "mountHomepageQuickActions",
   },
 ];
-const DISALLOWED_RUNTIME_BRIDGE = "../../../dist/homepage.js";
+
+function escapeRegExp(value) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
 
 function main() {
   const failures = [];
@@ -41,19 +47,33 @@ function main() {
   for (const check of wiringChecks) {
     const fullPath = resolve(process.cwd(), check.path);
     const content = readFileSync(fullPath, "utf8");
-    if (content.includes(DISALLOWED_RUNTIME_BRIDGE)) {
+    if (DISALLOWED_RUNTIME_BRIDGE_PATTERN.test(content)) {
       failures.push(
-        `${check.path} still depends on ${DISALLOWED_RUNTIME_BRIDGE}`,
+        `${check.path} still depends on a retired dist runtime bridge (expected no imports ending in dist/homepage.js)`,
       );
     }
-    if (!content.includes(check.expectedOwnerImport)) {
+    const importPattern = new RegExp(
+      `import\\(\\s*["']${escapeRegExp(check.expectedOwnerImport)}["']\\s*\\)`,
+    );
+    if (!importPattern.test(content)) {
       failures.push(
-        `${check.path} does not import ${check.expectedOwnerImport}`,
+        `${check.path} does not dynamically import ${check.expectedOwnerImport}`,
       );
     }
-    if (!content.includes(check.expectedMountCall)) {
+    const mountBindingPattern = new RegExp(
+      `const\\s+${escapeRegExp(check.expectedMountCall)}\\s*=`,
+    );
+    if (!mountBindingPattern.test(content)) {
       failures.push(
-        `${check.path} does not reference ${check.expectedMountCall}`,
+        `${check.path} does not bind ${check.expectedMountCall} from imported owner module`,
+      );
+    }
+    const mountCallPattern = new RegExp(
+      `${escapeRegExp(check.expectedMountCall)}\\(root\\)`,
+    );
+    if (!mountCallPattern.test(content)) {
+      failures.push(
+        `${check.path} does not invoke ${check.expectedMountCall}(root)`,
       );
     }
   }
