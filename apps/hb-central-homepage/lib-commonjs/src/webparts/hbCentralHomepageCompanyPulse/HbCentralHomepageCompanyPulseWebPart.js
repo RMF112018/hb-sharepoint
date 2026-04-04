@@ -33,7 +33,7 @@ var HbCentralHomepageCompanyPulseWebPart = /** @class */ (function (_super) {
             this.domElement.replaceChildren(root_1);
             this._mountPromise = Promise.resolve()
                 .then(function () {
-                return Promise.resolve().then(function () { return require("../../../lib-commonjs/src/runtime/owners/mountHomepageCompanyPulse.js"); });
+                return Promise.resolve().then(function () { return require("../../runtime/owners-browser/mountHomepageCompanyPulse.js"); });
             })
                 .then(function (module) {
                 var _a, _b;

@@ -18,7 +18,7 @@ export default class HbCentralHomepageCompanyPulseWebPart extends BaseClientSide
       this._mountPromise = Promise.resolve()
         .then(
           () =>
-            import("../../../lib-commonjs/src/runtime/owners/mountHomepageCompanyPulse.js"),
+            import("../../runtime/owners-browser/mountHomepageCompanyPulse.js"),
         )
         .then((module) => {
           const mountHomepageCompanyPulse =

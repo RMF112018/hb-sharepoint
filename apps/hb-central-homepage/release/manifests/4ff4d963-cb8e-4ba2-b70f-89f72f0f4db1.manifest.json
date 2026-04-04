@@ -31,11 +31,16 @@
     "scriptResources": {
       "hb-central-homepage-hero-web-part": {
         "type": "path",
-        "path": "hb-central-homepage-hero-web-part_1e3f2e854d24aa41b894.js"
+        "path": "hb-central-homepage-hero-web-part_0e4b42c75fb43d9139cd.js"
       },
       "@microsoft/sp-webpart-base": {
         "type": "component",
         "id": "974a7777-0990-4136-8fa6-95d80114c2e0",
+        "version": "1.22.2"
+      },
+      "@microsoft/sp-loader": {
+        "type": "component",
+        "id": "1c6c9123-7aac-41f3-a376-3caea41ed83f",
         "version": "1.22.2"
       }
     }

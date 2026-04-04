@@ -19,7 +19,9 @@ export default class HbCentralHomepageFeaturedProjectsWebPart extends BaseClient
       this._mountPromise = Promise.resolve()
         .then(
           () =>
-            import("../../../lib-commonjs/src/runtime/owners/mountHomepageFeaturedProjects.js"),
+            import(
+              "../../runtime/owners-browser/mountHomepageFeaturedProjects.js"
+            ),
         )
         .then((module) => {
           const mountHomepageFeaturedProjects =

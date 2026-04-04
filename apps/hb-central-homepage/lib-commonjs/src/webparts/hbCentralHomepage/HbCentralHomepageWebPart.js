@@ -32,9 +32,7 @@ var HbCentralHomepageWebPart = /** @class */ (function (_super) {
             root_1.className = HOMEPAGE_ROOT_CLASS;
             this.domElement.replaceChildren(root_1);
             this._mountPromise = Promise.resolve()
-                .then(function () {
-                return Promise.resolve().then(function () { return require("../../../lib-commonjs/src/runtime/owners/mountHomepageSections.js"); });
-            })
+                .then(function () { return Promise.resolve().then(function () { return require("../../runtime/owners-browser/mountHomepageSections.js"); }); })
                 .then(function (module) {
                 var _a, _b;
                 var mountHomepageSections = (_a = module.mountHomepageSections) !== null && _a !== void 0 ? _a : (_b = module.default) === null || _b === void 0 ? void 0 : _b.mountHomepageSections;

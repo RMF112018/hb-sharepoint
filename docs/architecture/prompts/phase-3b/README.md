@@ -43,6 +43,14 @@ Earlier audit work concluded the `.sppkg` structure, manifest ownership, and pac
 - Current validated disposition: wrappers import `lib-commonjs` runtime owner artifacts, emitted lazy chunks retain CommonJS signatures (`exports`/`require`), and Prompt-01 closes with `Confirmed root cause`.
 - Prompt-02, Prompt-03, and Prompt-04 remain open implementation scope.
 
+## Prompt-02 Status (2026-04-04)
+
+- Prompt-02 closure is complete for browser-safe owner build remediation scope.
+- Evidence directory: `docs/architecture/prompts/phase-3b/evidence/2026-04-04-prompt-02/`
+- Canonical closure authority: `docs/architecture/blueprint/phase-3b-browser-safe-owner-build-remediation-and-prompt-02-closure.md`
+- Current validated disposition: wrapper imports now resolve to browser-safe owner modules under `src/runtime/owners-browser/*`, affected lazy chunks no longer emit `exports`/`require` CommonJS signatures, and package ownership invariants remain five-way unique.
+- Prompt-03 and Prompt-04 remain open hardening/live-proof scope.
+
 ## Scope boundary
 
 This package is **not** a new architecture migration.

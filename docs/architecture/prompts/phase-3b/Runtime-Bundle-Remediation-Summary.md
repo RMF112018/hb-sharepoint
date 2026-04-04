@@ -34,6 +34,16 @@ Earlier audits already established that wrappers dynamically import focused owne
 - Prompt-01 concludes `Confirmed root cause`: wrapper imports target `lib-commonjs` owner modules and emitted lazy chunks preserve CommonJS signatures (`Object.defineProperty(exports, ...)`, `exports.*`, `require(...)`), including failing path `chunk.357_775c0006db12ff929954.js`.
 - Prompt-02 is the next implementation step; Prompt-03/Prompt-04 remain downstream hardening and live-proof scope.
 
+## Prompt-02 closure status (2026-04-04)
+
+- Prompt-02 remediation outputs are frozen at `docs/architecture/prompts/phase-3b/evidence/2026-04-04-prompt-02/`.
+- Canonical closure authority is now `docs/architecture/blueprint/phase-3b-browser-safe-owner-build-remediation-and-prompt-02-closure.md`.
+- Prompt-02 confirms browser-safe owner remediation in current repo truth:
+  - wrapper imports now target `src/runtime/owners-browser/*`,
+  - emitted lazy owner chunks no longer contain `Object.defineProperty(exports, ...)`, `exports.*`, or bare `require(...)`,
+  - `.sppkg` ownership invariants remain intact (five unique entry/primary ownership values).
+- Prompt-03 and Prompt-04 remain open downstream scope.
+
 ## Scope of remediation
 
 This package is deliberately narrow.

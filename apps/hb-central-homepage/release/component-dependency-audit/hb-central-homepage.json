@@ -111,7 +111,24 @@
           "isDirectDependency": false
         }
       ],
-      "asyncChunks": {}
+      "asyncChunks": {
+        "Unnamed Chunk (#88)": {
+          "asyncComponentDependencies": [
+            {
+              "componentId": "0d910c1c-13b9-4e1c-9aa4-b008c5e42d7d",
+              "componentName": "react",
+              "componentVersion": "17.0.1",
+              "isDirectDependency": true
+            },
+            {
+              "componentId": "aa0a46ec-1505-43cd-a44a-93f3a5aa460a",
+              "componentName": "react-dom",
+              "componentVersion": "17.0.1",
+              "isDirectDependency": true
+            }
+          ]
+        }
+      }
     },
     "hb-central-homepage-hero-web-part": {
       "dependencies": [
@@ -224,7 +241,24 @@
           "isDirectDependency": false
         }
       ],
-      "asyncChunks": {}
+      "asyncChunks": {
+        "Unnamed Chunk (#921)": {
+          "asyncComponentDependencies": [
+            {
+              "componentId": "0d910c1c-13b9-4e1c-9aa4-b008c5e42d7d",
+              "componentName": "react",
+              "componentVersion": "17.0.1",
+              "isDirectDependency": true
+            },
+            {
+              "componentId": "aa0a46ec-1505-43cd-a44a-93f3a5aa460a",
+              "componentName": "react-dom",
+              "componentVersion": "17.0.1",
+              "isDirectDependency": true
+            }
+          ]
+        }
+      }
     },
     "hb-central-homepage-featured-projects-web-part": {
       "dependencies": [
@@ -337,7 +371,24 @@
           "isDirectDependency": false
         }
       ],
-      "asyncChunks": {}
+      "asyncChunks": {
+        "Unnamed Chunk (#763)": {
+          "asyncComponentDependencies": [
+            {
+              "componentId": "0d910c1c-13b9-4e1c-9aa4-b008c5e42d7d",
+              "componentName": "react",
+              "componentVersion": "17.0.1",
+              "isDirectDependency": true
+            },
+            {
+              "componentId": "aa0a46ec-1505-43cd-a44a-93f3a5aa460a",
+              "componentName": "react-dom",
+              "componentVersion": "17.0.1",
+              "isDirectDependency": true
+            }
+          ]
+        }
+      }
     },
     "hb-central-homepage-company-pulse-web-part": {
       "dependencies": [
@@ -450,7 +501,24 @@
           "isDirectDependency": false
         }
       ],
-      "asyncChunks": {}
+      "asyncChunks": {
+        "Unnamed Chunk (#678)": {
+          "asyncComponentDependencies": [
+            {
+              "componentId": "0d910c1c-13b9-4e1c-9aa4-b008c5e42d7d",
+              "componentName": "react",
+              "componentVersion": "17.0.1",
+              "isDirectDependency": true
+            },
+            {
+              "componentId": "aa0a46ec-1505-43cd-a44a-93f3a5aa460a",
+              "componentName": "react-dom",
+              "componentVersion": "17.0.1",
+              "isDirectDependency": true
+            }
+          ]
+        }
+      }
     },
     "hb-central-homepage-quick-actions-web-part": {
       "dependencies": [
@@ -563,7 +631,24 @@
           "isDirectDependency": false
         }
       ],
-      "asyncChunks": {}
+      "asyncChunks": {
+        "Unnamed Chunk (#462)": {
+          "asyncComponentDependencies": [
+            {
+              "componentId": "0d910c1c-13b9-4e1c-9aa4-b008c5e42d7d",
+              "componentName": "react",
+              "componentVersion": "17.0.1",
+              "isDirectDependency": true
+            },
+            {
+              "componentId": "aa0a46ec-1505-43cd-a44a-93f3a5aa460a",
+              "componentName": "react-dom",
+              "componentVersion": "17.0.1",
+              "isDirectDependency": true
+            }
+          ]
+        }
+      }
     }
   }
 }

@@ -7,32 +7,30 @@ const DISALLOWED_RUNTIME_BRIDGE_PATTERN =
 const wiringChecks = [
   {
     path: "apps/hb-central-homepage/src/webparts/hbCentralHomepage/HbCentralHomepageWebPart.js",
-    expectedOwnerImport:
-      "../../../lib-commonjs/src/runtime/owners/mountHomepageSections.js",
+    expectedOwnerImport: "../../runtime/owners-browser/mountHomepageSections.js",
     expectedMountCall: "mountHomepageSections",
   },
   {
     path: "apps/hb-central-homepage/src/webparts/hbCentralHomepageHero/HbCentralHomepageHeroWebPart.js",
-    expectedOwnerImport:
-      "../../../lib-commonjs/src/runtime/owners/mountHomepageHero.js",
+    expectedOwnerImport: "../../runtime/owners-browser/mountHomepageHero.js",
     expectedMountCall: "mountHomepageHero",
   },
   {
     path: "apps/hb-central-homepage/src/webparts/hbCentralHomepageFeaturedProjects/HbCentralHomepageFeaturedProjectsWebPart.js",
     expectedOwnerImport:
-      "../../../lib-commonjs/src/runtime/owners/mountHomepageFeaturedProjects.js",
+      "../../runtime/owners-browser/mountHomepageFeaturedProjects.js",
     expectedMountCall: "mountHomepageFeaturedProjects",
   },
   {
     path: "apps/hb-central-homepage/src/webparts/hbCentralHomepageCompanyPulse/HbCentralHomepageCompanyPulseWebPart.js",
     expectedOwnerImport:
-      "../../../lib-commonjs/src/runtime/owners/mountHomepageCompanyPulse.js",
+      "../../runtime/owners-browser/mountHomepageCompanyPulse.js",
     expectedMountCall: "mountHomepageCompanyPulse",
   },
   {
     path: "apps/hb-central-homepage/src/webparts/hbCentralHomepageQuickActions/HbCentralHomepageQuickActionsWebPart.js",
     expectedOwnerImport:
-      "../../../lib-commonjs/src/runtime/owners/mountHomepageQuickActions.js",
+      "../../runtime/owners-browser/mountHomepageQuickActions.js",
     expectedMountCall: "mountHomepageQuickActions",
   },
 ];

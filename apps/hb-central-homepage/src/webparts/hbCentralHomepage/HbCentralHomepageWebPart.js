@@ -17,8 +17,7 @@ export default class HbCentralHomepageWebPart extends BaseClientSideWebPart {
 
       this._mountPromise = Promise.resolve()
         .then(
-          () =>
-            import("../../../lib-commonjs/src/runtime/owners/mountHomepageSections.js"),
+          () => import("../../runtime/owners-browser/mountHomepageSections.js"),
         )
         .then((module) => {
           const mountHomepageSections =

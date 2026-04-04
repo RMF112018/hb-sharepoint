@@ -33,7 +33,7 @@ var HbCentralHomepageQuickActionsWebPart = /** @class */ (function (_super) {
             this.domElement.replaceChildren(root_1);
             this._mountPromise = Promise.resolve()
                 .then(function () {
-                return Promise.resolve().then(function () { return require("../../../lib-commonjs/src/runtime/owners/mountHomepageQuickActions.js"); });
+                return Promise.resolve().then(function () { return require("../../runtime/owners-browser/mountHomepageQuickActions.js"); });
             })
                 .then(function (module) {
                 var _a, _b;
