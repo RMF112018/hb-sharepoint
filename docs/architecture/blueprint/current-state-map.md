@@ -69,6 +69,7 @@ The repository currently contains:
 - phase-3c Prompt-02 real-owner mount restoration closure records for browser-safe entrypoint functional restoration governance
 - phase-3c Prompt-03 placeholder-regression hardening closure records for source/package phrase-family release-gate enforcement governance
 - phase-3c Prompt-04 rebuild/deploy/functional-live-proof closure records for clean-state provenance and conditional-go release governance
+- phase-3d Prompt-01 repo-truth and emitted-artifact baseline closure records for five-surface wrapper-owner-chunk trace governance
 - a deterministic `.sppkg` packaging path for the homepage app via Heft-native SPFx production packaging (`heft build --production` + `heft package-solution --production`) guarded by `tools/validate-sppkg.mjs`
 - a `packages/ui-kit/` shared visual package with runnable typecheck, lint, build, and test scripts
 
@@ -134,6 +135,7 @@ The repository does not yet contain:
 - Treat phase-3c Prompt-02 as materially executed for owner-restoration scope: browser-safe owner entrypoints now render surface-specific success-path UI, placeholder proof-of-load text is removed, and wrapper topology remains unchanged.
 - Treat phase-3c Prompt-03 as materially executed for placeholder-regression hardening scope: homepage source-owner and packaged lazy-owner validation now hard-fail on blocked placeholder phrase-family signatures while preserving existing runtime-format and ownership anti-collapse checks.
 - Treat phase-3c Prompt-04 as materially executed for rebuild/provenance/governance scope: clean-state homepage package evidence and validator outputs are frozen with artifact-of-record digest linkage and explicit `Conditional Go` classification pending external tenant live-proof evidence.
+- Treat phase-3d Prompt-01 as materially executed for repo-truth and emitted-artifact baseline scope: all five wrappers resolve to browser-safe owner entrypoints that currently mount placeholder success-path content, emitted lazy chunks preserve the same placeholder chain, and Prompt-02 is the implementation restoration boundary.
 - Use the prompt package to sequence implementation work, but use live files and this map as the source of truth for what exists now.
 - Do not infer app structure, package structure, or verification capabilities that have not been created yet.
 - Treat Prompt-01 as historically executed: the structural baseline already exists and should be confirmed rather than recreated.
@@ -205,3 +207,4 @@ The repository does not yet contain:
 - `docs/architecture/blueprint/phase-3c-restore-real-owner-mounts-and-prompt-02-closure.md` records the approved phase-3c Prompt-02 real-owner mount restoration baseline and closure.
 - `docs/architecture/blueprint/phase-3c-harden-against-placeholder-regression-and-prompt-03-closure.md` records the approved phase-3c Prompt-03 placeholder-regression hardening baseline and closure.
 - `docs/architecture/blueprint/phase-3c-rebuild-deploy-functional-live-proof-and-prompt-04-closure.md` records the approved phase-3c Prompt-04 rebuild/deploy/functional-live-proof baseline and conditional-go closure.
+- `docs/architecture/blueprint/phase-3d-repo-truth-and-artifact-baseline-and-prompt-01-closure.md` records the approved phase-3d Prompt-01 repo-truth and emitted-artifact baseline closure.
