@@ -114,6 +114,15 @@ The Phase 3 end state is:
   - actionable packaged artifact ownership-gate enforcement for non-collapsed `entryModuleId` and primary script-resource ownership,
   - release-gate hard failures on localhost/debug leakage in production package artifacts.
 
+## Prompt-10 Baseline Status
+
+- Prompt-10 is now treated as an executed Phase-3 baseline for final artifact proof and package audit governance.
+- Canonical closure note: `docs/architecture/blueprint/phase-3-final-artifact-audit-and-prompt-10-closure.md`.
+- The Prompt-10 closure freezes:
+  - successful final Heft-native package execution evidence,
+  - packaged per-surface `entryModuleId` and primary script-resource ownership mapping proof,
+  - explicit validation-pass evidence for deployable artifact semantics and retired-bridge absence checks.
+
 ## Evidence sources used
 
 ### Attached artifacts

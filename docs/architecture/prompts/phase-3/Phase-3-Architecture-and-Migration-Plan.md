@@ -58,6 +58,12 @@ Move the HB Central homepage solution from its current hybrid deployment archite
 - Canonical Prompt-09 closure authority: `docs/architecture/blueprint/phase-3-ownership-aware-release-gates-and-prompt-09-closure.md`.
 - Downstream artifact-proof and final-phase closure prompts should consume this ownership-aware release-gate baseline and treat regression into collapsed bundle ownership or debug leakage as hard failure conditions.
 
+## Prompt-10 baseline governance status
+
+- Prompt-10 is treated as executed baseline work for this phase.
+- Canonical Prompt-10 closure authority: `docs/architecture/blueprint/phase-3-final-artifact-audit-and-prompt-10-closure.md`.
+- Downstream SharePoint-validation and final-closeout prompts should consume this final artifact-audit baseline and preserve its packaged ownership and artifact-hygiene proof posture.
+
 ---
 
 ## 1. Current architecture
