@@ -1,0 +1,373 @@
+Prompt-02 source config snapshot
+timestamp=2026-04-04T08:39:06Z
+commit=1eeb510d2f1a7ef6a48c823cd688ae568c12ab68
+
+[root package.json scripts]
+{
+  "version": "00.000.047",
+  "scripts": {
+    "check-types": "turbo run check-types",
+    "lint": "turbo run lint",
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "validate:homepage:package": "node tools/validate-homepage-webpart-wiring.mjs && node tools/validate-sppkg.mjs",
+    "build:sppkg": "pnpm --filter @hbc/hb-central-homepage build && pnpm --filter @hbc/hb-central-homepage spfx:package && pnpm validate:homepage:package",
+    "build:sppkg:homepage": "pnpm --filter @hbc/hb-central-homepage spfx:package && pnpm validate:homepage:package",
+    "format:check": "prettier --check .",
+    "format": "prettier --write ."
+  }
+}
+
+[app package.json scripts]
+{
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "start": "heft start --clean",
+    "check-types": "tsc --noEmit -p tsconfig.dev.json",
+    "lint": "eslint src --ext .ts,.tsx",
+    "build": "vite build",
+    "test": "vitest run",
+    "spfx:package": "heft build --clean --production && heft package-solution --production"
+  }
+}
+
+
+===== apps/hb-central-homepage/config/config.json
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "hb-central-homepage-sections-web-part": {
+      "components": [
+        {
+          "entrypoint": "./src/webparts/hbCentralHomepage/HbCentralHomepageWebPart.js",
+          "manifest": "./src/webparts/hbCentralHomepage/HbCentralHomepageWebPart.manifest.json"
+        }
+      ]
+    },
+    "hb-central-homepage-hero-web-part": {
+      "components": [
+        {
+          "entrypoint": "./src/webparts/hbCentralHomepageHero/HbCentralHomepageHeroWebPart.js",
+          "manifest": "./src/webparts/hbCentralHomepageHero/HbCentralHomepageHeroWebPart.manifest.json"
+        }
+      ]
+    },
+    "hb-central-homepage-featured-projects-web-part": {
+      "components": [
+        {
+          "entrypoint": "./src/webparts/hbCentralHomepageFeaturedProjects/HbCentralHomepageFeaturedProjectsWebPart.js",
+          "manifest": "./src/webparts/hbCentralHomepageFeaturedProjects/HbCentralHomepageFeaturedProjectsWebPart.manifest.json"
+        }
+      ]
+    },
+    "hb-central-homepage-company-pulse-web-part": {
+      "components": [
+        {
+          "entrypoint": "./src/webparts/hbCentralHomepageCompanyPulse/HbCentralHomepageCompanyPulseWebPart.js",
+          "manifest": "./src/webparts/hbCentralHomepageCompanyPulse/HbCentralHomepageCompanyPulseWebPart.manifest.json"
+        }
+      ]
+    },
+    "hb-central-homepage-quick-actions-web-part": {
+      "components": [
+        {
+          "entrypoint": "./src/webparts/hbCentralHomepageQuickActions/HbCentralHomepageQuickActionsWebPart.js",
+          "manifest": "./src/webparts/hbCentralHomepageQuickActions/HbCentralHomepageQuickActionsWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {
+    "react": "React",
+    "react-dom": "ReactDom"
+  },
+  "localizedResources": {}
+}
+
+===== apps/hb-central-homepage/config/package-solution.json
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "hb-central-homepage-client-side-solution",
+    "id": "7b9f902f-8f6f-492c-9525-d8a4b4d0846c",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "HB Construction",
+      "websiteUrl": "https://example.com",
+      "privacyUrl": "https://example.com/privacy",
+      "termsOfUseUrl": "https://example.com/terms",
+      "mpnId": "Undefined-1.0.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "HB Central homepage web part package"
+      },
+      "longDescription": {
+        "default": "SharePoint package for HB Central homepage runtime bundle."
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    }
+  },
+  "paths": {
+    "zippedPackage": "../../../dist/sppkg/hb-central-homepage.sppkg"
+  }
+}
+
+===== apps/hb-central-homepage/config/write-manifests.json
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/write-manifests.schema.json",
+  "cdnBasePath": "~sitecollection/ClientSideAssets"
+}
+
+===== apps/hb-central-homepage/config/heft.json
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/heft/v0/heft.schema.json",
+  "extends": "@microsoft/spfx-web-build-rig/profiles/default/config/heft.json"
+}
+
+===== apps/hb-central-homepage/config/rig.json
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/rig-package/rig.schema.json",
+  "rigPackageName": "@microsoft/spfx-web-build-rig"
+}
+
+===== apps/hb-central-homepage/config/typescript.json
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/heft/v0/typescript.schema.json",
+  "extends": "@microsoft/spfx-web-build-rig/profiles/default/config/typescript.json"
+}
+
+===== apps/hb-central-homepage/config/sass.json
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/heft/v0/heft-sass.schema.json",
+  "extends": "@microsoft/spfx-web-build-rig/profiles/default/config/sass.json"
+}
+
+===== tools/validate-sppkg.mjs
+import { existsSync } from "node:fs";
+import { resolve } from "node:path";
+import { spawnSync } from "node:child_process";
+
+/** @typedef {{
+ * hasContentTypes: boolean;
+ * hasRootRels: boolean;
+ * packageManifestRelationshipCount: number;
+ * packageManifestTarget: string | null;
+ * packageManifestTargetExists: boolean;
+ * localhostManifestEntries: string[];
+ * debugLeakageEntries: string[];
+ * unsupportedFeatureEntries: string[];
+ * missingExpectedWebPartDefinitionEntries: string[];
+ * webPartOwnershipRecords: Array<{
+ *   id: string;
+ *   entryModuleId: string | null;
+ *   primaryScriptResourceKey: string | null;
+ *   primaryScriptResourcePath: string | null;
+ * }>;
+ * webPartOwnershipParseFailures: string[];
+ * }} SppkgValidationResult */
+
+const packageManifestRelationshipType =
+  "http://schemas.microsoft.com/sharepoint/2012/app/relationships/package-manifest";
+const expectedWebPartManifestIds = [
+  "b8bb1136-d33e-47d2-9d45-848524b8fcbf",
+  "4ff4d963-cb8e-4ba2-b70f-89f72f0f4db1",
+  "02ce4751-f355-444e-a635-a6f3b11fad79",
+  "c5819073-cf72-4d91-bd5b-49982a6b8230",
+  "506562ca-e752-4bf4-a218-f06d965f8f7f",
+];
+const expectedWebPartDefinitionEntries = expectedWebPartManifestIds.map(
+  (id) => `${id}/WebPart_${id}.xml`,
+);
+
+function runUnzip(args) {
+  const result = spawnSync("unzip", args, { encoding: "utf8", stdio: "pipe" });
+  if (result.status !== 0) {
+    throw new Error(
+      `unzip ${args.join(" ")} failed: ${result.stderr || result.stdout}`,
+    );
+  }
+
+  return result.stdout;
+}
+
+function listEntries(artifactPath) {
+  return runUnzip(["-Z1", artifactPath])
+    .split("\n")
+    .map((line) => line.trim())
+    .filter(Boolean);
+}
+
+function readEntry(artifactPath, entryPath) {
+  return runUnzip(["-p", artifactPath, entryPath]);
+}
+
+function normalizePackagePath(path) {
+  return path.replace(/^\//, "").replace(/\\/g, "/");
+}
+
+function hasLocalhostReference(content) {
+  return /https?:\/\/localhost(?::\d+)?\//i.test(content);
+}
+
+function hasUnsupportedFeatureRegistration(content) {
+  return /<\s*ClientSideComponentInstance\b/i.test(content);
+}
+
+function hasDebugLeakage(content) {
+  return (
+    /debugmanifestsfile=/i.test(content) ||
+    /loadspfx=true/i.test(content) ||
+    /noredir=true/i.test(content) ||
+    /_layouts\/15\/workbench\.aspx/i.test(content)
+  );
+}
+
+function decodeXmlAttribute(value) {
+  return value
+    .replace(/&quot;/g, '"')
+    .replace(/&apos;/g, "'")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&amp;/g, "&");
+}
+
+function extractComponentManifestJson(webPartXml) {
+  const match = webPartXml.match(/\bComponentManifest="([^"]+)"/);
+  if (!match) {
+    throw new Error("ComponentManifest attribute is missing");
+  }
+  const decoded = decodeXmlAttribute(match[1]);
+  return JSON.parse(decoded);
+}
+
+function resolvePrimaryScriptResource(loaderConfig) {
+  if (!loaderConfig || typeof loaderConfig !== "object") {
+    return { key: null, path: null };
+  }
+  const scriptResources = loaderConfig.scriptResources;
+  if (!scriptResources || typeof scriptResources !== "object") {
+    return { key: null, path: null };
+  }
+
+  const entryModuleId =
+    typeof loaderConfig.entryModuleId === "string"
+      ? loaderConfig.entryModuleId
+      : null;
+  if (entryModuleId) {
+    const byEntryModule = scriptResources[entryModuleId];
+    if (
+      byEntryModule?.type === "path" &&
+      typeof byEntryModule.path === "string"
+    ) {
+      return { key: entryModuleId, path: byEntryModule.path };
+    }
+  }
+
+  for (const [key, resource] of Object.entries(scriptResources)) {
+    if (key.startsWith("@")) continue;
+    if (resource?.type === "path" && typeof resource.path === "string") {
+      return { key, path: resource.path };
+    }
+  }
+
+  return { key: null, path: null };
+}
+
+/** @param {string} artifactPath */
+function validateSppkg(artifactPath) {
+  const entries = listEntries(artifactPath);
+  const hasContentTypes = entries.includes("[Content_Types].xml");
+  const hasRootRels = entries.includes("_rels/.rels");
+
+  let packageManifestRelationshipCount = 0;
+  let packageManifestTarget = null;
+  let packageManifestTargetExists = false;
+  const localhostManifestEntries = [];
+  const debugLeakageEntries = [];
+  const unsupportedFeatureEntries = [];
+  const missingExpectedWebPartDefinitionEntries =
+    expectedWebPartDefinitionEntries.filter(
+      (entry) => !entries.includes(entry),
+    );
+  const webPartOwnershipRecords = [];
+  const webPartOwnershipParseFailures = [];
+
+  if (hasRootRels) {
+    const relsXml = readEntry(artifactPath, "_rels/.rels");
+    const relationshipRegex = /<Relationship\b([^>]*?)\/?>/g;
+    let match = relationshipRegex.exec(relsXml);
+
+    while (match) {
+      const attrs = match[1];
+      const typeMatch = attrs.match(/\bType="([^"]+)"/);
+      const targetMatch = attrs.match(/\bTarget="([^"]+)"/);
+
+      if (typeMatch?.[1] === packageManifestRelationshipType) {
+        packageManifestRelationshipCount += 1;
+        packageManifestTarget = targetMatch?.[1] ?? null;
+      }
+
+      match = relationshipRegex.exec(relsXml);
+    }
+
+    if (packageManifestTarget) {
+      packageManifestTargetExists = entries.includes(
+        normalizePackagePath(packageManifestTarget),
+      );
+    }
+  }
+
+  const textEntries = entries.filter(
+    (entry) =>
+      /\.(xml|rels|json|js)$/i.test(entry) &&
+      !entry.includes("[") &&
+      !entry.includes("]"),
+  );
+  for (const entry of textEntries) {
+    const content = readEntry(artifactPath, entry);
+    if (hasLocalhostReference(content)) {
+      localhostManifestEntries.push(entry);
+    }
+    if (hasDebugLeakage(content)) {
+      debugLeakageEntries.push(entry);
+    }
+  }
+
+  const featureEntries = entries.filter((entry) =>
+    /(^|\/)elements\.xml$/i.test(entry),
+  );
+  for (const entry of featureEntries) {
+    const content = readEntry(artifactPath, entry);
+    if (hasUnsupportedFeatureRegistration(content)) {
+      unsupportedFeatureEntries.push(entry);
+    }
+  }
+
+  for (const webPartId of expectedWebPartManifestIds) {
+    const webPartEntry = `${webPartId}/WebPart_${webPartId}.xml`;
+    if (!entries.includes(webPartEntry)) continue;
+
+    try {
+      const webPartXml = readEntry(artifactPath, webPartEntry);
+      const componentManifest = extractComponentManifestJson(webPartXml);
+      const loaderConfig =
+        componentManifest && typeof componentManifest === "object"
+          ? componentManifest.loaderConfig
+          : null;
+      const entryModuleId =
+        loaderConfig && typeof loaderConfig.entryModuleId === "string"
+          ? loaderConfig.entryModuleId
+          : null;
+      const primaryScriptResource = resolvePrimaryScriptResource(loaderConfig);
+      webPartOwnershipRecords.push({
+        id: webPartId,
+        entryModuleId,
+        primaryScriptResourceKey: primaryScriptResource.key,

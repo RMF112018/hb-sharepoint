@@ -36,6 +36,12 @@ This package is based on the currently observed mismatch between:
 - Canonical closure authority: `docs/architecture/blueprint/phase-3a-suspect-artifact-evidence-and-prompt-01-closure.md`
 - Current validated disposition: the artifact-of-record `dist/sppkg/hb-central-homepage.sppkg` is split and valid; do not continue remediation escalation unless a different suspect artifact is supplied.
 
+## Prompt-02 Status (2026-04-04)
+- Prompt-02 closure is complete for repo-truth and build-input freeze scope.
+- Evidence directory: `docs/architecture/prompts/phase-3a/evidence/2026-04-04-prompt-02/`
+- Canonical closure authority: `docs/architecture/blueprint/phase-3a-repo-truth-build-input-map-and-prompt-02-closure.md`
+- Current validated disposition: current source layer is genuinely split; Prompt-02 execution in this run is an approved operator override while retaining Prompt-01 mismatch-branch findings.
+
 ## Assumptions and Limitations
 - This package assumes the homepage should continue shipping as **one single `.sppkg`**.
 - This package assumes the current remediation target is limited to the homepage package and its packaging chain.

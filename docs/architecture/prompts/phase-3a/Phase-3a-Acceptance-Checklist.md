@@ -5,7 +5,7 @@ Use this checklist to determine whether the Phase 3a remediation effort is compl
 
 ## Technical Outcomes
 - [ ] The current suspect `.sppkg` was validated and the failure mode was documented.
-- [ ] Current `main` repo truth was frozen and recorded.
+- [x] Current `main` repo truth was frozen and recorded.
 - [ ] The homepage packaging chain was rebuilt from a true clean state.
 - [ ] Generated pre-package manifests/assets were inspected and mapped.
 - [ ] The exact pipeline layer where ownership collapse first occurs was identified.

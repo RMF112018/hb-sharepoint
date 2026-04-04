@@ -8,6 +8,15 @@ Determine exactly where the current homepage packaging pipeline stops honoring t
 - Step 2 suspect-artifact proof is complete: `dist/sppkg/hb-central-homepage.sppkg` validates as split ownership (five unique packaged `entryModuleId` values, primary script-resource keys, and primary script-resource paths).
 - Current branch decision: stop escalation and classify the observed mismatch as an artifact-selection/provenance issue unless a different suspect `.sppkg` is provided.
 
+## Prompt-02 Status (2026-04-04)
+- Step 3 repo-truth freeze is complete in `docs/architecture/prompts/phase-3a/evidence/2026-04-04-prompt-02/`.
+- Prompt-02 required outputs are complete:
+  - `02-source-config-snapshot.txt`
+  - `02-build-input-map.md`
+  - `02-repo-truth-summary.md`
+- Confirmed Prompt-02 disposition: current source truth is genuinely split at source-manifest, bundle-declaration, and wrapper-owner boundaries.
+- Governance note: Prompt-01 mismatch-branch gate remains true; Prompt-02 continuation is an approved operator override to freeze repo-truth build-input evidence.
+
 ## Investigation Sequence
 
 ### 1. Freeze evidence before modifying anything
